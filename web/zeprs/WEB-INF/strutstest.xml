@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <form-beans>
+    
+    <form-bean name="form4" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="field1" type="java.lang.String"/>
+      <form-property name="field1656" type="java.lang.String"/>
+      <form-property name="field193" type="java.lang.String"/>
+      <form-property name="field1662" type="java.lang.String"/>
+      <form-property name="field1657" type="java.lang.String"/>
+      <form-property name="field196" type="java.lang.String"/>
+      <form-property name="field1664" type="java.lang.String"/>
+      <form-property name="field1562" type="java.lang.String"/>
+      <form-property name="field1563" type="java.lang.String"/>
+      <form-property name="field1564" type="java.lang.String"/>
+      <form-property name="field1565" type="java.lang.String"/>
+      <form-property name="field1570" type="java.lang.String"/>
+      <form-property name="field1566" type="java.lang.String"/>
+      <form-property name="field1567" type="java.lang.String"/>
+      <form-property name="field1568" type="java.lang.String"/>
+      <form-property name="field1569" type="java.lang.String"/>
+      <form-property name="field1571" type="java.lang.String"/>
+      <form-property name="field1608" type="java.lang.String"/>
+      <form-property name="field1610" type="java.lang.String"/>
+      <form-property name="field1612" type="java.lang.String"/>
+      <form-property name="field1609" type="java.lang.String"/>
+      <form-property name="field1611" type="java.lang.String"/>
+      <form-property name="field1613" type="java.lang.String"/>
+      <form-property name="field1658" type="java.lang.String"/>
+      <form-property name="field207" type="java.lang.String"/>
+      <form-property name="field1672" type="java.lang.String"/>
+      <form-property name="field1659" type="java.lang.String"/>
+      <form-property name="field1460" type="java.lang.String"/>
+      <form-property name="field1673" type="java.lang.String"/>
+      <form-property name="field1660" type="java.lang.String"/>
+      <form-property name="field1462" type="java.lang.String"/>
+      <form-property name="field1674" type="java.lang.String"/>
+      <form-property name="field1675" type="java.lang.String"/>
+      <form-property name="field1676" type="java.lang.String"/>
+      <form-property name="field1677" type="java.lang.String"/>
+      <form-property name="field1593" type="java.lang.String"/>
+      <form-property name="field1590" type="java.lang.String"/>
+      <form-property name="field1735" type="java.lang.String"/>
+      <form-property name="field1687" type="java.lang.String"/>
+      <form-property name="field1738" type="java.lang.String"/>
+      <form-property name="field1594" type="java.lang.String"/>
+      <form-property name="field1591" type="java.lang.String"/>
+      <form-property name="field1736" type="java.lang.String"/>
+      <form-property name="field1688" type="java.lang.String"/>
+      <form-property name="field1739" type="java.lang.String"/>
+      <form-property name="field1595" type="java.lang.String"/>
+      <form-property name="field1592" type="java.lang.String"/>
+      <form-property name="field1737" type="java.lang.String"/>
+      <form-property name="field1689" type="java.lang.String"/>
+      <form-property name="field1740" type="java.lang.String"/>
+      <form-property name="field1741" type="java.lang.String"/>
+      <form-property name="field1597" type="java.lang.String"/>
+      <form-property name="field1598" type="java.lang.String"/>
+      <form-property name="field1742" type="java.lang.String"/>
+      <form-property name="field1600" type="java.lang.String"/>
+      <form-property name="field1602" type="java.lang.String"/>
+      <form-property name="field1605" type="java.lang.String"/>
+      <form-property name="field1743" type="java.lang.String"/>
+      <form-property name="field1604" type="java.lang.String"/>
+      <form-property name="field1606" type="java.lang.String"/>
+      <form-property name="field1607" type="java.lang.String"/>
+      <form-property name="field1575" type="java.lang.String"/>
+      <form-property name="field1574" type="java.lang.String"/>
+      <form-property name="field1576" type="java.lang.String"/>
+      <form-property name="field1578" type="java.lang.String"/>
+      <form-property name="field1577" type="java.lang.String"/>
+      <form-property name="field1579" type="java.lang.String"/>
+      <form-property name="field1734" type="java.lang.String"/>
+      <form-property name="field1583" type="java.lang.String"/>
+      <form-property name="field1580" type="java.lang.String"/>
+      <form-property name="field1581" type="java.lang.String"/>
+      <form-property name="field1582" type="java.lang.String"/>
+      <form-property name="field1700" type="java.lang.String"/>
+      <form-property name="field1708" type="java.lang.String"/>
+      <form-property name="field1709" type="java.lang.String"/>
+      <form-property name="field1710" type="java.lang.String"/>
+      <form-property name="field1711" type="java.lang.String"/>
+      <form-property name="field1714" type="java.lang.String"/>
+      <form-property name="field1715" type="java.lang.String"/>
+      <form-property name="field1716" type="java.lang.String"/>
+      <form-property name="field1717" type="java.lang.String"/>
+      <form-property name="field1585" type="java.lang.String"/>
+      <form-property name="field1587" type="java.lang.String"/>
+      <form-property name="field1586" type="java.lang.String"/>
+      <form-property name="field1584" type="java.lang.String"/>
+      <form-property name="field1722" type="java.lang.String"/>
+      <form-property name="field1724" type="java.lang.String"/>
+      <form-property name="field1726" type="java.lang.String"/>
+      <form-property name="field1728" type="java.lang.String"/>
+      <form-property name="field1723" type="java.lang.String"/>
+      <form-property name="field1725" type="java.lang.String"/>
+      <form-property name="field1727" type="java.lang.String"/>
+      <form-property name="field1729" type="java.lang.String"/>
+      <form-property name="field110" type="java.lang.String"/>
+      <form-property name="field111" type="java.lang.String"/>
+      <form-property name="field112" type="java.lang.String"/>
+      <form-property name="field113" type="java.lang.String"/>
+      <form-property name="field114" type="java.lang.String"/>
+      <form-property name="field107" type="java.lang.String"/>
+    </form-bean>
+    
+  </form-beans>
+  <global-exceptions/>
+  <global-forwards>
+    <forward name="success" path="/WEB-INF/pages/success.jsp"/>
+	         <forward name="patientChart" path="/patientChart.do"/>
+	         <forward name="patientHome" path="/patientHome.do"/>
+	         <forward name="patientAnte" path="/patientAnte.do"/>
+	         <forward name="patientSafeMother" path="/patientSafeMother.do"/>
+	         <forward name="previousPregnancies" path="/previousPregnancies.do"/>
+	         <forward name="error" path="/WEB-INF/pages/error.jsp"/>
+	         <forward name="home" path="/home.do"/>
+	         <forward name="noPermissions" path="/noPermissions.do"/>
+	         <forward name="search" path="/search.do"/>
+	         <forward name="setup" path="/setup.do"/>
+	         <forward name="patientCare" path="/patientCare.do"/>
+	         <forward name="reports" path="/reports.do"/>
+	         <forward name="menu" path="/menuList.do"/>
+	         <forward name="admin/home" path="/admin/home.do"/>
+	         <forward name="admin/formList" path="/admin/formList.do"/>
+	         <forward name="admin/reportList" path="/admin/reportList.do"/>
+	         <forward name="locked" path="/WEB-INF/pages/locked.jsp"/>
+	         <forward name="notlocked" path="/WEB-INF/pages/notlocked.jsp"/>
+	         <forward name="history" path="/history.do"/>
+	         <forward name="nextForm" path="/nextForm.do"/>
+	         <forward name="problem" path="/problem.do"/>
+	         <forward name="demographics" path="/demographics.do"/>
+	         <forward name="patientTask" path="/patientTask.do"/>
+	         <forward name="versionInfo" path="/versionInfo.do"/>
+	         <forward name="partograph" path="/partograph.do"/>
+	         <forward name="createReferral" path="/form83/new.do"/>
+	         <forward name="referrals" path="/referrals.do"/>
+	         <forward name="pregnancyDating" path="/pregnancyDating.do"/>
+        <forward name="archive" path="/archive.do"/>
+  </global-forwards>
+  <action-mappings>
+    <!-- user space -->
+    <action path="/home" type="org.cidrz.webapp.dynasite.struts.action.HomeAction">
+      <forward name="success" path="/WEB-INF/pages/index.jsp"/>
+    </action>
+
+    <action path="/form4/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form4" validate="false" parameter="4" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form4/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form4" validate="true" input="/form4/new.do" parameter="4" scope="request"/>
+
+    <action path="/form4/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form4" validate="false" parameter="4" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    
+  </action-mappings>
+  <message-resources parameter="resources.application"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/bar.xml"/>
+  </plug-in>
+</struts-config>

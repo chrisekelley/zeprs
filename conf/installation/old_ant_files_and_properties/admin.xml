@@ -1,0 +1,66 @@
+<!--
+  ~    Copyright 2003, 2004, 2005, 2006 Research Triangle Institute
+  ~
+  ~    Licensed under the Apache License, Version 2.0 (the "License");
+  ~    you may not use this file except in compliance with the License.
+  ~    You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  -->
+
+    <target name="load-remote-db">
+        <property name="buildDate" value="now"/>
+        <property file="version.properties"/>
+        <echo message="Backing up remote database"/>
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysqldump -u rti -p${demoDbPassword} -h ${demoIp} --opt zeprs > ${warArchiveDir}\sql-backups\demo_backup${buildDate}.sql"/>
+        </exec>
+        <!--<echo message="Updating remote database"/>
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u rti -pL9ADILnm -h 66.199.240.18 zeprs << ${conf.template.dir}\sql\zeprs_install.sql" />
+        </exec>-->
+    </target>
+
+  <taskdef name="install" classname="org.apache.catalina.ant.InstallTask"/>
+  <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask"/>
+  <taskdef name="list" classname="org.apache.catalina.ant.ListTask"/>
+  <taskdef name="reload" classname="org.apache.catalina.ant.ReloadTask"/>
+  <taskdef name="resources" classname="org.apache.catalina.ant.ResourcesTask"/>
+  <taskdef name="roles" classname="org.apache.catalina.ant.RolesTask"/>
+  <taskdef name="start" classname="org.apache.catalina.ant.StartTask"/>
+  <taskdef name="stop" classname="org.apache.catalina.ant.StopTask"/>
+  <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"/>
+
+    <target name="install-remote-app" description="Install web application on remote server">
+        <install url="${remote-url}" username="${remote-username}" password="${remote-password}" path="/zeprs" war="${zeprs.warfile}"/>
+    </target>
+
+    <target name="deploy-remote-app" description="Deploy web application on remote server">
+        <deploy url="${remote-url}" username="${remote-username}" password="${remote-password}" path="/zeprs" war="${zeprs.warfile}"/>
+    </target>
+
+    <target name="start-remote-app" description="Start web application">
+        <start url="${remote-url}" username="${remote-username}" password="${remote-password}" path="/zeprs" failonerror="false" error="erroLog.txt" append="true"/>
+    </target>
+
+    <target name="stop-remote-app" description="Stop web application">
+        <stop url="${remote-url}" username="${remote-username}" password="${remote-password}" path="/zeprs" failonerror="false" error="erroLog.txt"/>
+    </target>
+
+    <target name="reload-remote-app" description="Reload web application">
+        <reload url="${remote-url}" username="${remote-username}" password="${remote-password}" path="/zeprs"/>
+    </target>
+
+    <target name="undeploy-remote-app" description="Undeploy web application">
+        <undeploy url="${remote-url}" username="${remote-username}" password="${remote-password}" path="/zeprs"/>
+    </target>
+
+    <target name="update-remote-site">
+        <scp file="${zeprs.warfile}" todir="${scpUpdate}" trust="yes" />
+        <scp file="${conf.template.dir}\sql\zeprs_install.sql" todir="${scpUpdate}" trust="yes" />
+    </target>
+
+    <target name="run-remote-script" depends="stop-remote-app">
+        <sshexec host="${sshHost}" username="${sshUsername}" password="${sshPassword}" command="${sshCommand}" trust="yes" />
+        <antcall target="start-remote-app"/>
+    </target>

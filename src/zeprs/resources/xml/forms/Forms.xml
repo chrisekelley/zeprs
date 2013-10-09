@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<list>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>patientRegistration</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>prevPregnancies</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>labResults</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>latentFirstStageLabour</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>newbornEval</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>postnatalMaternalVisit</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>probPostnatalInfant</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>uthNeonatalRecord</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>infantPhysicalExam</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>stillbirthDeliveryRecord</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>anteUltrasoundEval</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>currentMedicine</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>antesum</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>probLabor</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>deliverySum</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>maternalDischarge</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>medSurgHist</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>pregnancyEnd</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>pregnancyBegin</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>updateEGA</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>postnatalHosp</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>postUltrasound</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>nicuSummary</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>initialVisit</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>probPostnatal</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>partographStatus</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>routineAnte</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>puerperium</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>pregnancyDating</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>createReferral</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>infantDischargeSummary</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>postnatalInfant</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>labTest</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>drugIntervention</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>arvRegimen</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>rpr</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>smCounselingVisit</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>safeMotherhoodCare</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>ultrasoundFetusEval</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>referral_reasons</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>hemotology</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>chemistry</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>liverfunction</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>urinalysis</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>newbornrecord</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+</list>

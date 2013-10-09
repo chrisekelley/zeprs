@@ -1,0 +1,493 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+
+    <description>ZEPRS Tag Library</description>
+    <tlib-version>1.0</tlib-version>
+
+    <short-name>zeprsTagLib</short-name>
+
+    <tag-file>
+        <name>form2</name>
+        <path>/WEB-INF/tags/form2.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>medicine_form</name>
+        <path>/WEB-INF/tags/medicine_form.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>menu</name>
+        <path>/WEB-INF/tags/menu.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>rule_list</name>
+        <path>/WEB-INF/tags/rule_list.tag</path>
+    </tag-file>
+        <tag-file>
+        <name>tabs</name>
+        <path>/WEB-INF/tags/tabs.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>report_list</name>
+        <path>/WEB-INF/tags/report_list.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>form</name>
+        <path>/WEB-INF/tags/form.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>radio</name>
+        <path>/WEB-INF/tags/radio.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>radio_vert</name>
+        <path>/WEB-INF/tags/radio_vert.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>radio_no_label</name>
+        <path>/WEB-INF/tags/radio_no_label.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>checkbox</name>
+        <path>/WEB-INF/tags/checkbox.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>checkbox_dwr</name>
+        <path>/WEB-INF/tags/checkbox_dwr.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>checkbox_only</name>
+        <path>/WEB-INF/tags/checkbox_only.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>select</name>
+        <path>/WEB-INF/tags/select.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>select-only</name>
+        <path>/WEB-INF/tags/select-only.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>select-dwr</name>
+        <path>/WEB-INF/tags/select-dwr.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>select-dwr-label</name>
+        <path>/WEB-INF/tags/select-dwr-label.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>year</name>
+        <path>/WEB-INF/tags/year.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>year_no_label</name>
+        <path>/WEB-INF/tags/year_no_label.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>day</name>
+        <path>/WEB-INF/tags/day.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>month</name>
+        <path>/WEB-INF/tags/month.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>month_no_label</name>
+        <path>/WEB-INF/tags/month_no_label.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>yesno</name>
+        <path>/WEB-INF/tags/yesno.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>yesno_nolabel</name>
+        <path>/WEB-INF/tags/yesno_nolabel.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>yesno_br</name>
+        <path>/WEB-INF/tags/yesno_br.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>yesno_br_each</name>
+        <path>/WEB-INF/tags/yesno_br_each.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>yesno_no_na</name>
+        <path>/WEB-INF/tags/yesno_no_na.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>yesno_dwr</name>
+        <path>/WEB-INF/tags/yesno_dwr.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>yesno_only</name>
+        <path>/WEB-INF/tags/yesno_only.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>yesno_preview</name>
+        <path>/WEB-INF/tags/yesno_preview.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>whostage</name>
+        <path>/WEB-INF/tags/whostage.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>sex</name>
+        <path>/WEB-INF/tags/sex.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>adherence</name>
+        <path>/WEB-INF/tags/adherence.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date</name>
+        <path>/WEB-INF/tags/date.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>nrc</name>
+        <path>/WEB-INF/tags/nrc.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>hidden</name>
+        <path>/WEB-INF/tags/hidden.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>hidden_dwr</name>
+        <path>/WEB-INF/tags/hidden_dwr.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>spacer</name>
+        <path>/WEB-INF/tags/spacer.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>textarea</name>
+        <path>/WEB-INF/tags/textarea.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>textarea_dwr</name>
+        <path>/WEB-INF/tags/textarea_dwr.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>patientid</name>
+        <path>/WEB-INF/tags/patientid.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>patientid_districts</name>
+        <path>/WEB-INF/tags/patientid_districts.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>patientid_sites</name>
+        <path>/WEB-INF/tags/patientid_sites.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>input</name>
+        <path>/WEB-INF/tags/input.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>text-only</name>
+        <path>/WEB-INF/tags/text-only.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>text-dwr</name>
+        <path>/WEB-INF/tags/text-dwr.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>re_auth</name>
+        <path>/WEB-INF/tags/re_auth.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit</name>
+        <path>/WEB-INF/tags/date_visit.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_hidden</name>
+        <path>/WEB-INF/tags/date_visit_hidden.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_no_form</name>
+        <path>/WEB-INF/tags/date_visit_no_form.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_no_form_no_label</name>
+        <path>/WEB-INF/tags/date_visit_no_form_no_label.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_drug</name>
+        <path>/WEB-INF/tags/date_visit_drug.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_initial</name>
+        <path>/WEB-INF/tags/date_visit_initial.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_problem</name>
+        <path>/WEB-INF/tags/date_visit_problem.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_dwr</name>
+        <path>/WEB-INF/tags/date_visit_dwr.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_dwr_label</name>
+        <path>/WEB-INF/tags/date_visit_dwr_label.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_empty</name>
+        <path>/WEB-INF/tags/date_visit_empty.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>date_visit_only</name>
+        <path>/WEB-INF/tags/date_visit_only.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>display_header</name>
+        <path>/WEB-INF/tags/display_header.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>display_subheader</name>
+        <path>/WEB-INF/tags/display_subheader.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>display_subheader_row</name>
+        <path>/WEB-INF/tags/display_subheader_row.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>display_collapsing_add_item_link</name>
+        <path>/WEB-INF/tags/display_collapsing_add_item_link.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>display_collapsing_header</name>
+        <path>/WEB-INF/tags/display_collapsing_header.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>infotext</name>
+        <path>/WEB-INF/tags/infotext.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>sites</name>
+        <path>/WEB-INF/tags/sites.tag</path>
+    </tag-file>
+
+     <tag-file>
+        <name>sites_not_selected</name>
+        <path>/WEB-INF/tags/sites_not_selected.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>drug_regimen_list</name>
+        <path>/WEB-INF/tags/drug_regimen_list.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>drug_regimen_list_radio</name>
+        <path>/WEB-INF/tags/drug_regimen_list_radio.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>drug_regimen_paeds_list_radio</name>
+        <path>/WEB-INF/tags/drug_regimen_paeds_list_radio.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>district</name>
+        <path>/WEB-INF/tags/district.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>other_pharm_dropdown</name>
+        <path>/WEB-INF/tags/other_pharm_dropdown.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>other_pharm_paeds_dropdown</name>
+        <path>/WEB-INF/tags/other_pharm_paeds_dropdown.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>ega</name>
+        <path>/WEB-INF/tags/ega.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>ega_dwr</name>
+        <path>/WEB-INF/tags/ega_dwr.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>ega_only</name>
+        <path>/WEB-INF/tags/ega_only.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>ega_pregnancyDating</name>
+        <path>/WEB-INF/tags/ega_pregnancyDating.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>ega_weeks_only</name>
+        <path>/WEB-INF/tags/ega_weeks_only.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>time</name>
+        <path>/WEB-INF/tags/time.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>time_no_label</name>
+        <path>/WEB-INF/tags/time_no_label.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>position</name>
+        <path>/WEB-INF/tags/position.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>position-dropdown</name>
+        <path>/WEB-INF/tags/position-dropdown.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>position-dropdown-dwr</name>
+        <path>/WEB-INF/tags/position-dropdown-dwr.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>currentMedicine</name>
+        <path>/WEB-INF/tags/current_medicine.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>currentImmunizations</name>
+        <path>/WEB-INF/tags/current_immunizations.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>multiselect</name>
+        <path>/WEB-INF/tags/multiselect.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>multiselect_enum</name>
+        <path>/WEB-INF/tags/multiselect_enum.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>multiselect_enum_input</name>
+        <path>/WEB-INF/tags/multiselect_enum.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>multiselect_item</name>
+        <path>/WEB-INF/tags/multiselect_item.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>apgar</name>
+        <path>/WEB-INF/tags/apgar.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>newborn</name>
+        <path>/WEB-INF/tags/newborn.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>lab_results</name>
+        <path>/WEB-INF/tags/lab_results.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>drug_interventions</name>
+        <path>/WEB-INF/tags/drug_interventions.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>fetus</name>
+        <path>/WEB-INF/tags/fetus.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>referral</name>
+        <path>/WEB-INF/tags/referral.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>prevPregnanciesLink</name>
+        <path>/WEB-INF/tags/prevPregnanciesLink.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>uterus_size</name>
+        <path>/WEB-INF/tags/uterus_size.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>firm</name>
+        <path>/WEB-INF/tags/firm.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>fundal_height</name>
+        <path>/WEB-INF/tags/fundal_height.tag</path>
+    </tag-file>
+</taglib>
+

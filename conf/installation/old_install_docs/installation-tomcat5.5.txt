@@ -1,0 +1,78 @@
+Thank you for your interest in ZEPRS. ZEPRS is free and open source. I'm
+in the process of putting together an installer for ZEPRS. In a nutshell,
+here are the technical requirements:
+
+* Java 1.5
+* MySQL 5
+* Apache tomcat 5.5
+
+
+There are three main components to the app:
+
+* ZEPRS war - the tomcat web app archive.
+* MySQL databases:
+        * zeprs - patient data
+        * admin - administrative database - for forms/fields and
+other metadata
+        * zeprsdemo - for testing of zeprs
+* tomcat libs - zeprs-related libs - go in tomcat/common/libs
+directory
+
+Currently the system assumes that there is a mysql database on the same
+machine as the app. This is certainly configurable however. I'll provide
+more detailed instructions once I sort out the distro.
+
+Here are the files in the archive with install instructions:
+(Note - when I refer to *tomcat*, that is the tomcat installation dir, such as C:\program files\apache software foundation\Tomcat 5.5\)
+
+zeprs.war - place in your tomcat distro’s webapps dir.
+
+Unzip the file archive.zip in the webapps dir.
+copy archive.xml to tomcat\conf\Catalina\localhost
+
+Note the following tomcat dirs - endorsed, lib, and classes
+
+Copy libs\mysql-connector-java-3.1.10-bin.jar  *tomcat*\common\endorsed
+
+Copy libs\log4j-1.2.13.jar  *tomcat*\common\lib
+Copy libs\commons-logging.jar  *tomcat*\common\lib
+Copy libs\commons-el.jar  *tomcat*common\lib
+
+Copy libs\log4j.properties  *tomcat*\common\classes
+
+I'm unable to script the installation of the databases because I don't know the root password on the system you are installing. 
+I'll automate this in the future.
+
+To install the databases, enter the command line and cd to this install dir.
+
+Create the admin, zeprs, zeprsdemo databases by running the following command:
+mysql -u root -p mysql < create-dbs.sql
+It will prompt you for the root password.
+
+admin_install.sql - use this to populate the admin database. On the command line enter the following:
+mysql -u root -p admin < admin_install.sql
+
+zeprs_install.sql - use this to populate the zeprs database and the zeprsdemo database. 
+The zeprsdemo database is used for testing and training personnel on a "live" system - data they enter won’t appear in reports. 
+
+On the command line enter the following:
+mysql -u root -p zeprs < zeprs_install.sql
+
+mysql -u root -p zeprsdemo < zeprs_install.sql
+
+The next two databases are easier to create - the scripts create the databases:
+mysql -u root -p mysql < mail_install.sql
+mysql -u root -p mysql < userdata_install.sql
+
+Those two databases - mail and userdata - are used for user credentials. 
+
+Finally, create privs in mysql for the new databases so that the web application has access to them:
+
+mysql -u root -p mysql< db_permissions.sql
+
+Assuming you made it this far, start tomcat. Watch the log in logs/catalina.out. If all looks ok, try to login.
+
+To login as administrator - with full privs, use the zepadmin/zepadmin11 username/password.
+
+I have not tested this yet, so chances are, it may not work. Any issues will likely be relating to permissions. 
+I’ll certainly help you clear these up. 

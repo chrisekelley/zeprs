@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<org.cidrz.webapp.dynasite.valueobject.Form>
+  <id>75</id>
+  <name>postUltrasound</name>
+  <label>Postnatal Ultrasound Evaluation</label>
+  <requireReauth>true</requireReauth>
+  <requirePatient>true</requirePatient>
+  <enabled>true</enabled>
+  <ruleDefinitions/>
+  <flow>
+    <id>8</id>
+    <name>Ultrasound</name>
+    <flowOrder>7</flowOrder>
+    <forms class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.FlowOrderComparator"/>
+    </forms>
+  </flow>
+  <flowId>8</flowId>
+  <flowOrder>1</flowOrder>
+  <formType>
+    <id>1</id>
+    <name>Pregnancy (Mother only)</name>
+  </formType>
+  <formTypeId>1</formTypeId>
+  <pageItems class="tree-set">
+    <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>2896</id>
+      <form__field>
+        <id>1427</id>
+        <label>BEGIN TABLE</label>
+        <type>Display</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>true</shared>
+        <starSchemaName></starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>1427</formFieldId>
+      <displayOrder>0</displayOrder>
+      <inputType>display-tbl-begin</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>2</cols>
+      <visible>true</visible>
+      <formId>75</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>2894</id>
+      <form__field>
+        <id>1212</id>
+        <label>Date of Ultrasound</label>
+        <type>Date</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>true</shared>
+        <starSchemaName>date_of_ultrasound_1212</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>1212</formFieldId>
+      <displayOrder>1</displayOrder>
+      <inputType>text</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <formId>75</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>2893</id>
+      <form__field>
+        <id>1473</id>
+        <label>Diagnosis (General Impression)</label>
+        <type>Enum</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions>
+          <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
+            <id>94</id>
+            <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
+            <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
+            <fieldId>1473</fieldId>
+            <enabled>true</enabled>
+            <ruleParams/>
+            <outcomeParams/>
+            <message>Abnormalities detected in ultrasound.</message>
+            <operand>1</operand>
+            <operator>gt</operator>
+            <allPregnancies>false</allPregnancies>
+          </org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
+        </ruleDefinitions>
+        <enumerations class="tree-set">
+          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>2749</id>
+            <fieldId>1473</fieldId>
+            <enumeration>No abnormalities found</enumeration>
+            <numericValue>1</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>No abnormalities found (1)</concatEnumNumeric>
+            <displayOrder>2147483647</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>2750</id>
+            <fieldId>1473</fieldId>
+            <enumeration>Fibroid Uterus</enumeration>
+            <numericValue>2</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Fibroid Uterus (2)</concatEnumNumeric>
+            <displayOrder>2147483647</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>2751</id>
+            <fieldId>1473</fieldId>
+            <enumeration>Ascites</enumeration>
+            <numericValue>3</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Ascites (3)</concatEnumNumeric>
+            <displayOrder>2147483647</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>2752</id>
+            <fieldId>1473</fieldId>
+            <enumeration>Retained Products Of Conception</enumeration>
+            <numericValue>4</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Retained Products Of Conception (4)</concatEnumNumeric>
+            <displayOrder>2147483647</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>2753</id>
+            <fieldId>1473</fieldId>
+            <enumeration>Abnormalities Found, Describe</enumeration>
+            <numericValue>5</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Abnormalities Found, Describe (5)</concatEnumNumeric>
+            <displayOrder>2147483647</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+        </enumerations>
+        <shared>true</shared>
+        <starSchemaName>diagnosis_ultrasound</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>1473</formFieldId>
+      <displayOrder>2</displayOrder>
+      <inputType>select</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>2753</visibleEnumIdTrigger1>
+      <visibleDependencies1>1474</visibleDependencies1>
+      <visibleEnumIdTrigger2>-1</visibleEnumIdTrigger2>
+      <selectedEnum>-1</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>75</formId>
+      <colspan>0</colspan>
+      <dempMap1>
+        <entry>
+          <string>1474</string>
+          <long>2893</long>
+        </entry>
+      </dempMap1>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>2895</id>
+      <form__field>
+        <id>1474</id>
+        <label>Describe Abnormalities/Comment on Ultrasound</label>
+        <type>Text</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>true</shared>
+        <starSchemaName>describe_abnormalities</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>1474</formFieldId>
+      <displayOrder>3</displayOrder>
+      <inputType>textarea</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>false</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>75</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>2897</id>
+      <form__field>
+        <id>1428</id>
+        <label>END TABLE</label>
+        <type>Display</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>true</shared>
+        <starSchemaName></starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+      </form__field>
+      <formFieldId>1428</formFieldId>
+      <displayOrder>4</displayOrder>
+      <inputType>display-tbl-end</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>1</cols>
+      <visible>true</visible>
+      <formId>75</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+  </pageItems>
+  <formfields class="tree-set">
+    <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+  </formfields>
+  <submissions>0</submissions>
+  <maxSubmissions>100</maxSubmissions>
+</org.cidrz.webapp.dynasite.valueobject.Form>

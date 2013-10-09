@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_urinalysis_protein" name="org.cidrz.project.zeprs.valueobject.partograph.UrinalysisProtein">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="urinalysisProtein1" length="4" access="method" column="urinalysisProtein_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="urinalysisProtein2" length="4" access="method" column="urinalysisProtein_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="urinalysisProtein3" length="4" access="method" column="urinalysisProtein_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="urinalysisProtein4" length="4" access="method" column="urinalysisProtein_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="urinalysisProtein5" length="4" access="method" column="urinalysisProtein_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="urinalysisProtein6" length="4" access="method" column="urinalysisProtein_6"/>
+    <property name="timeObservation7" access="method" column="time_7"/>
+    <property name="urinalysisProtein7" length="4" access="method" column="urinalysisProtein_7"/>
+    <property name="timeObservation8" access="method" column="time_8"/>
+    <property name="urinalysisProtein8" length="4" access="method" column="urinalysisProtein_8"/>
+    <property name="timeObservation9" access="method" column="time_9"/>
+    <property name="urinalysisProtein9" length="4" access="method" column="urinalysisProtein_9"/>
+    <property name="timeObservation10" access="method" column="time_10"/>
+    <property name="urinalysisProtein10" length="4" access="method" column="urinalysisProtein_10"/>
+    <property name="timeObservation11" access="method" column="time_11"/>
+    <property name="urinalysisProtein11" length="4" access="method" column="urinalysisProtein_11"/>
+    <property name="timeObservation12" access="method" column="time_12"/>
+    <property name="urinalysisProtein12" length="4" access="method" column="urinalysisProtein_12"/>
+    <property name="timeObservation13" access="method" column="time_13"/>
+    <property name="urinalysisProtein13" length="4" access="method" column="urinalysisProtein_13"/>
+    <property name="timeObservation14" access="method" column="time_14"/>
+    <property name="urinalysisProtein14" length="4" access="method" column="urinalysisProtein_14"/>
+    <property name="timeObservation15" access="method" column="time_15"/>
+    <property name="urinalysisProtein15" length="4" access="method" column="urinalysisProtein_15"/>
+    <property name="timeObservation16" access="method" column="time_16"/>
+    <property name="urinalysisProtein16" length="4" access="method" column="urinalysisProtein_16"/>
+    <property name="timeObservation17" access="method" column="time_17"/>
+    <property name="urinalysisProtein17" length="4" access="method" column="urinalysisProtein_17"/>
+    <property name="timeObservation18" access="method" column="time_18"/>
+    <property name="urinalysisProtein18" length="4" access="method" column="urinalysisProtein_18"/>
+    <property name="timeObservation19" access="method" column="time_19"/>
+    <property name="urinalysisProtein19" length="4" access="method" column="urinalysisProtein_19"/>
+    <property name="timeObservation20" access="method" column="time_20"/>
+    <property name="urinalysisProtein20" length="4" access="method" column="urinalysisProtein_20"/>
+    <property name="timeObservation21" access="method" column="time_21"/>
+    <property name="urinalysisProtein21" length="4" access="method" column="urinalysisProtein_21"/>
+    <property name="timeObservation22" access="method" column="time_22"/>
+    <property name="urinalysisProtein22" length="4" access="method" column="urinalysisProtein_22"/>
+    <property name="timeObservation23" access="method" column="time_23"/>
+    <property name="urinalysisProtein23" length="4" access="method" column="urinalysisProtein_23"/>
+    <property name="timeObservation24" access="method" column="time_24"/>
+    <property name="urinalysisProtein24" length="4" access="method" column="urinalysisProtein_24"/>
+  </class>
+</hibernate-mapping>

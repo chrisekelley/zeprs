@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Application Server 8.1 Servlet 2.4//EN" "http://www.sun.com/software/appserver/dtds/sun-web-app_2_4-1.dtd">
+<web-app id="fileHandler" version="2.4"
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <servlet>
+        <display-name>File handler</display-name>
+        <servlet-name>fileHandler</servlet-name>
+        <servlet-class>javax.servlet.http.HttpServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>fileHandler</servlet-name>
+        <url-pattern>/patients</url-pattern>
+    </servlet-mapping>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>fileHandler</realm-name>
+    </login-config>
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+   <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>fileHandler</web-resource-name>
+            <url-pattern>*.xml</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-role>
+        <role-name>CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS</role-name>
+    </security-role>
+    <security-role>
+        <role-name>ALTER_PROGRAMS_AND_SCREEN_APPEARANCE</role-name>
+    </security-role>
+    <security-role>
+        <role-name>VIEW_INDIVIDUAL_PATIENT_RECORDS</role-name>
+    </security-role>
+    <security-role>
+        <role-name>VIEW_SELECTED_REPORTS_AND_VIEW_STATISTICAL_SUMMARIES</role-name>
+    </security-role>
+    <security-role>
+        <role-name>CREATE_NEW_PATIENTS_AND_SEARCH</role-name>
+    </security-role>
+    <security-role>
+        <role-name>CREATE_MEDICAL_STAFF_IDS_AND_PASSWORDS_FOR_MEDICAL_STAFF</role-name>
+    </security-role>
+        <security-role>
+        <role-name>DELETE_ARCHIVE_PATIENT_RECORDS</role-name>
+    </security-role>
+
+
+
+</web-app>

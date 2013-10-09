@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<org.cidrz.webapp.dynasite.valueobject.Publisher>
+  <siteId>1</siteId>
+  <site>
+    <id>1</id>
+    <siteAlphaId>332</siteAlphaId>
+    <districtId>5040</districtId>
+    <abbreviation>AIR</abbreviation>
+    <name>Airport</name>
+    <siteTypeId>1</siteTypeId>
+  </site>
+</org.cidrz.webapp.dynasite.valueobject.Publisher>

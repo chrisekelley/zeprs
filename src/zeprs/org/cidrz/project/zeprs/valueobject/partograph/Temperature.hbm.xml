@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_temperature" name="org.cidrz.project.zeprs.valueobject.partograph.Temperature">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="temperature1" access="method" column="temperature_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="temperature2" access="method" column="temperature_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="temperature3" access="method" column="temperature_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="temperature4" access="method" column="temperature_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="temperature5" access="method" column="temperature_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="temperature6" access="method" column="temperature_6"/>
+    <property name="timeObservation7" access="method" column="time_7"/>
+    <property name="temperature7" access="method" column="temperature_7"/>
+    <property name="timeObservation8" access="method" column="time_8"/>
+    <property name="temperature8" access="method" column="temperature_8"/>
+    <property name="timeObservation9" access="method" column="time_9"/>
+    <property name="temperature9" access="method" column="temperature_9"/>
+    <property name="timeObservation10" access="method" column="time_10"/>
+    <property name="temperature10" access="method" column="temperature_10"/>
+    <property name="timeObservation11" access="method" column="time_11"/>
+    <property name="temperature11" access="method" column="temperature_11"/>
+    <property name="timeObservation12" access="method" column="time_12"/>
+    <property name="temperature12" access="method" column="temperature_12"/>
+    <property name="timeObservation13" access="method" column="time_13"/>
+    <property name="temperature13" access="method" column="temperature_13"/>
+    <property name="timeObservation14" access="method" column="time_14"/>
+    <property name="temperature14" access="method" column="temperature_14"/>
+    <property name="timeObservation15" access="method" column="time_15"/>
+    <property name="temperature15" access="method" column="temperature_15"/>
+    <property name="timeObservation16" access="method" column="time_16"/>
+    <property name="temperature16" access="method" column="temperature_16"/>
+    <property name="timeObservation17" access="method" column="time_17"/>
+    <property name="temperature17" access="method" column="temperature_17"/>
+    <property name="timeObservation18" access="method" column="time_18"/>
+    <property name="temperature18" access="method" column="temperature_18"/>
+    <property name="timeObservation19" access="method" column="time_19"/>
+    <property name="temperature19" access="method" column="temperature_19"/>
+    <property name="timeObservation20" access="method" column="time_20"/>
+    <property name="temperature20" access="method" column="temperature_20"/>
+    <property name="timeObservation21" access="method" column="time_21"/>
+    <property name="temperature21" access="method" column="temperature_21"/>
+    <property name="timeObservation22" access="method" column="time_22"/>
+    <property name="temperature22" access="method" column="temperature_22"/>
+    <property name="timeObservation23" access="method" column="time_23"/>
+    <property name="temperature23" access="method" column="temperature_23"/>
+    <property name="timeObservation24" access="method" column="time_24"/>
+    <property name="temperature24" access="method" column="temperature_24"/>
+  </class>
+</hibernate-mapping>

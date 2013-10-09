@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<list>
+  <org.cidrz.project.zeprs.valueobject.Immunization>
+    <id>1</id>
+    <name>BCG</name>
+  </org.cidrz.project.zeprs.valueobject.Immunization>
+  <org.cidrz.project.zeprs.valueobject.Immunization>
+    <id>2</id>
+    <name>OPV0</name>
+  </org.cidrz.project.zeprs.valueobject.Immunization>
+  <org.cidrz.project.zeprs.valueobject.Immunization>
+    <id>3</id>
+    <name>OV0/TT Initial Dose</name>
+  </org.cidrz.project.zeprs.valueobject.Immunization>
+  <org.cidrz.project.zeprs.valueobject.Immunization>
+    <id>4</id>
+    <name>Hepatitis B Vacine</name>
+  </org.cidrz.project.zeprs.valueobject.Immunization>
+  <org.cidrz.project.zeprs.valueobject.Immunization>
+    <id>5</id>
+    <name>Nevirapine Initial Dose</name>
+  </org.cidrz.project.zeprs.valueobject.Immunization>
+  <org.cidrz.project.zeprs.valueobject.Immunization>
+    <id>6</id>
+    <name>Co-Trimoxazole</name>
+  </org.cidrz.project.zeprs.valueobject.Immunization>
+</list>

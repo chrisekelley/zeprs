@@ -1,0 +1,663 @@
+<project name="zeprs" default="dist-war-zip" basedir=".">
+
+    <!-- first, see if there are local/developer (non-CVS) properties available -->
+    <property file="local.properties"/>
+
+    <!-- then fill in anything not already set with the project's properties. Local takes precedence -->
+    <property file="build.properties"/>
+
+    <!-- Project Directories-->
+
+    <path id="servlet.libs">
+        <fileset dir="${tomcat.lib.dir}">
+            <include name="jsp-api.jar"/>
+            <include name="servlet-api.jar"/>
+        </fileset>
+    </path>
+
+    <path id="tomcat-realm.classpath">
+        <fileset dir="${tomcat.lib.dir}">
+            <include name="catalina.jar"/>
+            <include name="catalina-optional.jar"/>
+        </fileset>
+        <fileset dir="${tomcat.lib.dir}">
+            <include name="jmx.jar"/>
+        </fileset>
+    </path>
+
+    <fileset id="zeprs.web.libs" dir="${lib.dir}">
+        <include name="*/*.jar"/>
+    </fileset>
+
+    <!--
+      * Declare paths for java classpath
+    -->
+
+    <!-- JDK Classpath -->
+    <path id="jdk.classpath">
+        <fileset dir="${jdk.jre.lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+    <!-- JDK Classpath -->
+
+    <!-- Tomcat Classpath -->
+    <path id="tomcat.classpath">
+        <fileset dir="${tomcat.dir}/lib/">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    <!-- Tomcat Classpath -->
+
+
+    <path id="zeprs.classpath">
+        <fileset refid="zeprs.web.libs"/>
+    </path>
+
+    <!-- Complete Libraries -->
+    <path id="complete.classpath">
+        <path refid="jdk.classpath"/>
+        <path refid="tomcat.classpath"/>
+        <path refid="zeprs.classpath"/>
+    </path>
+    <!-- Complete Libraries -->
+
+
+
+    <target name="compile">
+        <antcall target="compile-zeprs"/>
+        <antcall target="compile-tomcat-realm"/>
+    </target>
+
+    <target name="compile-zeprs">
+       <tstamp>
+         <format property="TODAY_US" pattern="MM-dd-yyyy-HH:mm" locale="en_US" />
+       </tstamp>
+       <echo message="Timestamp: ${TODAY_US}"/>
+
+    	<antcall target="init"></antcall>
+    	<delete dir="${zeprs.web.classes}/org/cidrz"/>
+        <javac srcdir="${zeprs.src.dir}" destdir="${zeprs.web.classes}" verbose="yes" debug="true" debuglevel="lines,vars,source">
+            <classpath refid="zeprs.classpath"/>
+            <classpath refid="servlet.libs"/>
+            <classpath>
+                <pathelement location="${deploy.dir}/WEB-INF/classes"/>
+                <fileset dir="${deploy.dir}/WEB-INF/lib">
+                    <include name="*.jar"/>
+                </fileset>
+                <fileset dir="${tomcat.dir}/lib">
+                    <include name="*.jar"/>
+                </fileset>
+                <fileset dir="${tomcat.dir}/bin">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="compile-tomcat-realm" depends="init">
+        <javac srcdir="${tomcat-realm.src.dir}" destdir="${tomcat-realm.classes.dir}" debug="true" debuglevel="lines,vars,source">
+            <classpath refid="tomcat-realm.classpath"/>
+        </javac>
+    </target>
+
+    <!-- Used in building distro-->
+    <target name="hibGenXdoclet2-all">
+       <echo message="xdoclet.lib.dir: ${xdoclet.lib.dir}"/>
+       <path id="xdoclet.task.classpath">
+           <pathelement location="${xdoclet.plugin.dir}/xdoclet-plugin-hibernate-1.0.3.jar"/>
+           <!-- Add the xdoclet2 plugins jar here -->
+           <pathelement location="${xdoclet.lib.dir}/xdoclet-2.0.4.jar"/>
+
+           <!-- xdoclet2 runtime dependencies -->
+           <pathelement location="${xdoclet.lib.dir}/generama-1.2.1.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/picocontainer-1.0.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/nanocontainer-1.0-beta-3.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/nanocontainer-ant-1.0-beta-3.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/qdox-20051211.114207.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/velocity-1.4.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-collections-3.1.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-jelly-20050813.225330.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-jelly-tags-define-1.0.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-logging-1.0.4.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/dom4j-1.6.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-beanutils-1.7.0.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-jexl-1.0.jar"/>
+       	   <pathelement location="${xdoclet.lib.dir}/jaxen-1.1-beta-4.jar"/>
+       </path>
+<!--
+       <delete file="${baseDir}/${zeprs.web.classes}/org/cidrz/project/zeprs/valueobject/EncounterData.hbm.xml"/>
+-->
+       <taskdef
+           name="xdoclet2"
+           classname="org.xdoclet.ant.XDocletTask"
+           classpathref="xdoclet.task.classpath"
+           />
+       <!-- defines the file handled by xdoclet2 -->
+       <echo message="hibGenXdoclet2-all - generating x-doclet tags from ${zeprs.src.dir}"/>
+       <echo message="hibGenXdoclet2-all - destination: ${zeprs.web.classes}"/>
+       <xdoclet2>
+           <fileset dir="${baseDir}\${zeprs.src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+
+           <!-- defines the processing of a plugin -->
+           <component
+             classname="org.xdoclet.plugin.hibernate.HibernateMappingPlugin"
+             destdir="${baseDir}/${zeprs.web.classes}"
+             version="3.0"
+             />
+       </xdoclet2>
+    	<antcall target="copy-parto-xml"/>
+   </target>
+
+     <!--This is for the version of zeprs for Lusaka deployment-->
+    <target name="dist-war-zip">
+        <antcall target="war"/>
+        <antcall target="create-deploy-db"/>
+        <property file="version.properties"/>
+        <property file="version.old.properties" prefix="old"/>
+        <copy file="${build.dir}/zeprs_${old.buildNum}.zip" tofile="${warArchiveDir}/zeprs_${old.buildNum}.zip" overwrite="false" failonerror="false"/>
+        <delete file="${build.dir}/zeprs_${old.buildNum}.zip"/>
+        <zip zipfile="${build.dir}/zeprs_${buildNum}.zip">
+            <zipfileset dir="${build.dir}" prefix="zeprs_${buildNum}">
+                <include name="${warfile}"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\sql" prefix="zeprs_${buildNum}">
+                <include name="admin_install.sql"/>
+                <include name="zeprs_install.sql"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\bin" prefix="zeprs_${buildNum}">
+                <include name="update_demo.sh"/>
+                <include name="update_lusaka.sh"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\doc" prefix="zeprs_${buildNum}">
+                <include name="license.txt"/>
+                <include name="contrib.txt"/>
+            </zipfileset>
+            <zipfileset dir="${zeprs.web.webinf}\pages" prefix="zeprs_${buildNum}">
+                <include name="version.html"/>
+            </zipfileset>
+            <!--<fileset dir="${build.conf.bin.dir}">
+                <include name="install.sh"/>
+            </fileset>-->
+        </zip>
+    </target>
+     <!--This is for the version of zeprs for Lusaka deployment-->
+    <target name="dist-no-war-zip">
+        <antcall target="create-deploy-db"/>
+        <property file="version.properties"/>
+        <property file="version.old.properties" prefix="old"/>
+        <copy file="${build.dir}/zeprs_${old.buildNum}.zip" tofile="${warArchiveDir}/zeprs_${old.buildNum}.zip" overwrite="false" failonerror="false"/>
+        <delete file="${build.dir}/zeprs_${old.buildNum}.zip"/>
+        <zip zipfile="${build.dir}/zeprs_${buildNum}.zip">
+            <zipfileset dir="${build.dir}" prefix="zeprs_${buildNum}">
+                <include name="${warfile}"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\sql" prefix="zeprs_${buildNum}">
+                <include name="admin_install.sql"/>
+                <include name="zeprs_install.sql"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\bin" prefix="zeprs_${buildNum}">
+                <include name="update_demo.sh"/>
+                <include name="update_lusaka.sh"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\doc" prefix="zeprs_${buildNum}">
+                <include name="license.txt"/>
+                <include name="contrib.txt"/>
+            </zipfileset>
+            <zipfileset dir="${zeprs.web.webinf}\pages" prefix="zeprs_${buildNum}">
+                <include name="version.html"/>
+            </zipfileset>
+        </zip>
+    </target>
+
+    <!--This is for the version of zeprs for Rimuhosting deployment-->
+   <target name="dist-rimu-zip" depends="war,create-deploy-db">
+       <property file="version.properties"/>
+       <property file="version.old.properties" prefix="old"/>
+       <copy file="${build.dir}/zeprs_${old.buildNum}.zip" tofile="${warArchiveDir}/zeprs_${old.buildNum}.zip" overwrite="false" failonerror="false"/>
+       <delete file="${build.dir}/zeprs_${old.buildNum}.zip"/>
+       <zip zipfile="${build.dir}/zeprs_${buildNum}.zip">
+           <zipfileset dir="${build.dir}" prefix="zeprs_${buildNum}">
+               <include name="${warfile}"/>
+           </zipfileset>
+           <zipfileset dir="${conf.template.dir}\sql" prefix="zeprs_${buildNum}">
+               <include name="admin_install.sql"/>
+               <include name="zeprs_install.sql"/>
+           </zipfileset>
+           <zipfileset dir="${conf.template.dir}\bin" prefix="zeprs_${buildNum}">
+               <include name="update_demo.sh"/>
+               <include name="update_lusaka.sh"/>
+           </zipfileset>
+           <zipfileset dir="${conf.template.dir}\doc" prefix="zeprs_${buildNum}">
+               <include name="license.txt"/>
+               <include name="contrib.txt"/>
+           </zipfileset>
+           <zipfileset dir="${zeprs.web.webinf}\pages" prefix="zeprs_${buildNum}">
+               <include name="version.html"/>
+           </zipfileset>
+       	   <zipfileset dir="${zeprs.src.dir}/org/cidrz" prefix="zeprs_${buildNum}/src" >
+       	   </zipfileset>
+
+       	<!--<copy todir="${deploy.dir}/WEB-INF/src/org/cidrz">
+       	            <fileset dir="${zeprs.src.dir}/org/cidrz"/>
+       	        </copy>-->
+
+           <!--<fileset dir="${build.conf.bin.dir}">
+               <include name="install.sh"/>
+           </fileset>-->
+       </zip>
+   </target>
+
+    <!--This is for the packaged version of zeprs-->
+    <target name="install-zip" depends="war,create-dbs">
+        <property file="version.properties"/>
+        <property file="version.old.properties" prefix="old"/>
+        <copy file="${build.dir}/zeprs_${old.buildNum}.zip" tofile="${warArchiveDir}/zeprs_${old.buildNum}.zip" overwrite="false" failonerror="false"/>
+        <copy file="${tomcat-realm.jar}" todir="${conf.template.dir}\libs\server\lib\" overwrite="true" failonerror="true"/>
+        <delete file="${build.dir}/zeprs_${old.buildNum}.zip"/>
+        <zip zipfile="${build.dir}/zeprs_${buildNum}.zip">
+            <zipfileset dir="${build.dir}" prefix="zeprs_${buildNum}">
+                <include name="${warfile}"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\sql" prefix="zeprs_${buildNum}">
+                <include name="install.sql"/>
+            </zipfileset>
+            <zipfileset dir="${docs.dir}" prefix="zeprs_${buildNum}/javadocs"/>
+            <zipfileset dir="${conf.template.dir}\doc" prefix="zeprs_${buildNum}">
+                <include name="readme.txt"/>
+                <include name="installation.txt"/>
+                <include name="license.txt"/>
+                <include name="contrib.txt"/>
+            </zipfileset>
+            <zipfileset dir="${zeprs.web.webinf}\pages" prefix="zeprs_${buildNum}">
+                <include name="version.html"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\libs" prefix="zeprs_${buildNum}">
+                 <include name="server/**/*"/>
+                 <include name="common/**/*"/>
+            </zipfileset>
+            <!--<fileset dir="${build.conf.bin.dir}">
+                <include name="install.sh"/>
+            </fileset>-->
+        </zip>
+    </target>
+
+    <target name="war">
+        <antcall target="compile-zeprs"/>
+        <antcall target="hibGenXdoclet2-all"/>
+        <antcall target="copy-lusaka-context.xml"/>
+        <antcall target="copy-hibernate-datasource"/>
+        <antcall target="copy-src"/>
+        <antcall target="delete-copy-xml"/>
+        <antcall target="versionInfo"/>
+        <antcall target="jsp"/>
+        <antcall target="copy-web-compiled"/>
+        <antcall target="javadoc"/>
+        <delete file="${zeprs.warfile}"/>
+    	<delete file="${zeprs.web.dir}/WEB-INF/classes/resources/dev.properties"/>
+        <copy file="${hibernate.conf.dir}/hibernate-datasource.cfg.xml" tofile="${zeprs.web.classes}/hibernate.xml" overwrite="true"/>
+        <copy file="${conf.template.dir}\sql\admin_install.sql" tofile="${zeprs.src.dir}/resources/admin_install.sql" overwrite="true"/>
+<!--
+        <copydir src="${deploy.dir}/WEB-INF/classes/org/apache/" dest="${zeprs.web.classes}/org/apache/"/>
+-->
+    	<war basedir="${zeprs.web.dir}" destfile="${zeprs.warfile}" webxml="${zeprs.web.webinf}/web.xml" >
+            <metainf dir="${web.dir}/META-INF"/>
+            <classes dir="${zeprs.web.classes}"/>
+        	<exclude name="**/.svn/**"/>
+        </war>
+        <echo message="Setting app back into design state - copies dev.properties; WEB-INF.xml: use servlet, no compiled jsps; local context.xml."/>
+    	<copy file="${conf.dir}/template/dynasite/dev.properties" tofile="${zeprs.web.dir}/WEB-INF/classes/resources/dev.properties"/>
+        <antcall target="copy-web-not-compiled-servlet.xml"/>
+        <antcall target="copy-local-context.xml"/>
+    </target>
+
+    <target name="war-no-hib">
+        <antcall target="compile-zeprs"/>
+        <antcall target="copy-src"/>
+        <antcall target="versionInfo"/>
+        <antcall target="jsp"/>
+    	<antcall target="copy-parto-xml-src"/>
+    	<antcall target="copy-lusaka-context.xml"/>
+    	<antcall target="copy-hibernate-datasource"/>
+        <antcall target="copy-web-compiled"/>
+    	<antcall target="delete-copy-xml"/>
+        <antcall target="javadoc"/>
+        <delete file="${zeprs.warfile}"/>
+    	<delete file="${zeprs.web.dir}/WEB-INF/classes/resources/dev.properties"/>
+        <copy file="${hibernate.conf.dir}/hibernate-datasource.cfg.xml" tofile="${zeprs.web.classes}/hibernate.xml" overwrite="true"/>
+        <copy file="${conf.template.dir}\sql\admin_install.sql" tofile="${zeprs.src.dir}/resources/admin_install.sql" overwrite="true"/>
+		<tstamp>
+			<format property="TODAY_US" pattern="MM-dd-yyyy-HH:mm" locale="en_US" />
+		</tstamp>
+		<echo message="Timestamp: ${TODAY_US}"/>
+    	<!--
+    	<war basedir="${zeprs.web.dir}" destfile="${zeprs.warfile}" webxml="${zeprs.web.webinf}/web.xml" >
+            <metainf dir="${web.dir}/META-INF"/>
+            <classes dir="${zeprs.web.classes}"/>
+        	<exclude name="**/.svn/**"/>
+        </war>
+        <echo message="Setting app back into design state - copies dev.properties; WEB-INF.xml: use servlet, no compiled jsps; local context.xml."/>
+    	<copy file="${conf.dir}/template/dynasite/dev.properties" tofile="${zeprs.web.dir}/WEB-INF/classes/resources/dev.properties"/>
+        <antcall target="copy-web-not-compiled-servlet.xml"/>
+        <antcall target="copy-local-context.xml"/>
+        -->
+    </target>
+
+    <target name="war-no-hib-old" depends="compile-zeprs,copy-lusaka-context.xml,copy-parto-xml,copy-hibernate-datasource,copy-src,delete-copy-xml,versionInfo,jsp,copy-web-compiled,javadoc">
+        <delete file="${zeprs.warfile}"/>
+    	<delete file="${zeprs.web.dir}/WEB-INF/classes/resources/dev.properties"/>
+        <copy file="${hibernate.conf.dir}/hibernate-datasource.cfg.xml" tofile="${zeprs.web.classes}/hibernate.xml" overwrite="true"/>
+        <copy file="${conf.template.dir}\sql\admin_install.sql" tofile="${zeprs.src.dir}/resources/admin_install.sql" overwrite="true"/>
+        <war basedir="${zeprs.web.dir}" destfile="${zeprs.warfile}" webxml="${zeprs.web.webinf}/web.xml" >
+            <metainf dir="${web.dir}/META-INF"/>
+            <classes dir="${zeprs.web.classes}"/>
+        	<exclude name="**/.svn/**"/>
+        </war>
+        <echo message="Setting app back into design state - copies dev.properties; WEB-INF.xml: use servlet, no compiled jsps; local context.xml."/>
+    	<copy file="${conf.dir}/template/dynasite/dev.properties" tofile="${zeprs.web.dir}/WEB-INF/classes/resources/dev.properties"/>
+        <antcall target="copy-web-not-compiled-servlet.xml"/>
+        <antcall target="copy-local-context.xml"/>
+    </target>
+
+    <target name="copy-src">
+        <copy todir="${zeprs.web.dir}/WEB-INF/src/org/cidrz">
+            <fileset dir="${zeprs.src.dir}/org/cidrz"/>
+        </copy>
+    </target>
+
+	<target name="delete-copy-xml">
+		<delete dir="${zeprs.web.dir}/WEB-INF/classes/resources/xml"/>
+	    <copy todir="${zeprs.web.dir}/WEB-INF/classes/resources/xml">
+	            <fileset dir="${zeprs.src.dir}/resources/xml"/>
+	    </copy>
+	    <copy todir="${deploy.dir}/WEB-INF/classes/resources/xml">
+	            <fileset dir="${zeprs.src.dir}/resources/xml"/>
+	    </copy>
+	    </target>
+
+    <target name="copy-parto-xml">
+        <copy todir="${zeprs.src.dir}/org/cidrz/project/zeprs/valueobject/partograph" >
+            <fileset dir="${zeprs.web.dir}/WEB-INF/classes/org/cidrz/project/zeprs/valueobject/partograph">
+            	<include name="**/*.xml"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="copy-parto-xml-src">
+        <copy todir="${zeprs.web.dir}/WEB-INF/classes/org/cidrz/project/zeprs/valueobject/partograph" >
+            <fileset dir="${zeprs.src.dir}/org/cidrz/project/zeprs/valueobject/partograph">
+            	<include name="**/*.xml"/>
+            </fileset>
+        </copy>
+        <copy todir="${deploy.dir}/WEB-INF/classes/org/cidrz/project/zeprs/valueobject/partograph" >
+            <fileset dir="${zeprs.src.dir}/org/cidrz/project/zeprs/valueobject/partograph">
+            	<include name="**/*.xml"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- this target will automatically create an html file with
+    an incremented build number and version number-->
+    <target name="versionInfo">
+        <copy file="version.properties" tofile="version.old.properties" overwrite="true"/>
+        <propertyfile
+            file="version.properties" comment="Build version info">
+            <entry key="buildDate" type="date" value="now"/>
+            <entry key="buildNum" default="0" type="int" operation="+" value="1"/>
+        </propertyfile>
+        <copy file="${conf.template.dir}/tomcat/version.html" tofile="${zeprs.web.webinf}/pages/version.html" overwrite="true"/>
+        <replace
+            file="${zeprs.web.webinf}/pages/version.html"
+            value="value not found in version.properties"
+            propertyFile="version.properties">
+            <replacefilter
+                token="@buildDate@"
+                property="buildDate"/>
+            <replacefilter
+                token="@buildNum@"
+                property="buildNum"/>
+        </replace>
+        <copy file="${conf.template.dir}/sql/sql.template" tofile="${conf.template.dir}/sql/sql.txt" overwrite="true"/>
+        <replace
+            file="${conf.template.dir}/sql/sql.txt"
+            value="value not found in version.properties"
+            propertyFile="version.properties">
+            <replacefilter
+                token="@buildDate@"
+                property="buildDate"/>
+            <replacefilter
+                token="@buildNum@"
+                property="buildNum"/>
+        </replace>
+    </target>
+
+    <target name="create-deploy-db">
+        <property file="version.properties"/>
+
+        <copy file="${conf.template.dir}/sql/sql.txt" tofile="${conf.template.dir}\sql\admin_install.sql" overwrite="true"/>
+
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysqldump -u root -p${dbPassword} --opt -B ${adminDbname}  >> ${conf.template.dir}\sql\admin_install.sql"/>
+        </exec>
+
+    </target>
+
+    <target name="create-dbs" depends="clean_users">
+        <property file="version.properties"/>
+
+        <copy file="${conf.template.dir}/sql/sql.txt" tofile="${conf.template.dir}\sql\zeprs_install.sql" overwrite="true"/>
+        <copy file="${conf.template.dir}/sql/sql.txt" tofile="${conf.template.dir}\sql\admin_install.sql" overwrite="true"/>
+
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword}  ${dbname} &lt; ${conf.template.dir}\sql\deleteGen.sql"/>
+        </exec>
+
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysqldump -u root -p${dbPassword}  -B ${dbname}  >> ${conf.template.dir}\sql\zeprs_install.sql"/>
+        </exec>
+
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysqldump -u root -p${dbPassword} --opt -B ${adminDbname}  >> ${conf.template.dir}\sql\admin_install.sql"/>
+        </exec>
+        <!--uncoment next line if you wish to regenerate the mail and userdata databases-->
+        <!--<taskdef name="create-user_databases"/>-->
+
+        <concat destfile="${conf.template.dir}\sql\install.sql" fixlastline="yes">
+            <filelist dir="${conf.template.dir}\sql">
+                <file name="admin_install.sql"/>
+                <file name="spacer.sql"/>
+                <file name="zeprs_install.sql"/>
+                <file name="spacer.sql"/>
+                <file name="mail_install.sql"/>
+                <file name="spacer.sql"/>
+                <file name="userdata_install.sql"/>
+                <file name="spacer.sql"/>
+                <file name="db_install.sql"/>
+            </filelist>
+        </concat>
+
+    </target>
+
+    <target name="create-user_databases">
+         <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword}  ${mailDbname} &lt; ${conf.template.dir}\sql\deleteMail.sql"/>
+        </exec>
+
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword}  ${userdataDbname} &lt; ${conf.template.dir}\sql\deleteUserdata.sql"/>
+        </exec>
+
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysqldump -u root -p${dbPassword} --opt -B ${mailDbname}  >> ${conf.template.dir}\sql\mail_install.sql"/>
+        </exec>
+
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysqldump -u root -p${dbPassword} --opt -B ${userdataDbname}  >> ${conf.template.dir}\sql\userdata_install.sql"/>
+        </exec>
+    </target>
+
+    <target name="clean_users">
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword}  ${dbname} &lt; ${conf.template.dir}\sql\delete_users.sql"/>
+        </exec>
+    </target>
+
+
+    <target name="realm-jar">
+        <jar file="${tomcat-realm.jar}" basedir="${tomcat-realm.classes.dir}">
+            <include name="**/*"/>
+        </jar>
+        <copy file="${tomcat-realm.jar}" todir="${tomcat.lib.dir}" overwrite="true"/>
+    </target>
+
+    <target name="zeprs-jar">
+        <jar destfile="${build.dir}/app.jar"
+             includes="org/cidrz/**"
+             basedir="${zeprs.web.classes}"/>
+    </target>
+
+
+    <target name="javadoc">
+        <javadoc sourcepath="${javadocSourcePath}" packagenames="org.cidrz.project.zeprs.report.valueobject" destdir="${docs.dir}" windowtitle="ZEPRS API"/>
+    </target>
+
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${zeprs.web.classes}"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <mkdir dir="${tomcat-realm.classes.dir}"/>
+        <mkdir dir="${build.conf.dir}"/>
+        <mkdir dir="${hibernate.merge.dir}"/>
+        <mkdir dir="${zeprs.web.webinf.lib}"/>
+        <mkdir dir="${docs.dir}"/>
+
+        <copy toDir="${build.conf.dir}">
+            <fileset dir="${conf.template.dir}">
+                <include name="**/*"/>
+            </fileset>
+            <filterset>
+                <filtersfile file="${conf.in.dir}/conf.properties"/>
+            </filterset>
+        </copy>
+    </target>
+
+    <target name="copy-hibernate-datasource">
+        <copy file="${conf.dir}/template/hibernate/hibernate-datasource.cfg.xml" tofile="${zeprs.web.classes}/hibernate.cfg.xml" overwrite="true"/>
+    </target>
+
+    <target name="jspc">
+    	<delete dir="${src.dir}/zeprs/org/apache"/>
+
+        <taskdef classname="org.apache.jasper.JspC" name="jasper2">
+
+            <classpath id="jspc.classpath">
+                <pathelement location="${jdk.root.dir}/../lib/tools.jar"/>
+                <fileset dir="${tomcat.dir}/bin">
+                    <include name="*.jar"/>
+                </fileset>
+                <fileset dir="${tomcat.dir}/lib">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </taskdef>
+
+        <jasper2
+            validateXml="false"
+            uriroot="${deploy.dir}"
+            webXmlFragment="${conf.template.dir}/tomcat/generated_web.xml"
+            outputDir="${src.dir}/zeprs"/>
+
+    </target>
+
+    <target name="compile-jsp">
+    	<delete dir="${deploy.dir}/WEB-INF/classes/org/apache"/>
+    	<delete dir="${deploy.dir}/WEB-INF/classes/org/cidrz"/>
+        <mkdir dir="${deploy.dir}/WEB-INF/classes/org/apache"/>
+        <mkdir dir="${deploy.dir}/WEB-INF/classes/org/cidrz"/>
+        <mkdir dir="${deploy.dir}/WEB-INF/lib"/>
+
+        <!-- <javac srcdir="${src.dir}" destdir="${compile.dir}">
+                <classpath refid="complete.classpath"/>
+            </javac> -->
+        <javac destdir="${deploy.dir}/WEB-INF/classes"
+            optimize="off"
+            debug="on" failonerror="true"
+            srcdir="${src.dir}/zeprs"
+            excludes="**/*.smap">
+            <classpath refid="complete.classpath"/>
+
+            <classpath>
+                <pathelement location="${deploy.dir}/WEB-INF/classes"/>
+                <fileset dir="${deploy.dir}/WEB-INF/lib">
+                    <include name="*.jar"/>
+                </fileset>
+            	<pathelement location="${tomcat.dir}/lib"/>
+                <fileset dir="${tomcat.dir}/lib">
+                    <include name="*.jar"/>
+                </fileset>
+                <fileset dir="${tomcat.dir}/bin">
+                    <include name="*.jar"/>
+                </fileset>
+            	<pathelement path="xdoclet.task.classpath"/>
+            </classpath>
+            <include name="**"/>
+            <!--<exclude name="tags/**"/>-->
+        </javac>
+    </target>
+
+    <target name="jsp">
+		<tstamp>
+			<format property="TODAY_US" pattern="MM-dd-yyyy-HH:mm" locale="en_US" />
+		</tstamp>
+		<echo message="Timestamp: ${TODAY_US}"/>
+        <antcall target="jspc"/>
+        <antcall target="compile-jsp"/>
+    </target>
+
+    <target name="update-web-compiled.xml">
+        <loadfile property="file" srcFile="${conf.template.dir}/tomcat/generated_web.xml"/>
+        <copy file="${conf.template.dir}/tomcat/web-compiled-template.xml"
+            toFile="${conf.template.dir}/tomcat/web-compiled.xml" filtering="on" overwrite="yes">
+            <filterset>
+                <filter token="generated" value="${file}"/>
+            </filterset>
+        </copy>
+    </target>
+
+    <target name="copy-web-no-servlet.xml">
+        <copy file="${conf.template.dir}/tomcat/web-no-servlet.xml" tofile="${zeprs.web.webinf}/web.xml" overwrite="true"/>
+        <copy file="${conf.template.dir}/tomcat/web-no-servlet.xml" tofile="${deploy.dir}/WEB-INF/web.xml" overwrite="true"/>
+    </target>
+
+    <target name="copy-web-compiled" depends="update-web-compiled.xml">
+        <copy file="${conf.template.dir}/tomcat/web-compiled.xml" tofile="${zeprs.web.webinf}/web.xml" overwrite="true"/>
+        <copy file="${conf.template.dir}/tomcat/web-compiled.xml" tofile="${deploy.dir}/WEB-INF/web.xml" overwrite="true"/>
+    </target>
+
+    <target name="copy-web-not-compiled-servlet.xml">
+        <copy file="${conf.template.dir}/tomcat/web-not-compiled.xml" tofile="${zeprs.web.webinf}/web.xml" overwrite="true"/>
+        <copy file="${conf.template.dir}/tomcat/web-not-compiled.xml" tofile="${deploy.dir}/WEB-INF/web.xml" overwrite="true"/>
+    </target>
+
+    <target name="copy-foo-and-bar.xml">
+        <copy file="${deploy.dir}/WEB-INF/foo.xml" tofile="${zeprs.web.webinf}/foo.xml" overwrite="true"/>
+        <copy file="${deploy.dir}/WEB-INF/bar.xml" tofile="${zeprs.web.webinf}/bar.xml" overwrite="true"/>
+    </target>
+
+	<target name="copy-war-to-localhost">
+		<copy file="${build.dir}/zeprs.war" todir="${tomcat.dir}\webapps" overwrite="true"/>
+		<delete dir="${deploy.dir}" failonerror="true"/>
+		<delete dir="${tomcat.dir}\work\Catalina\localhost\zeprs\" failonerror="true"/>
+		</target>
+
+    <target name="copy-local-context.xml">
+        <copy file="${conf.template.dir}/tomcat/context-local.xml" tofile="${web.dir}/zeprs/META-INF/context.xml" overwrite="true"/>
+    </target>
+
+    <target name="copy-lusaka-context.xml">
+        <copy file="${conf.template.dir}/tomcat/context-Lusaka.xml" tofile="${web.dir}/zeprs/META-INF/context.xml" overwrite="true"/>
+    </target>
+
+</project>

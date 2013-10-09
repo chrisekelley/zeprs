@@ -1,0 +1,302 @@
+<?xml version="1.0" ?>
+ <project name="unused"  basedir=".">
+    <!-- first, see if there are local/developer (non-CVS) properties available -->
+      <property file="local.properties"/>
+
+      <!-- then fill in anything not already set with the project's properties. Local takes precedence -->
+      <property file="build.properties"/>
+     <dirname property="root.dir" file="${ant.file}"/>
+     <target name="deploy" depends="OLDclean,compile,copy-hibernate-datasource,copy-ehcache"/>
+    <!-- <target name="deploy-old" depends="clean,compile,hibernate,sql-MR-full,configure-tomcat,copy-hibernate-datasource,copy-ehcache"/>
+    <target name="unittest" depends="clean,compile,hibernate,sql-MR-full,configure-tomcat,copy-hibernate-jdbc"/> -->
+
+    <target name="OLDclean">
+        <delete dir="${zeprs.web.classes}"/>
+        <delete dir="${test.classes.dir}"/>
+        <delete dir="${tomcat-realm.classes.dir}"/>
+        <delete dir="${build.dir}"/>
+    </target>
+       <target name="delete-before-build">
+        <delete dir="${zeprs.web.classes}/org/apache"/>
+        <delete dir="${zeprs.src.dir}/org/apache"/>
+        <delete dir="${tomcat.dir}/webapps/zeprs/WEB-INF/classes/org/apache"/>
+        <delete dir="${tomcat.dir}/work/Catalina/localhost/zeprs"/>
+    </target>
+
+    <target name="compile-test" depends="init,compile-zeprs,compile-tomcat-realm">
+        <javac srcdir="${test.src.dir}" destdir="${test.classes.dir}">
+            <classpath>
+                <fileset dir="${zeprs.web.classes}"/>
+                <fileset dir="${zeprs.web.webinf.lib}"/>
+                <fileset dir="${tomcat-realm.classes.dir}"/>
+            </classpath>
+        </javac>
+    </target>
+
+
+    <fileset dir="." id="war-contents">
+        <include name="**/*.jsp"/>
+        <include name="css/*"/>
+        <include name="js/*"/>
+        <include name="WEB-INF/*.tld"/>
+        <include name="WEB-INF/tags/*"/>
+        <include name="WEB-INF/dtds/*"/>
+        <include name="WEB-INF/Torque.properties"/>
+        <include name="WEB-INF/validation.xml"/>
+        <include name="WEB-INF/struts-config.xml"/>
+        <include name="WEB-INF/validator-rules.xml"/>
+    </fileset>
+
+
+   <!--<target name="hibGenXdoclet2" depends="compile-zeprs">-->
+    <target name="hibGenXdoclet2">
+       <echo message="xdoclet.lib.dir: ${xdoclet.lib.dir}"/>
+       <path id="xdoclet.task.classpath">
+           <!--<pathelement location="${xdoclet.plugin.dir}/xdoclet-plugin-hibernate-1.0.3.jar"/>-->
+           <!-- Add the xdoclet2 plugins jar here -->
+           <!--<pathelement location="${xdoclet.lib.dir}/xdoclet-2.0.3.jar"/>-->
+
+           <!-- xdoclet2 runtime dependencies -->
+           <!--<pathelement location="${xdoclet.lib.dir}/generama-1.2.1.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/picocontainer-1.0.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/nanocontainer-1.0-beta-3.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/nanocontainer-ant-1.0-beta-3.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/qdox-20051211.114207.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/velocity-1.4.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-collections-3.1.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-jelly-20050813.225330.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-jelly-tags-define-1.0.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-logging-1.0.4.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/dom4j-1.6.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-beanutils-1.7.0.jar"/>
+           <pathelement location="${xdoclet.lib.dir}/commons-jexl-1.0.jar"/>-->
+       </path>
+       <delete file="${baseDir}/${zeprs.web.classes}/org/cidrz/project/zeprs/valueobject/EncounterData.hbm.xml"/>
+       <taskdef
+           name="xdoclet2"
+           classname="org.xdoclet.ant.XDocletTask"
+           classpathref="xdoclet.task.classpath"
+           />
+       <!-- defines the file handled by xdoclet2 -->
+       <echo message="hibGenXdoclet2 - generating x-doclet tags from ${zeprs.src.dir}"/>
+       <echo message="hibGenXdoclet2 - destination: ${zeprs.web.classes}"/>
+       <xdoclet2>
+           <fileset dir="${baseDir}\${zeprs.src.dir}/org/cidrz/project/zeprs/valueobject">
+               <exclude name="**/partograph/**"/>
+               <exclude name="**/report/**"/>
+           </fileset>
+           <fileset file="${zeprs.src.dir}/org/cidrz/webapp/dynasite/valueobject/AuditInfo.java"/>
+           <fileset file="${zeprs.src.dir}/org/cidrz/webapp/dynasite/valueobject/User.java"/>
+
+           <!-- defines the processing of a plugin -->
+           <component
+             classname="org.xdoclet.plugin.hibernate.HibernateMappingPlugin"
+             destdir="${baseDir}/${zeprs.web.classes}"
+             version="3.0"
+             />
+       </xdoclet2>
+   </target>
+
+
+    <target name="hibernate-schemaexport">
+        <taskdef name="schemaexport"
+            classname="net.sf.hibernate.tool.hbm2ddl.SchemaExportTask"
+            classpath="${zeprs.web.classes}"/>
+        <schemaexport
+            properties="${hibernate.conf.dir}/hibernate.properties"
+            quiet="no"
+            text="yes"
+            drop="no"
+            delimiter=";"
+            output="${hibernate.schemafile}">
+            <fileset dir="${zeprs.web.classes}">
+                <include name="**/*.hbm.xml"/>
+                <exclude name="**/*Staff.hbm.xml"/>
+            </fileset>
+        </schemaexport>
+    </target>
+
+    <taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask">
+        <classpath refid="zeprs.classpath"/>
+        <classpath refid="servlet.libs"/>
+    </taskdef>
+    <target name="schema-update" depends="compile">
+        <hibernatetool destdir="${conf.out.dir}">
+            <configuration configurationfile="${hibernate-schemaUpdate}"/>
+            <hbm2ddl drop="true" create="true" export="false" update="true" outputfilename="schemaupdate${TODAY_US}.txt"/>
+        </hibernatetool>
+    </target>
+
+
+    <!--Old hibernate 2.0 version - do not use-->
+    <target name="old-schemaupdate">
+        <taskdef name="schemaupdate"
+            classname="org.hibernate.tool.hbm2ddl.SchemaUpdateTask">
+            <classpath refid="zeprs.classpath"/>
+            <classpath refid="servlet.libs"/>
+        </taskdef>
+       <echo message="schemaupdate - destination: ${zeprs.web.classes}"/>
+        <record name="${conf.out.dir}/schemaupdate${TODAY_US}.txt" action="start" taskname="schemaupdate" />
+
+        <schemaupdate
+            properties="${hibernate.conf.dir}/hibernate.properties"
+            config="${hibernate-schemaUpdate}"
+            quiet="no" text="yes">
+
+            <fileset dir="${zeprs.web.classes}/org/cidrz/project/zeprs/valueobject">
+                <include name="**/*.hbm.xml"/>
+                 <exclude name="**/*Staff.hbm.xml"/>
+                 <exclude name="**/report/**"/>
+           </fileset>
+           <fileset file="${zeprs.web.classes}/org/cidrz/webapp/dynasite/valueobject/AuditInfo.hbm.xml"/>
+           <fileset file="${zeprs.web.classes}/org/cidrz/webapp/dynasite/valueobject/User.hbm.xml"/>
+            <!--<fileset dir="${zeprs.web.classes}">
+                <include name="**/*.hbm.xml"/>
+                <exclude name="**/*Staff.hbm.xml"/>
+            </fileset>-->
+        </schemaupdate>
+        <record name="${hibernate.conf.dir}/schemaupdate.txt" action="stop"/>
+    </target>
+
+        <!-- <target name="sql-MR-full" description="includes encounters" depends="init,sql-build-db, load-MR-full">
+    </target> -->
+
+    <target name="sql-MR-clean" description="fresh db - no encounters" depends="init,sql-build-db, load-clean_db">
+    </target>
+
+     <target name="sql-build-db">
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword} ${dbname} &lt; ${hibernate.schemafile}"/>
+        </exec>
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword} ${dbname} &lt; ${sql.conf.dir}/post-ddl-cleanup.sql"/>
+        </exec>
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword} ${dbname} &lt; ${sql.conf.dir}/dba_user_setup.sql"/>
+        </exec>
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword} ${dbname} &lt; ${sql.conf.dir}/web_user_setup.sql"/>
+        </exec>
+    </target>
+
+
+    <target name="load-MR-full">
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u ${dba} --password=${dbPassword} ${dbname} &lt; ${sql.conf.dir}/zeprs.sql"/>
+        </exec>
+    </target>
+
+    <target name="load-clean_db">
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u ${dba} --password=${dbPassword} ${dbname} &lt; ${sql.conf.dir}/forms.sql"/>
+        </exec>
+    </target>
+
+    <target name="old-drop-sql">
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword} ${dbname} &lt; ${sql.conf.dir}/dropart.sql"/>
+        </exec>
+        <exec dir="." executable="mysqladmin" failonerror="false">
+            <arg line=" -u root -p${dbPassword} -f drop ${dbname}"/>
+        </exec>
+        <exec dir="." executable="mysqladmin" failonerror="true">
+            <arg line=" -u root -p${dbPassword} -f create ${dbname}"/>
+        </exec>
+    </target>
+
+    <target name="load-live_db">
+            <exec dir="." executable="cmd" failonerror="true">
+                <arg line="/c mysql -u ${dba} --password=${dbPassword} ${dbname} &lt; ${sql.conf.dir}/live.sql"/>
+            </exec>
+        </target>
+
+    <target name="load-test-mail-db">
+        <exec dir="." executable="cmd" failonerror="true">
+            <arg line="/c mysql -u root -p${dbPassword} &lt; ${sql.conf.dir}/temp_mail_db.sql"/>
+        </exec>
+    </target>
+
+    <target name="configure-tomcat" depends="init,compile-tomcat-realm, realm-jar">
+        <copy todir="${tomcat.conf.dir}" overwrite="true">
+            <fileset dir="${build.conf.tomcat.dir}">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+        <copy todir="${tomcat.server.lib.dir}" overwrite="true">
+            <fileset dir="${lib.dir}">
+                <include name="mysql-connector-java-3.0.14-production-bin.jar"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="javadoc">
+        <javadoc sourcepath="${src.dir}" packagenames="*" destdir="${docs.dir}" windowtitle="ZEPRS API"/>
+    </target>
+
+     <target name="prepare-lib-dirs">
+        <!-- reset the lib directories for the projects from the central lib repository -->
+        <!--<delete>
+            <fileset dir="${zeprs.web.webinf.lib}">
+                <include name="*"/>
+            </fileset>
+        </delete>
+        <copy todir="${zeprs.web.webinf.lib}">
+             <fileset dir="${lib.dir}">
+                <include name="*"/>
+            </fileset>
+        </copy>-->
+        <!--<copy todir="${deploy.dir}/WEB-INF/lib">
+            <fileset refid="zeprs.web.libs"/>
+        </copy>-->
+
+    </target>
+
+    <target name="copy-hibernate-jdbc">
+        <copy file="${conf.dir}/template/hibernate/hibernate-jdbc.cfg.xml" tofile="${zeprs.web.classes}/hibernate.cfg.xml" overwrite="true"/>
+    </target>
+
+    <target name="copy-c3p0-properties">
+        <copy file="${conf.dir}/template/hibernate/c3p0.properties" tofile="${zeprs.web.classes}/c3p0.properties" overwrite="true"/>
+    </target>
+
+    <target name="copy-server.xml">
+        <copy file="${build.conf.dir}/tomcat/server.xml" tofile="${tomcat.dir}/conf/server.xml" overwrite="true"/>
+    </target>
+
+    <target name="copy-ehcache">
+        <copy file="${conf.dir}/template/hibernate/ehcache.xml" tofile="${zeprs.web.classes}/ehcache.xml" overwrite="true"/>
+    </target>
+
+    <target name="copy-admin-ehcache">
+        <copy file="${conf.dir}/template/hibernate/ehcache-admin.xml" tofile="${zeprs.web.classes}/ehcache.xml" overwrite="true"/>
+    </target>
+
+    <target name="dist-no-hib-zip" depends="war-no-hibernate,create-deploy-db">
+        <property file="version.properties"/>
+        <property file="version.old.properties" prefix="old"/>
+        <copy file="${build.dir}/zeprs_${old.buildNum}.zip" tofile="${warArchiveDir}/zeprs_${old.buildNum}.zip" overwrite="false" failonerror="false"/>
+        <delete file="${build.dir}/zeprs_${old.buildNum}.zip"/>
+        <copy file="${zeprs.web.webinf}/pages/version.html" tofile="${build.conf.dir}/tomcat/version.html" overwrite="true"/>
+        <zip zipfile="${build.dir}/zeprs_${buildNum}.zip">
+            <zipfileset dir="${build.dir}" prefix="zeprs_${buildNum}">
+                <include name="${warfile}"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\sql" prefix="zeprs_${buildNum}">
+                <include name="zeprs_install.sql"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\bin" prefix="zeprs_${buildNum}">
+                <include name="update.sh"/>
+            </zipfileset>
+            <zipfileset dir="${build.conf.dir}" prefix="zeprs_${buildNum}">
+                <include name="tomcat/**/*"/>
+            </zipfileset>
+            <zipfileset dir="${conf.template.dir}\doc" prefix="zeprs_${buildNum}">
+                <include name="readme.txt"/>
+            </zipfileset>
+            <!--<fileset dir="${build.conf.bin.dir}">
+                <include name="install.sh"/>
+            </fileset>-->
+        </zip>
+    </target>
+
+</project>

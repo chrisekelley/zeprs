@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<quartz xmlns="http://www.opensymphony.com/quartz/JobSchedulingData"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.opensymphony.com/quartz/JobSchedulingData
+	        http://www.opensymphony.com/quartz/xml/job_scheduling_data_1_5.xsd"
+        version="1.5">
+
+
+    <calendar class-name="org.quartz.impl.calendar.HolidayCalendar" replace="true">
+        <name>holidayCalendar</name>
+        <description>HolidayCalendar</description>
+        <base-calendar class-name="org.quartz.impl.calendar.WeeklyCalendar">
+            <name>weeklyCalendar</name>
+            <description>WeeklyCalendar</description>
+            <base-calendar class-name="org.quartz.impl.calendar.AnnualCalendar">
+                <name>annualCalendar</name>
+                <description>AnnualCalendar</description>
+            </base-calendar>
+        </base-calendar>
+    </calendar>
+
+    <job>
+        <job-detail>
+            <name>LIMSImport</name>
+            <group>DEFAULT</group>
+            <description>A job that imports from the LIMS system into ZEPRS</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.ImportLimsQuartz
+            </job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+
+        <trigger>
+            <cron>
+                <name>limsTrigger</name>
+                <group>DEFAULT</group>
+                <job-name>LIMSImport</job-name>
+                <job-group>DEFAULT</job-group>
+                 <!-- Fire at 10am every day -->
+                <cron-expression>0 0 10 * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+    <job>
+        <job-detail>
+            <name>LIMSImport2</name>
+            <group>DEFAULT</group>
+            <description>A job that imports from the LIMS system into ZEPRS</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.ImportLimsQuartz
+            </job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+
+        <trigger>
+            <cron>
+                <name>limsTrigger2</name>
+                <group>DEFAULT</group>
+                <job-name>LIMSImport2</job-name>
+                <job-group>DEFAULT</job-group>
+                 <!-- Fire at 1500 every day -->
+                <cron-expression>0 0 15 * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+
+	<job>
+        <job-detail>
+            <name>RSSGenerator</name>
+            <group>DEFAULT</group>
+            <description>A job that generates rss and xml files of recently-changed patient records</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.GenerateRssFile
+            </job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+
+        <trigger>
+            <cron>
+                <name>rssTrigger</name>
+                <group>DEFAULT</group>
+                <job-name>RSSGeneratorScheduler</job-name>
+                <job-group>DEFAULT</job-group>
+                <!-- Fire every 10 minutes at :02, :12, :22, :32, :42, :52; cron-expression: 0 2/10 * * * ?-->
+                <cron-expression>0 * 1 * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+
+    <job>
+        <job-detail>
+            <name>ImportFeeds</name>
+            <group>DEFAULT</group>
+            <description>A job that imports patient records from an rss feed.</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.ImportFeed
+            </job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+
+        <trigger>
+            <cron>
+                <name>importTrigger</name>
+                <group>DEFAULT</group>
+                <job-name>ImportFeedScheduler</job-name>
+                <job-group>DEFAULT</job-group>
+                <!-- Fire every 10 minutes  at :07, :17, :27, :37, :47, :57 -->
+                <cron-expression>0 7/10 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+
+	<job>
+        <job-detail>
+            <name>MasterSiteArchiver</name>
+            <group>DEFAULT</group>
+            <description>A job that creates a zip archive of site XML files that have been updated in the past 24 hours.</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.GenerateSiteArchiveZip
+            </job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+
+        <trigger>
+            <cron>
+                <name>masterSiteArchiverTrigger</name>
+                <group>DEFAULT</group>
+                <job-name>MasterSiteArchiverScheduler</job-name>
+                <job-group>DEFAULT</job-group>
+                <!-- Fire at 0100 every day -->
+                <cron-expression>0 0 1 * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+
+	<job>
+        <job-detail>
+            <name>ExportPatientIdentifierList</name>
+            <group>DEFAULT</group>
+            <description>A job that creates a list of used patient identifiers for each site..</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.ExportPatientIdentifierList
+            </job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+
+        <trigger>
+            <cron>
+                <name>exportPatientIdentifierListTrigger</name>
+                <group>DEFAULT</group>
+                <job-name>ExportPatientIdentifierListScheduler</job-name>
+                <job-group>DEFAULT</job-group>
+                <!-- Fire at 2230 every day -->
+                <cron-expression>0 30 22 * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+
+	<job>
+        <job-detail>
+            <name>RSSExporter</name>
+            <group>DEFAULT</group>
+            <description>A job that generates rss and xml files of all patient records. This is initiated manually.</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.GenerateSiteXml
+            </job-class>
+            <volatility>false</volatility>
+            <durability>true</durability>
+            <recover>false</recover>
+        </job-detail>
+    </job>
+
+</quartz>

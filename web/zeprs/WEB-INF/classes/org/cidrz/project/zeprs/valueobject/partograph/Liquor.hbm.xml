@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_liquor" name="org.cidrz.project.zeprs.valueobject.partograph.Liquor">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="liquor1" length="4" access="method" column="liquor_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="liquor2" length="4" access="method" column="liquor_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="liquor3" length="4" access="method" column="liquor_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="liquor4" length="4" access="method" column="liquor_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="liquor5" length="4" access="method" column="liquor_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="liquor6" length="4" access="method" column="liquor_6"/>
+    <property name="timeObservation7" access="method" column="time_7"/>
+    <property name="liquor7" length="4" access="method" column="liquor_7"/>
+    <property name="timeObservation8" access="method" column="time_8"/>
+    <property name="liquor8" length="4" access="method" column="liquor_8"/>
+    <property name="timeObservation9" access="method" column="time_9"/>
+    <property name="liquor9" length="4" access="method" column="liquor_9"/>
+    <property name="timeObservation10" access="method" column="time_10"/>
+    <property name="liquor10" length="4" access="method" column="liquor_10"/>
+    <property name="timeObservation11" access="method" column="time_11"/>
+    <property name="liquor11" length="4" access="method" column="liquor_11"/>
+    <property name="timeObservation12" access="method" column="time_12"/>
+    <property name="liquor12" length="4" access="method" column="liquor_12"/>
+    <property name="timeObservation13" access="method" column="time_13"/>
+    <property name="liquor13" length="4" access="method" column="liquor_13"/>
+    <property name="timeObservation14" access="method" column="time_14"/>
+    <property name="liquor14" length="4" access="method" column="liquor_14"/>
+    <property name="timeObservation15" access="method" column="time_15"/>
+    <property name="liquor15" length="4" access="method" column="liquor_15"/>
+    <property name="timeObservation16" access="method" column="time_16"/>
+    <property name="liquor16" length="4" access="method" column="liquor_16"/>
+    <property name="timeObservation17" access="method" column="time_17"/>
+    <property name="liquor17" length="4" access="method" column="liquor_17"/>
+    <property name="timeObservation18" access="method" column="time_18"/>
+    <property name="liquor18" length="4" access="method" column="liquor_18"/>
+    <property name="timeObservation19" access="method" column="time_19"/>
+    <property name="liquor19" length="4" access="method" column="liquor_19"/>
+    <property name="timeObservation20" access="method" column="time_20"/>
+    <property name="liquor20" length="4" access="method" column="liquor_20"/>
+    <property name="timeObservation21" access="method" column="time_21"/>
+    <property name="liquor21" length="4" access="method" column="liquor_21"/>
+    <property name="timeObservation22" access="method" column="time_22"/>
+    <property name="liquor22" length="4" access="method" column="liquor_22"/>
+    <property name="timeObservation23" access="method" column="time_23"/>
+    <property name="liquor23" length="4" access="method" column="liquor_23"/>
+    <property name="timeObservation24" access="method" column="time_24"/>
+    <property name="liquor24" length="4" access="method" column="liquor_24"/>
+    <property name="timeObservation25" access="method" column="time_25"/>
+    <property name="liquor25" length="4" access="method" column="liquor_25"/>
+    <property name="timeObservation26" access="method" column="time_26"/>
+    <property name="liquor26" length="4" access="method" column="liquor_26"/>
+    <property name="timeObservation27" access="method" column="time_27"/>
+    <property name="liquor27" length="4" access="method" column="liquor_27"/>
+    <property name="timeObservation28" access="method" column="time_28"/>
+    <property name="liquor28" length="4" access="method" column="liquor_28"/>
+    <property name="timeObservation29" access="method" column="time_29"/>
+    <property name="liquor29" length="4" access="method" column="liquor_29"/>
+    <property name="timeObservation30" access="method" column="time_30"/>
+    <property name="liquor30" length="4" access="method" column="liquor_30"/>
+    <property name="timeObservation31" access="method" column="time_31"/>
+    <property name="liquor31" length="4" access="method" column="liquor_31"/>
+    <property name="timeObservation32" access="method" column="time_32"/>
+    <property name="liquor32" length="4" access="method" column="liquor_32"/>
+    <property name="timeObservation33" access="method" column="time_33"/>
+    <property name="liquor33" length="4" access="method" column="liquor_33"/>
+    <property name="timeObservation34" access="method" column="time_34"/>
+    <property name="liquor34" length="4" access="method" column="liquor_34"/>
+    <property name="timeObservation35" access="method" column="time_35"/>
+    <property name="liquor35" length="4" access="method" column="liquor_35"/>
+    <property name="timeObservation36" access="method" column="time_36"/>
+    <property name="liquor36" length="4" access="method" column="liquor_36"/>
+    <property name="timeObservation37" access="method" column="time_37"/>
+    <property name="liquor37" length="4" access="method" column="liquor_37"/>
+    <property name="timeObservation38" access="method" column="time_38"/>
+    <property name="liquor38" length="4" access="method" column="liquor_38"/>
+    <property name="timeObservation39" access="method" column="time_39"/>
+    <property name="liquor39" length="4" access="method" column="liquor_39"/>
+    <property name="timeObservation40" access="method" column="time_40"/>
+    <property name="liquor40" length="4" access="method" column="liquor_40"/>
+    <property name="timeObservation41" access="method" column="time_41"/>
+    <property name="liquor41" length="4" access="method" column="liquor_41"/>
+    <property name="timeObservation42" access="method" column="time_42"/>
+    <property name="liquor42" length="4" access="method" column="liquor_42"/>
+    <property name="timeObservation43" access="method" column="time_43"/>
+    <property name="liquor43" length="4" access="method" column="liquor_43"/>
+    <property name="timeObservation44" access="method" column="time_44"/>
+    <property name="liquor44" length="4" access="method" column="liquor_44"/>
+    <property name="timeObservation45" access="method" column="time_45"/>
+    <property name="liquor45" length="4" access="method" column="liquor_45"/>
+    <property name="timeObservation46" access="method" column="time_46"/>
+    <property name="liquor46" length="4" access="method" column="liquor_46"/>
+    <property name="timeObservation47" access="method" column="time_47"/>
+    <property name="liquor47" length="4" access="method" column="liquor_47"/>
+    <property name="timeObservation48" access="method" column="time_48"/>
+    <property name="liquor48" length="4" access="method" column="liquor_48"/>
+  </class>
+</hibernate-mapping>

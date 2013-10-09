@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<quartz xmlns="http://www.opensymphony.com/quartz/JobSchedulingData"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.opensymphony.com/quartz/JobSchedulingData
+	        http://www.opensymphony.com/quartz/xml/job_scheduling_data_1_5.xsd"
+        version="1.5">
+
+
+    <calendar class-name="org.quartz.impl.calendar.HolidayCalendar" replace="true">
+        <name>holidayCalendar</name>
+        <description>HolidayCalendar</description>
+        <base-calendar class-name="org.quartz.impl.calendar.WeeklyCalendar">
+            <name>weeklyCalendar</name>
+            <description>WeeklyCalendar</description>
+            <base-calendar class-name="org.quartz.impl.calendar.AnnualCalendar">
+                <name>annualCalendar</name>
+                <description>AnnualCalendar</description>
+            </base-calendar>
+        </base-calendar>
+    </calendar>
+
+    <job>
+        <job-detail>
+            <name>DummyJob</name>
+            <group>DEFAULT</group>
+            <description>A placeholder - see actual job in quartz-jobs-reports.xml</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.DummyJob
+            </job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+
+        <trigger>
+            <cron>
+                <name>dailyTrigger</name>
+                <group>DEFAULT</group>
+                <job-name>ReportScheduler</job-name>
+                <job-group>DEFAULT</job-group>
+                <!-- Fire at 7am every day -->
+                <cron-expression>0 0 7 * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+
+    <job>
+        <job-detail>
+            <name>RSSGenerator</name>
+            <group>DEFAULT</group>
+            <description>A job that generates rss file of patient records</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.GenerateRssFile
+            </job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+
+        <trigger>
+            <cron>
+                <name>rssTrigger</name>
+                <group>DEFAULT</group>
+                <job-name>ReportScheduler</job-name>
+                <job-group>DEFAULT</job-group>
+                <!-- Fire every 30 minutes -->
+                <cron-expression>0 0/30 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+
+    <job>
+        <job-detail>
+            <name>ImportFeeds</name>
+            <group>DEFAULT</group>
+            <description>A job that imports patient records from an rss feed.</description>
+            <job-class>
+                org.cidrz.webapp.dynasite.utils.admin.ImportFeed
+            </job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+
+        <trigger>
+            <cron>
+                <name>importTrigger</name>
+                <group>DEFAULT</group>
+                <job-name>ReportScheduler</job-name>
+                <job-group>DEFAULT</job-group>
+                <!-- Fire every 30 minutes -->
+                <cron-expression>0 15/45 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+</quartz>

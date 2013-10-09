@@ -1,0 +1,14 @@
+## Create the Databases
+
+Using the mysql command, create the zeprs, zeprsdemo, admin, mail, and userdata databases.
+ 
+Run the following sql scripts using the format mysql -u root db<file.sql
+
+		conf/template/sql/zeprs-data-05032012.sql - create the zeprs db - mysql -u root zeprs<zeprs-data-05032012.sql 
+		conf/template/sql/zeprsdemo-data-05032012.sql - create the zeprsdemo db - mysql -u root zeprsdemo<zeprsdemo-data-05032012.sq
+		conf/template/sql/admin_install.sql - create the admin db - mysql -u root admin<admin_install.sql
+		conf/template/sql/mail_install.sql - create the mail db - mysql -u root mail<mail_install.sql
+		conf/template/sql/userdata_install.sql - create the userdata db - mysql -u root userdata<userdata_install.sql
+
+To configure the sql permissions, open conf/template/sql/web_user.sql and view the sql for the zeprs_web_user, root users. 
+Lines 8 - 23 lines should suffice. You will need to replace "password" with the password for zeprs_web_user in META-INF/context.xml.

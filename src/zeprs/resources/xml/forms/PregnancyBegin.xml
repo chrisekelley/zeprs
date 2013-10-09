@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<org.cidrz.webapp.dynasite.valueobject.Form>
+  <id>72</id>
+  <name>pregnancyBegin</name>
+  <label>New Pregnancy</label>
+  <requireReauth>true</requireReauth>
+  <requirePatient>true</requirePatient>
+  <enabled>true</enabled>
+  <ruleDefinitions/>
+  <flow>
+    <id>100</id>
+    <name>unassigned</name>
+    <flowOrder>100</flowOrder>
+    <forms class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.FlowOrderComparator"/>
+    </forms>
+  </flow>
+  <flowId>100</flowId>
+  <flowOrder>10</flowOrder>
+  <formType>
+    <id>1</id>
+    <name>Pregnancy (Mother only)</name>
+  </formType>
+  <formTypeId>1</formTypeId>
+  <pageItems class="tree-set">
+    <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>2654</id>
+      <form__field>
+        <id>1370</id>
+        <label>Date Pregnancy Began</label>
+        <type>Date</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>date_pregnancy_began</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+      </form__field>
+      <formFieldId>1370</formFieldId>
+      <displayOrder>0</displayOrder>
+      <inputType>dateToday</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <formId>72</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>2655</id>
+      <form__field>
+        <id>1371</id>
+        <label>Comments</label>
+        <type>Text</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>comments_new_preg_1371</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+      </form__field>
+      <formFieldId>1371</formFieldId>
+      <displayOrder>1</displayOrder>
+      <inputType>textarea</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <formId>72</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+  </pageItems>
+  <formfields class="tree-set">
+    <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+  </formfields>
+  <submissions>0</submissions>
+  <maxSubmissions>1</maxSubmissions>
+</org.cidrz.webapp.dynasite.valueobject.Form>

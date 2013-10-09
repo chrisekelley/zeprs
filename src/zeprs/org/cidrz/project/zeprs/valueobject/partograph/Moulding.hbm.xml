@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_moulding" name="org.cidrz.project.zeprs.valueobject.partograph.Moulding">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="moulding1" length="4" access="method" column="moulding_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="moulding2" length="4" access="method" column="moulding_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="moulding3" length="4" access="method" column="moulding_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="moulding4" length="4" access="method" column="moulding_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="moulding5" length="4" access="method" column="moulding_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="moulding6" length="4" access="method" column="moulding_6"/>
+    <property name="timeObservation7" access="method" column="time_7"/>
+    <property name="moulding7" length="4" access="method" column="moulding_7"/>
+    <property name="timeObservation8" access="method" column="time_8"/>
+    <property name="moulding8" length="4" access="method" column="moulding_8"/>
+    <property name="timeObservation9" access="method" column="time_9"/>
+    <property name="moulding9" length="4" access="method" column="moulding_9"/>
+    <property name="timeObservation10" access="method" column="time_10"/>
+    <property name="moulding10" length="4" access="method" column="moulding_10"/>
+    <property name="timeObservation11" access="method" column="time_11"/>
+    <property name="moulding11" length="4" access="method" column="moulding_11"/>
+    <property name="timeObservation12" access="method" column="time_12"/>
+    <property name="moulding12" length="4" access="method" column="moulding_12"/>
+    <property name="timeObservation13" access="method" column="time_13"/>
+    <property name="moulding13" length="4" access="method" column="moulding_13"/>
+    <property name="timeObservation14" access="method" column="time_14"/>
+    <property name="moulding14" length="4" access="method" column="moulding_14"/>
+    <property name="timeObservation15" access="method" column="time_15"/>
+    <property name="moulding15" length="4" access="method" column="moulding_15"/>
+    <property name="timeObservation16" access="method" column="time_16"/>
+    <property name="moulding16" length="4" access="method" column="moulding_16"/>
+    <property name="timeObservation17" access="method" column="time_17"/>
+    <property name="moulding17" length="4" access="method" column="moulding_17"/>
+    <property name="timeObservation18" access="method" column="time_18"/>
+    <property name="moulding18" length="4" access="method" column="moulding_18"/>
+    <property name="timeObservation19" access="method" column="time_19"/>
+    <property name="moulding19" length="4" access="method" column="moulding_19"/>
+    <property name="timeObservation20" access="method" column="time_20"/>
+    <property name="moulding20" length="4" access="method" column="moulding_20"/>
+    <property name="timeObservation21" access="method" column="time_21"/>
+    <property name="moulding21" length="4" access="method" column="moulding_21"/>
+    <property name="timeObservation22" access="method" column="time_22"/>
+    <property name="moulding22" length="4" access="method" column="moulding_22"/>
+    <property name="timeObservation23" access="method" column="time_23"/>
+    <property name="moulding23" length="4" access="method" column="moulding_23"/>
+    <property name="timeObservation24" access="method" column="time_24"/>
+    <property name="moulding24" length="4" access="method" column="moulding_24"/>
+    <property name="timeObservation25" access="method" column="time_25"/>
+    <property name="moulding25" length="4" access="method" column="moulding_25"/>
+    <property name="timeObservation26" access="method" column="time_26"/>
+    <property name="moulding26" length="4" access="method" column="moulding_26"/>
+    <property name="timeObservation27" access="method" column="time_27"/>
+    <property name="moulding27" length="4" access="method" column="moulding_27"/>
+    <property name="timeObservation28" access="method" column="time_28"/>
+    <property name="moulding28" length="4" access="method" column="moulding_28"/>
+    <property name="timeObservation29" access="method" column="time_29"/>
+    <property name="moulding29" length="4" access="method" column="moulding_29"/>
+    <property name="timeObservation30" access="method" column="time_30"/>
+    <property name="moulding30" length="4" access="method" column="moulding_30"/>
+    <property name="timeObservation31" access="method" column="time_31"/>
+    <property name="moulding31" length="4" access="method" column="moulding_31"/>
+    <property name="timeObservation32" access="method" column="time_32"/>
+    <property name="moulding32" length="4" access="method" column="moulding_32"/>
+    <property name="timeObservation33" access="method" column="time_33"/>
+    <property name="moulding33" length="4" access="method" column="moulding_33"/>
+    <property name="timeObservation34" access="method" column="time_34"/>
+    <property name="moulding34" length="4" access="method" column="moulding_34"/>
+    <property name="timeObservation35" access="method" column="time_35"/>
+    <property name="moulding35" length="4" access="method" column="moulding_35"/>
+    <property name="timeObservation36" access="method" column="time_36"/>
+    <property name="moulding36" length="4" access="method" column="moulding_36"/>
+    <property name="timeObservation37" access="method" column="time_37"/>
+    <property name="moulding37" length="4" access="method" column="moulding_37"/>
+    <property name="timeObservation38" access="method" column="time_38"/>
+    <property name="moulding38" length="4" access="method" column="moulding_38"/>
+    <property name="timeObservation39" access="method" column="time_39"/>
+    <property name="moulding39" length="4" access="method" column="moulding_39"/>
+    <property name="timeObservation40" access="method" column="time_40"/>
+    <property name="moulding40" length="4" access="method" column="moulding_40"/>
+    <property name="timeObservation41" access="method" column="time_41"/>
+    <property name="moulding41" length="4" access="method" column="moulding_41"/>
+    <property name="timeObservation42" access="method" column="time_42"/>
+    <property name="moulding42" length="4" access="method" column="moulding_42"/>
+    <property name="timeObservation43" access="method" column="time_43"/>
+    <property name="moulding43" length="4" access="method" column="moulding_43"/>
+    <property name="timeObservation44" access="method" column="time_44"/>
+    <property name="moulding44" length="4" access="method" column="moulding_44"/>
+    <property name="timeObservation45" access="method" column="time_45"/>
+    <property name="moulding45" length="4" access="method" column="moulding_45"/>
+    <property name="timeObservation46" access="method" column="time_46"/>
+    <property name="moulding46" length="4" access="method" column="moulding_46"/>
+    <property name="timeObservation47" access="method" column="time_47"/>
+    <property name="moulding47" length="4" access="method" column="moulding_47"/>
+    <property name="timeObservation48" access="method" column="time_48"/>
+    <property name="moulding48" length="4" access="method" column="moulding_48"/>
+  </class>
+</hibernate-mapping>

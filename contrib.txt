@@ -1,0 +1,5 @@
+Contributions
+=============
+- Dave Peckham - Created much of the original source for form administration, outcomes, persistence, and original encounter_record schema, Feb-July, 2004
+- Chris Kelley - Managed and contributed to initial zeprs development; Converted site to table-per-form schema, shift from hibernate; On-going support and maintenance -> DBUtils, Dec 2003 - Oct. 2006. 
+- Eric Lacey - Initial analysis and creation of reports, Feb-March,2005.

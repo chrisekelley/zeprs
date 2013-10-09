@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_drugs_dispensed" name="org.cidrz.project.zeprs.valueobject.partograph.DrugsDispensed">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="drugsDispensed1" access="method" column="drugsDispensed_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="drugsDispensed2" access="method" column="drugsDispensed_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="drugsDispensed3" access="method" column="drugsDispensed_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="drugsDispensed4" access="method" column="drugsDispensed_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="drugsDispensed5" access="method" column="drugsDispensed_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="drugsDispensed6" access="method" column="drugsDispensed_6"/>
+    <property name="timeObservation7" access="method" column="time_7"/>
+    <property name="drugsDispensed7" access="method" column="drugsDispensed_7"/>
+    <property name="timeObservation8" access="method" column="time_8"/>
+    <property name="drugsDispensed8" access="method" column="drugsDispensed_8"/>
+    <property name="timeObservation9" access="method" column="time_9"/>
+    <property name="drugsDispensed9" access="method" column="drugsDispensed_9"/>
+    <property name="timeObservation10" access="method" column="time_10"/>
+    <property name="drugsDispensed10" access="method" column="drugsDispensed_10"/>
+    <property name="timeObservation11" access="method" column="time_11"/>
+    <property name="drugsDispensed11" access="method" column="drugsDispensed_11"/>
+    <property name="timeObservation12" access="method" column="time_12"/>
+    <property name="drugsDispensed12" access="method" column="drugsDispensed_12"/>
+    <property name="timeObservation13" access="method" column="time_13"/>
+    <property name="drugsDispensed13" access="method" column="drugsDispensed_13"/>
+    <property name="timeObservation14" access="method" column="time_14"/>
+    <property name="drugsDispensed14" access="method" column="drugsDispensed_14"/>
+    <property name="timeObservation15" access="method" column="time_15"/>
+    <property name="drugsDispensed15" access="method" column="drugsDispensed_15"/>
+    <property name="timeObservation16" access="method" column="time_16"/>
+    <property name="drugsDispensed16" access="method" column="drugsDispensed_16"/>
+    <property name="timeObservation17" access="method" column="time_17"/>
+    <property name="drugsDispensed17" access="method" column="drugsDispensed_17"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+  </class>
+</hibernate-mapping>

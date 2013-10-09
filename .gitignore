@@ -1,0 +1,18 @@
+.classpath
+.settings
+.project
+.couchapprc
+*.swp
+*.tmp
+.DS_store
+.idea
+
+# Java class files
+*.class
+
+# generated files
+WEB-INF/classes/
+
+# Local configuration file (sdk path, etc)
+local.properties
+build.properties

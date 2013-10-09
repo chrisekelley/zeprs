@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_oxytocin" name="org.cidrz.project.zeprs.valueobject.partograph.Oxytocin">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="oxytocin1" length="4" access="method" column="oxytocin_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="oxytocin2" length="4" access="method" column="oxytocin_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="oxytocin3" length="4" access="method" column="oxytocin_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="oxytocin4" length="4" access="method" column="oxytocin_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="oxytocin5" length="4" access="method" column="oxytocin_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="oxytocin6" length="4" access="method" column="oxytocin_6"/>
+    <property name="timeObservation7" access="method" column="time_7"/>
+    <property name="oxytocin7" length="4" access="method" column="oxytocin_7"/>
+    <property name="timeObservation8" access="method" column="time_8"/>
+    <property name="oxytocin8" length="4" access="method" column="oxytocin_8"/>
+    <property name="timeObservation9" access="method" column="time_9"/>
+    <property name="oxytocin9" length="4" access="method" column="oxytocin_9"/>
+    <property name="timeObservation10" access="method" column="time_10"/>
+    <property name="oxytocin10" length="4" access="method" column="oxytocin_10"/>
+    <property name="timeObservation11" access="method" column="time_11"/>
+    <property name="oxytocin11" length="4" access="method" column="oxytocin_11"/>
+    <property name="timeObservation12" access="method" column="time_12"/>
+    <property name="oxytocin12" length="4" access="method" column="oxytocin_12"/>
+    <property name="timeObservation13" access="method" column="time_13"/>
+    <property name="oxytocin13" length="4" access="method" column="oxytocin_13"/>
+    <property name="timeObservation14" access="method" column="time_14"/>
+    <property name="oxytocin14" length="4" access="method" column="oxytocin_14"/>
+    <property name="timeObservation15" access="method" column="time_15"/>
+    <property name="oxytocin15" length="4" access="method" column="oxytocin_15"/>
+    <property name="timeObservation16" access="method" column="time_16"/>
+    <property name="oxytocin16" length="4" access="method" column="oxytocin_16"/>
+    <property name="timeObservation17" access="method" column="time_17"/>
+    <property name="oxytocin17" length="4" access="method" column="oxytocin_17"/>
+    <property name="timeObservation18" access="method" column="time_18"/>
+    <property name="oxytocin18" length="4" access="method" column="oxytocin_18"/>
+    <property name="timeObservation19" access="method" column="time_19"/>
+    <property name="oxytocin19" length="4" access="method" column="oxytocin_19"/>
+    <property name="timeObservation20" access="method" column="time_20"/>
+    <property name="oxytocin20" length="4" access="method" column="oxytocin_20"/>
+    <property name="timeObservation21" access="method" column="time_21"/>
+    <property name="oxytocin21" length="4" access="method" column="oxytocin_21"/>
+    <property name="timeObservation22" access="method" column="time_22"/>
+    <property name="oxytocin22" length="4" access="method" column="oxytocin_22"/>
+    <property name="timeObservation23" access="method" column="time_23"/>
+    <property name="oxytocin23" length="4" access="method" column="oxytocin_23"/>
+    <property name="timeObservation24" access="method" column="time_24"/>
+    <property name="oxytocin24" length="4" access="method" column="oxytocin_24"/>
+    <property name="timeObservation25" access="method" column="time_25"/>
+    <property name="oxytocin25" length="4" access="method" column="oxytocin_25"/>
+    <property name="timeObservation26" access="method" column="time_26"/>
+    <property name="oxytocin26" length="4" access="method" column="oxytocin_26"/>
+    <property name="timeObservation27" access="method" column="time_27"/>
+    <property name="oxytocin27" length="4" access="method" column="oxytocin_27"/>
+    <property name="timeObservation28" access="method" column="time_28"/>
+    <property name="oxytocin28" length="4" access="method" column="oxytocin_28"/>
+    <property name="timeObservation29" access="method" column="time_29"/>
+    <property name="oxytocin29" length="4" access="method" column="oxytocin_29"/>
+    <property name="timeObservation30" access="method" column="time_30"/>
+    <property name="oxytocin30" length="4" access="method" column="oxytocin_30"/>
+    <property name="timeObservation31" access="method" column="time_31"/>
+    <property name="oxytocin31" length="4" access="method" column="oxytocin_31"/>
+    <property name="timeObservation32" access="method" column="time_32"/>
+    <property name="oxytocin32" length="4" access="method" column="oxytocin_32"/>
+    <property name="timeObservation33" access="method" column="time_33"/>
+    <property name="oxytocin33" length="4" access="method" column="oxytocin_33"/>
+    <property name="timeObservation34" access="method" column="time_34"/>
+    <property name="oxytocin34" length="4" access="method" column="oxytocin_34"/>
+    <property name="timeObservation35" access="method" column="time_35"/>
+    <property name="oxytocin35" length="4" access="method" column="oxytocin_35"/>
+    <property name="timeObservation36" access="method" column="time_36"/>
+    <property name="oxytocin36" length="4" access="method" column="oxytocin_36"/>
+    <property name="timeObservation37" access="method" column="time_37"/>
+    <property name="oxytocin37" length="4" access="method" column="oxytocin_37"/>
+    <property name="timeObservation38" access="method" column="time_38"/>
+    <property name="oxytocin38" length="4" access="method" column="oxytocin_38"/>
+    <property name="timeObservation39" access="method" column="time_39"/>
+    <property name="oxytocin39" length="4" access="method" column="oxytocin_39"/>
+    <property name="timeObservation40" access="method" column="time_40"/>
+    <property name="oxytocin40" length="4" access="method" column="oxytocin_40"/>
+    <property name="timeObservation41" access="method" column="time_41"/>
+    <property name="oxytocin41" length="4" access="method" column="oxytocin_41"/>
+    <property name="timeObservation42" access="method" column="time_42"/>
+    <property name="oxytocin42" length="4" access="method" column="oxytocin_42"/>
+    <property name="timeObservation43" access="method" column="time_43"/>
+    <property name="oxytocin43" length="4" access="method" column="oxytocin_43"/>
+    <property name="timeObservation44" access="method" column="time_44"/>
+    <property name="oxytocin44" length="4" access="method" column="oxytocin_44"/>
+    <property name="timeObservation45" access="method" column="time_45"/>
+    <property name="oxytocin45" length="4" access="method" column="oxytocin_45"/>
+    <property name="timeObservation46" access="method" column="time_46"/>
+    <property name="oxytocin46" length="4" access="method" column="oxytocin_46"/>
+    <property name="timeObservation47" access="method" column="time_47"/>
+    <property name="oxytocin47" length="4" access="method" column="oxytocin_47"/>
+    <property name="timeObservation48" access="method" column="time_48"/>
+    <property name="oxytocin48" length="4" access="method" column="oxytocin_48"/>
+    <property name="timeObservation49" access="method" column="time_49"/>
+    <property name="oxytocinDrops49" length="4" access="method" column="oxytocin_49"/>
+    <property name="timeObservation50" access="method" column="time_50"/>
+    <property name="oxytocinDrops50" length="4" access="method" column="oxytocin_50"/>
+    <property name="timeObservation51" access="method" column="time_51"/>
+    <property name="oxytocinDrops51" length="4" access="method" column="oxytocin_51"/>
+    <property name="timeObservation52" access="method" column="time_52"/>
+    <property name="oxytocinDrops52" length="4" access="method" column="oxytocin_52"/>
+    <property name="timeObservation53" access="method" column="time_53"/>
+    <property name="oxytocinDrops53" length="4" access="method" column="oxytocin_53"/>
+    <property name="timeObservation54" access="method" column="time_54"/>
+    <property name="oxytocinDrops54" length="4" access="method" column="oxytocin_54"/>
+    <property name="timeObservation55" access="method" column="time_55"/>
+    <property name="oxytocinDrops55" length="4" access="method" column="oxytocin_55"/>
+    <property name="timeObservation56" access="method" column="time_56"/>
+    <property name="oxytocinDrops56" length="4" access="method" column="oxytocin_56"/>
+    <property name="timeObservation57" access="method" column="time_57"/>
+    <property name="oxytocinDrops57" length="4" access="method" column="oxytocin_57"/>
+    <property name="timeObservation58" access="method" column="time_58"/>
+    <property name="oxytocinDrops58" length="4" access="method" column="oxytocin_58"/>
+    <property name="timeObservation59" access="method" column="time_59"/>
+    <property name="oxytocinDrops59" length="4" access="method" column="oxytocin_59"/>
+    <property name="timeObservation60" access="method" column="time_60"/>
+    <property name="oxytocinDrops60" length="4" access="method" column="oxytocin_60"/>
+    <property name="timeObservation61" access="method" column="time_61"/>
+    <property name="oxytocinDrops61" length="4" access="method" column="oxytocin_61"/>
+    <property name="timeObservation62" access="method" column="time_62"/>
+    <property name="oxytocinDrops62" length="4" access="method" column="oxytocin_62"/>
+    <property name="timeObservation63" access="method" column="time_63"/>
+    <property name="oxytocinDrops63" length="4" access="method" column="oxytocin_63"/>
+    <property name="timeObservation64" access="method" column="time_64"/>
+    <property name="oxytocinDrops64" length="4" access="method" column="oxytocin_64"/>
+    <property name="timeObservation65" access="method" column="time_65"/>
+    <property name="oxytocinDrops65" length="4" access="method" column="oxytocin_65"/>
+    <property name="timeObservation66" access="method" column="time_66"/>
+    <property name="oxytocinDrops66" length="4" access="method" column="oxytocin_66"/>
+    <property name="timeObservation67" access="method" column="time_67"/>
+    <property name="oxytocinDrops67" length="4" access="method" column="oxytocin_67"/>
+    <property name="timeObservation68" access="method" column="time_68"/>
+    <property name="oxytocinDrops68" length="4" access="method" column="oxytocin_68"/>
+    <property name="timeObservation69" access="method" column="time_69"/>
+    <property name="oxytocinDrops69" length="4" access="method" column="oxytocin_69"/>
+    <property name="timeObservation70" access="method" column="time_70"/>
+    <property name="oxytocinDrops70" length="4" access="method" column="oxytocin_70"/>
+    <property name="timeObservation71" access="method" column="time_71"/>
+    <property name="oxytocinDrops71" length="4" access="method" column="oxytocin_71"/>
+    <property name="timeObservation72" access="method" column="time_72"/>
+    <property name="oxytocinDrops72" length="4" access="method" column="oxytocin_72"/>
+    <property name="timeObservation73" access="method" column="time_73"/>
+    <property name="oxytocinDrops73" length="4" access="method" column="oxytocin_73"/>
+    <property name="timeObservation74" access="method" column="time_74"/>
+    <property name="oxytocinDrops74" length="4" access="method" column="oxytocin_74"/>
+    <property name="timeObservation75" access="method" column="time_75"/>
+    <property name="oxytocinDrops75" length="4" access="method" column="oxytocin_75"/>
+    <property name="timeObservation76" access="method" column="time_76"/>
+    <property name="oxytocinDrops76" length="4" access="method" column="oxytocin_76"/>
+    <property name="timeObservation77" access="method" column="time_77"/>
+    <property name="oxytocinDrops77" length="4" access="method" column="oxytocin_77"/>
+    <property name="timeObservation78" access="method" column="time_78"/>
+    <property name="oxytocinDrops78" length="4" access="method" column="oxytocin_78"/>
+    <property name="timeObservation79" access="method" column="time_79"/>
+    <property name="oxytocinDrops79" length="4" access="method" column="oxytocin_79"/>
+    <property name="timeObservation80" access="method" column="time_80"/>
+    <property name="oxytocinDrops80" length="4" access="method" column="oxytocin_80"/>
+    <property name="timeObservation81" access="method" column="time_81"/>
+    <property name="oxytocinDrops81" length="4" access="method" column="oxytocin_81"/>
+    <property name="timeObservation82" access="method" column="time_82"/>
+    <property name="oxytocinDrops82" length="4" access="method" column="oxytocin_82"/>
+    <property name="timeObservation83" access="method" column="time_83"/>
+    <property name="oxytocinDrops83" length="4" access="method" column="oxytocin_83"/>
+    <property name="timeObservation84" access="method" column="time_84"/>
+    <property name="oxytocinDrops84" length="4" access="method" column="oxytocin_84"/>
+    <property name="timeObservation85" access="method" column="time_85"/>
+    <property name="oxytocinDrops85" length="4" access="method" column="oxytocin_85"/>
+    <property name="timeObservation86" access="method" column="time_86"/>
+    <property name="oxytocinDrops86" length="4" access="method" column="oxytocin_86"/>
+    <property name="timeObservation87" access="method" column="time_87"/>
+    <property name="oxytocinDrops87" length="4" access="method" column="oxytocin_87"/>
+    <property name="timeObservation88" access="method" column="time_88"/>
+    <property name="oxytocinDrops88" length="4" access="method" column="oxytocin_88"/>
+    <property name="timeObservation89" access="method" column="time_89"/>
+    <property name="oxytocinDrops89" length="4" access="method" column="oxytocin_89"/>
+    <property name="timeObservation90" access="method" column="time_90"/>
+    <property name="oxytocinDrops90" length="4" access="method" column="oxytocin_90"/>
+    <property name="timeObservation91" access="method" column="time_91"/>
+    <property name="oxytocinDrops91" length="4" access="method" column="oxytocin_91"/>
+    <property name="timeObservation92" access="method" column="time_92"/>
+    <property name="oxytocinDrops92" length="4" access="method" column="oxytocin_92"/>
+    <property name="timeObservation93" access="method" column="time_93"/>
+    <property name="oxytocinDrops93" length="4" access="method" column="oxytocin_93"/>
+    <property name="timeObservation94" access="method" column="time_94"/>
+    <property name="oxytocinDrops94" length="4" access="method" column="oxytocin_94"/>
+    <property name="timeObservation95" access="method" column="time_95"/>
+    <property name="oxytocinDrops95" length="4" access="method" column="oxytocin_95"/>
+    <property name="timeObservation96" access="method" column="time_96"/>
+    <property name="oxytocinDrops96" length="4" access="method" column="oxytocin_96"/>
+  </class>
+</hibernate-mapping>

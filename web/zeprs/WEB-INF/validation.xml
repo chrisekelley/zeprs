@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE form-validation PUBLIC
+           "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN"
+           "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+
+<form-validation>
+
+
+    <global>
+    </global>
+
+    <formset>
+        <form name="adminForm">
+            <field property="id" depends="integer">
+                <arg0 key="labels.admin.form.id"/>
+            </field>
+            <field property="name" depends="required">
+                <arg0 key="labels.admin.form.name"/>
+            </field>
+            <field property="label" depends="required">
+                <arg0 key="labels.admin.form.label"/>
+            </field>
+            <field property="requireReauth" depends="">
+                <arg0 key="labels.admin.form.requireReauth"/>
+            </field>
+            <field property="requirePatient" depends="">
+                <arg0 key="labels.admin.form.requirePatient"/>
+            </field>
+            <field property="enabled" depends="">
+                <arg0 key="labels.admin.form.enabled"/>
+            </field>
+            <field property="flowOrder" depends="required">
+                <arg0 key="labels.admin.form.flowOrder"/>
+            </field>
+        </form>
+        <form name="adminField">
+            <field property="id" depends="integer">
+                <arg0 key="labels.admin.field.id"/>
+            </field>
+            <field property="formId" depends="required,integer">
+                <arg0 key="labels.admin.field.fieldId"/>
+            </field>
+            <field property="label" depends="required">
+                <arg0 key="labels.admin.field.label"/>
+            </field>
+            <field property="type" depends="required">
+                <arg0 key="labels.admin.field.type"/>
+            </field>
+            <field property="required" depends="">
+                <arg0 key="labels.admin.field.required"/>
+            </field>
+            <field property="minValue" depends="integer">
+                <arg0 key="labels.admin.field.minValue"/>
+            </field>
+            <field property="maxValue" depends="integer">
+                <arg0 key="labels.admin.field.maxValue"/>
+            </field>
+            <field property="units">
+                <arg0 key="labels.admin.field.units"/>
+            </field>
+            <field property="patientProperty">
+                <arg0 key="labels.admin.field.patientProperty"/>
+            </field>
+            <field property="enabled">
+                <arg0 key="labels.admin.field.enabled"/>
+            </field>
+        </form>
+        <form name="adminRule">
+            <field property="ruleClass" depends="required"/>
+            <field property="outcomeClass" depends="required"/>
+            <field property="enabled"/>
+        </form>
+        <form name="problem">
+            <field property="problemName" depends="required">
+             <arg0 key="labels.problem.problemName"/>
+            </field>
+            <field property="commentText" depends="maxlength">
+             <arg0 key="labels.problem.commentText"/>
+             <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+             <var><var-name>maxlength</var-name><var-value>1000</var-value></var>
+            </field>
+            <field property="actionPlan" depends="maxlength">
+             <arg0 key="labels.problem.actionPlan"/>
+             <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+             <var><var-name>maxlength</var-name><var-value>1000</var-value></var>
+            </field>
+        </form>
+        <form name="comment">
+            <field property="commentText" depends="required,maxlength">
+             <arg0 key="labels.problem.commentText"/>
+             <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+             <var><var-name>maxlength</var-name><var-value>1000</var-value></var>
+            </field>
+            <field property="actionPlan" depends="maxlength">
+             <arg0 key="labels.problem.actionPlan"/>
+             <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+             <var><var-name>maxlength</var-name><var-value>1000</var-value></var>
+            </field>
+        </form>
+
+
+
+    </formset>
+
+</form-validation>

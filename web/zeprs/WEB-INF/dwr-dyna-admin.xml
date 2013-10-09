@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN" "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+<dwr>
+    <allow>
+         <create creator="new" javascript="Dynasite" scope="session">
+            <param name="class" value="org.cidrz.webapp.dynasite.remote.admin.Dynasite"/>
+        </create>
+        <convert converter="bean" match="org.cidrz.webapp.dynasite.valueobject.PageItem">
+             <param name="include" value="id, form_field, formFieldId, displayOrder, inputType, closeRow, columnNumber, size, maxlength, rows, cols, visible, visibleEnumIdTrigger1, visibleDependencies1, visibleEnumIdTrigger2, visibleDependencies2, selectedEnum, form, formId, colspan, dempMap1, dempMap2, highlightCell"/>
+        </convert>
+
+        <convert converter="bean" match="org.cidrz.webapp.dynasite.valueobject.AuditInfo"/>
+        <convert converter="bean" match="org.cidrz.webapp.dynasite.valueobject.User"/>
+        <convert converter="bean" match="org.cidrz.webapp.dynasite.valueobject.Site"/>
+        <convert converter="bean" match="org.cidrz.webapp.dynasite.valueobject.Flow">
+            <param name="include" value="id, name, flowOrder"/>
+        </convert>
+        <convert converter="bean" match="org.cidrz.webapp.dynasite.valueobject.Form"/>
+        <convert converter="bean" match="org.cidrz.webapp.dynasite.valueobject.FormField">
+            <param name="include" value="id, label, shared, enumerations, enabled, required, starSchemaName, minValue, maxValue, type, units"/>
+        </convert>
+        <convert converter="bean" match="org.cidrz.webapp.dynasite.valueobject.RuleDefinition">
+            <param name="include" value="id, fieldId, ruleClass, outcomeClass, allPregnancies, ruleParams, message, operand, operator, formId"/>
+        </convert>
+        <convert converter="bean" match="org.cidrz.webapp.dynasite.valueobject.FieldEnumeration">
+             <param name="include" value="id, enumeration, numericValue, enabled, concatEnumNumeric, displayOrder"/>
+        </convert>
+    </allow>
+    <signatures>
+      <![CDATA[
+      import java.util.HashSet;
+      import org.cidrz.webapp.dynasite.valueobject.FormField;
+      import org.cidrz.webapp.dynasite.valueobject.Flow;
+      import org.cidrz.webapp.dynasite.valueobject.FieldEnumeration;
+      FormField.setEnumerations(Set<FieldEnumeration> enumerations);
+      import org.cidrz.webapp.dynasite.valueobject.RuleDefinition;
+      ]]>
+    </signatures>
+</dwr>

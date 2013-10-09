@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_urine_amount" name="org.cidrz.project.zeprs.valueobject.partograph.UrineAmount">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="urineAmount1" access="method" column="urineAmount_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="urineAmount2" access="method" column="urineAmount_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="urineAmount3" access="method" column="urineAmount_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="urineAmount4" access="method" column="urineAmount_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="urineAmount5" access="method" column="urineAmount_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="urineAmount6" access="method" column="urineAmount_6"/>
+    <property name="timeObservation7" access="method" column="time_7"/>
+    <property name="urineAmount7" access="method" column="urineAmount_7"/>
+    <property name="timeObservation8" access="method" column="time_8"/>
+    <property name="urineAmount8" access="method" column="urineAmount_8"/>
+    <property name="timeObservation9" access="method" column="time_9"/>
+    <property name="urineAmount9" access="method" column="urineAmount_9"/>
+    <property name="timeObservation10" access="method" column="time_10"/>
+    <property name="urineAmount10" access="method" column="urineAmount_10"/>
+    <property name="timeObservation11" access="method" column="time_11"/>
+    <property name="urineAmount11" access="method" column="urineAmount_11"/>
+    <property name="timeObservation12" access="method" column="time_12"/>
+    <property name="urineAmount12" access="method" column="urineAmount_12"/>
+    <property name="timeObservation13" access="method" column="time_13"/>
+    <property name="urineAmount13" access="method" column="urineAmount_13"/>
+    <property name="timeObservation14" access="method" column="time_14"/>
+    <property name="urineAmount14" access="method" column="urineAmount_14"/>
+    <property name="timeObservation15" access="method" column="time_15"/>
+    <property name="urineAmount15" access="method" column="urineAmount_15"/>
+    <property name="timeObservation16" access="method" column="time_16"/>
+    <property name="urineAmount16" access="method" column="urineAmount_16"/>
+    <property name="timeObservation17" access="method" column="time_17"/>
+    <property name="urineAmount17" access="method" column="urineAmount_17"/>
+    <property name="timeObservation18" access="method" column="time_18"/>
+    <property name="urineAmount18" access="method" column="urineAmount_18"/>
+    <property name="timeObservation19" access="method" column="time_19"/>
+    <property name="urineAmount19" access="method" column="urineAmount_19"/>
+    <property name="timeObservation20" access="method" column="time_20"/>
+    <property name="urineAmount20" access="method" column="urineAmount_20"/>
+    <property name="timeObservation21" access="method" column="time_21"/>
+    <property name="urineAmount21" access="method" column="urineAmount_21"/>
+    <property name="timeObservation22" access="method" column="time_22"/>
+    <property name="urineAmount22" access="method" column="urineAmount_22"/>
+    <property name="timeObservation23" access="method" column="time_23"/>
+    <property name="urineAmount23" access="method" column="urineAmount_23"/>
+    <property name="timeObservation24" access="method" column="time_24"/>
+    <property name="urineAmount24" access="method" column="urineAmount_24"/>
+  </class>
+</hibernate-mapping>

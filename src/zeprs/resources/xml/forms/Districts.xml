@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<list>
+  <org.cidrz.webapp.dynasite.valueobject.District>
+    <id>1</id>
+    <districtId>5040</districtId>
+    <districtName>Lusaka</districtName>
+  </org.cidrz.webapp.dynasite.valueobject.District>
+  <org.cidrz.webapp.dynasite.valueobject.District>
+    <id>3</id>
+    <districtId>8060</districtId>
+    <districtName>Livingstone</districtName>
+  </org.cidrz.webapp.dynasite.valueobject.District>
+  <org.cidrz.webapp.dynasite.valueobject.District>
+    <id>2</id>
+    <districtId>8070</districtId>
+    <districtName>Mazabuka</districtName>
+  </org.cidrz.webapp.dynasite.valueobject.District>
+  <org.cidrz.webapp.dynasite.valueobject.District>
+    <id>4</id>
+    <districtId>9040</districtId>
+    <districtName>Mongu</districtName>
+  </org.cidrz.webapp.dynasite.valueobject.District>
+</list>

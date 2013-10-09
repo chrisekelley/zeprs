@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN" "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+<dwr>
+
+    <allow>
+        <create creator="new" javascript="PatientId" scope="session">
+            <param name="class" value="org.cidrz.webapp.dynasite.remote.PatientId"/>
+            <!--<auth method="getPatientId" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>-->
+        </create>
+        <create creator="new" javascript="Fetus" scope="session">
+            <param name="class" value="org.cidrz.webapp.dynasite.remote.Fetus"/>
+            <auth method="createFetus" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+        </create>
+        <create creator="new" javascript="Newborn" scope="session">
+            <param name="class" value="org.cidrz.webapp.dynasite.remote.Newborn"/>
+            <auth method="createNewborn" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+        </create>
+        <create creator="new" javascript="Partograph" scope="session">
+            <param name="class" value="org.cidrz.webapp.dynasite.remote.Partograph"/>
+            <!--<auth method="insertValueTime" role="*"/>
+            <auth method="setupBean" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+            <auth method="insertValue" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+            <auth method="updatePartographStatus" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+            <auth method="insertValueTime" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>-->
+        </create>
+        <create creator="new" javascript="Antenatal" scope="session">
+            <param name="class" value="org.cidrz.webapp.dynasite.remote.Antenatal"/>
+            <!--<auth method="setupBean" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+            <auth method="insertValue" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+            <auth method="updatePartographStatus" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+            <auth method="insertValueTime" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>-->
+        </create>
+        <create creator="new" javascript="Encounter" scope="session">
+            <param name="class" value="org.cidrz.webapp.dynasite.remote.Encounter"/>
+            <!--<auth method="setupBean" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+            <auth method="insertValue" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>-->
+        </create>
+        <create creator="new" javascript="GenericChart" scope="session">
+            <param name="class" value="org.cidrz.webapp.dynasite.remote.GenericChart"/>
+            <!--<auth method="setupBean" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+            <auth method="insertValue" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>-->
+        </create>
+        <create creator="new" javascript="WidgetDisplay" scope="session">
+            <param name="class" value="org.cidrz.webapp.dynasite.remote.WidgetDisplay"/>
+            <!--<auth method="setupBean" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>
+            <auth method="insertValue" role="CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS"/>-->
+        </create>
+    </allow>
+
+</dwr>

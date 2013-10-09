@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+           "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+           "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="adminSystemState" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="state" type="java.lang.String"/>
+            <form-property name="message" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="adminForm" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="formId" type="java.lang.Long"/>
+            <form-property name="name" type="java.lang.String"/>
+            <form-property name="label" type="java.lang.String"/>
+            <form-property name="_fieldOrder" type="java.lang.String"/>
+            <form-property name="_fields" type="java.lang.String"/>
+            <form-property name="_allfields" type="java.lang.String"/>
+            <form-property name="_up" type="java.lang.String"/>
+            <form-property name="_down" type="java.lang.String"/>
+            <form-property name="requireReauth" type="java.lang.Boolean"/>
+            <form-property name="requirePatient" type="java.lang.Boolean"/>
+            <form-property name="enabled" type="java.lang.Boolean"/>
+            <form-property name="flow" type="org.cidrz.webapp.dynasite.valueobject.Flow"/>
+            <form-property name="flowId" type="java.lang.Long"/>
+            <form-property name="flowOrder" type="java.lang.Integer"/>
+            <form-property name="formType" type="org.cidrz.webapp.dynasite.valueobject.FormType"/>
+            <form-property name="formTypeId" type="java.lang.Long"/>
+            <form-property name="maxSubmissions" type="java.lang.Integer"/>
+        </form-bean>
+        <form-bean name="adminPageItem" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="form_field" type="org.cidrz.webapp.dynasite.valueobject.FormField"/>
+            <form-property name="inputType" type="java.lang.String"/>
+            <form-property name="closeRow" type="java.lang.Boolean"/>
+            <form-property name="columnNumber" type="java.lang.Integer"/>
+            <form-property name="size" type="java.lang.Integer"/>
+            <form-property name="maxlength" type="java.lang.Integer"/>
+            <form-property name="rows" type="java.lang.Integer"/>
+            <form-property name="cols" type="java.lang.Integer"/>
+            <form-property name="visible" type="java.lang.Boolean"/>
+            <form-property name="visibleEnumIdTrigger1" type="java.lang.String"/>
+            <form-property name="visibleEnumIdTrigger2" type="java.lang.String"/>
+            <form-property name="_enumerationOrder" type="java.lang.String"/>
+            <form-property name="_enumerations" type="java.lang.String"/>
+            <form-property name="_up" type="java.lang.String"/>
+            <form-property name="_down" type="java.lang.String"/>
+            <form-property name="_dependencies1" type="java.lang.String[]"/>
+            <form-property name="_dependencies2" type="java.lang.String[]"/>
+            <form-property name="selectedEnum" type="java.lang.Integer"/>
+            <form-property name="formId" type="java.lang.Long"/>
+            <form-property name="colspan" type="java.lang.Integer"/>
+            <form-property name="highlightCell" type="java.lang.Boolean"/>
+            <form-property name="newSharedField" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="adminRule" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="providerId" type="java.lang.Long"/>
+            <form-property name="formId" type="java.lang.Long"/>
+            <form-property name="fieldId" type="java.lang.Long"/>
+            <form-property name="providerClass" type="java.lang.String"/>
+            <form-property name="ruleClass" type="java.lang.String"/>
+            <form-property name="outcomeClass" type="java.lang.String"/>
+            <form-property name="outcomeArg" type="java.lang.String"/>
+            <form-property name="enabled" type="java.lang.Boolean"/>
+            <form-property name="operand" type="java.lang.String"/>
+            <form-property name="operator" type="java.lang.String"/>
+            <form-property name="expr" type="java.lang.String"/>
+            <form-property name="allPregnancies" type="java.lang.Boolean"/>
+        </form-bean>
+        <form-bean name="adminReport" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="label" type="java.lang.String"/>
+            <form-property name="sqlQuery" type="java.lang.String"/>
+            <form-property name="colLabels" type="java.lang.String"/>
+            <form-property name="primaryCategoryColumn" type="java.lang.String"/>
+            <form-property name="secondaryCategoryColumn" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="adminEnumeration" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="fieldId" type="java.lang.Long"/>
+            <form-property name="formId" type="java.lang.Long"/>
+            <form-property name="pageItem" type="java.lang.Long"/>
+            <form-property name="enumeration" type="java.lang.String"/>
+            <form-property name="numericValue" type="java.lang.String"/>
+            <form-property name="enabled" type="java.lang.Boolean"/>
+        </form-bean>
+        <form-bean name="problem" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="patientId" type="java.lang.Long"/>
+            <form-property name="pregnancyId" type="java.lang.Long"/>
+            <form-property name="problemName" type="java.lang.String"/>
+            <form-property name="active" type="java.lang.Boolean"/>
+            <form-property name="onsetDate" type="java.lang.String"/>
+            <form-property name="commentText" type="java.lang.String"/>
+            <form-property name="actionPlan" type="java.lang.String"/>
+            <form-property name="problemType" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="comment" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="patientId" type="java.lang.Long"/>
+            <form-property name="pregnancyId" type="java.lang.Long"/>
+            <form-property name="problemId" type="java.lang.Long"/>
+            <form-property name="commentText" type="java.lang.String"/>
+            <form-property name="actionPlan" type="java.lang.String"/>
+            <form-property name="outcomeId" type="java.lang.Long"/>
+            <form-property name="encounterId" type="java.lang.Long"/>
+            <form-property name="problemType" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="outcomeform" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="patientId" type="java.lang.Long"/>
+            <form-property name="pregnancyId" type="java.lang.Long"/>
+            <form-property name="active" type="java.lang.Boolean"/>
+            <form-property name="commentText" type="java.lang.String"/>
+            <form-property name="actionPlan" type="java.lang.String"/>
+            <form-property name="problemType" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="adminReportField" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="formField" type="java.lang.Long"/>
+            <form-property name="pageItem" type="java.lang.Long"/>
+            <form-property name="form" type="java.lang.Long"/>
+            <form-property name="reportProperty" type="java.lang.String"/>
+            <form-property name="liveReport" type="java.lang.Long"/>
+            <form-property name="shared" type="java.lang.Boolean"/>
+            <form-property name="formId" type="java.lang.Long"/>
+        </form-bean>
+        <form-bean name="chooseReportForm" type="org.cidrz.project.zeprs.report.chooseReportForm"/>
+        <form-bean name="updatePartograph" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="field1" type="java.lang.String"/>
+            <form-property name="field1549" type="java.lang.String"/>
+            <form-property name="field1551" type="java.lang.String"/>
+            <form-property name="field1552" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="forward" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="formId" type="java.lang.Long"/>
+        </form-bean>
+        <form-bean name="admit" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="referralId" type="java.lang.Long"/>
+            <form-property name="condition" type="java.lang.String"/>
+            <form-property name="ward" type="java.lang.Integer"/>
+            <form-property name="firm" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="userSearch" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="searchUsername" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="queryBuilder" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="fieldId" type="java.lang.Long"/>
+            <form-property name="siteId" type="java.lang.Long"/>
+            <form-property name="bdate" type="java.lang.String"/>
+            <form-property name="edate" type="java.lang.String"/>
+            <form-property name="addfield" type="java.lang.Boolean"/>
+        </form-bean>
+        <form-bean name="subscribe" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="id" type="java.lang.Long"/>
+            <form-property name="url" type="java.lang.String"/>
+            <form-property name="datesubscribed" type="java.sql.Timestamp"/>
+            <form-property name="enabled" type="java.lang.Boolean"/>
+            <form-property name="site" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="publish" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="siteId" type="java.lang.Long"/>
+            <form-property name="dateModified" type="java.sql.Timestamp"/>
+            <form-property name="url" type="java.lang.String"/>
+            <form-property name="redirectLocal" type="java.lang.Boolean"/>
+        </form-bean>
+        <form-bean name="sql" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="job" type="java.lang.String"/>
+            <form-property name="type" type="java.lang.String"/>
+            <form-property name="logJob" type="java.lang.Boolean" initial="true"/>
+        </form-bean>
+
+		<form-bean name="PreviewBean" type="org.apache.commons.beanutils.LazyDynaBean">
+			<form-property name="id" type="java.lang.Long" />
+		</form-bean>
+		<form-bean name="RestoreBean" type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="zeprsId" type="java.lang.String" />
+			<form-property name="patientFileName" type="java.lang.String" />
+			<form-property name="pubDate" type="java.lang.String" />
+		</form-bean>
+
+    </form-beans>
+
+    <global-exceptions>
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="success" path="/WEB-INF/pages/success.jsp"/>
+        <forward name="patientChart" path="/patientChart.do"/>
+        <forward name="patientHome" path="/patientHome.do" redirect="true"/>
+        <forward name="patientAnte" path="/patientAnte.do" redirect="true"/>
+        <forward name="patientAnteError" path="/patientAnte.do"/>
+        <forward name="patientSafeMother" path="/patientSafeMother.do" redirect="true"/>
+        <forward name="patientSafeMotherError" path="/patientSafeMother.do"/>
+        <forward name="previousPregnancies" path="/previousPregnancies.do" redirect="true"/>
+        <forward name="previousPregnanciesError" path="/previousPregnancies.do"/>
+        <forward name="error" path="/WEB-INF/pages/error.jsp"/>
+        <forward name="home" path="/home.do"/>
+        <forward name="noPermissions" path="/noPermissions.do"/>
+        <forward name="search" path="/search.do"/>
+        <forward name="setup" path="/setup.do"/>
+        <forward name="patientCare" path="/patientCare.do"/>
+        <forward name="reports" path="/reports.do" redirect="true"/>
+        <forward name="menu" path="/menuList.do"/>
+        <forward name="admin/home" path="/admin/home.do"/>
+        <forward name="admin/formList" path="/admin/formList.do"/>
+        <forward name="admin/reportList" path="/admin/reportList.do"/>
+        <forward name="admin/pool" path="/admin/pool.do"/>
+        <forward name="admin/createPatient" path="/admin/createPatient.do"/>
+        <forward name="admin/ruleList" path="/admin/ruleList.do"/>
+        <forward name="admin/reportGen" path="/admin/reportGen.do"/>
+        <forward name="locked" path="/WEB-INF/pages/locked.jsp"/>
+        <forward name="notlocked" path="/WEB-INF/pages/notlocked.jsp"/>
+        <forward name="history" path="/history.do"/>
+        <forward name="nextForm" path="/nextForm.do"/>
+        <forward name="problem" path="/problem.do" redirect="true"/>
+        <forward name="demographics" path="/demographics.do" redirect="true"/>
+        <forward name="demographicsError" path="/demographics.do"/>
+        <forward name="patientTask" path="/patientTask.do" redirect="true"/>
+        <forward name="versionInfo" path="/versionInfo.do"/>
+        <forward name="partograph" path="/partograph.do" redirect="true"/>
+        <forward name="partographError" path="/partograph.do"/>
+        <forward name="createReferral" path="/form83/new.do" redirect="true"/>
+        <forward name="referrals" path="/referrals.do" redirect="true"/>
+        <forward name="pregnancyDating" path="/pregnancyDating.do" redirect="true"/>
+        <forward name="pregnancyDatingError" path="/pregnancyDating.do"/>
+        <forward name="archive" path="/archive.do"/>
+        <forward name="forward" path="/forward.do"/>
+        <forward name="patientPuer" path="/patientPuer.do" redirect="true"/>
+        <forward name="patientPuerError" path="/patientPuer.do"/>
+        <forward name="labourObservations" path="/labourObservations.do" redirect="true"/>
+        <forward name="labourObservationsError" path="/labourObservations.do"/>
+        <forward name="currentMedicine" path="/currentMedicine.do" redirect="true"/>
+        <forward name="currentMedicineError" path="/currentMedicine.do"/>
+        <forward name="safeMotherhood" path="/safeMotherhood.do" redirect="true"/>
+        <forward name="safeMotherhoodError" path="/safeMotherhood.do"/>
+        <forward name="discharge" path="/discharge.do" redirect="true"/>
+        <forward name="admin/users" path="/admin/users.do"/>
+        <forward name="help" path="/help.do"/>
+        <forward name="generatePatientReport" path="/generatePatientReport.do"/>
+        <forward name="admin/fieldList" path="admin/fieldList.do"/>
+        <forward name="reports/queryBuilder" path="reports/queryBuilder.do"/>
+        <forward name="drugs" path="/drugs.do" redirect="true"/>
+        <forward name="drugsError" path="/drugs.do"/>
+        <forward name="labs" path="/labs.do" redirect="true"/>
+        <forward name="labsError" path="/labs.do"/>
+        <forward name="counsel" path="/counsel.do" redirect="true"/>
+        <forward name="counselError" path="/counsel.do"/>
+        <forward name="rpr" path="/rpr.do" redirect="true"/>
+        <forward name="rprError" path="/rpr.do"/>
+        <forward name="arv" path="/arv.do" redirect="true"/>
+        <forward name="arvError" path="/arv.do"/>
+        <forward name="childrensClinicCard" path="/childrensClinicCard.do"/>
+        <forward name="createPatient" path="/createPatient.do"/>
+        <forward name="logout" path="/logout.do"/>
+        <forward name="export" path="/admin/export.do" redirect="true"/>
+        <forward name="import" path="/admin/import.do" redirect="true"/>
+        <forward name="admin/propogateUpdates" path="/admin/propogateUpdates.do" redirect="true"/>
+        <forward name="hematology" path="/hematology.do" redirect="true"/>
+        <forward name="hematologyError" path="/hematology.do"/>
+        <forward name="chemistry" path="/chemistry.do" redirect="true"/>
+        <forward name="chemistryError" path="/chemistry.do"/>
+        <forward name="liver" path="/liver.do" redirect="true"/>
+        <forward name="liverError" path="/liver.do"/>
+        <forward name="urinalysis" path="/urinalysis.do" redirect="true"/>
+        <forward name="urinalysisError" path="/urinalysis.do"/>
+        <forward name="homelink" path="/homelink.do" redirect="true"/>
+    </global-forwards>
+
+    <action-mappings>
+
+        <!-- user space -->
+
+        <action path="/home" type="org.cidrz.webapp.dynasite.struts.action.HomeAction">
+            <forward name="success" path="/WEB-INF/pages/index.jsp"/>
+        </action>
+        <action path="/homelink" type="org.cidrz.webapp.dynasite.struts.action.SimpleAction">
+            <forward name="success" path="/pages/login/homelink.jsp"/>
+        </action>
+		<action path="/logout" type="org.cidrz.webapp.dynasite.struts.action.LogoutAction">
+            <forward name="success" path="/home.do" redirect="true"/>
+        </action>
+        <action path="/noPermissions" type="org.cidrz.webapp.dynasite.struts.action.generic.BaseAction">
+            <forward name="success" path="/WEB-INF/pages/noPermissions.jsp"/>
+        </action>
+		<action path="/message" type="org.cidrz.webapp.dynasite.struts.action.generic.BaseAction">
+            <forward name="success" path="/WEB-INF/pages/success.jsp"/>
+        </action>
+        <action path="/history" type="org.cidrz.webapp.dynasite.struts.action.generic.BaseAction">
+            <forward name="success" path="/WEB-INF/pages/history.jsp"/>
+        </action>
+        <action path="/reports" type="org.cidrz.webapp.dynasite.struts.action.ReportListAction">
+            <forward name="success" path="/WEB-INF/pages/reports/index.jsp"/>
+        </action>
+        <action path="/reportList" type="org.cidrz.webapp.dynasite.struts.action.generic.ObjectListAction" parameter="org.cidrz.webapp.dynasite.valueobject.ReportSpec">
+            <forward name="success" path="/WEB-INF/pages/reports/report_list.jsp"/>
+        </action>
+        <action path="/patientHome" type="org.cidrz.webapp.dynasite.struts.action.PatientHomeAction">
+            <forward name="input" path="/WEB-INF/pages/search/search.jsp"/>
+            <forward name="patientChart" path="/patientChart.do"/>
+            <forward name="patientHistory" path="/patientHistory.do"/>
+        </action>
+        <action path="/patientAnte" type="org.cidrz.webapp.dynasite.struts.action.PatientAnteAction">
+            <forward name="input" path="/WEB-INF/pages/search/search.jsp"/>
+            <forward name="success" path="/WEB-INF/pages/patient_records/patient_antenatal.jsp"/>
+        </action>
+        <action path="/patientPuer" type="org.cidrz.webapp.dynasite.struts.action.PatientPuerAction" name="form81" validate="false" parameter="81" scope="request">
+            <forward name="input" path="/WEB-INF/pages/search/search.jsp"/>
+            <forward name="success" path="/WEB-INF/pages/encounters/form_chart.jsp"/>
+        </action>
+        <action path="/patientSafeMother" type="org.cidrz.webapp.dynasite.struts.action.PatientSafeMotherAction">
+            <forward name="input" path="/WEB-INF/pages/search/search.jsp"/>
+        </action>
+        <action path="/viewEncounter" type="org.cidrz.webapp.dynasite.struts.action.PatientEncounterAction">
+        </action>
+        <action path="/inactivateOutcome" type="org.cidrz.webapp.dynasite.struts.action.InactivateOutcomeAction"/>
+        <action path="/search" type="org.cidrz.webapp.dynasite.struts.action.HomeAction">
+            <forward name="input" path="/WEB-INF/pages/search/search.jsp"/>
+            <forward name="success" path="/WEB-INF/pages/index.jsp"/>
+        </action>
+        <action path="/setup" type="org.cidrz.webapp.dynasite.struts.action.SetupFormAction">
+            <forward name="input" path="/WEB-INF/pages/setup/site.jsp"/>
+        </action>
+        <action path="/patientCare" type="org.cidrz.webapp.dynasite.struts.action.generic.BaseAction">
+            <forward name="success" path="/WEB-INF/pages/encounters/problem_page.jsp"/>
+        </action>
+        <action path="/navigation" type="org.cidrz.webapp.dynasite.struts.action.FlowAction">
+            <forward name="success" path="/WEB-INF/pages/menus/flows.jsp"/>
+        </action>
+        <action path="/nextForm" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/problem" type="org.cidrz.webapp.dynasite.struts.action.ProblemAction">
+            <forward name="success" path="/WEB-INF/pages/problems/problems.jsp"/>
+        </action>
+        <action path="/demographics" type="org.cidrz.webapp.dynasite.struts.action.DemoAction"/>
+        <action path="/patientTask" type="org.cidrz.webapp.dynasite.struts.action.PatientTaskAction">
+            <forward name="success" path="/WEB-INF/pages/patient_records/patient_tasks.jsp"/>
+        </action>
+        <action path="/versionInfo" type="org.cidrz.webapp.dynasite.struts.action.generic.BaseAction">
+            <forward name="success" path="/WEB-INF/pages/version.html"/>
+        </action>
+        <action path="/partograph" type="org.cidrz.webapp.dynasite.struts.action.PartographAction">
+            <forward name="success" path="/WEB-INF/pages/partograph/index.jsp"/>
+        </action>
+        <action path="/ChooseReportAction" type="org.cidrz.project.zeprs.report.ChooseReportAction" name="chooseReportForm">
+            <forward name="input" path="/WEB-INF/pages/reports/index.jsp"/>
+            <forward name="success" path="/WEB-INF/pages/reports/showReport.jsp"/>
+            <forward name="CBoHQuarterlySelfAssessment" path="/WEB-INF/pages/reports/showCBoHQuarterlySelfAssessmentReport.jsp"/>
+            <forward name="CBoHCommunicableDisease" path="/WEB-INF/pages/reports/showCBoHCommunicableDiseaseWeeklyReport.jsp"/>
+            <forward name="ClinicWorkload" path="/WEB-INF/pages/reports/showClinicWorkloadReport.jsp"/>
+            <forward name="DeliveryTally" path="/WEB-INF/pages/reports/showDeliveryTallySheetReport.jsp"/>
+            <forward name="DeliveryRegister" path="/WEB-INF/pages/reports/deliveryRegister.jsp"/>
+            <forward name="DHMT1HIV" path="/WEB-INF/pages/reports/showDHMT1HIVControlReport.jsp"/>
+            <forward name="DiseaseAggregation" path="/WEB-INF/pages/reports/showDiseaseAggregationReport.jsp"/>
+            <forward name="DistrictServiceDeliveryAggregation" path="/WEB-INF/pages/reports/showDistrictServiceDeliveryAggregationReport.jsp"/>
+            <forward name="HealthServiceDeliveryAggregation" path="/WEB-INF/pages/reports/showHealthServiceDeliveryAggregationReport.jsp"/>
+            <forward name="HospitalServiceDeliveryAggregation" path="/WEB-INF/pages/reports/showHospitalServiceDeliveryAggregationReport.jsp"/>
+            <forward name="InpatientAdmission" path="/WEB-INF/pages/reports/showInpatientAdmissionTallyReport.jsp"/>
+            <forward name="InpatientDiagnosis" path="/WEB-INF/pages/reports/showInpatientDiagnosisAndDeathTallyReport.jsp"/>
+            <forward name="LUDHMBMaternalAndNeonatalStats" path="/WEB-INF/pages/reports/showLUDHMBMaternalReport.jsp"/>
+            <forward name="LUDHBTTallySheet" path="/WEB-INF/pages/reports/showLUDHMTTallySheetforMDHImmunisationsReport.jsp"/>
+            <forward name="NeonatalMortality" path="/WEB-INF/pages/reports/neonatalMortality.jsp"/>
+            <forward name="OutpatientDiagnosis" path="/WEB-INF/pages/reports/showOutpatientDiagnosisTallyReport.jsp"/>
+            <forward name="SafeMotherhoodRegisterAntenatal" path="/WEB-INF/pages/reports/safeMotherhoodRegisterAntenatal.jsp"/>
+            <forward name="SafeMotherhoodRegisterPostnatal" path="/WEB-INF/pages/reports/safeMotherhoodRegisterPostnatal.jsp"/>
+            <forward name="SafeMotherhoodTally" path="/WEB-INF/pages/reports/showSafeMotherhoodTallyReport.jsp"/>
+            <forward name="Under1Immunisation" path="/WEB-INF/pages/reports/showUnder1ImmunisationTallyReport.jsp"/>
+            <forward name="WeeklyMaternalMortality" path="/WEB-INF/pages/reports/showWeeklyMaternalMortalityReport.jsp"/>
+            <forward name="WeeklyNeonatalMortality" path="/WEB-INF/pages/reports/showWeeklyNeonatalMortalityReport.jsp"/>
+            <forward name="IntegratedVctRegister" path="/WEB-INF/pages/reports/integratedVctRegister.jsp"/>
+            <forward name="MaternalMortalityRegister" path="/WEB-INF/pages/reports/maternalMortalityRegister.jsp"/>
+            <forward name="BirthRecordRegister" path="/WEB-INF/pages/reports/birthRecordRegister.jsp"/>
+            <forward name="xml" path="/WEB-INF/pages/reports/xml.jsp"/>
+            <forward name="DeliverySummary" path="/WEB-INF/pages/reports/dailyDeliverySummary.jsp"/>
+            <forward name="PmtctLabourWardRegister" path="/WEB-INF/pages/reports/pmtctLabourWardRegister.jsp"/>
+            <forward name="DailyAntenatalSummary" path="/WEB-INF/pages/reports/dailyAntenatalSummary.jsp"/>
+            <forward name="MonthlyAntenatalSummary" path="/WEB-INF/pages/reports/monthlyAntenatalSummary.jsp"/>
+            <forward name="AllSitesMonthlyAntenatalSummary" path="/WEB-INF/pages/reports/allSitesMonthlyAntenatalSummary.jsp"/>
+            <forward name="SaveSummary" path="/WEB-INF/pages/reports/saveSummary.jsp"/>
+            <forward name="DhmtHivControl" path="/WEB-INF/pages/reports/dhmtHivControl.jsp"/>
+            <forward name="UthObstetricsReport" path="/WEB-INF/pages/reports/uthObstetricsReport.jsp"/>
+            <forward name="ReflexRegister" path="/WEB-INF/pages/reports/reflexRegister.jsp"/>
+            <forward name="FixedCostIncentiveReport" path="/WEB-INF/pages/reports/fixedCostIncentiveReport.jsp"/>
+            <forward name="EligibleForArtReport" path="/WEB-INF/pages/reports/eligibleForArtReport.jsp"/>
+			<forward name="LimsReport" path="/WEB-INF/pages/reports/lims_report.jsp"/>
+        </action>
+        <action path="/viewReport" type="org.cidrz.webapp.dynasite.struts.action.report.ViewAction" name="viewReport">
+            <forward name="success" path="/WEB-INF/pages/reports/deliveryRegister.jsp"/>
+        </action>
+        <action path="/pregnancyDating" type="org.cidrz.webapp.dynasite.struts.action.ChartFormAction" name="form82" validate="false" parameter="82" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/preg_date_form_chart.jsp"/>
+        </action>
+        <action path="/previousPregnancies" type="org.cidrz.webapp.dynasite.struts.action.ChartFormAction" name="form2" validate="false" parameter="2" scope="request">
+            <forward name="input" path="/WEB-INF/pages/search/search.jsp"/>
+            <forward name="success" path="/WEB-INF/pages/encounters/form_chart.jsp"/>
+        </action>
+        <action path="/referrals" type="org.cidrz.webapp.dynasite.struts.action.ReferralListAction">
+            <forward name="success" path="/WEB-INF/pages/referrals/index.jsp"/>
+        </action>
+        <action path="/archive" type="org.cidrz.webapp.dynasite.struts.action.EncounterArchiveListAction" name="chooseReportForm">
+            <forward name="success" path="/WEB-INF/pages/reports/archive.jsp"/>
+        </action>
+        <action path="/forward" type="org.cidrz.webapp.dynasite.struts.action.ForwardAction"
+            name="forward" scope="request" validate="false">
+            <forward name="success" path="/home.do"/>
+        </action>
+        <action path="/labourObservations" type="org.cidrz.webapp.dynasite.struts.action.ChartFormAction" name="form17" validate="false" parameter="17" scope="request">
+            <forward name="input" path="/WEB-INF/pages/search/search.jsp"/>
+            <forward name="success" path="/WEB-INF/pages/encounters/form_chart.jsp"/>
+        </action>
+        <action path="/currentMedicine" type="org.cidrz.webapp.dynasite.struts.action.ChartFormAction" name="form55" validate="false" parameter="55" scope="request">
+            <forward name="input" path="/WEB-INF/pages/search/search.jsp"/>
+            <forward name="success" path="/WEB-INF/pages/encounters/form_chart.jsp"/>
+        </action>
+        <!--<action path="/safeMotherhood" type="org.cidrz.webapp.dynasite.struts.action.SafeMotherhoodAction">
+            <forward name="success" path="/WEB-INF/pages/encounters/form_chart.jsp"/>
+        </action>-->
+        <action path="/safeMotherhood" type="org.cidrz.webapp.dynasite.struts.action.SafeMotherhoodAction" name="form92" validate="false" parameter="92" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/labs" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form87" validate="false" parameter="87" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/rpr" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form90" validate="false" parameter="90" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/drugs" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form88" validate="false" parameter="88" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/counsel" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form91" validate="false" parameter="91" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/arv" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form89" validate="false" parameter="89" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/discharge" type="org.cidrz.webapp.dynasite.struts.action.DischargeAction">
+            <forward name="success" path="/WEB-INF/pages/patient_records/patient_referrals.jsp"/>
+        </action>
+        <action path="/help" type="org.cidrz.webapp.dynasite.struts.action.HelpAction">
+            <forward name="success" path="/WEB-INF/pages/help/index.jsp"/>
+        </action>
+        <action path="/generatePatientReport" type="org.cidrz.webapp.dynasite.struts.action.report.GeneratePatientReportAction">
+        </action>
+        <action path="/admin/fieldList" type="org.cidrz.webapp.dynasite.struts.action.admin.FieldListAction">
+            <forward name="success" path="/WEB-INF/pages/admin/fieldList.jsp"/>
+        </action>
+        <action path="/reports/queryBuilder" type="org.cidrz.webapp.dynasite.struts.action.QueryBuilderAction"
+                name="queryBuilder" scope="request" validate="false" input="/WEB-INF/pages/reports/queryBuilder.jsp">
+            <forward name="success" path="/WEB-INF/pages/reports/queryBuilder.jsp"/>
+        </action>
+        <action path="/antenatalCard" type="org.cidrz.webapp.dynasite.struts.action.AntenatalCardAction">
+            <forward name="success" path="/WEB-INF/pages/patient_records/antenatalCard.jsp"/>
+        </action>
+        <action path="/childrensClinicCard" type="org.cidrz.webapp.dynasite.struts.action.ChildrensClinicCardAction">
+            <forward name="success" path="/WEB-INF/pages/patient_records/childrensClinicCard.jsp"/>
+        </action>
+        <action path="/postnatalCard" type="org.cidrz.webapp.dynasite.struts.action.PostnatalCardAction">
+            <forward name="success" path="/WEB-INF/pages/patient_records/postnatalCard.jsp"/>
+        </action>
+        <action path="/safeMotherhoodClinicCard" type="org.cidrz.webapp.dynasite.struts.action.SafeMotherhoodClinicCardAction">
+            <forward name="success" path="/WEB-INF/pages/patient_records/safeMotherhoodClinicCard.jsp"/>
+        </action>
+        <action path="/admin/restorePatient" type="org.cidrz.webapp.dynasite.struts.action.admin.RestorePatientAction" name="RestoreBean"
+		 scope="request" validate="false" parameter="org.cidrz.webapp.dynasite.valueobject.Restore" input="/WEB-INF/pages/admin/restore_patient.jsp">
+			<forward name="success" path="/WEB-INF/pages/admin/restore_patient.jsp"/>
+        </action>
+        <action path="/admin/export" type="org.cidrz.webapp.dynasite.struts.action.admin.ExportClinicAction">
+            <forward name="success" path="/WEB-INF/pages/admin/export_done.jsp"/>
+        </action>
+        <action path="/admin/import" type="org.cidrz.webapp.dynasite.struts.action.admin.ImportFeedAction">
+            <forward name="success" path="/admin/subscription/new.do" redirect="true"/>
+        </action>
+        <action path="/admin/deleteEncounter" type="org.cidrz.webapp.dynasite.struts.action.admin.DeleteEncounterAction">
+            <forward name="success" path="/home.do"/>
+        </action>
+        <action path="/admin/createDirectories" type="org.cidrz.webapp.dynasite.struts.action.admin.CreateDirectoriesAction">
+        </action>
+        <action path="/admin/cleanDirectories" type="org.cidrz.webapp.dynasite.struts.action.admin.CleanDirectoriesAction">
+        </action>
+        <action path="/deleteOutcome" type="org.cidrz.webapp.dynasite.struts.action.admin.DeleteOutcomeAction">
+            <forward name="success" path="/problem.do"/>
+        </action>
+        <action path="/deleteProblem" type="org.cidrz.webapp.dynasite.struts.action.admin.DeleteProblemAction">
+            <forward name="success" path="/problem.do"/>
+        </action>
+        <action path="/hematology" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form101" validate="false" parameter="101" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/chemistry" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form102" validate="false" parameter="102" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/liver" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form103" validate="false" parameter="103" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/urinalysis" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form104" validate="false" parameter="104" scope="request">
+            <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+		<action path="/patient/get" type="org.cidrz.webapp.dynasite.struts.action.admin.ExportPatientAction">
+        </action>
+        <action path="/patient/import" type="org.cidrz.webapp.dynasite.struts.action.admin.ImportPatientAction" >
+           <forward name="success" path="/home.do" redirect="true"/>
+        </action>
+
+        <!-- admin system state -->
+
+        <action path="/admin/systemState" type="org.cidrz.webapp.dynasite.struts.action.admin.SystemStateAction"
+            name="adminSystemState" scope="request" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/change.jsp"/>
+            <forward name="formAdmin" path="/admin/formList.do"/>
+        </action>
+
+        <action path="/admin/home" type="org.cidrz.webapp.dynasite.struts.action.generic.BaseAction">
+            <forward name="success" path="/WEB-INF/pages/admin/index.jsp"/>
+        </action>
+
+        <!-- admin forms -->
+
+        <action path="/admin/formList" type="org.cidrz.webapp.dynasite.struts.action.admin.FormListAction">
+            <forward name="success" path="/WEB-INF/pages/admin/form_list.jsp"/>
+        </action>
+        <action path="/admin/form/save" type="org.cidrz.webapp.dynasite.struts.action.admin.SaveFormAction"
+            name="adminForm" scope="request" validate="false" input="/WEB-INF/pages/admin/form.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.Form">
+            <forward name="success" path="/admin/formList.do"/>
+            <forward name="preview" path="/WEB-INF/pages/admin/preview_form.jsp"/>
+        </action>
+
+        <action path="/admin/form/preview" type="org.cidrz.webapp.dynasite.struts.action.admin.PreviewFormAction" name="PreviewBean" validate="true">
+		    <forward name="preview" path="/WEB-INF/pages/admin/preview_form.jsp"/>
+			<forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+		</action>
+
+        <action path="/admin/form/edit" type="org.cidrz.webapp.dynasite.struts.action.admin.EditFormAction"
+            name="adminForm" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.Form" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/fields.jsp"/>
+        </action>
+        <action path="/admin/form/new" type="org.cidrz.webapp.dynasite.struts.action.admin.CreateNewFormAction"
+            name="adminForm" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.Form" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/form.jsp"/>
+        </action>
+        <action path="/admin/pool" type="org.cidrz.webapp.dynasite.struts.action.admin.PoolAction">
+            <forward name="success" path="/WEB-INF/pages/admin/pool.jsp"/>
+        </action>
+        <action path="/admin/createPatient" type="org.cidrz.webapp.dynasite.struts.action.admin.CreatePatientAction">
+            <forward name="success" path="/admin/home.do"/>
+        </action>
+        <action path="/admin/ruleList" type="org.cidrz.webapp.dynasite.struts.action.admin.RuleListAction">
+            <forward name="success" path="/WEB-INF/pages/admin/ruleList.jsp"/>
+        </action>
+        <action path="/createPatient" type="org.cidrz.webapp.dynasite.struts.action.admin.CreatePatientAction">
+            <forward name="success" path="/home.do"/>
+        </action>
+
+        <!-- test form -->
+
+        <action path="/admin/form/edittest" type="org.cidrz.webapp.dynasite.struts.action.admin.EditFormAction"
+            name="adminForm" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.Form" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/test.jsp"/>
+        </action>
+
+        <!-- admin pageItems -->
+
+        <action path="/admin/pageItem/save" type="org.cidrz.webapp.dynasite.struts.action.admin.SavePageItemAction"
+            name="adminPageItem" scope="request" validate="false" input="/WEB-INF/pages/admin/pageItem.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.PageItem">
+            <forward name="success" path="/admin/form/edit.do"/>
+        </action>
+        <action path="/admin/pageItem/edit" type="org.cidrz.webapp.dynasite.struts.action.admin.EditPageItemAction"
+            name="adminPageItem" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.PageItem" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/pageItem.jsp"/>
+        </action>
+        <action path="/admin/pageItem/new" type="org.cidrz.webapp.dynasite.struts.action.admin.CreateNewPageItemAction"
+            name="adminPageItem" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.PageItem" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/pageItem.jsp"/>
+        </action>
+        <action path="/admin/pageItem/delete" type="org.cidrz.webapp.dynasite.struts.action.admin.DeletePageItemAction" parameter="org.cidrz.webapp.dynasite.valueobject.PageItem">
+            <forward name="success" path="/admin/form/edit.do"/>
+        </action>
+
+        <!-- admin enumerations -->
+
+        <action path="/admin/enumeration/save" type="org.cidrz.webapp.dynasite.struts.action.admin.SaveEnumerationAction"
+            name="adminEnumeration" scope="request" validate="false" input="/WEB-INF/pages/admin/enumeration.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.FieldEnumeration">
+            <forward name="success" path="/admin/pageItem/edit.do"/>
+            <!--<forward name="success" path="/admin/formList.do"/>-->
+        </action>
+        <action path="/admin/enumeration/edit" type="org.cidrz.webapp.dynasite.struts.action.admin.EditEnumerationAction"
+            name="adminEnumeration" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.FieldEnumeration" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/enumeration.jsp"/>
+        </action>
+        <action path="/admin/enumeration/new" type="org.cidrz.webapp.dynasite.struts.action.generic.CreateNewObjectAction"
+            name="adminEnumeration" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.FieldEnumeration" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/enumeration.jsp"/>
+        </action>
+
+        <action path="/admin/enumeration/delete" type="org.cidrz.webapp.dynasite.struts.action.admin.DeleteEnumerationAction" parameter="org.cidrz.webapp.dynasite.valueobject.FieldEnumeration">
+            <forward name="success" path="/admin/pageItem/edit.do"/>
+        </action>
+
+        <!-- admin rules -->
+
+        <action path="/admin/rule/save" type="org.cidrz.webapp.dynasite.struts.action.admin.SaveRuleDefinitionAction"
+            name="adminRule" scope="request" validate="false" input="/WEB-INF/pages/admin/rule.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.RuleDefinition">
+            <forward name="success-form" path="/admin/form/edit.do"/>
+            <forward name="success-field" path="/admin/pageItem/edit.do"/>
+        </action>
+        <action path="/admin/rule/edit" type="org.cidrz.webapp.dynasite.struts.action.admin.EditRuleDefinitionAction"
+            name="adminRule" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.RuleDefinition" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/rule.jsp"/>
+        </action>
+        <action path="/admin/rule/new" type="org.cidrz.webapp.dynasite.struts.action.admin.CreateNewRuleAction"
+            name="adminRule" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.RuleDefinition" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/rule.jsp"/>
+        </action>
+
+        <!-- admin reports -->
+
+        <action path="/admin/reportList" type="org.cidrz.webapp.dynasite.struts.action.generic.ObjectListAction" parameter="org.cidrz.webapp.dynasite.valueobject.ReportSpec">
+            <forward name="success" path="/WEB-INF/pages/admin/report_list.jsp"/>
+        </action>
+        <action path="/admin/report/save" type="org.cidrz.webapp.dynasite.struts.action.generic.SaveObjectAction"
+            name="adminReport" scope="request" validate="false" input="/WEB-INF/pages/admin/report.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.ReportSpec">
+            <forward name="success" path="/admin/reportList.do"/>
+            <forward name="preview" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+        </action>
+        <action path="/admin/report/edit" type="org.cidrz.webapp.dynasite.struts.action.generic.EditObjectAction"
+            name="adminReport" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.ReportSpec" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/report.jsp"/>
+        </action>
+        <action path="/admin/report/new" type="org.cidrz.webapp.dynasite.struts.action.generic.CreateNewObjectAction"
+            name="adminReport" scope="request" parameter="org.cidrz.webapp.dynasite.valueobject.ReportSpec" validate="false">
+            <forward name="success" path="/WEB-INF/pages/admin/report.jsp"/>
+        </action>
+
+        <!-- admin report fields -->
+
+        <action path="/admin/reportField/save" type="org.cidrz.webapp.dynasite.struts.action.admin.SaveAdminReportFieldAction"
+            name="adminReportField" scope="request" validate="false" input="/WEB-INF/pages/admin/pageItem/edit.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.LiveReportField">
+            <forward name="success" path="/admin/form/edit.do"/>
+        </action>
+
+        <!-- admin report generate -->
+
+        <action path="/admin/reportGen" type="org.cidrz.webapp.dynasite.struts.action.admin.ReportGenAction">
+            <forward name="success" path="/WEB-INF/pages/admin/report_admin.jsp"/>
+        </action>
+
+        <!-- dynasite generator -->
+
+        <action path="/admin/dynagen" type="org.cidrz.webapp.dynasite.struts.action.admin.SourceGeneratorAction">
+            <forward name="success" path="/WEB-INF/pages/admin/generate_done.jsp"/>
+        </action>
+
+        <!-- admin users -->
+
+        <action path="/admin/users" type="org.cidrz.webapp.dynasite.struts.action.admin.UserAdminAction"
+                name="userSearch" scope="request" validate="false" input="/WEB-INF/pages/admin/users.jsp">
+            <forward name="success" path="/WEB-INF/pages/admin/users.jsp"/>
+        </action>
+        <action path="/admin/deletePatient" name="chooseReportForm" type="org.cidrz.webapp.dynasite.struts.action.admin.DeletePatientAction">
+			<forward name="success" path="/message.do"/>
+        </action>
+        <action path="/admin/resetFlow" type="org.cidrz.webapp.dynasite.struts.action.admin.ResetFlowAction">
+            <forward name="success" path="/home.do"/>
+        </action>
+
+         <!-- admin site subscription  -->
+
+        <action path="/admin/subscription/save" type="org.cidrz.webapp.dynasite.struts.action.admin.SubscribeAction"
+            name="subscribe" scope="request" validate="false" input="/WEB-INF/pages/admin/subscription.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.Subscription">
+            <forward redirect="true" name="success" path="/admin/subscription/new.do"/>
+        </action>
+        <action path="/admin/subscription/new" type="org.cidrz.webapp.dynasite.struts.action.admin.SubscribeAction"  parameter="org.cidrz.webapp.dynasite.valueobject.Subscription">
+            <forward name="success" path="/WEB-INF/pages/admin/subscription.jsp"/>
+        </action>
+        <action path="/admin/subscription/delete" type="org.cidrz.webapp.dynasite.struts.action.admin.DeleteSubscriptionAction">
+            <forward name="success" path="/WEB-INF/pages/admin/subscription.jsp"/>
+        </action>
+
+        <!-- admin site publishing - rss feeds  -->
+
+        <action path="/admin/publisher/save" type="org.cidrz.webapp.dynasite.struts.action.admin.PublisherAction"
+            name="publish" scope="request" validate="false" input="/WEB-INF/pages/admin/publish_settings.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.Publisher">
+            <forward redirect="true" name="success" path="/admin/publisher/new.do"/>
+        </action>
+        <action path="/admin/publisher/new" type="org.cidrz.webapp.dynasite.struts.action.admin.PublisherAction"  parameter="org.cidrz.webapp.dynasite.valueobject.Publisher">
+            <forward name="success" path="/WEB-INF/pages/admin/publisher.jsp"/>
+        </action>
+
+        <!-- admin site propogate - update software on remote sites -->
+
+        <action path="/admin/propogateUpdates" type="org.cidrz.webapp.dynasite.struts.action.admin.PropogateUpdateAction">
+            <forward name="success" path="/WEB-INF/pages/admin/updated_sites.jsp"/>
+        </action>
+
+
+        <!-- admin sql administration   -->
+
+        <action path="/admin/sql/save" type="org.cidrz.webapp.dynasite.struts.action.admin.SqlAction"
+            name="sql" scope="request" validate="false" input="/WEB-INF/pages/admin/sql.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.ApplicationUpdate">
+            <forward name="success" path="/WEB-INF/pages/admin/sql.jsp"/>
+        </action>
+        <action path="/admin/sql/new" type="org.cidrz.webapp.dynasite.struts.action.admin.SqlAction"  parameter="org.cidrz.webapp.dynasite.valueobject.ApplicationUpdate">
+            <forward name="success" path="/WEB-INF/pages/admin/sql.jsp"/>
+        </action>
+
+         <!-- admin appupdates  -->
+
+        <action path="/admin/appupdates/view" type="org.cidrz.webapp.dynasite.struts.action.admin.ApplicationUpdateAction"  parameter="org.cidrz.webapp.dynasite.valueobject.ApplicationUpdate">
+            <forward name="success" path="/WEB-INF/pages/admin/appupdates.jsp"/>
+        </action>
+        <action path="/admin/appupdates/delete" type="org.cidrz.webapp.dynasite.struts.action.admin.ApplicationUpdateAction"  parameter="org.cidrz.webapp.dynasite.valueobject.ApplicationUpdate">
+            <forward name="success" path="/WEB-INF/pages/admin/appupdates.jsp"/>
+        </action>
+
+		<!-- admin LIMS imports -->
+
+		<action path="/admin/lims" type="org.cidrz.webapp.dynasite.struts.action.admin.ImportLimsAction">
+		     <forward name="success" path="/WEB-INF/pages/admin/lims.jsp"/>
+        </action>
+
+        <!-- problems -->
+
+        <action path="/problems/save" type="org.cidrz.webapp.dynasite.struts.action.generic.SaveObjectAction"
+            name="problem" scope="request" validate="false" input="/WEB-INF/pages/patient_records/patient_chart.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.Problem">
+            <forward name="success" path="/problem.do"/>
+        </action>
+        <action path="/problems/correct" type="org.cidrz.webapp.dynasite.struts.action.CorrectProblemAction"
+            name="problem" scope="request" validate="false" input="/WEB-INF/pages/patient_records/patient_chart.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.Problem">
+            <forward name="success" path="/problem.do"/>
+        </action>
+        <action path="/problems/comment/save" type="org.cidrz.webapp.dynasite.struts.action.generic.SaveObjectAction"
+            name="comment" scope="request" validate="false" input="/WEB-INF/pages/patient_records/patient_chart.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.Comment">
+            <forward name="success" path="/problem.do"/>
+        </action>
+
+        <!-- outcome -->
+
+        <action path="/outcome/correct" type="org.cidrz.webapp.dynasite.struts.action.CorrectOutcomeAction"
+            name="outcomeform" scope="request" validate="false" input="/WEB-INF/pages/patient_records/patient_home.jsp" parameter="org.cidrz.webapp.dynasite.rules.impl.OutcomeImpl">
+            <forward name="success" path="/problem.do"/>
+        </action>
+
+        <!-- uth summary -->
+
+        <action path="/maternalDischargeAction" type="org.cidrz.webapp.dynasite.struts.action.PatientPuerAction" name="form81" validate="false" parameter="81" scope="request">
+            <forward name="input" path="/WEB-INF/pages/search/search.jsp"/>
+            <forward name="success" path="/WEB-INF/pages/encounters/form_chart.jsp"/>
+        </action>
+
+        <action path="/admit" type="org.cidrz.webapp.dynasite.struts.action.AdmitAction" name="admit" scope="request" validate="false">
+            <forward name="success" path="/discharge.do"/>
+        </action>
+
+		<!-- quartz scheduler -->
+
+		<action path="/admin/scheduler" type="org.cidrz.webapp.dynasite.struts.action.admin.SchedulerAction">
+		    <forward name="success" path="/admin/schedulerList.do" redirect="true"/>
+        </action>
+
+		<action path="/admin/schedulerList" type="org.cidrz.webapp.dynasite.struts.action.admin.SchedulerAction">
+		    <forward name="success" path="/WEB-INF/pages/success.jsp" />
+        </action>
+
+		<!-- Set Dynasite Server Status -->
+
+		<action path="/admin/setServerStatus" type="org.cidrz.webapp.dynasite.struts.action.admin.SetServerStatusAction">
+		    <forward name="success" path="/admin/setServerStatusMessage.do" />
+        </action>
+
+		<action path="/admin/setServerStatusMessage" type="org.cidrz.webapp.dynasite.struts.action.admin.SetServerStatusAction">
+		    <forward name="success" path="/WEB-INF/pages/success.jsp" />
+        </action>
+
+		<!-- compare databases -->
+
+		<action path="/admin/compareDatabases" type="org.cidrz.webapp.dynasite.struts.action.admin.CompareDatabasesAction" name="chooseReportForm">
+		    <forward name="success" path="/admin/compareDatabasesResult.do" redirect="true"/>
+        </action>
+		<action path="/admin/compareDatabasesResult" type="org.cidrz.webapp.dynasite.struts.action.admin.CompareDatabasesResultAction" name="chooseReportForm">
+		    <forward name="success" path="/WEB-INF/pages/admin/compare_results.jsp" />
+        </action>
+
+    </action-mappings>
+
+    <message-resources parameter="resources.application" null= "false "/>
+
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/bar.xml"/>
+    </plug-in>
+
+</struts-config>
+

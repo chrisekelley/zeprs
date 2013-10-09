@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.cidrz.webapp.dynasite.servlet.DynasiteConfigServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/foo.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>validator-config</param-name>
+            <param-value>/WEB-INF/bar.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>validator-config-template</param-name>
+            <param-value>/WEB-INF/validation.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>sql-text</param-name>
+            <param-value>/WEB-INF/sql.txt</param-value>
+        </init-param>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>detail</param-name>
+            <param-value>2</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <display-name>Quartz Initializer Servlet</display-name>
+        <servlet-name>QuartzInitializer</servlet-name>
+        <servlet-class>
+            org.quartz.ee.servlet.QuartzInitializerServlet
+        </servlet-class>
+        <init-param>
+            <param-name>config-file</param-name>
+            <param-value>resources/quartz.properties</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>shutdown-on-unload</param-name>
+            <param-value>true</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>start-scheduler-on-load</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+
+    <!-- Cactus Servlet Redirector configuration -->
+       <!-- <servlet>
+            <servlet-name>ServletRedirector</servlet-name>
+            <servlet-class>org.apache.cactus.server.ServletTestRedirector</servlet-class>
+        </servlet>-->
+
+    <!-- Cactus Servlet Redirector URL mapping -->
+        <!--<servlet-mapping>
+            <servlet-name>ServletRedirector</servlet-name>
+            <url-pattern>/ServletRedirector</url-pattern>
+        </servlet-mapping>-->
+
+
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/WEB-INF/pages/login/logon.jsp</form-login-page>
+            <form-error-page>/pages/login/logonError.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/pages/accessDenied.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- 400 code is from trying to go directly to login.jsp -->
+        <error-code>400</error-code>
+        <location>/home.do</location>
+    </error-page>
+
+    <resource-ref>
+        <description>zeprsDB</description>
+        <res-ref-name>jdbc/zeprsDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <resource-ref>
+        <description>zeprsReportDB</description>
+        <res-ref-name>jdbc/zeprsReportDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <resource-ref>
+        <description>adminDB</description>
+        <res-ref-name>jdbc/adminDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <resource-ref>
+        <description>demoDB</description>
+        <res-ref-name>jdbc/demoDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <resource-ref>
+        <description>zeprsDBadmin</description>
+        <res-ref-name>jdbc/zeprsDBadmin</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+   <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>zeprs</web-resource-name>
+            <url-pattern>*.do</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>*</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Clinician/Doctor</web-resource-name>
+            <url-pattern>/patientHome.do</url-pattern>
+            <url-pattern>/demographics.do</url-pattern>
+            <url-pattern>/pregnancyDating.do</url-pattern>
+            <url-pattern>/patientTask.do</url-pattern>
+            <url-pattern>/previousPregnancies.do</url-pattern>
+            <url-pattern>/currentMedicine.do</url-pattern>
+            <url-pattern>/patientSafeMother.do</url-pattern>
+            <url-pattern>/patientAnte.do</url-pattern>
+            <url-pattern>/patientPuer.do</url-pattern>
+            <url-pattern>/problem.do</url-pattern>
+            <url-pattern>/labourObservations.do</url-pattern>
+            <url-pattern>/partograph.do</url-pattern>
+
+            <url-pattern>/form1/new.do</url-pattern>
+            <url-pattern>/form2/new.do</url-pattern>
+            <url-pattern>/form4/new.do</url-pattern>
+            <url-pattern>/form9/new.do</url-pattern>
+            <url-pattern>/form10/new.do</url-pattern>
+            <url-pattern>/form11/new.do</url-pattern>
+            <url-pattern>/form14/new.do</url-pattern>
+            <url-pattern>/form15/new.do</url-pattern>
+            <url-pattern>/form16/new.do</url-pattern>
+            <url-pattern>/form17/new.do</url-pattern>
+            <url-pattern>/form23/new.do</url-pattern>
+            <url-pattern>/form28/new.do</url-pattern>
+            <url-pattern>/form32/new.do</url-pattern>
+            <url-pattern>/form33/new.do</url-pattern>
+            <url-pattern>/form36/new.do</url-pattern>
+            <url-pattern>/form37/new.do</url-pattern>
+            <url-pattern>/form40/new.do</url-pattern>
+            <url-pattern>/form44/new.do</url-pattern>
+            <url-pattern>/form55/new.do</url-pattern>
+            <url-pattern>/form63/new.do</url-pattern>
+            <url-pattern>/form64/new.do</url-pattern>
+            <url-pattern>/form65/new.do</url-pattern>
+            <url-pattern>/form66/new.do</url-pattern>
+            <url-pattern>/form67/new.do</url-pattern>
+            <url-pattern>/form68/new.do</url-pattern>
+            <url-pattern>/form70/new.do</url-pattern>
+            <url-pattern>/form71/new.do</url-pattern>
+            <url-pattern>/form72/new.do</url-pattern>
+            <url-pattern>/form73/new.do</url-pattern>
+            <url-pattern>/form74/new.do</url-pattern>
+            <url-pattern>/form75/new.do</url-pattern>
+            <url-pattern>/form76/new.do</url-pattern>
+            <url-pattern>/form77/new.do</url-pattern>
+            <url-pattern>/form78/new.do</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+	<security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Basic Admin functions</web-resource-name>
+            <url-pattern>/admin/deletePatient.do</url-pattern>
+            <url-pattern>/admin/deleteEncounter.do</url-pattern>
+            <url-pattern>/admin/home.do</url-pattern>
+			<url-pattern>/admin/restorePatient.do</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>DELETE_ARCHIVE_PATIENT_RECORDS</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>zeprs/admin</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ALTER_PROGRAMS_AND_SCREEN_APPEARANCE</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>patient records</web-resource-name>
+            <url-pattern>/patientHome.do</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>VIEW_INDIVIDUAL_PATIENT_RECORDS</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>reports</web-resource-name>
+            <url-pattern>/reports.do</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>VIEW_SELECTED_REPORTS_AND_VIEW_STATISTICAL_SUMMARIES</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <display-name>dwr-user</display-name>
+        <web-resource-collection>
+            <web-resource-name>dwr-user-collection</web-resource-name>
+            <url-pattern>/dwr/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>clerk pages</web-resource-name>
+            <url-pattern>/form1/new.do</url-pattern>
+            <url-pattern>/demographics.do</url-pattern>
+            <url-pattern>/patientHome.do</url-pattern>
+            <url-pattern>/dwr/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>CREATE_NEW_PATIENTS_AND_SEARCH</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>user administration</web-resource-name>
+            <url-pattern>/admin/users.do</url-pattern>
+            <url-pattern>/dwruseradmin/*</url-pattern>
+            <url-pattern>/dwrdisplay/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>CREATE_MEDICAL_STAFF_IDS_AND_PASSWORDS_FOR_MEDICAL_STAFF</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>dynasite administration</web-resource-name>
+            <url-pattern>/admin/form/edit.do</url-pattern>
+            <url-pattern>/dwrdyna/*</url-pattern>
+            <url-pattern>/dwrdisplay/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ALTER_PROGRAMS_AND_SCREEN_APPEARANCE</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-role>
+        <role-name>CREATE_VIEW_MODIFY_INDIVIDUAL_PATIENT_RECORDS</role-name>
+    </security-role>
+    <security-role>
+        <role-name>ALTER_PROGRAMS_AND_SCREEN_APPEARANCE</role-name>
+    </security-role>
+    <security-role>
+        <role-name>VIEW_INDIVIDUAL_PATIENT_RECORDS</role-name>
+    </security-role>
+    <security-role>
+        <role-name>VIEW_SELECTED_REPORTS_AND_VIEW_STATISTICAL_SUMMARIES</role-name>
+    </security-role>
+    <security-role>
+        <role-name>CREATE_NEW_PATIENTS_AND_SEARCH</role-name>
+    </security-role>
+    <security-role>
+        <role-name>CREATE_MEDICAL_STAFF_IDS_AND_PASSWORDS_FOR_MEDICAL_STAFF</role-name>
+    </security-role>
+        <security-role>
+        <role-name>DELETE_ARCHIVE_PATIENT_RECORDS</role-name>
+    </security-role>
+
+    <servlet>
+        <servlet-name>dwr-patient-invoker</servlet-name>
+        <servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>config-patient</param-name>
+            <param-value>WEB-INF/dwr-patient.xml</param-value>
+        </init-param>
+        <load-on-startup>-1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>dwr-display-invoker</servlet-name>
+        <servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>config-display</param-name>
+            <param-value>WEB-INF/dwr-display.xml</param-value>
+        </init-param>
+        <load-on-startup>-1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>dwr-useradmin-invoker</servlet-name>
+        <servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>config-useradmin</param-name>
+            <param-value>WEB-INF/dwr-useradmin.xml</param-value>
+        </init-param>
+        <load-on-startup>-1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>dwr-dynaadmin-invoker</servlet-name>
+        <servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>config-dynaadmin</param-name>
+            <param-value>WEB-INF/dwr-dyna-admin.xml</param-value>
+        </init-param>
+        <load-on-startup>-1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dwr-patient-invoker</servlet-name>
+        <url-pattern>/dwr/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dwr-display-invoker</servlet-name>
+        <url-pattern>/dwrdisplay/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dwr-useradmin-invoker</servlet-name>
+        <url-pattern>/dwruseradmin/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dwr-dynaadmin-invoker</servlet-name>
+        <url-pattern>/dwrdyna/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>

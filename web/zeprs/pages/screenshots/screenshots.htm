@@ -1,0 +1,693 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>ZEPRS Tour</title>
+
+<script type="text/javascript"
+        src="http://rtidemo.org/zeprs/js/browser_detect.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    var output = '';
+    if (browser.isGecko)
+    {
+        output += '<link rel="stylesheet" href="http://rtidemo.org/zeprs/css/styles-moz.css;jsessionid=A275F2981836A26C201D5649A0C4BB2B" charset="ISO-8859-1" type="text/css">';
+    }
+    else
+    {
+        output += '<link rel="stylesheet" href="http://rtidemo.org/zeprs/css/styles-ie.css;jsessionid=A275F2981836A26C201D5649A0C4BB2B" charset="ISO-8859-1" type="text/css">';
+    }
+    document.write(output);
+
+
+    function toggle_screenshots(status) {
+        var el = document.getElementById("homeshot");
+        var el2 = document.getElementById("registrationshot");
+        var el3 = document.getElementById("taskshot");
+        var el4 = document.getElementById("pregnanciesshot");
+        var el5 = document.getElementById("datingshot");
+        var el6 = document.getElementById("anteshot");
+        var el7 = document.getElementById("probshot");
+        var el8 = document.getElementById("observationshot");
+        var el9 = document.getElementById("partoshot");
+        var el10 = document.getElementById("referralshot");
+        var el11 = document.getElementById("problemshot");
+        var el12 = document.getElementById("navigationshot");
+        var el13 = document.getElementById("adminshot");
+        var el14 = document.getElementById("startshot");
+
+        if (status == "off") {
+            el.style.display = "none";
+            el2.style.display = "none";
+            el3.style.display = "none";
+            el4.style.display = "none";
+            el5.style.display = "none";
+            el6.style.display = "none";
+            el7.style.display = "none";
+            el8.style.display = "none";
+            el9.style.display = "none";
+            el10.style.display = "none";
+            el11.style.display = "none";
+            el12.style.display = "none";
+            el13.style.display = "none";
+            el14.style.display = "none";
+        } else {
+            el.style.display = "";
+            el2.style.display = "";
+            el3.style.display = "";
+            el4.style.display = "";
+            el5.style.display = "";
+            el6.style.display = "";
+            el7.style.display = "";
+            el8.style.display = "";
+            el9.style.display = "";
+            el10.style.display = "";
+            el11.style.display = "";
+            el12.style.display = "";
+            el13.style.display = "";
+            el14.style.display = "";
+        }
+
+    }
+    function toggle(div1) {
+        toggle_screenshots("off");
+        var el = document.getElementById(div1);
+        // var el2 = document.getElementById("footerNav");
+        el.style.display = "";
+        //  el2.style.display = "";
+    }
+    function togglePrint() {
+        toggle_screenshots("on");
+        // var el2 = document.getElementById("footerNav");
+        // el2.style.display = "none";
+    }
+    <!-- PreLoad Wait - Script This script and more from http://www.rainbow.arch.scriptmania.com  -->
+
+            function waitPreloadPage() { //DOM
+                if (document.getElementById) {
+                    document.getElementById('prepage').style.visibility = 'hidden';
+                } else {
+                    if (document.layers) { //NS4
+                        document.prepage.visibility = 'hidden';
+                    }
+                    else { //IE4
+                        document.all.prepage.style.visibility = 'hidden';
+                    }
+                }
+            }
+    //]]>
+</script>
+<style type="text/css">
+    #navcontainer {
+        position: absolute;
+        top: 5.6em;
+        left: 0em;
+        width: 11em;
+        border-right: 1px solid #000;
+        padding: 0 0 1em 0;
+        margin-bottom: 1em;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+        background-color: #90bade;
+        color: #333;
+    }
+
+    #navcontainer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+        font-size: 10pt;
+    }
+
+    #navcontainer li {
+        border-bottom: 1px solid #90bade;
+        margin: 0;
+        color: #000;
+    }
+
+    #navcontainer li a {
+        display: block;
+        padding: 5px 5px 5px 0.5em;
+        border-left: 5px solid #1958b7;
+        border-right: 5px solid #508fc4;
+        background-color: #2175bc;
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    html>body #navcontainer li a {
+        width: auto;
+    }
+
+    #navcontainer li a:hover {
+        border-left: 5px solid #1c64d1;
+        border-right: 5px solid #5ba3e0;
+        background-color: #2586d7;
+        color: #fff;
+    }
+
+    #screenshots {
+        position: absolute;
+        left: 8.2em;
+        top: 4em;
+        background-color: transparent;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+        vertical-align: top;
+        padding-bottom: 1em;
+        padding-right:1em;
+        font-size: 10pt;
+    }
+</style>
+</head>
+
+<body lang="EN-US" link="blue" vlink="purple"  onLoad="waitPreloadPage();">
+<DIV id="prepage" style="position:absolute; font-family:arial,sans-serif; font-size:16; left:15em; top:0.7em; width:200px;; z-index:2">
+<TABLE width="200px;"><TR><TD><B>Loading ... ... Please wait.</B></TD></TR></TABLE>
+</DIV>
+<div id="banner-home">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="left" valign="middle" height="46px;"><span class="serviceHeader">ZEPRS Tour</span></td>
+
+            <td align="right" height="46px;">&nbsp;</td>
+        </tr>
+    </table>
+</div>
+
+<div id="navcontainer">
+    <ul id="navlist">
+        <li><a href="#" onclick="toggle('startshot')">Start Tour</a></li>
+        <li><a href="#" onclick="toggle('homeshot')">Search/Home</a></li>
+        <li><a href="#" onclick="toggle('registrationshot')">Patient Registration</a></li>
+        <li><a href="#" onclick="toggle('taskshot')">Task Lists</a></li>
+        <li><a href="#" onclick="toggle('pregnanciesshot')">Previous Pregnancies</a></li>
+        <li><a href="#" onclick="toggle('datingshot')">Pregnancy Dating</a></li>
+        <li><a href="#" onclick="toggle('anteshot')">Antenatal</a></li>
+        <li><a href="#" onclick="toggle('probshot')">Problem or Labour Visit</a></li>
+        <li><a href="#" onclick="toggle('observationshot')">Observations</a></li>
+        <li><a href="#" onclick="toggle('partoshot')">Partograph</a></li>
+        <li><a href="#" onclick="toggle('referralshot')">Referrals</a></li>
+        <li><a href="#" onclick="toggle('problemshot')">Problems</a></li>
+        <li><a href="#" onclick="toggle('navigationshot')">Navigation</a></li>
+        <li><a href="#" onclick="toggle('adminshot')">Administration</a></li>
+        <li style="margin: 0px 0px 0px 5px;">&nbsp;</li>
+        <li><a href="#" onclick="togglePrint()">Print this Tour</a></li>
+    </ul>
+</div>
+
+<div id="screenshots">
+
+
+<div id="homeshot" style="display:none;">
+    <h3><a
+            name="_Toc129675721"></a><a
+            name="_Toc129675498"><span
+            lang="EN-CA">Home page</span></a></h3>
+
+    <p>The ZEPRS Home page provides an easy way to search patients as well as a quick status update of current patients
+        in the clinic.
+        The clinician may search by keyword (family name, first names, ZEPRS ID, NRC number, staff username)
+        or by clicking the first letter of the patient's surname. The search results provide the following:
+        <ul>
+            <li>Patient names</li>
+            <li>Mother (if an infant)</li>
+            <li>ID and address info</li>
+            <li>Labour status</li>
+            <li>Health worker</li>
+            <li>When the record was last modified</li>
+        </ul>
+    </p>
+    <p>The Home page also provides links to major tasks such as creating a new patient, viewing reports, and managing referrals.</p>
+    <p>Screenshot of Home page:</p>
+
+    <p><img
+            src="screenshots_files/image002.jpg" height="378"
+            width="624"></p>
+    <br>
+
+    <p>Detail of Patient Search - query by text or letter, clinic, and Labour status:</p>
+
+    <p><img
+            src="screenshots_files/image003.jpg" height="69"
+            width="449"></p>
+
+    <p>&nbsp;</p>
+
+    <p><img
+            src="screenshots_files/image004.jpg" height="68"
+            width="459"></p>
+    <br>
+
+    <p>Search results headings:</p>
+    <br>
+    <img src="screenshots_files/image005.jpg"
+         height="133" width="624">
+    <br>
+
+    <p>Note that in the Search Results
+        headings a column titled "SMC." This
+        column displays the code for an HIV-positive patient. The ZEPRS system
+        has a role-based permissions system that enabled different levels of
+        access to data. If the user logged in with an account that was in the
+        clerk group,&nbsp; she would not see this HIV status displayed and
+        would only be able to view the new patient registration form/record.</p>
+
+    <p>There are links to both mother and infant available from the Search results:</p>
+
+    <p><img
+            src="screenshots_files/image006.jpg" height="69"
+            width="365"></p>
+</div>
+
+<div id="registrationshot" style="display:none;">
+    <h3><a
+            name="_Toc129675722"></a><a
+            name="_Toc129675499"><span
+            lang="EN-CA">Patient Registration</span></a></h3>
+
+    <p>The Patient Registration form collects basic demographic
+        data about the patient. The system assigns unique ID&rsquo;s based
+        on the Lusaka district ID requirements.
+        The district ID requirements were followed in order to integrate with the Safe Motherhood Care program already in-progress.
+        There are other capabilities within the ZEPRS system that integrate with the Safe Motherhood Care program.</p>
+
+    <p>Many of the forms in the ZEPRS system use javascript to facilitate data entry.
+        In this case, the Birth Date widget auto-calculates the age and pre-fills the "Age at First Attendance" field. </p>
+    <img src="screenshots_files/image007.jpg"
+         height="531" width="584">
+    <img src="screenshots_files/image008.jpg"
+         height="363" width="567">
+
+    <p><b>ID assignment:</b></p>
+
+    <p>The clinician may generate a new id or create an id for a
+        patient who is already in the Safe motherhood program but not in the
+        ZEPRS system. The ID assignment system uses <a
+            href="http://en.wikipedia.org/wiki/AJAX">AJAX</a>
+        functionality to query the server for the next available id or to check
+        if the Safe Motherhood ID has already been issued. For most new patient
+        registrations, it's a single-click operation - the new id is returned
+        automatically to the page in-place. </p>
+
+    <p><img
+            src="screenshots_files/image009.jpg" height="165"
+            width="567"></p>
+
+    <p>Note the new ID assigned (Current ID).</p>
+
+    <p><img
+            src="screenshots_files/image010.jpg" height="137"
+            width="562"></p>
+</div>
+
+<div id="taskshot" style="display:none">
+
+    <h3><a
+            name="_Toc129675723"></a><a
+            name="_Toc129675500"><span
+            lang="EN-CA">Task Lists</span></a></h3>
+
+    <p>The ZEPRS application uses a wizard-style mode of operations. After submitting a form,
+        the system feeds the clinician the next logical form.
+        The clinician may choose to get an overview of progress with her patient's care; the Task Lists provide this overview.
+        The task lists help the user identify which forms need to be completed. </p>
+
+    <p>Screenshot of Delivery Summary/Postnatal task list:</p>
+
+    <p><img
+            src="screenshots_files/image011.jpg" height="273"
+            width="573"></p>
+
+    <p>Clicking on the Date link under the Visit Details column displays the
+        record. Clicking the form name under the Form column displays the form.
+        "Not Done" indicates that the form is available for data entry. </p>
+
+    <p>Screenshot of History task list:</p>
+
+    <p><img
+            src="screenshots_files/image012.jpg" height="229"
+            width="485"></p>
+<span
+        style="font-size: 11pt; font-family: &quot;Times New Roman&quot;;"></span>
+
+    <p>This screenshot of Patient History screen shows the overall context of patient care within ZEPRS:</p>
+    <ul>
+        <li>Top info strip, with Staffname, Patient name, ID's, and current time</li>
+        <li>Left nav strip</li>
+        <li>History Task List</li>
+        <li>Problem list on right</li>
+    </ul>
+
+    <p>&nbsp;</p>
+
+    <p><img
+            src="screenshots_files/image013.jpg" height="373"
+            width="624"></p>
+</div>
+
+<div id="pregnanciesshot" style="display:none">
+    <h3><a
+            name="_Toc129675724"></a><a
+            name="_Toc129675501"><span
+            lang="EN-CA">Previous Pregnancies</span></a></h3>
+
+    <p>
+        Some of the forms, such as Previous Pregnancies, are displayed as
+        charts. The field names are on the left, followed by previous values,
+        then&nbsp; data entry fields for new values. Clinician must enter
+        password at the bottom of the form and press a submit botton (in this
+        case, either "Done" or "Add").<br>
+    </p>
+
+    <p>Editing values in the ZEPRS system is very easy. During the course of a visit, the patient might remember that she had
+        a 6 hour labour for the 1987 pregnancy instead of a 2 hour pregnancy.
+        The clinician would double-click the value "2" to the right of the field "Duration of Labour"
+        which would summons a small text entry field.
+        Changing the value in this widget sends the new value to the server, and the new value appears in the place of
+        the old value. The ZEPRS system stores all of the previous values in case data needs to be audited.
+        This "in-place" editing is another example of ZEPRS' AJAX functionality.</p>
+
+    <p><img
+            src="screenshots_files/image014.jpg" height="567"
+            width="588"></p>
+
+    <p><img
+            src="screenshots_files/image015.jpg" height="98"
+            width="589"></p>
+
+</div>
+
+<div id="datingshot" style="display:none">
+    <h3><a
+            name="_Toc129675725"></a><a
+            name="_Toc129675502"><span
+            lang="EN-CA">Pregnancy Dating</span></a></h3>
+
+    <p>The clinician may evaluate Estimated Gestation Age (EGA) based on three methods, and
+        choose which one to report. This form is presented as a modified version of
+        the typical chart, except in this case it's top-to-bottom instead of
+        left-to-right.<br>
+    </p>
+
+    <p><img
+            src="screenshots_files/image016.jpg" height="363"
+            width="618"></p>
+    <b><span
+            style="font-size: 11pt; font-family: Arial;" lang="EN-CA"></span></b>
+</div>
+
+<div id="anteshot" style="display:none">
+    <h3><a
+            name="_Toc129675726"></a><a
+            name="_Toc129675503"><span
+            lang="EN-CA">Routine Antenatal Visit</span></a></h3>
+
+    <p>The clinician makes an entry to this chart upon every Antenatal
+        visit. The choices for Folate, Iron, and Malaria SP are used for the
+        Safe Motherhood Care program. If "Problem" is checked, the system will
+        forward the clinician to the Problem or Labour form.<br>
+    </p>
+
+    <p><img
+            src="screenshots_files/image017.jpg" height="529"
+            width="419"></p>
+    <b><span
+            style="font-size: 11pt; font-family: Arial;" lang="EN-CA"></span></b>
+</div>
+
+<div id="probshot" style="display:none">
+    <h3><a
+            name="_Toc129675727"></a><a
+            name="_Toc129675504"><span
+            lang="EN-CA">Problem or Labour Visit</span></a></h3>
+
+    <p>If the patient is experiencing a problem during antepartum
+        or intrapartum that the clinician wishes to note or if the patient is
+        in Labour, she has the option of filling out this form.
+        The clinician must complete this form in order to send the patient to labour management.</p>
+
+    <p>Sections of this form may be expanded or collapsed as
+        needed. In the following screenshot, the &ldquo;Vitals&rdquo;
+        section is expanded.</p>
+
+    <p><img
+            src="screenshots_files/image018.jpg" height="538"
+            width="578"></p>
+<span
+        style="font-size: 11pt; font-family: &quot;Times New Roman&quot;;"></span>
+
+    <p>The system will admit the patient to labour if the Cervix
+        Dilatation is &gt;=4. The following screenshot highlights the
+        Cervical Dilatation field.</p>
+
+    <p><img
+            src="screenshots_files/image019.jpg" height="321"
+            width="297"></p>
+
+    <p>Close-up:
+        Disposition of patient in Problem/Labour Visit
+        form</p>
+
+    <p><img
+            src="screenshots_files/image020.jpg" height="206"
+            width="219"></p>
+    <b><span
+            style="font-size: 11pt; font-family: Arial;" lang="EN-CA"></span></b>
+</div>
+
+<div id="observationshot" style="display:none">
+    <h3><a
+            name="_Toc129675728"></a><a
+            name="_Toc129675505"><span
+            lang="EN-CA">Observations for Latent Phase of 1st Stage of Labour</span></a></h3>
+
+    <p>Even
+        if the user chooses &ldquo;Admit to Active Labor, the system
+        forwards the user to the &rdquo;Observations for Latent Phase of
+        1st Stage of Labour&rdquo;
+        form if the Cervix Dilatation is &lt;4. </p>
+
+    <p>Screenshot of Observations for Latent Phase of 1st Stage of
+        Labour&rdquo; form - Cervix Dilatation field is highlighted:<br>
+    </p>
+
+    <p><img
+            src="screenshots_files/image021.jpg" height="481"
+            width="623"></p>
+
+    <p>Once
+        the patient has reached cervix dilatation &gt;=4, the
+        system forwards the user to the Partograph.</p>
+
+</div>
+
+<div id="partoshot" style="display:none">
+    <h3><a
+            name="_Toc129675729"></a><a
+            name="_Toc129675506"><span
+            lang="EN-CA">Partograph</span></a></h3>
+
+    <p>The
+        Partograph is based on the paper chart endorsed by the
+        WHO for labor management. The clinician may click directly on the chart
+        to
+        enter data &ndash; the chart automatically updates. This is another
+        example of Ajax functionality in ZEPRS.<br>
+    </p>
+
+    <p><img
+            src="screenshots_files/image022.jpg" height="473"
+            width="624"></p>
+
+    <p>Closeup:
+        Cervix/Descent plot:</p>
+
+    <p><img
+            src="screenshots_files/image023.jpg" height="221"
+            width="623"></p>
+
+    <p>Closeup:
+        Data entry of a dropdown field:</p>
+
+    <p><img
+            src="screenshots_files/image024.jpg" height="199"
+            width="268"></p>
+
+    <p>Close-up:
+        Vaginal Exam &ndash; The Partograph chart has a link to
+        another chart for recording the vaginal exam during the labour process:</p>
+
+    <p><img
+            src="screenshots_files/image025.jpg" height="503"
+            width="554"></p>
+<span
+        style="font-size: 11pt; font-family: &quot;Times New Roman&quot;;"><br
+        style="page-break-before: always;" clear="all">
+</span>
+
+    <p>Close-up:
+        Drugs dispensed during labour may be recorded
+        while in the Partograph:</p>
+
+    <p><img
+            src="screenshots_files/image026.jpg" height="308"
+            width="328"></p>
+</div>
+
+<div id="referralshot" style="display:none">
+    <h3
+            style="margin-left: 0in; text-indent: 0in;"><a
+            name="_Toc129675730"></a><a
+            name="_Toc129675507"><span
+            lang="EN-CA">Referrals</span></a></h3>
+
+    <p>The ZEPRS application includes a referral system. Lusaka, Zambia has a single hospital, University Teaching Hospital (UTH),
+        that handles complicated cases that the clinics refer. All of the Lusaka
+        district clinics as well as UTH are connected via a wireless network and can refer patients electronically to UTH.
+        The clinics use the referral application to monitor the status of their patients as the receive care at UTH.
+        Clinicians may refer patients to UTH from many of the forms by selecting a dropdown:</p>
+
+    <p><img
+            src="screenshots_files/image027.jpg" height="148"
+            width="400"></p>
+
+    <p>When
+        the form is submitted, this record appears on the
+        Referrals page, which is available from a link on the left nav strip. </p>
+
+    <p><img
+            src="screenshots_files/image028.jpg" height="196"
+            width="623"></p>
+
+    <p>Clinicians at UTH who are responsible for admitting patients
+        may click on the &ldquo;Admit&rdquo; link in the list to admit
+        the patient. This link is only viewable by PC's at UTH. <br>
+    </p>
+
+    <p><img
+            src="screenshots_files/image029.jpg" height="153"
+            width="153"></p>
+
+    <p>Clicking
+        &ldquo;Admit&rdquo; brings up a small form attached to the
+        record that triggered the referral:</p>
+
+    <p><img
+            src="screenshots_files/image030.jpg" height="349"
+            width="577"></p>
+
+    <p>Submitting
+        this small form admits the patient for UTH care.</p>
+    <b><span
+            style="font-size: 11pt; font-family: Arial;" lang="EN-CA"><br
+            style="page-break-before: always;" clear="all">
+</span></b>
+</div>
+
+<div id="problemshot" style="display:none">
+    <h3><a
+            name="_Toc129675731"></a><a
+            name="_Toc129675508"><span
+            lang="EN-CA">Problem List</span></a></h3>
+
+    <p>During
+        the course of the pregnancy, system-generated
+        problems, as well as problems manually entered by the clinicians, may
+        be viewed
+        and commented upon in the Problem List:</p>
+
+    <p><img
+            src="screenshots_files/image031.jpg" height="262"
+            width="623"></p>
+
+    <p>Problems
+        are also displayed on the right side of each form,
+        record, and task list:</p>
+
+    <p><img
+            src="screenshots_files/image032.jpg" height="281"
+            width="512"></p>
+    <b><span
+            style="font-size: 11pt; font-family: Arial;" lang="EN-CA"><br
+            style="page-break-before: always;" clear="all">
+</span></b>
+</div>
+
+<div id="navigationshot" style="display:none">
+    <h3><a
+            name="_Toc129675732"></a><a
+            name="_Toc129675509"><span
+            lang="EN-CA">Site navigation</span></a></h3>
+
+    <p>Users
+        may navigate to different parts of the ZEPRS
+        application from the left navigation strip. Some of the sections of the
+        navigation follow the main phases of pregnancy. Mother/child
+        relationships are also reflected in the navigation - a link to the
+        infant is displayed in the "Children" section. When viewing a child, a
+        link to the mother is displayed.<br>
+    </p>
+
+    <p><img
+            src="screenshots_files/image033.jpg" height="561"
+            width="106"></p>
+    <b><span
+            style="font-size: 11pt; font-family: Arial;" lang="EN-CA"><br
+            style="page-break-before: always;" clear="all">
+</span></b>
+</div>
+
+<div id="adminshot" style="display:none">
+    <h3><a
+            name="_Toc129675733"></a><a
+            name="_Toc129675510"><span
+            lang="EN-CA">Administration</span></a></h3>
+
+    <p>Creating and editing forms may be administered using a web browser. </p>
+
+    <p>The following screenshot displays the fields in the Delivery Summary form. <br>
+    </p>
+
+    <p><img
+            src="screenshots_files/image034.jpg" height="363"
+            width="623"></p>
+
+    <p>Administration:
+        Editing a form field using &ldquo;Edit Selected
+        Item&rdquo; (Full edit):</p>
+
+    <p><img
+            src="screenshots_files/image035.jpg" height="510"
+            width="623"></p>
+
+    <p>For
+        quick edits, one may use the &ldquo;Edit field&rdquo; or
+        &ldquo;Edit
+        Rules&rdquo; link to perform edits of common field elements. A
+        small form appears to
+        the right of the field left. This enables the user to process a lot of
+        field
+        changes while staying on the main form page.</p>
+
+    <p><img
+            src="screenshots_files/image036.jpg" height="138"
+            width="606"></p>
+
+    <p>Edit
+        Rules &ndash; Rules attached to a field may be edited from
+        the &ldquo;Edit Rules&rdquo; link:</p>
+
+    <p><img
+            src="screenshots_files/image037.jpg" height="257"
+            width="623"></p>
+</div>
+
+<div id="startshot">
+    <p>Click on the links on the left navigation stip to take a short tour of the ZEPRS application.
+        Click <a href="#" onclick="togglePrint()">Print</a> to display a print version of this whole tour.</p>
+</div>
+</div>
+</body>
+</html>

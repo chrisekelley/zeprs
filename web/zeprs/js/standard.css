@@ -1,0 +1,139 @@
+BODY {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+
+UL
+{
+	list-style-type:none;
+	COLOR: #000000;
+	BACKGROUND: transparent;
+	FONT-SIZE: 70%;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: None;
+	margin-right: 10px;
+}
+
+LI
+{
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: None;
+	BORDER-TOP: 1PX #bb0000 SOLID;
+	LIST-STYLE-POSITION: outside;
+	BACKGROUND-COLOR: #e0e0e0;
+	margin-bottom: 5px;
+	margin-left: -20px;
+	padding-left: 5px;
+	BORDER-TOP: 1px #6666ff solid;
+	background-image: none;
+}
+
+		H1
+		{
+			COLOR: #663333;
+			FONT-SIZE: 125%;
+			FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+			FONT-WEIGHT: Bold;
+			margin-bottom: 3pt;
+		}
+		H2
+		{
+			COLOR: #666666;
+			FONT-SIZE: 100%;
+			FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+			FONT-WEIGHT: Bold;
+			margin-bottom: 3pt;
+		}
+		H3
+		{
+			COLOR: #666666;
+			FONT-SIZE: 85%;
+			FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+			FONT-WEIGHT: Bold;
+			margin-bottom: 3pt;
+		}
+		P
+		{
+			COLOR: #333333;
+			FONT-SIZE: 75%;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+			margin-bottom: 3pt;
+		}
+		.SmallText
+		{
+			COLOR: #333333;
+			FONT-SIZE: 75%;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+			margin-bottom: 3pt;
+		}
+		.TinyText
+		{
+			COLOR: #333333;
+			FONT-SIZE: 65%;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+			margin-bottom: 3pt;
+		}
+		UL
+		{
+			COLOR: #666666;
+			FONT-SIZE: 75%;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+			margin-bottom: 3pt;
+		}
+		OL
+		{
+			COLOR: #666666;
+			FONT-SIZE: 75%;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+			margin-bottom: 3pt;
+		}
+		.MenuItem
+		{
+			COLOR: #ffffff;
+			FONT-SIZE: 12px;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+		}
+		a.MenuItemLink
+		{
+			COLOR: #333333;
+			FONT-SIZE: 12px;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+			margin: 0px;
+			padding: 0px;
+		}
+		a.MenuItemLink:link
+		{
+			COLOR: #333333;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+		}
+		a.MenuItemLink:visited
+		{
+			COLOR: #333333;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+		}
+		a.MenuItemLink:hover
+		{
+			COLOR: #333333;
+			FONT-FAMILY: Arial, Helvetica, sans-serif;
+			TEXT-DECORATION: None;
+		}
+		.myMenu {
+			position: absolute;
+			visibility: hidden;
+			z-index: 5;
+			border: 1px solid #333333;
+		}	

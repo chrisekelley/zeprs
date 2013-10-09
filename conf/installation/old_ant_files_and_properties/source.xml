@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+        <!--
+        kudos: http://clearsoftware.net/index.cfm?mode=entry&entry=3DE80F19-E081-2BAC-69D0C4D91DB254DE
+        -->
+<project name="zeprsBuild" default="build" basedir=".">
+      <!-- first, see if there are properties available -->
+    <property file="source.properties"/>
+     <target name="createArchiveDir">
+         <mkdir dir="${build.temp}"/>
+         <mkdir dir="${build.clean}"/>
+     </target>
+
+     <target name="build" depends="createArchiveDir">
+<!--- Check out the code into the temp dir -->
+<exec executable="svn">
+<arg line="co ${svn.projecturl} ${build.temp} -r ${svn.revision}"/>
+</exec>
+
+<!--- Do any changes to any files here -->
+
+<!-- Move it all to the clean dir -->
+<copy todir="${build.clean}">
+<fileset dir="${build.temp}">
+<exclude name="**/*.svn"/>
+</fileset>
+</copy>
+
+<!-- Zip up the clean dir and copy the zip to the basedir -->
+<zip destfile="${distro.dir}/${build.filename}" basedir="${build.clean}" />
+<copy todir="">
+<fileset dir="${build.clean}" includes="${build.filename}" />
+</copy>
+
+<!-- Remove temp and clean dirs -->
+<delete dir="${build.temp}" />
+<delete dir="${build.clean}" />
+</target>
+
+</project>

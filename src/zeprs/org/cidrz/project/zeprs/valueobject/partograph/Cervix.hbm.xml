@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_cervix" name="org.cidrz.project.zeprs.valueobject.partograph.Cervix">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+    <property name="actionStartRow" access="method" column="action_start_row"/>
+    <property name="actionStartColumn" access="method" column="action_start_col"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="cervix1" access="method" column="cervix_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="cervix2" access="method" column="cervix_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="cervix3" access="method" column="cervix_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="cervix4" access="method" column="cervix_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="cervix5" access="method" column="cervix_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="cervix6" access="method" column="cervix_6"/>
+    <property name="timeObservation7" access="method" column="time_7"/>
+    <property name="cervix7" access="method" column="cervix_7"/>
+    <property name="timeObservation8" access="method" column="time_8"/>
+    <property name="cervix8" access="method" column="cervix_8"/>
+    <property name="timeObservation9" access="method" column="time_9"/>
+    <property name="cervix9" access="method" column="cervix_9"/>
+    <property name="timeObservation10" access="method" column="time_10"/>
+    <property name="cervix10" access="method" column="cervix_10"/>
+    <property name="timeObservation11" access="method" column="time_11"/>
+    <property name="cervix11" access="method" column="cervix_11"/>
+    <property name="timeObservation12" access="method" column="time_12"/>
+    <property name="cervix12" access="method" column="cervix_12"/>
+    <property name="timeObservation13" access="method" column="time_13"/>
+    <property name="cervix13" access="method" column="cervix_13"/>
+    <property name="timeObservation14" access="method" column="time_14"/>
+    <property name="cervix14" access="method" column="cervix_14"/>
+    <property name="timeObservation15" access="method" column="time_15"/>
+    <property name="cervix15" access="method" column="cervix_15"/>
+    <property name="timeObservation16" access="method" column="time_16"/>
+    <property name="cervix16" access="method" column="cervix_16"/>
+    <property name="timeObservation17" access="method" column="time_17"/>
+    <property name="cervix17" access="method" column="cervix_17"/>
+    <property name="timeObservation18" access="method" column="time_18"/>
+    <property name="cervix18" access="method" column="cervix_18"/>
+    <property name="timeObservation19" access="method" column="time_19"/>
+    <property name="cervix19" access="method" column="cervix_19"/>
+    <property name="timeObservation20" access="method" column="time_20"/>
+    <property name="cervix20" access="method" column="cervix_20"/>
+    <property name="timeObservation21" access="method" column="time_21"/>
+    <property name="cervix21" access="method" column="cervix_21"/>
+    <property name="timeObservation22" access="method" column="time_22"/>
+    <property name="cervix22" access="method" column="cervix_22"/>
+    <property name="timeObservation23" access="method" column="time_23"/>
+    <property name="cervix23" access="method" column="cervix_23"/>
+    <property name="timeObservation24" access="method" column="time_24"/>
+    <property name="cervix24" access="method" column="cervix_24"/>
+  </class>
+</hibernate-mapping>

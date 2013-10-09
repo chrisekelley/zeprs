@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_descent" name="org.cidrz.project.zeprs.valueobject.partograph.Descent">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="descent1" access="method" column="descent_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="descent2" access="method" column="descent_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="descent3" access="method" column="descent_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="descent4" access="method" column="descent_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="descent5" access="method" column="descent_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="descent6" access="method" column="descent_6"/>
+    <property name="timeObservation7" access="method" column="time_7"/>
+    <property name="descent7" access="method" column="descent_7"/>
+    <property name="timeObservation8" access="method" column="time_8"/>
+    <property name="descent8" access="method" column="descent_8"/>
+    <property name="timeObservation9" access="method" column="time_9"/>
+    <property name="descent9" access="method" column="descent_9"/>
+    <property name="timeObservation10" access="method" column="time_10"/>
+    <property name="descent10" access="method" column="descent_10"/>
+    <property name="timeObservation11" access="method" column="time_11"/>
+    <property name="descent11" access="method" column="descent_11"/>
+    <property name="timeObservation12" access="method" column="time_12"/>
+    <property name="descent12" access="method" column="descent_12"/>
+    <property name="timeObservation13" access="method" column="time_13"/>
+    <property name="descent13" access="method" column="descent_13"/>
+    <property name="timeObservation14" access="method" column="time_14"/>
+    <property name="descent14" access="method" column="descent_14"/>
+    <property name="timeObservation15" access="method" column="time_15"/>
+    <property name="descent15" access="method" column="descent_15"/>
+    <property name="timeObservation16" access="method" column="time_16"/>
+    <property name="descent16" access="method" column="descent_16"/>
+    <property name="timeObservation17" access="method" column="time_17"/>
+    <property name="descent17" access="method" column="descent_17"/>
+    <property name="timeObservation18" access="method" column="time_18"/>
+    <property name="descent18" access="method" column="descent_18"/>
+    <property name="timeObservation19" access="method" column="time_19"/>
+    <property name="descent19" access="method" column="descent_19"/>
+    <property name="timeObservation20" access="method" column="time_20"/>
+    <property name="descent20" access="method" column="descent_20"/>
+    <property name="timeObservation21" access="method" column="time_21"/>
+    <property name="descent21" access="method" column="descent_21"/>
+    <property name="timeObservation22" access="method" column="time_22"/>
+    <property name="descent22" access="method" column="descent_22"/>
+    <property name="timeObservation23" access="method" column="time_23"/>
+    <property name="descent23" access="method" column="descent_23"/>
+    <property name="timeObservation24" access="method" column="time_24"/>
+    <property name="descent24" access="method" column="descent_24"/>
+  </class>
+</hibernate-mapping>

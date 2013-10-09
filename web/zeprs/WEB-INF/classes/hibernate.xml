@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.datasource">java:comp/env/jdbc/adminDB</property>
+        <property name="show_sql">false</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.jdbc.batch_size"><![CDATA[15]]></property>
+        <property name="hibernate.jdbc.batch_versioned_data">true</property>
+        <property name="hibernate.jdbc.use_streams_for_binary">true</property>
+        <property name="hibernate.max_fetch_depth"><![CDATA[1]]></property>
+        <property name="hibernate.cglib.use_reflection_optimizer">true</property>
+
+        <!-- Mapping files -->
+        <mapping resource="org/cidrz/webapp/dynasite/valueobject/FieldEnumeration.hbm.xml"/>
+        <mapping resource="org/cidrz/webapp/dynasite/valueobject/Form.hbm.xml"/>
+        <mapping resource="org/cidrz/webapp/dynasite/valueobject/FormField.hbm.xml"/>
+        <mapping resource="org/cidrz/webapp/dynasite/valueobject/RuleDefinition.hbm.xml"/>
+        <mapping resource="org/cidrz/webapp/dynasite/valueobject/PageItem.hbm.xml"/>
+        <mapping resource="org/cidrz/webapp/dynasite/valueobject/FormType.hbm.xml"/>
+        <mapping resource="org/cidrz/webapp/dynasite/valueobject/User.hbm.xml"/>
+        <mapping resource="org/cidrz/webapp/dynasite/valueobject/Site.hbm.xml"/>
+    </session-factory>
+
+</hibernate-configuration>

@@ -1,0 +1,57 @@
+
+
+
+Unrar the file archive.rar in the webapps dir.
+copy archive.xml to tomcat\conf\Catalina\localhost
+
+Note the following tomcat dirs - endorsed, lib, and classes
+
+Copy libs\mysql-connector-java-5.x-bin.jar  *tomcat*\lib
+Copy libs\log4j-1.2.13.jar  *tomcat*\lib
+Copy libs\commons-logging.jar  *tomcat*\lib
+Copy libs\commons-el.jar  *tomcat*\lib
+Copy libs\log4j.properties  *tomcat*\lib
+
+I'm unable to script the installation of the databases because I don't know the root password on the system you are installing. 
+I'll automate this in the future.
+
+To install the databases, enter the command line and cd to this install dir.
+
+Create the admin, zeprs, zeprsdemo databases by running the following command:
+mysql -u root -p mysql < create-dbs.sql
+It will prompt you for the root password.
+
+admin_install.sql - use this to populate the admin database. On the command line enter the following:
+mysql -u root -p admin < admin_install.sql
+
+zeprs_install.sql - use this to populate the zeprs database and the zeprsdemo database. 
+The zeprsdemo database is used for testing and training personnel on a "live" system - data they enter won�t appear in reports. 
+
+On the command line enter the following:
+mysql -u root -p zeprs < zeprs_install.sql
+
+mysql -u root -p zeprsdemo < zeprs_install.sql
+
+The next two databases are easier to create - the scripts create the databases:
+mysql -u root -p mysql < mail_install.sql
+mysql -u root -p mysql < userdata_install.sql
+
+Those two databases - mail and userdata - are used for user credentials. 
+
+Finally, create privs in mysql for the new databases so that the web application has access to them:
+
+mysql -u root -p mysql< db_permissions.sql
+
+Assuming you made it this far, start tomcat. Watch the log in logs/catalina.out. If all looks ok, try to login.
+
+To login to the ZEPRS app as administrator - with full privs - use the zepadmin/zepadmin11 username/password.
+
+Any issues will likely be relating to permissions. I�ll certainly help you clear these up. 
+
+To run ant tasks, copy installation/local.properties to the root zeprs source dir - in the same dir as build.xml. 
+Customize the paths to suite your install. The main things to customize are:
+
+baseDir=C:\\source\\zeprs
+toolsDir=C:\\tools
+warArchiveDir=C:\\zeprs-wars
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="parto_vaginal_exam" name="org.cidrz.project.zeprs.valueobject.partograph.VaginalExamParto">
+    <id unsaved-value="0" access="method" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" access="method" column="patient_id"/>
+    <property name="pregnancyId" access="method" column="pregnancy_id"/>
+    <property name="dateVisit" not-null="true" access="method" column="date_visit"/>
+    <property name="timeObservation1" access="method" column="time_1"/>
+    <property name="station1" access="method" column="station_1"/>
+    <property name="cord1" access="method" column="cord_1"/>
+    <property name="position1" access="method" column="position_1"/>
+    <property name="timeObservation2" access="method" column="time_2"/>
+    <property name="station2" access="method" column="station_2"/>
+    <property name="cord2" access="method" column="cord_2"/>
+    <property name="position2" access="method" column="position_2"/>
+    <property name="timeObservation3" access="method" column="time_3"/>
+    <property name="station3" access="method" column="station_3"/>
+    <property name="cord3" access="method" column="cord_3"/>
+    <property name="position3" access="method" column="position_3"/>
+    <property name="timeObservation4" access="method" column="time_4"/>
+    <property name="station4" access="method" column="station_4"/>
+    <property name="cord4" access="method" column="cord_4"/>
+    <property name="position4" access="method" column="position_4"/>
+    <property name="timeObservation5" access="method" column="time_5"/>
+    <property name="station5" access="method" column="station_5"/>
+    <property name="cord5" access="method" column="cord_5"/>
+    <property name="position5" access="method" column="position_5"/>
+    <property name="timeObservation6" access="method" column="time_6"/>
+    <property name="station6" access="method" column="station_6"/>
+    <property name="cord6" access="method" column="cord_6"/>
+    <property name="position6" access="method" column="position_6"/>
+    <property name="vulva1" access="method" column="vulva_1"/>
+    <property name="vagina1" access="method" column="vagina_1"/>
+    <property name="vulva2" access="method" column="vulva_2"/>
+    <property name="vagina2" access="method" column="vagina_2"/>
+    <property name="vulva3" access="method" column="vulva_3"/>
+    <property name="vagina3" access="method" column="vagina_3"/>
+    <property name="vulva4" access="method" column="vulva_4"/>
+    <property name="vagina4" access="method" column="vagina_4"/>
+    <property name="vulva5" access="method" column="vulva_5"/>
+    <property name="vagina5" access="method" column="vagina_5"/>
+    <property name="vulva6" access="method" column="vulva_6"/>
+    <property name="vagina6" access="method" column="vagina_6"/>
+    <property name="created" access="method" column="created"/>
+    <property name="createdBy" access="method" column="created_by"/>
+    <property name="lastModified" access="method" column="last_modified"/>
+    <property name="lastModifiedBy" access="method" column="last_modified_by"/>
+    <property name="siteId" access="method" column="site_id"/>
+    <property name="importId" access="method" column="import_id"/>
+  </class>
+</hibernate-mapping>
