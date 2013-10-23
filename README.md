@@ -81,6 +81,8 @@ You will need to replace "password" with the password for zeprs_web_user in META
  In the Server Locations section, use tomcat installation and change the deploy path name to webapps. 
  Increase the server timeouts to 90 seconds.
  ![Eclipse Tomcat server settings screenshot](docs/images/eclipse-tomcat-server-config.png)
+ - Click the Modules tab and confirm that the zeprs module is active. If not, use the "Add Web Module" function.
+ ![Eclipse Modules settings screenshot](docs/images/eclipse-web-modules.png)
  - In Launch configuration arguments tab, put the following at the beginning of the VM arguments:
 -Xms256m -Xmx1g -XX:MaxPermSize=256m 
  ![Eclipse Tomcat server launch config screenshot](docs/images/eclipse-launch-config-props.png)
