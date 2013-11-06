@@ -67,15 +67,19 @@ You will need to replace "password" with the password for zeprs_web_user in META
 ## Eclipse Project Configuration
 
  - In Eclipse, go to Build Path -> Configure Build Path and add the jars listed in the screenshot below. 
- For Windows, also point to your JDK's tools.jar. This is not necessary for MacOSX - tools.jar is included in its SDK already. 
+ You also will need to set up Eclipse to import tools.jar - follow [these instructions](http://stackoverflow.com/a/10314969)
  ![Eclipse Build libs screenshot](docs/images/eclipse-build-libs.png)
  - Also confirm that the Server Runtime (Tomcat) points to a valid runtime. (Add Library -> Server Runtime.) 
  In the screenshot below, it is already listed as Apache Tomcat 6.
  - Add servlet-api.jar from your tomcat/libs directory. 
+ - Here is a screenshot of the source tab (You usually don't have to configure this.):
+ ![Eclipse Build source tab screenshot](docs/images/eclipse_java_build_path_source_tab.png) 
+ - Screenshot of Web Deployment Assembly (This was automatically configured):
+ ![Eclipse web deployment assembly screenshot](docs/images/eclipse_web_deployment_assembly.png)
  - Confirm that your server runtime is in eclipse preferences -> Server  -> runtime environments
- - In the Servers view, add zeprs to the Tomcat 6 server. 
+ - In the Servers view, add zeprs to the Tomcat 6 server. <br/>
  ![Eclipse Servers view screenshot](docs/images/eclipse-servers-view.png)
- - check in the projects properties Targgeted runtimes that it is pointed to this server.
+ - Check in the project's properties that Targeted Runtimes is pointed to this server.
   ![Eclipse Targeted Runtime](docs/images/eclipse-targeted-runtime.png)
  - Double-click on the server in Servers view. 
  In the Server Locations section, use tomcat installation and change the deploy path name to webapps. 
@@ -87,6 +91,9 @@ You will need to replace "password" with the password for zeprs_web_user in META
 -Xms256m -Xmx1g -XX:MaxPermSize=256m 
  ![Eclipse Tomcat server launch config screenshot](docs/images/eclipse-launch-config-props.png)
  - Set src/zeprs/resources/dev.properties to the path to your source code.
+ - Create a new directory called "archive" in the tomcat webapps directory. When you launch the server, 
+ 		go to Admin -> Site Admin -> Create directories in archive. These are used to store backups for forms and patient records.
+
  
 ### A few more Eclipse screenshots:
 
