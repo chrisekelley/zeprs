@@ -61,14 +61,18 @@ public class ImportFormAction extends BaseAction {
 	public static Log log = LogFactory.getFactory().getInstance(ImportFormAction.class);
 	protected ActionForward doExecute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-		HttpSession session = request.getSession();
+		// Extract attributes we will need
+        HttpSession session = request.getSession();
+        Principal userPrincipal = request.getUserPrincipal();
+        String username = userPrincipal.getName();
+        
 		Site site = SessionUtil.getInstance(session).getClientSettings().getSite();
 		String message = null;
 		Long siteId = site.getId();
 		Principal user = request.getUserPrincipal();
 		String userName = user.getName();
 		Connection connAdmin = null;
-		//Connection connApp = null;
+		Connection connApp = null;
 		String newPath = Constants.ARCHIVE_PATH_FORMS_IMPORT_NEW;
         Publisher publisher = PubSubUtils.getPublisher();
 
@@ -76,7 +80,7 @@ public class ImportFormAction extends BaseAction {
 			try {
 				String fileName = request.getParameter("fileName");
 				connAdmin = DatabaseUtils.getAdminConnection();
-				//connApp = DatabaseUtils.getZEPRSConnection(Constants.DATABASE_ADMIN_USERNAME);
+				connApp = DatabaseUtils.getSpecialRootConnection(username);
 				StringBuffer comments = new StringBuffer();
 				Long formId = null;
 				int length = fileName.length();
@@ -106,7 +110,7 @@ public class ImportFormAction extends BaseAction {
 				importedForm.setName(StringManipulation.fixFirstDigit(importedForm.getName()));
 		        Locale locale = (Locale) session.getAttribute(Globals.LOCALE_KEY);
 		        String localeString = locale.toString();
-				comments = FormImportDAO.saveImportedForm(userName, connAdmin, fileName, importedForm, localeString, false, publisher);
+				comments = FormImportDAO.saveImportedForm(userName, connAdmin, connApp, fileName, importedForm, localeString, false, publisher);
 
 				if (comments.toString().startsWith("Failure")) {
 					request.setAttribute("exception", comments.toString());

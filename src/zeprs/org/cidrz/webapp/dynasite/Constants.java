@@ -54,7 +54,7 @@ public class Constants {
     public static final String SQL_CREATE = "SQL_CREATE";
     public static final String SQL_CREATEBRIDGE = "SQL_CREATEBRIDGE";
     public static final String SQL_RETRIEVE = "SQL_RETRIEVE";
-    public static final String SQL_GENERATED_PROPERTIES = "resources/generatedSQL-" + DATABASE_TYPE + ".properties";
+    public static final String SQL_GENERATED_PROPERTIES = "resources/generatedSQL.properties";
     public static final String SQL_DEMO_PROPERTIES = "resources/generatedSQL.properties";
     public static final String SQL_PARTO_PROPERTIES = "resources/partographSQL.properties";
     public static final String SQL_PATIENT_PROPERTIES = "resources/patientSQL.properties";
@@ -73,7 +73,7 @@ public class Constants {
     public static final String DYNASITE_XML_PATH = pathToCatalinaHome + pathSep + "webapps" + pathSep + "zeprs" + pathSep + "WEB-INF" + pathSep + "classes" + pathSep + "resources" + pathSep + "xml" + pathSep + "forms" + pathSep;
     public static final String PARTO_XML_PATH = pathToCatalinaHome +  pathSep + "webapps" + pathSep + "zeprs" + pathSep + "WEB-INF" + pathSep + "classes" + pathSep + "org" + pathSep + "cidrz" + pathSep + "project" + pathSep + "zeprs" + pathSep + "valueobject" + pathSep + "partograph" + pathSep;
     public static final String REPORTS_XML_PATH = pathToCatalinaHome + pathSep + "webapps" + pathSep + "zeprs" + pathSep + "data" + pathSep;
-    public static final String REPORTS_XSL_PATH = pathToCatalinaHome + pathSep + "webapps" + pathSep + "zeprs" + pathSep + "webapps" + pathSep + "zeprs" + pathSep + "xsl" + pathSep;
+    public static final String REPORTS_XSL_PATH = pathToCatalinaHome + pathSep + "webapps" + pathSep + "zeprs" + pathSep + "xsl" + pathSep;
     public static final String REPORTS_LOCAL_XML_PATH = LOCAL_DEV_PATH + "web\\zeprs\\data\\";
     public static final String LOCAL_CLASSES_PATH = LOCAL_DEV_PATH + "web\\zeprs\\WEB-INF\\classes";
     public static final String DEPLOY_CLASSES_PATH = Constants.pathToCatalinaHome + "\\webapps\\zeprs\\WEB-INF\\classes\\";

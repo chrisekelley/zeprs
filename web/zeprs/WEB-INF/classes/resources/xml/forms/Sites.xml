@@ -57,15 +57,6 @@
     <siteTypeId>1</siteTypeId>
   </org.cidrz.webapp.dynasite.valueobject.Site>
   <org.cidrz.webapp.dynasite.valueobject.Site>
-    <id>37</id>
-    <siteAlphaId>021</siteAlphaId>
-    <districtId>8070</districtId>
-    <abbreviation>CMU</abbreviation>
-    <name>Chikankata Mukabuumi</name>
-    <siteTypeId>1</siteTypeId>
-    <inactive>1</inactive>
-  </org.cidrz.webapp.dynasite.valueobject.Site>
-  <org.cidrz.webapp.dynasite.valueobject.Site>
     <id>9</id>
     <siteAlphaId>142</siteAlphaId>
     <districtId>5040</districtId>
@@ -146,14 +137,6 @@
     <siteTypeId>1</siteTypeId>
   </org.cidrz.webapp.dynasite.valueobject.Site>
   <org.cidrz.webapp.dynasite.valueobject.Site>
-    <id>47</id>
-    <siteAlphaId>LIM</siteAlphaId>
-    <districtId>5040</districtId>
-    <abbreviation>LIMS</abbreviation>
-    <name>LIMS</name>
-    <siteTypeId>3</siteTypeId>
-  </org.cidrz.webapp.dynasite.valueobject.Site>
-  <org.cidrz.webapp.dynasite.valueobject.Site>
     <id>24</id>
     <siteAlphaId>242</siteAlphaId>
     <districtId>5040</districtId>
@@ -202,32 +185,6 @@
     <siteTypeId>1</siteTypeId>
   </org.cidrz.webapp.dynasite.valueobject.Site>
   <org.cidrz.webapp.dynasite.valueobject.Site>
-    <id>42</id>
-    <siteAlphaId>025</siteAlphaId>
-    <districtId>5040</districtId>
-    <abbreviation>UTH-5</abbreviation>
-    <name>old UTH-5</name>
-    <siteTypeId>2</siteTypeId>
-    <inactive>1</inactive>
-  </org.cidrz.webapp.dynasite.valueobject.Site>
-  <org.cidrz.webapp.dynasite.valueobject.Site>
-    <id>36</id>
-    <siteAlphaId>002</siteAlphaId>
-    <districtId>5040</districtId>
-    <abbreviation>OTHER</abbreviation>
-    <name>Other</name>
-    <siteTypeId>1</siteTypeId>
-  </org.cidrz.webapp.dynasite.valueobject.Site>
-  <org.cidrz.webapp.dynasite.valueobject.Site>
-    <id>43</id>
-    <siteAlphaId>026</siteAlphaId>
-    <districtId>5040</districtId>
-    <abbreviation>pl1</abbreviation>
-    <name>placeholder</name>
-    <siteTypeId>2</siteTypeId>
-    <inactive>1</inactive>
-  </org.cidrz.webapp.dynasite.valueobject.Site>
-  <org.cidrz.webapp.dynasite.valueobject.Site>
     <id>32</id>
     <siteAlphaId>302</siteAlphaId>
     <districtId>5040</districtId>
@@ -250,6 +207,23 @@
     <abbreviation>STL</abbreviation>
     <name>State Lodge</name>
     <siteTypeId>1</siteTypeId>
+  </org.cidrz.webapp.dynasite.valueobject.Site>
+  <org.cidrz.webapp.dynasite.valueobject.Site>
+    <id>36</id>
+    <siteAlphaId>002</siteAlphaId>
+    <districtId>5040</districtId>
+    <abbreviation>OTHER</abbreviation>
+    <name>Other</name>
+    <siteTypeId>1</siteTypeId>
+  </org.cidrz.webapp.dynasite.valueobject.Site>
+  <org.cidrz.webapp.dynasite.valueobject.Site>
+    <id>37</id>
+    <siteAlphaId>021</siteAlphaId>
+    <districtId>8070</districtId>
+    <abbreviation>CMU</abbreviation>
+    <name>Chikankata Mukabuumi</name>
+    <siteTypeId>1</siteTypeId>
+    <inactive>1</inactive>
   </org.cidrz.webapp.dynasite.valueobject.Site>
   <org.cidrz.webapp.dynasite.valueobject.Site>
     <id>38</id>
@@ -284,12 +258,30 @@
     <siteTypeId>2</siteTypeId>
   </org.cidrz.webapp.dynasite.valueobject.Site>
   <org.cidrz.webapp.dynasite.valueobject.Site>
-    <id>46</id>
+    <id>42</id>
     <siteAlphaId>025</siteAlphaId>
     <districtId>5040</districtId>
-    <abbreviation>UTHR</abbreviation>
-    <name>UTH-Adult ARV</name>
+    <abbreviation>UTH-5</abbreviation>
+    <name>old UTH-5</name>
     <siteTypeId>2</siteTypeId>
+    <inactive>1</inactive>
+  </org.cidrz.webapp.dynasite.valueobject.Site>
+  <org.cidrz.webapp.dynasite.valueobject.Site>
+    <id>43</id>
+    <siteAlphaId>026</siteAlphaId>
+    <districtId>5040</districtId>
+    <abbreviation>pl1</abbreviation>
+    <name>placeholder</name>
+    <siteTypeId>2</siteTypeId>
+    <inactive>1</inactive>
+  </org.cidrz.webapp.dynasite.valueobject.Site>
+  <org.cidrz.webapp.dynasite.valueobject.Site>
+    <id>44</id>
+    <siteAlphaId>MST</siteAlphaId>
+    <districtId>5040</districtId>
+    <abbreviation>ZEP</abbreviation>
+    <name>ZEPRS Master</name>
+    <siteTypeId>1</siteTypeId>
   </org.cidrz.webapp.dynasite.valueobject.Site>
   <org.cidrz.webapp.dynasite.valueobject.Site>
     <id>45</id>
@@ -300,11 +292,19 @@
     <siteTypeId>2</siteTypeId>
   </org.cidrz.webapp.dynasite.valueobject.Site>
   <org.cidrz.webapp.dynasite.valueobject.Site>
-    <id>44</id>
-    <siteAlphaId>MST</siteAlphaId>
+    <id>46</id>
+    <siteAlphaId>025</siteAlphaId>
     <districtId>5040</districtId>
-    <abbreviation>ZEP</abbreviation>
-    <name>ZEPRS Master</name>
-    <siteTypeId>1</siteTypeId>
+    <abbreviation>UTHR</abbreviation>
+    <name>UTH-Adult ARV</name>
+    <siteTypeId>2</siteTypeId>
+  </org.cidrz.webapp.dynasite.valueobject.Site>
+  <org.cidrz.webapp.dynasite.valueobject.Site>
+    <id>47</id>
+    <siteAlphaId>LIM</siteAlphaId>
+    <districtId>5040</districtId>
+    <abbreviation>LIMS</abbreviation>
+    <name>LIMS</name>
+    <siteTypeId>3</siteTypeId>
   </org.cidrz.webapp.dynasite.valueobject.Site>
 </list>

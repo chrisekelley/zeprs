@@ -229,7 +229,8 @@ public class DatabaseCompatability {
 			//  ORDER BY id asc OFFSET " + offset + " ROWS FETCH NEXT " + maxRows + " ROWS ONLY"
 			results =  " ORDER BY " + orderBy + " OFFSET " + offset + " ROWS FETCH NEXT " + maxRows + " ROWS ONLY";
 		} else if (database.equals("mysql")) {
-			results =  " ORDER BY " + orderBy + " OFFSET " + offset + " ROWS FETCH NEXT " + maxRows + " ROWS ONLY";
+//			results =  " ORDER BY " + orderBy + " OFFSET " + offset + " ROWS FETCH NEXT " + maxRows + " ROWS ONLY";
+			results =  " ORDER BY " + orderBy + " LIMIT " + maxRows + " OFFSET " + offset;
 		} else if (database.equals("mssql")) {
 			// ") AS LogWithRowNumbers WHERE Row >= " + offset + " AND Row <= " + (offset + maxRows)
 			results = ") AS LogWithRowNumbers WHERE Row >= " + offset + " AND Row <= " + maxRows;

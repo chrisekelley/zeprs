@@ -804,6 +804,10 @@
         </action>
 
     </action-mappings>
+    
+     <message-resources factory="org.rti.zcore.utils.struts.i18n.ReloadablePropertyMessageResourcesFactory" parameter="resources.ApplicationResources" null="false" key="ApplicationResources"/>
+  	 <message-resources factory="org.rti.zcore.utils.struts.i18n.ReloadablePropertyMessageResourcesFactory" parameter="resources.TemplateResources" null="false" key="TemplateResources"/>
+  
 
     <message-resources parameter="resources.application" null= "false "/>
 

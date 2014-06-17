@@ -4108,4 +4108,6 @@
   </formfields>
   <submissions>0</submissions>
   <maxSubmissions>4</maxSubmissions>
+  <localeList/>
+  <demographicsForm>false</demographicsForm>
 </org.cidrz.webapp.dynasite.valueobject.Form>

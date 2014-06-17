@@ -65,8 +65,9 @@ public class FieldEnumerationDAO {
     	FieldEnumeration item = null;
     	String sql;
     	ArrayList values;
-    	sql = "select id, field_id AS fieldId, enumeration, numeric_value AS numericValue, is_enabled AS enabled, display_order AS displayOrder, import_id AS importId " +
-    			"openmrs_concept, uuid, parent_uuid as parentUuid, locale  from ADMIN.field_enumeration where import_id=? ";
+    	sql = "select id, field_id AS fieldId, enumeration, numeric_value AS numericValue, is_enabled AS enabled, display_order AS displayOrder, import_id AS importId "
+//    			"openmrs_concept, uuid, parent_uuid as parentUuid, locale  "
+    			+ "from ADMIN.field_enumeration where import_id=? ";
     	values = new ArrayList();
     	values.add(importId);
     	item = (FieldEnumeration) DatabaseUtils.getBean(conn, FieldEnumeration.class, sql, values);
@@ -210,9 +211,12 @@ public class FieldEnumerationDAO {
             fieldEnumeration.setUuid(uuidStr);
     	}
 
-    	String sql = "insert into ADMIN.field_enumeration (field_id, enumeration, numeric_value, is_enabled, display_order, " +
-        	"import_id, openmrs_concept, uuid, parent_uuid, locale ) " +
-            "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    	String sql = "insert into ADMIN.field_enumeration (field_id, enumeration, numeric_value, is_enabled, display_order "
+    			+ ", import_id "
+//        	+ " openmrs_concept, uuid, parent_uuid, locale"
+        	+ " ) " +
+//            "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    		  "values (?, ?, ?, ?, ?, ?)";
         ArrayList values = new ArrayList();
         values.add(fieldEnumeration.getFieldId());
         values.add(fieldEnumeration.getEnumeration());
@@ -220,10 +224,10 @@ public class FieldEnumerationDAO {
         values.add(fieldEnumeration.isEnabled());
         values.add(fieldEnumeration.getDisplayOrder());
         values.add(fieldEnumeration.getImportId());
-        values.add(fieldEnumeration.getOpenmrs_concept());
-        values.add(fieldEnumeration.getUuid());
-        values.add(fieldEnumeration.getParentUuid());
-        values.add(fieldEnumeration.getLocale());
+//        values.add(fieldEnumeration.getOpenmrs_concept());
+//        values.add(fieldEnumeration.getUuid());
+//        values.add(fieldEnumeration.getParentUuid());
+//        values.add(fieldEnumeration.getLocale());
 
         Long id = (Long) DatabaseUtils.create(conn, sql, values.toArray());
         return id;

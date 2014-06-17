@@ -5,7 +5,7 @@
   <label>Drug Stocks</label>
   <requireReauth>true</requireReauth>
   <requirePatient>false</requirePatient>
-  <enabled>false</enabled>
+  <enabled>true</enabled>
   <ruleDefinitions/>
   <flow>
     <id>100</id>
@@ -240,4 +240,6 @@
   </formfields>
   <submissions>0</submissions>
   <maxSubmissions>0</maxSubmissions>
+  <localeList/>
+  <demographicsForm>false</demographicsForm>
 </org.cidrz.webapp.dynasite.valueobject.Form>

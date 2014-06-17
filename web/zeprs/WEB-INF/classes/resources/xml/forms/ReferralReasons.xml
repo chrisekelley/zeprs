@@ -18,10 +18,10 @@
   <flowId>100</flowId>
   <flowOrder>0</flowOrder>
   <formType>
-    <id>1</id>
-    <name>Pregnancy (Mother only)</name>
+    <id>4</id>
+    <name>Mother and Infant</name>
   </formType>
-  <formTypeId>1</formTypeId>
+  <formTypeId>4</formTypeId>
   <pageItems class="tree-set">
     <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -64,45 +64,6 @@
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>4372</id>
-      <form__field>
-        <id>2153</id>
-        <label>Encounter Uuid</label>
-        <type>Text</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>encounter_uuid</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2153</formFieldId>
-      <displayOrder>1</displayOrder>
-      <inputType>hidden-empty</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>94</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>3992</id>
       <form__field>
         <id>1261</id>
@@ -122,7 +83,7 @@
         <encounterRecordproperty></encounterRecordproperty>
       </form__field>
       <formFieldId>1261</formFieldId>
-      <displayOrder>2</displayOrder>
+      <displayOrder>1</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -155,7 +116,7 @@
         <encounterRecordproperty></encounterRecordproperty>
       </form__field>
       <formFieldId>1262</formFieldId>
-      <displayOrder>3</displayOrder>
+      <displayOrder>2</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -188,7 +149,7 @@
         <encounterRecordproperty></encounterRecordproperty>
       </form__field>
       <formFieldId>1263</formFieldId>
-      <displayOrder>4</displayOrder>
+      <displayOrder>3</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -221,7 +182,7 @@
         <encounterRecordproperty></encounterRecordproperty>
       </form__field>
       <formFieldId>1264</formFieldId>
-      <displayOrder>5</displayOrder>
+      <displayOrder>4</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -254,7 +215,7 @@
         <encounterRecordproperty></encounterRecordproperty>
       </form__field>
       <formFieldId>1265</formFieldId>
-      <displayOrder>6</displayOrder>
+      <displayOrder>5</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <size>0</size>
@@ -285,7 +246,7 @@
         <encounterRecordproperty></encounterRecordproperty>
       </form__field>
       <formFieldId>1360</formFieldId>
-      <displayOrder>7</displayOrder>
+      <displayOrder>6</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -319,7 +280,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1497</formFieldId>
-      <displayOrder>8</displayOrder>
+      <displayOrder>7</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -353,7 +314,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1270</formFieldId>
-      <displayOrder>9</displayOrder>
+      <displayOrder>8</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -387,7 +348,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1499</formFieldId>
-      <displayOrder>10</displayOrder>
+      <displayOrder>9</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -421,7 +382,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1500</formFieldId>
-      <displayOrder>11</displayOrder>
+      <displayOrder>10</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -455,7 +416,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1501</formFieldId>
-      <displayOrder>12</displayOrder>
+      <displayOrder>11</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -489,7 +450,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1502</formFieldId>
-      <displayOrder>13</displayOrder>
+      <displayOrder>12</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -523,7 +484,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1503</formFieldId>
-      <displayOrder>14</displayOrder>
+      <displayOrder>13</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -557,7 +518,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1504</formFieldId>
-      <displayOrder>15</displayOrder>
+      <displayOrder>14</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -591,7 +552,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1505</formFieldId>
-      <displayOrder>16</displayOrder>
+      <displayOrder>15</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -625,7 +586,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1506</formFieldId>
-      <displayOrder>17</displayOrder>
+      <displayOrder>16</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -673,7 +634,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1756</formFieldId>
-      <displayOrder>18</displayOrder>
+      <displayOrder>17</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -721,7 +682,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1757</formFieldId>
-      <displayOrder>19</displayOrder>
+      <displayOrder>18</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -793,7 +754,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1758</formFieldId>
-      <displayOrder>20</displayOrder>
+      <displayOrder>19</displayOrder>
       <inputType>select</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -827,7 +788,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1359</formFieldId>
-      <displayOrder>21</displayOrder>
+      <displayOrder>20</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -861,7 +822,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1784</formFieldId>
-      <displayOrder>22</displayOrder>
+      <displayOrder>21</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -895,7 +856,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1785</formFieldId>
-      <displayOrder>23</displayOrder>
+      <displayOrder>22</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -929,7 +890,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1786</formFieldId>
-      <displayOrder>24</displayOrder>
+      <displayOrder>23</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -963,7 +924,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1787</formFieldId>
-      <displayOrder>25</displayOrder>
+      <displayOrder>24</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -997,7 +958,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1788</formFieldId>
-      <displayOrder>26</displayOrder>
+      <displayOrder>25</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1031,7 +992,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1789</formFieldId>
-      <displayOrder>27</displayOrder>
+      <displayOrder>26</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1065,7 +1026,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1809</formFieldId>
-      <displayOrder>28</displayOrder>
+      <displayOrder>27</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1099,7 +1060,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1817</formFieldId>
-      <displayOrder>29</displayOrder>
+      <displayOrder>28</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1133,7 +1094,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1810</formFieldId>
-      <displayOrder>30</displayOrder>
+      <displayOrder>29</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1167,7 +1128,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1811</formFieldId>
-      <displayOrder>31</displayOrder>
+      <displayOrder>30</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1201,7 +1162,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1812</formFieldId>
-      <displayOrder>32</displayOrder>
+      <displayOrder>31</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1235,7 +1196,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1813</formFieldId>
-      <displayOrder>33</displayOrder>
+      <displayOrder>32</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1269,7 +1230,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1777</formFieldId>
-      <displayOrder>34</displayOrder>
+      <displayOrder>331</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1308,7 +1269,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1775</formFieldId>
-      <displayOrder>35</displayOrder>
+      <displayOrder>341</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1347,7 +1308,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1781</formFieldId>
-      <displayOrder>36</displayOrder>
+      <displayOrder>351</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1371,4 +1332,6 @@
   </formfields>
   <submissions>0</submissions>
   <maxSubmissions>1000</maxSubmissions>
+  <localeList/>
+  <demographicsForm>false</demographicsForm>
 </org.cidrz.webapp.dynasite.valueobject.Form>

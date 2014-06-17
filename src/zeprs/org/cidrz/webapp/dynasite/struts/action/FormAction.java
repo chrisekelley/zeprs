@@ -20,11 +20,13 @@ import org.cidrz.project.zeprs.valueobject.gen.ArvRegimen;
 import org.cidrz.project.zeprs.valueobject.gen.LabTest;
 import org.cidrz.project.zeprs.valueobject.gen.NewbornEval;
 import org.cidrz.project.zeprs.valueobject.gen.Rpr;
+import org.cidrz.webapp.dynasite.Constants;
 import org.cidrz.webapp.dynasite.dao.EncountersDAO;
 import org.cidrz.webapp.dynasite.dao.PatientDAO;
 import org.cidrz.webapp.dynasite.dao.PatientStatusDAO;
 import org.cidrz.webapp.dynasite.dao.SessionPatientDAO;
 import org.cidrz.webapp.dynasite.dao.FormDAO;
+import org.cidrz.webapp.dynasite.dao.UserDAO;
 import org.cidrz.webapp.dynasite.exception.ObjectNotFoundException;
 import org.cidrz.webapp.dynasite.security.AuthManager;
 import org.cidrz.webapp.dynasite.security.UserUnauthorizedException;
@@ -39,6 +41,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.security.Principal;
 import java.sql.Connection;
@@ -120,6 +123,50 @@ public class FormAction extends BasePatientAction {
             sessionPatient = SessionUtil.getInstance(session).getSessionPatient();
             patientId = sessionPatient.getId();
         }
+        
+        if (formId == 125) {
+			String password = (String) dynaForm.get("password");
+			ActionMessages errors = new ActionMessages();
+			if (password.length() > 12) {
+				errors.add("errors", new ActionMessage("errors.password.length.long"));
+				saveErrors(request, errors);
+			} else if (password.length() < 8) {
+				errors.add("errors", new ActionMessage("errors.password.length.short"));
+				saveErrors(request, errors);
+			}
+
+        	// Check for duplicate username
+        	if ( dynaForm.get("username") != null) {
+        		String searchUsername = (String) dynaForm.get("username");
+        		Object userObject;
+        		Connection conn = null;
+				try {
+                    conn = DatabaseUtils.getZEPRSConnection(username);
+					userObject = UserDAO.getUser(conn, searchUsername);
+					errors.add("errors", new ActionMessage("errors.duplicate.username", searchUsername));
+				} catch (ObjectNotFoundException e) {
+					// It's ok - there should not be a user.
+				 } finally {
+                     if (conn != null && !conn.isClosed()) {
+                         conn.close();
+                     }
+                 }
+        	}
+//			String hashPass = null;
+//			if (Constants.PASSWORD_ALGORITHM != null && Constants.PASSWORD_ENCODING != null) {
+//        		String algorithm = Constants.PASSWORD_ALGORITHM;
+//        		String encodingMethod = Constants.PASSWORD_ENCODING;
+//        		try {
+//        			hashPass = EncryptionUtils.hash(algorithm, encodingMethod, password);
+//        		} catch (Exception e) {
+//        			// TODO Auto-generated catch block
+//        			e.printStackTrace();
+//        		}
+//				dynaForm.set("password", hashPass);
+//        	} else {
+//        		log.debug("You must set up password.algorithm and password.encoding when encryptionMethod equals app");
+//        	}
+		}
 
         // Some of the forms are submitted in edit-mode. We need to deal w/ these up-front
 
@@ -517,7 +564,7 @@ public class FormAction extends BasePatientAction {
                 }
             }
 
-            // Medical/Surgical History takes you to patientAnte. If select current medicine – go to Current Medicine form.
+            // Medical/Surgical History takes you to patientAnte. If select current medicine ï¿½ go to Current Medicine form.
             if (formId == 70) {
                 // part of reload prevention scheme:
                 resetToken(request);

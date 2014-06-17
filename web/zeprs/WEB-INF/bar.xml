@@ -5701,5 +5701,46 @@
         <arg0 key="Form factor" resource="false"/>
       </field>
     </form>
+    <form name="form122">
+      <field property="field1" depends="required">
+        <arg0 key="Date of visit" resource="false"/>
+      </field>
+    </form>
+    <form name="form123">
+      <field property="field1" depends="required">
+        <arg0 key="Date of visit" resource="false"/>
+      </field>
+    </form>
+    <form name="form124">
+      <field property="field1" depends="required">
+        <arg0 key="Date of visit" resource="false"/>
+      </field>
+    </form>
+    <form name="form125">
+      <field property="field1" depends="required">
+        <arg0 key="Date of visit" resource="false"/>
+      </field>
+      <field property="field2157" depends="required">
+        <arg0 key="Username" resource="false"/>
+      </field>
+      <field property="field2158" depends="required">
+        <arg0 key="Password" resource="false"/>
+      </field>
+      <field property="field2159">
+        <arg0 key="E-mail address" resource="false"/>
+      </field>
+      <field property="field2160" depends="required">
+        <arg0 key="Forenames" resource="false"/>
+      </field>
+      <field property="field2161" depends="required">
+        <arg0 key="Surname" resource="false"/>
+      </field>
+      <field property="field2162">
+        <arg0 key="Mobile phone" resource="false"/>
+      </field>
+      <field property="field2163">
+        <arg0 key="Phone" resource="false"/>
+      </field>
+    </form>
   </formset>
 </form-validation>

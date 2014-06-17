@@ -18766,19 +18766,19 @@
   <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
     <id>2803</id>
     <fieldId>1596</fieldId>
-    <enumeration>NR - non-reactive</enumeration>
+    <enumeration>NR ? non-reactive</enumeration>
     <numericValue>1</numericValue>
     <enabled>true</enabled>
-    <concatEnumNumeric>NR - non-reactive (1)</concatEnumNumeric>
+    <concatEnumNumeric>NR ? non-reactive (1)</concatEnumNumeric>
     <displayOrder>2147483647</displayOrder>
   </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
   <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
     <id>2804</id>
     <fieldId>1596</fieldId>
-    <enumeration>I - indeterminate</enumeration>
+    <enumeration>I ? indeterminate</enumeration>
     <numericValue>2</numericValue>
     <enabled>true</enabled>
-    <concatEnumNumeric>I - indeterminate (2)</concatEnumNumeric>
+    <concatEnumNumeric>I ? indeterminate (2)</concatEnumNumeric>
     <displayOrder>2147483647</displayOrder>
   </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
   <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>

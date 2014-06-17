@@ -43,7 +43,7 @@ import org.cidrz.webapp.dynasite.dao.FormTypeDAO;
 import org.cidrz.webapp.dynasite.dao.RuleDefinitionDAO;
 import org.cidrz.webapp.dynasite.exception.ObjectNotFoundException;
 import org.cidrz.webapp.dynasite.valueobject.Publisher;
-import org.rti.zcore.utils.sync.PubSubUtils;
+import org.rti.zcore.sync.utils.PubSubUtils;
 import org.cidrz.webapp.dynasite.utils.DatabaseUtils;
 import org.cidrz.webapp.dynasite.utils.FileUtils;
 import org.cidrz.webapp.dynasite.utils.StringManipulation;
@@ -487,9 +487,11 @@ public class DynasiteUtils {
 	 * @throws ServletException
 	 * @should return ArrayList
 	 */
-	public static ArrayList<String> verifySchema(Connection conn, String username, String execute, String localeString)
+	public static ArrayList<String> verifySchema(Connection conn, Connection connZeprs, String username, String execute, String localeString)
 			throws IOException, SQLException, ServletException, Exception {
 		//StringBuffer sbuf = new StringBuffer();
+		// Hack for ZEPRS
+		Connection connAdmin = conn;
 		ArrayList<String> missingCols = new ArrayList<String>();
 		String database = Constants.DATABASE_TYPE;
 		Publisher publisher = PubSubUtils.getPublisher();
@@ -520,7 +522,7 @@ public class DynasiteUtils {
 				if (dbTable == null) {
 					if (execute != null) {
 						String fileName = formObj.getClassname() + ".xml";
-						StringBuffer comments = FormImportDAO.saveImportedForm(username, conn, fileName, formObj, localeString, true, publisher);
+						StringBuffer comments = FormImportDAO.saveImportedForm(username, connAdmin, connZeprs, fileName, formObj, localeString, true, publisher);
 						if (comments.toString().startsWith("Failure")) {
 							//request.setAttribute("exception", comments.toString());
 							//return mapping.findForward("error");

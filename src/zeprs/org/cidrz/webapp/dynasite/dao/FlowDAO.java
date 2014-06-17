@@ -93,14 +93,17 @@ public class FlowDAO {
      */
     public static Long save(Connection conn, Flow flow) throws SQLException, ServletException {
 
+//        String sql = "INSERT INTO admin.flow " +
+//                "(name, flow_order, created_by, global_identifier_name) " +
+//                "VALUES (?,?,?,?)";
         String sql = "INSERT INTO admin.flow " +
-                "(name, flow_order, created_by, global_identifier_name) " +
-                "VALUES (?,?,?,?)";
+        		"(name, flow_order) " +
+        		"VALUES (?,?)";
         ArrayList values = new ArrayList();
         values.add(flow.getName());
         values.add(flow.getFlowOrder());
-        values.add(flow.getCreatedBy());
-        values.add(flow.getGlobalIdentifierName());
+//        values.add(flow.getCreatedBy());
+//        values.add(flow.getGlobalIdentifierName());
         Long siteId = (Long) DatabaseUtils.create(conn, sql, values.toArray());
         return siteId;
     }

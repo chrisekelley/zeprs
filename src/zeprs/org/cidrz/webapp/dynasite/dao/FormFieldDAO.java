@@ -109,8 +109,9 @@ public class FormFieldDAO {
     	sql = "select id, label, type, required, min_value AS \"minValue\", max_value AS \"maxValue\", " +
     	"units, display_order AS displayOrder, patient_property AS patientProperty, is_enabled AS enabled, " +
     	"shared, star_schema_name AS starSchemaName, encounter_record_property AS encounterRecordproperty, " +
-    	"patient_status_property AS patientStatusproperty, patient_lab_property AS patientLabproperty, import_id AS importId, " +
-    	"openmrs_concept, openmrs_datatype, openmrs_name, openmrs_parent_concept, uuid, parent_uuid as parentUuid, locale  " +
+    	"patient_status_property AS patientStatusproperty, patient_lab_property AS patientLabproperty " +
+        ", import_id AS importId " +
+//    	"openmrs_concept, openmrs_datatype, openmrs_name, openmrs_parent_concept, uuid, parent_uuid as parentUuid, locale  " +
     	"from ADMIN.form_field " +
     	"WHERE import_id=?";
     	values = new ArrayList();
@@ -311,9 +312,11 @@ public class FormFieldDAO {
     	String sql = "insert into ADMIN.form_field (label, type, required, min_value, max_value, units, display_order, " +
                 "patient_property, is_enabled, " +
                 "last_modified, created, last_modified_by, created_by, site_id, " +
-                "shared, star_schema_name, encounter_record_property, patient_status_property, patient_lab_property, import_id, " +
-                "openmrs_concept, openmrs_datatype, openmrs_name, openmrs_parent_concept, uuid, parent_uuid, locale ) " +
-                "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "shared, star_schema_name, encounter_record_property, patient_status_property, patient_lab_property " +
+                 ", import_id )" +
+//                "openmrs_concept, openmrs_datatype, openmrs_name, openmrs_parent_concept, uuid, parent_uuid, locale ) " +
+//                "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    			"values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         ArrayList values = new ArrayList();
         values.add(formfield.getLabel());
         values.add(formfield.getType());
@@ -331,13 +334,13 @@ public class FormFieldDAO {
         values.add(formfield.getPatientStatusproperty());
         values.add(formfield.getPatientLabproperty());
         values.add(formfield.getImportId());
-        values.add(formfield.getOpenmrs_concept());
-        values.add(formfield.getOpenmrs_datatype());
-        values.add(formfield.getOpenmrs_name());
-        values.add(formfield.getOpenmrs_parent_concept());
-        values.add(formfield.getUuid());
-        values.add(formfield.getParentUuid());
-        values.add(formfield.getLocale());
+//        values.add(formfield.getOpenmrs_concept());
+//        values.add(formfield.getOpenmrs_datatype());
+//        values.add(formfield.getOpenmrs_name());
+//        values.add(formfield.getOpenmrs_parent_concept());
+//        values.add(formfield.getUuid());
+//        values.add(formfield.getParentUuid());
+//        values.add(formfield.getLocale());
 
         Long formFieldId = (Long) DatabaseUtils.create(conn, sql, values.toArray());
         pageItem.setFormFieldId(formFieldId);
@@ -346,10 +349,11 @@ public class FormFieldDAO {
         forms.add(pageItem.getFormId());
         DynaSiteObjects.getFieldToForms().put(formFieldId, forms);
     	}
+    	// removed reserved word escaping for "rows" for ZEPRS since it uses mysql.
 
         String sql = "insert into ADMIN.page_item (form_field_id, display_order, input_type, close_row, column_number, " +
                 "last_modified, created, last_modified_by, created_by, site_id, " +
-                "size, maxlength, \"rows\", cols, visible, visible_enum_id_trigger1, visible_dependencies1, " +
+                "size, maxlength, rows, cols, visible, visible_enum_id_trigger1, visible_dependencies1, " +
                 "visible_enum_id_trigger2, visible_dependencies2, selected_enum, form_id, colspan, roles, import_id) " +
                 "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         ArrayList values = new ArrayList();

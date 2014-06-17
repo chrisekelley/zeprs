@@ -6,14 +6,14 @@
     <districtName>Lusaka</districtName>
   </org.cidrz.webapp.dynasite.valueobject.District>
   <org.cidrz.webapp.dynasite.valueobject.District>
-    <id>3</id>
-    <districtId>8060</districtId>
-    <districtName>Livingstone</districtName>
-  </org.cidrz.webapp.dynasite.valueobject.District>
-  <org.cidrz.webapp.dynasite.valueobject.District>
     <id>2</id>
     <districtId>8070</districtId>
     <districtName>Mazabuka</districtName>
+  </org.cidrz.webapp.dynasite.valueobject.District>
+  <org.cidrz.webapp.dynasite.valueobject.District>
+    <id>3</id>
+    <districtId>8060</districtId>
+    <districtName>Livingstone</districtName>
   </org.cidrz.webapp.dynasite.valueobject.District>
   <org.cidrz.webapp.dynasite.valueobject.District>
     <id>4</id>

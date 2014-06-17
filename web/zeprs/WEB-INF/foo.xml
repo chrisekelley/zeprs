@@ -1692,6 +1692,25 @@
       <form-property name="field2118" type="java.lang.String"/>
       <form-property name="field2119" type="java.lang.String"/>
     </form-bean>
+    <form-bean name="form122" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="field1" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="form123" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="field1" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="form124" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="field1" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="form125" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="field1" type="java.lang.String"/>
+      <form-property name="field2157" type="java.lang.String"/>
+      <form-property name="field2158" type="java.lang.String"/>
+      <form-property name="field2159" type="java.lang.String"/>
+      <form-property name="field2160" type="java.lang.String"/>
+      <form-property name="field2161" type="java.lang.String"/>
+      <form-property name="field2162" type="java.lang.String"/>
+      <form-property name="field2163" type="java.lang.String"/>
+    </form-bean>
   </form-beans>
   <global-exceptions/>
   <global-forwards>
@@ -2537,7 +2556,37 @@
     <action path="/form115/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form115" validate="false" parameter="115" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
+    <action path="/form122/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form122" validate="false" parameter="122" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form122/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form122" validate="true" input="/form122/new.do" parameter="122" scope="request"/>
+    <action path="/form122/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form122" validate="false" parameter="122" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form123/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form123" validate="false" parameter="123" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form123/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form123" validate="true" input="/form123/new.do" parameter="123" scope="request"/>
+    <action path="/form123/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form123" validate="false" parameter="123" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form124/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form124" validate="false" parameter="124" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form124/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form124" validate="true" input="/form124/new.do" parameter="124" scope="request"/>
+    <action path="/form124/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form124" validate="false" parameter="124" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form125/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form125" validate="false" parameter="125" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form125/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form125" validate="true" input="/form125/new.do" parameter="125" scope="request"/>
+    <action path="/form125/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form125" validate="false" parameter="125" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
   </action-mappings>
+     <message-resources factory="org.rti.zcore.utils.struts.i18n.ReloadablePropertyMessageResourcesFactory" parameter="resources.ApplicationResources" null="false" key="ApplicationResources"/>
+  	 <message-resources factory="org.rti.zcore.utils.struts.i18n.ReloadablePropertyMessageResourcesFactory" parameter="resources.TemplateResources" null="false" key="TemplateResources"/>
   <message-resources parameter="resources.application" null="false"/>
   <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
     <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/bar.xml"/>

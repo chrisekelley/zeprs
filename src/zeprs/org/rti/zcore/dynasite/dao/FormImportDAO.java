@@ -120,7 +120,7 @@ public class FormImportDAO {
     		}
     	} else {
     		if (formTypeId == 5) {			
-    			if (Constants.DATABASE_NAME.equals("mysql")) {
+    			if (Constants.DATABASE_TYPE.equals("mysql")) {
     				sql = "CREATE TABLE " + tableName + " (\n" +
     		    			"  ID bigint NOT NULL AUTO_INCREMENT,\n" +
     		    			"  PRIMARY KEY (id))";
@@ -291,7 +291,7 @@ public class FormImportDAO {
     		} else {
     			idSql = "SELECT IDENT_CURRENT('ADMIN.FORM')";
     		}*/
-    		BigDecimal result = (BigDecimal) DatabaseUtils.getScalar(connAdmin, idSql);
+    		Long result = (Long) DatabaseUtils.getScalar(connAdmin, idSql);
     		formId = Long.valueOf(result.toString());
     		if (logAppUpdate == true) {
     			ApplicationUpdate appUpdate = new ApplicationUpdate();
@@ -330,6 +330,7 @@ public class FormImportDAO {
 	 * Saves an imported form.
 	 * @param userName
 	 * @param connAdmin
+	 * @param connApp - used in ZEPRS
 	 * @param fileName
 	 * @param newForm
 	 * @param locale
@@ -343,7 +344,7 @@ public class FormImportDAO {
 	 * @throws IOException
 	 */
 	public static StringBuffer saveImportedForm(String userName,
-			Connection connAdmin, String fileName, Form newForm, String locale, Boolean createSchemaOnly, Publisher publisher) throws Exception, ServletException, SQLException,
+			Connection connAdmin, Connection connApp, String fileName, Form newForm, String locale, Boolean createSchemaOnly, Publisher publisher) throws Exception, ServletException, SQLException,
 			NumberFormatException, IOException {
 
 		StringBuffer comments = new StringBuffer();
@@ -380,7 +381,7 @@ public class FormImportDAO {
 
 		// save the form
 		try {
-			formId = saveNewFormOnly(connAdmin, connAdmin, newForm, userName, siteId, true, createSchemaOnly, publisher);
+			formId = saveNewFormOnly(connAdmin, connApp, newForm, userName, siteId, true, createSchemaOnly, publisher);
 		} catch (SQLException e) {
 			comments.append("Failure: ");
 			comments.append(e.getMessage());
@@ -402,7 +403,7 @@ public class FormImportDAO {
 			FormField formfield = pageItem.getForm_field();
 			// save this formfield
 			try {
-				FormFieldDAO.createColumn(connAdmin, connAdmin, formfield, formId, pageItem);
+				FormFieldDAO.createColumn(connAdmin, connApp, formfield, formId, pageItem);
 				Long importId = formfield.getImportId();
 				Boolean createFormField = true;
 				// see if this is a shared field - it may already be in the database.
@@ -479,74 +480,77 @@ public class FormImportDAO {
 						visibleDependencies2.add(dependency);
 					}
 				}
-				List<RuleDefinition> rules = formfield.getRuleDefinitions();
-				for (RuleDefinition rule : rules) {
-					try {
-						// store the imported rule's id as importId.
-						rule.setFieldId(pageItem.getFormFieldId());
-						rule.setFormId(formId);
-						Long ruleId = (Long) RuleDefinitionDAO.insertRule(connAdmin, rule.getRuleClass(), rule.getOutcomeClass(), rule.getFormId(), rule.getFieldId(), rule.isEnabled(), rule.isAllPregnancies(), userName, siteId, rule.getMessage(), rule.getOperand(), rule.getOperator(), rule.getId());
-					} catch (SQLException e) {
-						comments.append("Failure: ");
-						comments.append(e.getMessage());
-						log.debug(e);
-					}
-				}
+				log.debug("Disabling import of rules for ZEPRS.");
+
+//				List<RuleDefinition> rules = formfield.getRuleDefinitions();
+//				for (RuleDefinition rule : rules) {
+//					try {
+//						// store the imported rule's id as importId.
+//						rule.setFieldId(pageItem.getFormFieldId());
+//						rule.setFormId(formId);
+//						Long ruleId = (Long) RuleDefinitionDAO.insertRule(connAdmin, rule.getRuleClass(), rule.getOutcomeClass(), rule.getFormId(), rule.getFieldId(), rule.isEnabled(), rule.isAllPregnancies(), userName, siteId, rule.getMessage(), rule.getOperand(), rule.getOperator(), rule.getId());
+//					} catch (SQLException e) {
+//						comments.append("Failure: ");
+//						comments.append(e.getMessage());
+//						log.debug(e);
+//					}
+//				}
 			}
 		}
 
 		if (createSchemaOnly == false) {
-			// Loop through visibleEnumIdTriggers and change the id's
-			for (String triggerId : visibleEnumIdTriggers1) {
-				// fetch the new enum
-				Long importId = Long.valueOf(triggerId);
-				try {
-					FieldEnumeration fieldEnumeration = FieldEnumerationDAO.getOneByImportId(connAdmin, importId);
-					Long newId = fieldEnumeration.getId();
-					//update the pageItem
-					PageItemDAO.updateVisibleEnumIdTrigger(connAdmin, importId.toString(), newId.toString(), 1);
-				} catch (ObjectNotFoundException e) {
-					visibleEnumIdTriggersErrors.add(triggerId);
-				}
-			}
-			for (String triggerId : visibleEnumIdTriggers2) {
-				// fetch the new enum
-				Long importId = Long.valueOf(triggerId);
-				try {
-					FieldEnumeration fieldEnumeration = FieldEnumerationDAO.getOneByImportId(connAdmin, importId);
-					Long newId = fieldEnumeration.getId();
-					//update the pageItem
-					PageItemDAO.updateVisibleEnumIdTrigger(connAdmin, importId.toString(), newId.toString(), 2);
-				} catch (ObjectNotFoundException e) {
-					visibleEnumIdTriggersErrors.add(triggerId);
-				}
-			}
+			log.debug("Disabling import of visibleEnumIdTriggers and visibleDependencies for ZEPRS.");
+//			// Loop through visibleEnumIdTriggers and change the id's
+//			for (String triggerId : visibleEnumIdTriggers1) {
+//				// fetch the new enum
+//				Long importId = Long.valueOf(triggerId);
+//				try {
+//					FieldEnumeration fieldEnumeration = FieldEnumerationDAO.getOneByImportId(connAdmin, importId);
+//					Long newId = fieldEnumeration.getId();
+//					//update the pageItem
+//					PageItemDAO.updateVisibleEnumIdTrigger(connAdmin, importId.toString(), newId.toString(), 1);
+//				} catch (ObjectNotFoundException e) {
+//					visibleEnumIdTriggersErrors.add(triggerId);
+//				}
+//			}
+//			for (String triggerId : visibleEnumIdTriggers2) {
+//				// fetch the new enum
+//				Long importId = Long.valueOf(triggerId);
+//				try {
+//					FieldEnumeration fieldEnumeration = FieldEnumerationDAO.getOneByImportId(connAdmin, importId);
+//					Long newId = fieldEnumeration.getId();
+//					//update the pageItem
+//					PageItemDAO.updateVisibleEnumIdTrigger(connAdmin, importId.toString(), newId.toString(), 2);
+//				} catch (ObjectNotFoundException e) {
+//					visibleEnumIdTriggersErrors.add(triggerId);
+//				}
+//			}
 
-			// also need to remap the fieldDependencies - use formField importId to get the new id.
-			for (String depId : visibleDependencies1) {
-				// fetch the new enum
-				Long importId = Long.valueOf(depId);
-				try {
-					FormField formField = FormFieldDAO.getOneByImportId(connAdmin, importId);
-					Long newId = formField.getId();
-					//update the pageItem
-					PageItemDAO.updateVisibleDependency(connAdmin, importId.toString(), newId.toString(), 1);
-				} catch (ObjectNotFoundException e) {
-					visibleEnumIdTriggersErrors.add(depId);
-				}
-			}
-			for (String depId : visibleDependencies2) {
-				// fetch the new enum
-				Long importId = Long.valueOf(depId);
-				try {
-					FormField formField = FormFieldDAO.getOneByImportId(connAdmin, importId);
-					Long newId = formField.getId();
-					//update the pageItem
-					PageItemDAO.updateVisibleDependency(connAdmin, importId.toString(), newId.toString(), 2);
-				} catch (ObjectNotFoundException e) {
-					visibleEnumIdTriggersErrors.add(depId);
-				}
-			}
+//			// also need to remap the fieldDependencies - use formField importId to get the new id.
+//			for (String depId : visibleDependencies1) {
+//				// fetch the new enum
+//				Long importId = Long.valueOf(depId);
+//				try {
+//					FormField formField = FormFieldDAO.getOneByImportId(connAdmin, importId);
+//					Long newId = formField.getId();
+//					//update the pageItem
+//					PageItemDAO.updateVisibleDependency(connAdmin, importId.toString(), newId.toString(), 1);
+//				} catch (ObjectNotFoundException e) {
+//					visibleEnumIdTriggersErrors.add(depId);
+//				}
+//			}
+//			for (String depId : visibleDependencies2) {
+//				// fetch the new enum
+//				Long importId = Long.valueOf(depId);
+//				try {
+//					FormField formField = FormFieldDAO.getOneByImportId(connAdmin, importId);
+//					Long newId = formField.getId();
+//					//update the pageItem
+//					PageItemDAO.updateVisibleDependency(connAdmin, importId.toString(), newId.toString(), 2);
+//				} catch (ObjectNotFoundException e) {
+//					visibleEnumIdTriggersErrors.add(depId);
+//				}
+//			}
 
 			Form dynasiteform = FormDisplayDAO.getFormGraphDb(connAdmin, formId);
         	DynaSiteObjects.getForms().put(formId, dynasiteform);

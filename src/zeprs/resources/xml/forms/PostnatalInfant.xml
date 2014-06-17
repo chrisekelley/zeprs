@@ -365,8 +365,6 @@
       <visible>true</visible>
       <visibleEnumIdTrigger1>2743</visibleEnumIdTrigger1>
       <visibleDependencies1>1471</visibleDependencies1>
-      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
-      <visibleDependencies2></visibleDependencies2>
       <formId>86</formId>
       <colspan>0</colspan>
       <dempMap1>
@@ -456,8 +454,6 @@
       <visible>false</visible>
       <visibleEnumIdTrigger1>2748</visibleEnumIdTrigger1>
       <visibleDependencies1>1472</visibleDependencies1>
-      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
-      <visibleDependencies2></visibleDependencies2>
       <formId>86</formId>
       <colspan>0</colspan>
       <dempMap1>
@@ -736,7 +732,7 @@
       <form__field>
         <id>530</id>
         <label>Head Circumference</label>
-        <type>Integer</type>
+        <type>Float</type>
         <required>false</required>
         <minValue>20</minValue>
         <maxValue>60</maxValue>
@@ -3993,4 +3989,6 @@
   </formfields>
   <submissions>0</submissions>
   <maxSubmissions>100</maxSubmissions>
+  <localeList/>
+  <demographicsForm>false</demographicsForm>
 </org.cidrz.webapp.dynasite.valueobject.Form>

@@ -13,6 +13,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>prevPregnancies</name>
@@ -27,6 +29,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>labResults</name>
@@ -41,6 +45,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>latentFirstStageLabour</name>
@@ -55,6 +61,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>newbornEval</name>
@@ -69,6 +77,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>postnatalMaternalVisit</name>
@@ -83,6 +93,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>probPostnatalInfant</name>
@@ -97,6 +109,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>uthNeonatalRecord</name>
@@ -111,6 +125,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>infantPhysicalExam</name>
@@ -125,6 +141,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>stillbirthDeliveryRecord</name>
@@ -139,6 +157,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>anteUltrasoundEval</name>
@@ -153,6 +173,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>currentMedicine</name>
@@ -167,6 +189,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>antesum</name>
@@ -181,6 +205,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>probLabor</name>
@@ -195,6 +221,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>deliverySum</name>
@@ -209,6 +237,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>maternalDischarge</name>
@@ -223,6 +253,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>medSurgHist</name>
@@ -237,6 +269,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>pregnancyEnd</name>
@@ -251,6 +285,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>pregnancyBegin</name>
@@ -265,6 +301,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>updateEGA</name>
@@ -279,6 +317,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>postnatalHosp</name>
@@ -293,6 +333,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>postUltrasound</name>
@@ -307,6 +349,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>nicuSummary</name>
@@ -321,6 +365,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>initialVisit</name>
@@ -335,6 +381,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>probPostnatal</name>
@@ -349,6 +397,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>partographStatus</name>
@@ -363,6 +413,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>routineAnte</name>
@@ -377,6 +429,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>puerperium</name>
@@ -391,6 +445,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>pregnancyDating</name>
@@ -405,6 +461,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>createReferral</name>
@@ -419,6 +477,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>infantDischargeSummary</name>
@@ -433,6 +493,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>postnatalInfant</name>
@@ -447,6 +509,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>labTest</name>
@@ -461,6 +525,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>drugIntervention</name>
@@ -475,6 +541,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>arvRegimen</name>
@@ -489,6 +557,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>rpr</name>
@@ -503,6 +573,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>smCounselingVisit</name>
@@ -517,6 +589,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>safeMotherhoodCare</name>
@@ -531,6 +605,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>ultrasoundFetusEval</name>
@@ -545,6 +621,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>referral_reasons</name>
@@ -559,6 +637,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>hemotology</name>
@@ -573,6 +653,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>chemistry</name>
@@ -587,6 +669,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>liverfunction</name>
@@ -601,6 +685,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>urinalysis</name>
@@ -615,6 +701,8 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
     <name>newbornrecord</name>
@@ -629,5 +717,87 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     </formfields>
     <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>drug_stocks</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>user_info</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>user_info</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>user_info</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>user_info</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
 </list>

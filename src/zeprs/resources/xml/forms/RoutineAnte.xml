@@ -1220,7 +1220,7 @@
             <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
             <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
             <fieldId>244</fieldId>
-            <enabled>false</enabled>
+            <enabled>true</enabled>
             <ruleParams/>
             <outcomeParams/>
             <message>Lab Results: Urinalysis Albumin &gt;= 1+</message>
@@ -1229,27 +1229,14 @@
             <allPregnancies>false</allPregnancies>
           </org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
           <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
-            <id>73</id>
-            <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
-            <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
-            <fieldId>244</fieldId>
-            <enabled>false</enabled>
-            <ruleParams/>
-            <outcomeParams/>
-            <message>Lab Results: Urinalysis Acetone &gt; 1+.</message>
-            <operand>2</operand>
-            <operator>eq</operator>
-            <allPregnancies>false</allPregnancies>
-          </org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
-          <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
-            <id>76</id>
+            <id>75</id>
             <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
             <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
             <fieldId>244</fieldId>
             <enabled>true</enabled>
             <ruleParams/>
             <outcomeParams/>
-            <message>Urinalysis Acetone &gt;= 2+ - Need to request diabetes test.</message>
+            <message>Urinalysis Glucose &gt;= 2+ - Need to request diabetes test.</message>
             <operand>3</operand>
             <operator>gte</operator>
             <allPregnancies>false</allPregnancies>
@@ -1351,27 +1338,27 @@
         <isEnabled>true</isEnabled>
         <ruleDefinitions>
           <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
-            <id>78</id>
-            <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
-            <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
-            <fieldId>242</fieldId>
-            <enabled>false</enabled>
-            <ruleParams/>
-            <outcomeParams/>
-            <message>Urinalysis Protein &gt;= 2+ - Need to request diabetes test.</message>
-            <operand>3</operand>
-            <operator>gte</operator>
-            <allPregnancies>false</allPregnancies>
-          </org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
-          <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
-            <id>79</id>
+            <id>72</id>
             <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
             <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
             <fieldId>242</fieldId>
             <enabled>true</enabled>
             <ruleParams/>
             <outcomeParams/>
-            <message>Urinalysis Protein &gt;= 2+ - Need to request diabetes test.</message>
+            <message>Lab Results: Urinalysis Glucose &gt; 1+.</message>
+            <operand>2</operand>
+            <operator>gt</operator>
+            <allPregnancies>false</allPregnancies>
+          </org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
+          <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
+            <id>76</id>
+            <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
+            <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
+            <fieldId>242</fieldId>
+            <enabled>true</enabled>
+            <ruleParams/>
+            <outcomeParams/>
+            <message>Urinalysis Acetone &gt;= 2+ - Need to request diabetes test.</message>
             <operand>3</operand>
             <operator>gte</operator>
             <allPregnancies>false</allPregnancies>
@@ -1473,27 +1460,40 @@
         <isEnabled>true</isEnabled>
         <ruleDefinitions>
           <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
-            <id>72</id>
-            <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
-            <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
-            <fieldId>243</fieldId>
-            <enabled>false</enabled>
-            <ruleParams/>
-            <outcomeParams/>
-            <message>Lab Results: Urinalysis Glucose &gt; 1+.</message>
-            <operand>2</operand>
-            <operator>gt</operator>
-            <allPregnancies>false</allPregnancies>
-          </org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
-          <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
-            <id>75</id>
+            <id>73</id>
             <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
             <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
             <fieldId>243</fieldId>
             <enabled>true</enabled>
             <ruleParams/>
             <outcomeParams/>
-            <message>Urinalysis Glucose &gt;= 2+ - Need to request diabetes test.</message>
+            <message>Lab Results: Urinalysis Acetone &gt; 1+.</message>
+            <operand>2</operand>
+            <operator>eq</operator>
+            <allPregnancies>false</allPregnancies>
+          </org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
+          <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
+            <id>78</id>
+            <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
+            <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
+            <fieldId>243</fieldId>
+            <enabled>true</enabled>
+            <ruleParams/>
+            <outcomeParams/>
+            <message>Urinalysis Protein &gt;= 2+ - Need to request diabetes test.</message>
+            <operand>3</operand>
+            <operator>gte</operator>
+            <allPregnancies>false</allPregnancies>
+          </org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
+          <org.cidrz.webapp.dynasite.valueobject.RuleDefinition>
+            <id>79</id>
+            <ruleClass>org.cidrz.webapp.dynasite.rules.impl.SimpleComparison</ruleClass>
+            <outcomeClass>org.cidrz.webapp.dynasite.rules.impl.InfoOutcome</outcomeClass>
+            <fieldId>243</fieldId>
+            <enabled>true</enabled>
+            <ruleParams/>
+            <outcomeParams/>
+            <message>Urinalysis Protein &gt;= 2+ - Need to request diabetes test.</message>
             <operand>3</operand>
             <operator>gte</operator>
             <allPregnancies>false</allPregnancies>
@@ -1987,10 +1987,6 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <visibleDependencies2></visibleDependencies2>
       <formId>80</formId>
       <colspan>0</colspan>
       <highlightCell>false</highlightCell>
@@ -2001,4 +1997,6 @@
   </formfields>
   <submissions>0</submissions>
   <maxSubmissions>20</maxSubmissions>
+  <localeList/>
+  <demographicsForm>false</demographicsForm>
 </org.cidrz.webapp.dynasite.valueobject.Form>

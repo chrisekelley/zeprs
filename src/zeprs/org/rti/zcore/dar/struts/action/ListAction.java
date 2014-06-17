@@ -203,7 +203,7 @@ public class ListAction extends BaseAction {
 						items = EncountersDAO.getAll(conn, formId, "SQL_RETRIEVEALL" + formId, clazz, maxRows, offset);
 						break;
 					default:
-						items = EncountersDAO.getAll(conn, formId, "SQL_RETRIEVE_ALL" + formId, clazz, maxRows, offset);
+						items = EncountersDAO.getAll(conn, formId, "SQL_RETRIEVEALL" + formId, clazz, maxRows, offset);
 						break;
 					}
 				} catch (IOException e) {

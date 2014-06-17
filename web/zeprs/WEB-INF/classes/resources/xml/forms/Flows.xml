@@ -104,4 +104,12 @@
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.FlowOrderComparator"/>
     </forms>
   </org.cidrz.webapp.dynasite.valueobject.Flow>
+  <org.cidrz.webapp.dynasite.valueobject.Flow>
+    <id>104</id>
+    <name>Admin</name>
+    <flowOrder>103</flowOrder>
+    <forms class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.FlowOrderComparator"/>
+    </forms>
+  </org.cidrz.webapp.dynasite.valueobject.Flow>
 </list>

@@ -8013,6 +8013,21 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2159</id>
+    <label>E-mail address</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>email</starSchemaName>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>686</id>
     <label>Ears</label>
     <type>Enum</type>
@@ -8385,24 +8400,6 @@
     <enumerations/>
     <shared>false</shared>
     <starSchemaName>encounter_id</starSchemaName>
-    <encounterRecordproperty></encounterRecordproperty>
-    <patientStatusproperty></patientStatusproperty>
-  </org.cidrz.webapp.dynasite.valueobject.FormField>
-  <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2153</id>
-    <label>Encounter Uuid</label>
-    <type>Text</type>
-    <required>false</required>
-    <minValue>0</minValue>
-    <maxValue>0</maxValue>
-    <units></units>
-    <displayOrder>2147483647</displayOrder>
-    <patientProperty></patientProperty>
-    <isEnabled>true</isEnabled>
-    <ruleDefinitions/>
-    <enumerations/>
-    <shared>false</shared>
-    <starSchemaName>encounter_uuid</starSchemaName>
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
@@ -9542,6 +9539,21 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2160</id>
+    <label>Forenames</label>
+    <type>Text</type>
+    <required>true</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>forenames</starSchemaName>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>1057</id>
     <label>Forenames (infant)</label>
     <type>Text</type>
@@ -10410,7 +10422,7 @@
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>530</id>
     <label>Head Circumference</label>
-    <type>Integer</type>
+    <type>Float</type>
     <required>false</required>
     <minValue>20</minValue>
     <maxValue>60</maxValue>
@@ -14528,6 +14540,21 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2162</id>
+    <label>Mobile phone</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>mobile</starSchemaName>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>442</id>
     <label>Mode of Cord Insertion</label>
     <type>Enum</type>
@@ -16340,6 +16367,21 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2158</id>
+    <label>Password</label>
+    <type>Text</type>
+    <required>true</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>password</starSchemaName>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2122</id>
     <label>Patient enrolled in ART Clinic?</label>
     <type>Yes/No</type>
@@ -16795,6 +16837,21 @@
     <starSchemaName>phase</starSchemaName>
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2163</id>
+    <label>Phone</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>phone</starSchemaName>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>1381</id>
@@ -20835,6 +20892,21 @@
     <encounterRecordproperty></encounterRecordproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2161</id>
+    <label>Surname</label>
+    <type>Text</type>
+    <required>true</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>lastname</starSchemaName>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>1056</id>
     <label>Surname (infant)</label>
     <type>Text</type>
@@ -21516,6 +21588,42 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2153</id>
+    <label>Test Name Nov 6</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <patientProperty></patientProperty>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>test_name_nov_6</starSchemaName>
+    <encounterRecordproperty></encounterRecordproperty>
+    <patientStatusproperty></patientStatusproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2154</id>
+    <label>Test Nov 6 two</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <patientProperty></patientProperty>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>test_nov_6_two</starSchemaName>
+    <encounterRecordproperty></encounterRecordproperty>
+    <patientStatusproperty></patientStatusproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2101</id>
     <label>test1</label>
     <type>Enum</type>
@@ -22091,6 +22199,24 @@
     <enumerations/>
     <shared>false</shared>
     <starSchemaName>testValue3</starSchemaName>
+    <encounterRecordproperty></encounterRecordproperty>
+    <patientStatusproperty></patientStatusproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2155</id>
+    <label>Tet Nov 6 three</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <patientProperty></patientProperty>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>test_nov_6_three</starSchemaName>
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
@@ -24280,6 +24406,21 @@
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
     <patientLabproperty></patientLabproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2157</id>
+    <label>Username</label>
+    <type>Text</type>
+    <required>true</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>username</starSchemaName>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>1961</id>

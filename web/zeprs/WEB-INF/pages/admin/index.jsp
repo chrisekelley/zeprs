@@ -39,7 +39,7 @@
     <li><html:link action="/admin/reportGen">Generate Reports</html:link></li>
     <li><html:link action="/admin/sql/new">SQL console</html:link></li>
     <li>User Administration</li>
-    <c:url value="admin/records/list.do" var="users"><c:param name="formId" value="170"/></c:url>
+    <c:url value="admin/records/list.do" var="users"><c:param name="formId" value="125"/></c:url>
     	<ul>
     		<li><a href='<c:out value="/${appName}/${users}"/>'>Create and list Users</a></li>   	
     	    <li><html:link action="/admin/users">View and modify User Group Assignments</html:link></li>

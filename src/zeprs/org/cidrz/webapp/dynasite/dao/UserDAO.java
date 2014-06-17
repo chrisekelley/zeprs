@@ -10,6 +10,8 @@
 
 package org.cidrz.webapp.dynasite.dao;
 
+import org.cidrz.project.zeprs.valueobject.gen.UserInfo;
+import org.cidrz.webapp.dynasite.Constants;
 import org.cidrz.webapp.dynasite.exception.ObjectNotFoundException;
 import org.cidrz.webapp.dynasite.utils.DatabaseUtils;
 import org.cidrz.webapp.dynasite.valueobject.Staff;
@@ -17,6 +19,7 @@ import org.cidrz.webapp.dynasite.valueobject.UserGroup;
 import org.cidrz.webapp.dynasite.valueobject.UserPermissions;
 
 import javax.servlet.ServletException;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -49,6 +52,27 @@ public class UserDAO {
         values.add(username);
         result = DatabaseUtils.getBean(conn, UserGroup.class, sql, values);
         return result;
+    }
+    
+    /**
+     * Checks if user exists
+     * @param conn
+     * @param username
+     * @return
+     * @throws SQLException
+     * @throws ServletException
+     * @throws ObjectNotFoundException
+     * @should return an Object
+     */
+    public static Object getUser(Connection conn, String username) throws SQLException, ServletException, ObjectNotFoundException {
+    	Object result = null;
+    	ArrayList values = new ArrayList();
+    	String sql = "SELECT " + Constants.USERINFO_USERNAME + " AS username " +
+    	"FROM " + Constants.USERINFO_TABLE + " " +
+    	"WHERE " + Constants.USERINFO_USERNAME + "=?";
+    	values.add(username);
+    	result = DatabaseUtils.getBean(conn, UserInfo.class, sql, values);
+    	return result;
     }
 
     /**
