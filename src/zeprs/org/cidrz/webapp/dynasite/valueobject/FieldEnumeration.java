@@ -12,6 +12,7 @@ package org.cidrz.webapp.dynasite.valueobject;
 
 import java.io.Serializable;
 
+
 /**
  * @hibernate.class table="field_enumeration"  lazy="false"
  * mutable="true"
@@ -26,6 +27,19 @@ public class FieldEnumeration implements Identifiable, org.cidrz.webapp.dynasite
     private AuditInfo auditInfo;
     private String concatEnumNumeric;
     private Integer displayOrder = new Integer(Integer.MAX_VALUE);
+    private Long importId;
+    private String openmrs_concept;
+    private String uuid;
+    private String parentUuid;
+    private String locale;
+    
+    public String getLocale() {
+		return locale;
+	}
+
+	public void setLocale(String locale) {
+		this.locale = locale;
+	}
 
 
     public FieldEnumeration() {
@@ -151,5 +165,47 @@ public class FieldEnumeration implements Identifiable, org.cidrz.webapp.dynasite
     public void setConcatEnumNumeric(String concatEnumNumeric) {
         this.concatEnumNumeric = concatEnumNumeric;
     }
+    
+	 /**
+     * @return
+     * @hibernate.property column="import_id"
+     */
+	public Long getImportId() {
+		return importId;
+	}
+
+	public void setImportId(Long importId) {
+		this.importId = importId;
+	}
+
+	/**
+	 * @return the openmrs_concept
+	 */
+	public String getOpenmrs_concept() {
+		return openmrs_concept;
+	}
+
+	/**
+	 * @param openmrsConcept the openmrs_concept to set
+	 */
+	public void setOpenmrs_concept(String openmrsConcept) {
+		openmrs_concept = openmrsConcept;
+	}
+
+	public String getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+
+	public String getParentUuid() {
+		return parentUuid;
+	}
+
+	public void setParentUuid(String parentUuid) {
+		this.parentUuid = parentUuid;
+	}
 
 }

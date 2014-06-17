@@ -18,11 +18,13 @@ import org.cidrz.webapp.dynasite.exception.ObjectNotFoundException;
 import org.cidrz.webapp.dynasite.exception.ObjectNotFoundException;
 
 import javax.servlet.ServletException;
+
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+import java.util.UUID;
 
 /**
  * @author <a href="mailto:ckelley@rti.org">Chris Kelley</a>
@@ -48,6 +50,27 @@ public class FieldEnumerationDAO {
         values.add(id);
         item = (FieldEnumeration) DatabaseUtils.getBean(conn, FieldEnumeration.class, sql, values);
         return item;
+    }
+    
+    /**
+     * Fetches an enumeration by importId
+     * @param conn
+     * @param importId
+     * @return
+     * @throws SQLException
+     * @throws ServletException
+     * @throws ObjectNotFoundException
+     */
+    public static FieldEnumeration getOneByImportId(Connection conn, Long importId) throws SQLException, ServletException, ObjectNotFoundException {
+    	FieldEnumeration item = null;
+    	String sql;
+    	ArrayList values;
+    	sql = "select id, field_id AS fieldId, enumeration, numeric_value AS numericValue, is_enabled AS enabled, display_order AS displayOrder, import_id AS importId " +
+    			"openmrs_concept, uuid, parent_uuid as parentUuid, locale  from ADMIN.field_enumeration where import_id=? ";
+    	values = new ArrayList();
+    	values.add(importId);
+    	item = (FieldEnumeration) DatabaseUtils.getBean(conn, FieldEnumeration.class, sql, values);
+    	return item;
     }
 
     /**
@@ -171,6 +194,39 @@ public class FieldEnumerationDAO {
                 "ORDER BY field_id";
         list = DatabaseUtils.getList(conn, FieldEnumeration.class, sql, values);
         return list;
+    }
+    
+    /**
+     * Created field_enumeration in admin
+     * @param conn
+     * @param fieldEnumeration TODO
+     * @return
+     * @throws SQLException
+     */
+    public static Object create(Connection conn, FieldEnumeration fieldEnumeration) throws SQLException {
+    	if (fieldEnumeration.getUuid() == null) {
+    		UUID uuid = UUID.randomUUID();
+            String uuidStr = uuid.toString();
+            fieldEnumeration.setUuid(uuidStr);
+    	}
+
+    	String sql = "insert into ADMIN.field_enumeration (field_id, enumeration, numeric_value, is_enabled, display_order, " +
+        	"import_id, openmrs_concept, uuid, parent_uuid, locale ) " +
+            "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        ArrayList values = new ArrayList();
+        values.add(fieldEnumeration.getFieldId());
+        values.add(fieldEnumeration.getEnumeration());
+        values.add(fieldEnumeration.getNumericValue());
+        values.add(fieldEnumeration.isEnabled());
+        values.add(fieldEnumeration.getDisplayOrder());
+        values.add(fieldEnumeration.getImportId());
+        values.add(fieldEnumeration.getOpenmrs_concept());
+        values.add(fieldEnumeration.getUuid());
+        values.add(fieldEnumeration.getParentUuid());
+        values.add(fieldEnumeration.getLocale());
+
+        Long id = (Long) DatabaseUtils.create(conn, sql, values.toArray());
+        return id;
     }
 
     /**

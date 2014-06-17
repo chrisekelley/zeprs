@@ -222,6 +222,89 @@ public class FormDisplayDAO {
         form.setPageItems(piSet);
         return form;
     }
+    
+    /**
+     * Get full form graph from database
+     * @param conn
+     * @param formId
+     * @return
+     * @throws SQLException
+     * @throws ServletException
+     * @throws ObjectNotFoundException
+     */
+    public static Form getFormGraphDb(Connection conn, Long formId) throws SQLException, ServletException, ObjectNotFoundException {
+
+    	Form form = FormDisplayDAO.getOne(conn, formId);
+    	// get the flow
+    	Flow flow = FlowDAO.getOne(conn, form.getFlowId());
+    	form.setFlow(flow);
+    	// get the formType
+    	FormType formType = FormTypeDAO.getOne(conn, form.getFormTypeId());
+    	form.setFormType(formType);
+    	// get the pageItems
+    	List pi = PageItemDAO.getAllforForm(conn, formId);
+    	for (int i = 0; i < pi.size(); i++) {
+    		PageItem pageItem = (PageItem) pi.get(i);
+    		Long formFieldId = pageItem.getFormFieldId();
+    		FormField formfield = FormFieldDAO.getOne(conn, formFieldId);
+    		if (formfield.getType().equals("Enum")) {
+    			List fieldEnum = null;
+    			try {
+//    				fieldEnum = FieldEnumerationDAO.getAll(conn, formfield.getId(), null);
+    				// changed method for ZEPRS
+    				fieldEnum = FieldEnumerationDAO.getAll(conn, formfield.getId());
+    				if (fieldEnum.size() != 0) {
+    					Set enumSet = new TreeSet(new DisplayOrderComparator());
+    					for (int j = 0; j < fieldEnum.size(); j++) {
+    						FieldEnumeration fieldEnumeration = (FieldEnumeration) fieldEnum.get(j);
+    						enumSet.add(fieldEnumeration);
+    					}
+    					formfield.setEnumerations(enumSet);
+    				}
+    			} catch (NullPointerException e) {
+    				// it's ok - does not have an enum
+    			} catch (ClassCastException e) {
+    				log.error(e);
+    			}
+    		}
+
+    		// get the ruleDefs
+            List ruleDefEnum = RuleDefinitionDAO.getAll(conn, formFieldId);
+            if (ruleDefEnum != null) {
+                formfield.setRuleDefinitions(ruleDefEnum);
+            }
+
+    		pageItem.setForm_field(formfield);
+
+    		// load the dependency maps
+    		if (pageItem.getVisibleDependencies1() != null) {
+    			if (pageItem.getVisibleDependencies1().length() != 0) {
+    				HashMap depMap1 = new HashMap();
+    				for (StringTokenizer stringTokenizer = new StringTokenizer(pageItem.getVisibleDependencies1()); stringTokenizer.hasMoreTokens();) {
+    					String dependency = stringTokenizer.nextToken();
+    					depMap1.put(dependency, pageItem.getId());
+    				}
+    				pageItem.setDempMap1(depMap1);
+    			}
+    		}
+
+    		if (pageItem.getVisibleDependencies2() != null) {
+    			int dep2length = 0;
+    			dep2length = pageItem.getVisibleDependencies2().length();
+    			if (dep2length != 0) {
+    				HashMap depMap2 = new HashMap();
+    				for (StringTokenizer stringTokenizer = new StringTokenizer(pageItem.getVisibleDependencies2()); stringTokenizer.hasMoreTokens();) {
+    					String dependency = stringTokenizer.nextToken();
+    					depMap2.put(dependency, pageItem.getId());
+    				}
+    				pageItem.setDempMap2(depMap2);
+    			}
+    		}
+    	}
+    	Set piSet = DataStructureUtils.listToSet(pi);
+    	form.setPageItems(piSet);
+    	return form;
+    }
 
     /**
      * Fetches a simple list of form id's for use in creating the forms stored in the application space upon startup
@@ -235,6 +318,31 @@ public class FormDisplayDAO {
         List list = new ArrayList();
         ArrayList values = new ArrayList();
         String sql = "select f.id from form f where f.is_enabled=true ";
+        list = DatabaseUtils.getList(conn, Form.class, sql, values);
+        return list;
+    }
+    
+    /**
+     * Fetches a simple list of enabled (active) forms for use in creating the forms stored in the application space upon startup
+     * Also used in creating the application definition.
+     *
+     * @return
+     * @throws SQLException
+     * @throws ServletException
+     * @param conn
+     */
+    public static List<Form> getEnabledFormList(Connection conn) throws SQLException, ServletException {
+        List list = new ArrayList();
+        ArrayList values = new ArrayList();
+        String sql = "select name, label, require_reauth AS requireReauth, require_patient AS requirePatient, " +
+        		"flow_id AS flowId, flow_order AS flowOrder, form_type_id AS formTypeId, " +
+        		"created AS \"auditInfo.created\", " +
+                "last_modified AS \"auditInfo.lastModified\", " +
+                "created_by AS \"auditInfo.createdBy.id\", " +
+                "last_modified_by AS \"auditInfo.lastModifiedBy.id\", " +
+                "global_identifier_name AS globalIdentifierName, import_id AS importId, form_domain_id AS formDomainId, " +
+                "import_type as importType , locale, id " +
+        		"from ADMIN.form  where is_enabled=1 ";
         list = DatabaseUtils.getList(conn, Form.class, sql, values);
         return list;
     }

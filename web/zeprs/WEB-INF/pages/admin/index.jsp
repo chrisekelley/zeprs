@@ -38,7 +38,12 @@
     <li><html:link action="/archive">View Encounter Value archive</html:link></li>
     <li><html:link action="/admin/reportGen">Generate Reports</html:link></li>
     <li><html:link action="/admin/sql/new">SQL console</html:link></li>
-    <li><html:link action="/admin/users">User Administration</html:link></li>
+    <li>User Administration</li>
+    <c:url value="admin/records/list.do" var="users"><c:param name="formId" value="170"/></c:url>
+    	<ul>
+    		<li><a href='<c:out value="/${appName}/${users}"/>'>Create and list Users</a></li>   	
+    	    <li><html:link action="/admin/users">View and modify User Group Assignments</html:link></li>
+    	</ul>
     <li><html:link action="/admin/subscription/new">Site Subscriptions</html:link></li>
     <li><html:link action="/admin/publisher/new">Site Publisher Setup</html:link></li>
     <li><html:link action="/admin/appupdates/view">Application Update Job Log</html:link></li>
@@ -76,6 +81,7 @@ Proceed to the "System State" link first.</p>-->
         </c:when>
         <c:when test="${systemState=='2'}">--%>
         <li><html:link action="/admin/formList">Form Admin</html:link></li>
+        <li><html:link action="/admin/form/import">Import Forms</html:link> - place XML in archive/import/new</li>
         <%--</c:when>
         <c:otherwise>
         <li><html:link action="/admin/formList" onclick="alert('System State set?');self.close();">Form Admin</html:link></li>

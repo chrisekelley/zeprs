@@ -1597,7 +1597,6 @@
     <form-bean name="form94" type="org.apache.struts.validator.DynaValidatorForm">
       <form-property name="field1" type="java.lang.String"/>
       <form-property name="field1917" type="java.lang.String"/>
-      <form-property name="field2153" type="java.lang.String"/>
       <form-property name="field1261" type="java.lang.String"/>
       <form-property name="field1262" type="java.lang.String"/>
       <form-property name="field1263" type="java.lang.String"/>
@@ -1687,6 +1686,12 @@
       <form-property name="field2087" type="java.lang.String"/>
       <form-property name="field2088" type="java.lang.String"/>
     </form-bean>
+    <form-bean name="form115" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="field1" type="java.lang.String"/>
+      <form-property name="field2117" type="java.lang.String"/>
+      <form-property name="field2118" type="java.lang.String"/>
+      <form-property name="field2119" type="java.lang.String"/>
+    </form-bean>
   </form-beans>
   <global-exceptions/>
   <global-forwards>
@@ -1770,6 +1775,7 @@
     <forward name="urinalysis" path="/urinalysis.do" redirect="true"/>
     <forward name="urinalysisError" path="/urinalysis.do"/>
     <forward name="homelink" path="/homelink.do" redirect="true"/>
+    <forward name="admin/records/list" path="/admin/records/list.do"/>
   </global-forwards>
   <action-mappings>
     <!-- user space -->
@@ -2101,6 +2107,18 @@
     <action path="/admin/dynagen" type="org.cidrz.webapp.dynasite.struts.action.admin.SourceGeneratorAction">
       <forward name="success" path="/WEB-INF/pages/admin/generate_done.jsp"/>
     </action>
+    <action path="/admin/records/list" type="org.rti.zcore.dar.struts.action.ListAction">
+      <forward name="success" path="/WEB-INF/pages/admin/records/record.jsp"/>
+    </action>
+    <action path="/admin/records/add" type="org.rti.zcore.dynasite.struts.records.AddAction">
+      <forward name="success" path="/admin/records/list.do" redirect="true"/>
+    </action>
+    <action path="/admin/records/edit" type="org.rti.zcore.dynasite.struts.records.EditAction">
+      <forward name="success" path="/admin/records/list.do" redirect="true"/>
+    </action>
+    <action path="/admin/records/delete" type="org.rti.zcore.dynasite.struts.records.DeleteAction">
+      <forward name="success" path="/admin/records/list.do" redirect="true"/>
+    </action>
     <!-- admin users -->
     <action path="/admin/users" type="org.cidrz.webapp.dynasite.struts.action.admin.UserAdminAction" name="userSearch" scope="request" validate="false" input="/WEB-INF/pages/admin/users.jsp">
       <forward name="success" path="/WEB-INF/pages/admin/users.jsp"/>
@@ -2149,6 +2167,10 @@
     <!-- admin LIMS imports -->
     <action path="/admin/lims" type="org.cidrz.webapp.dynasite.struts.action.admin.ImportLimsAction">
       <forward name="success" path="/WEB-INF/pages/admin/lims.jsp"/>
+    </action>
+    <!-- admin form import  -->
+    <action path="/admin/form/import" type="org.rti.zcore.dynasite.struts.ImportFormAction">
+      <forward name="success" path="/WEB-INF/pages/admin/import_forms.jsp"/>
     </action>
     <!-- problems -->
     <action path="/problems/save" type="org.cidrz.webapp.dynasite.struts.action.generic.SaveObjectAction" name="problem" scope="request" validate="false" input="/WEB-INF/pages/patient_records/patient_chart.jsp" parameter="org.cidrz.webapp.dynasite.valueobject.Problem">
@@ -2506,6 +2528,13 @@
     </action>
     <action path="/form109/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form109" validate="true" input="/form109/new.do" parameter="109" scope="request"/>
     <action path="/form109/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form109" validate="false" parameter="109" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form115/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form115" validate="false" parameter="115" scope="request">
+      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    </action>
+    <action path="/form115/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form115" validate="true" input="/form115/new.do" parameter="115" scope="request"/>
+    <action path="/form115/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form115" validate="false" parameter="115" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
   </action-mappings>

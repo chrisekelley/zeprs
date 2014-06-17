@@ -269,6 +269,7 @@
         <forward name="urinalysis" path="/urinalysis.do" redirect="true"/>
         <forward name="urinalysisError" path="/urinalysis.do"/>
         <forward name="homelink" path="/homelink.do" redirect="true"/>
+        <forward name="admin/records/list" path="/admin/records/list.do" />
     </global-forwards>
 
     <action-mappings>
@@ -653,6 +654,18 @@
         <action path="/admin/dynagen" type="org.cidrz.webapp.dynasite.struts.action.admin.SourceGeneratorAction">
             <forward name="success" path="/WEB-INF/pages/admin/generate_done.jsp"/>
         </action>
+        <action path="/admin/records/list" type="org.rti.zcore.dar.struts.action.ListAction">
+            <forward name="success" path="/WEB-INF/pages/admin/records/record.jsp"/>
+        </action>
+		<action path="/admin/records/add" type="org.rti.zcore.dynasite.struts.records.AddAction">
+			<forward name="success" path="/admin/records/list.do" redirect="true"/>
+        </action>
+		<action path="/admin/records/edit" type="org.rti.zcore.dynasite.struts.records.EditAction">
+			<forward name="success" path="/admin/records/list.do" redirect="true"/>
+        </action>
+		<action path="/admin/records/delete" type="org.rti.zcore.dynasite.struts.records.DeleteAction">
+			<forward name="success" path="/admin/records/list.do" redirect="true"/>
+        </action>
 
         <!-- admin users -->
 
@@ -720,6 +733,12 @@
 
 		<action path="/admin/lims" type="org.cidrz.webapp.dynasite.struts.action.admin.ImportLimsAction">
 		     <forward name="success" path="/WEB-INF/pages/admin/lims.jsp"/>
+        </action>
+        
+		<!-- admin form import  -->
+
+        <action path="/admin/form/import" type="org.rti.zcore.dynasite.struts.ImportFormAction">
+            <forward name="success" path="/WEB-INF/pages/admin/import_forms.jsp"/>
         </action>
 
         <!-- problems -->

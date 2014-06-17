@@ -10,6 +10,7 @@
 
 package org.cidrz.webapp.dynasite.utils;
 
+
 /**
  * Created by IntelliJ IDEA.
  * User: ckelley
@@ -66,5 +67,35 @@ public class StringManipulation {
             s = s.replace("'", "\\'");
             return s;
         }
+        
+        /**
+         * Converts a digit at the beginning of a string to its text equivalent.
+         * @param name
+         * @return
+         */
+        public static String fixFirstDigit (String name){
+        	String firstChar = name.substring(0, 1);
+        	String numberString = null;
+        	String fixesString = name;
+        	try {
+        		int intTest = Integer.parseInt(firstChar);
+        		numberString = convertNumber(intTest);
+        		fixesString = numberString + name.substring(1, name.length());
+        	} catch (NumberFormatException e) {
+        		// it's ok - we do not want an int here anyways....
+        	}
+        	return fixesString;
+        }
+        
+        /**
+         * Provides the text equivalent of a digit from 0-9..
+         * @param intTest
+         * @return
+         */
+		public static String convertNumber(int intTest) {
+			String numberWords[][] = { {"0", "zero"}, {"1", "one"}, {"2", "two"}, {"3", "three"}, {"4", "four"}, {"5", "five"},
+										{"6", "six"}, {"7", "seven"}, {"8", "eight"}, {"9", "nine"}};
+			return numberWords[intTest][1];
+		}
 
 }

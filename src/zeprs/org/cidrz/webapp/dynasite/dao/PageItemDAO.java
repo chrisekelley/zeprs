@@ -310,6 +310,47 @@ public class PageItemDAO {
         encId = (Long) DatabaseUtils.create(conn, sql, values.toArray());
         return encId;
     }
+    
+    /**
+     * Updates importVisibleEnumIdTrigger id's to new id's when importing forms.
+     * @param conn
+     * @param importVisibleEnumIdTrigger
+     * @param newVisibleEnumIdTrigger
+     * @param visibleEnumIdTriggerNumber
+     * @return
+     * @throws SQLException
+     */
+    public static Object updateVisibleEnumIdTrigger(Connection conn, String importVisibleEnumIdTrigger, String newVisibleEnumIdTrigger, int visibleEnumIdTriggerNumber) throws SQLException {
+    	ArrayList values = new ArrayList();
+    	String column = null;
+    	if (visibleEnumIdTriggerNumber == 1) {
+    		column = "VISIBLE_ENUM_ID_TRIGGER1";
+    	} else {
+    		column = "VISIBLE_ENUM_ID_TRIGGER2";
+    	}
+    	String sql = "UPDATE ADMIN.page_item set " + column + "=? WHERE " + column + "=?";
+    	values.add(newVisibleEnumIdTrigger);
+    	values.add(importVisibleEnumIdTrigger);
+    	Long encId = null;
+    	encId = (Long) DatabaseUtils.create(conn, sql, values.toArray());
+    	return encId;
+    }
+    
+    public static Object updateVisibleDependency(Connection conn, String importVisibleDependency, String newVisibleDependency, int visibleDependencyNumber) throws SQLException {
+    	ArrayList values = new ArrayList();
+    	String column = null;
+    	if (visibleDependencyNumber == 1) {
+    		column = "VISIBLE_DEPENDENCIES1";
+    	} else {
+    		column = "VISIBLE_DEPENDENCIES2";
+    	}
+    	String sql = "UPDATE ADMIN.page_item set " + column + "=? WHERE " + column + "=?";
+    	values.add(newVisibleDependency);
+    	values.add(importVisibleDependency);
+    	Long encId = null;
+    	encId = (Long) DatabaseUtils.create(conn, sql, values.toArray());
+    	return encId;
+    }
 
     /**
      * Saves shared field by copying a pageItem that uses this field to the current form.

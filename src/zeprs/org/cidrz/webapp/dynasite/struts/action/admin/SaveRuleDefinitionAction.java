@@ -47,7 +47,7 @@ public class SaveRuleDefinitionAction extends SaveObjectAction {
         try {
             conn = DatabaseUtils.getAdminConnection();
             RuleDefinition rule = (RuleDefinition) subject;
-            RuleDefinitionDAO.insertRule(conn, rule.getRuleClass(), rule.getOutcomeClass(), rule.getFormId(), rule.getFieldId(), rule.isEnabled(), rule.isAllPregnancies(), userName, site.getId(), rule.getMessage(), rule.getOperand(), rule.getOperator());
+            RuleDefinitionDAO.insertRule(conn, rule.getRuleClass(), rule.getOutcomeClass(), rule.getFormId(), rule.getFieldId(), rule.isEnabled(), rule.isAllPregnancies(), userName, site.getId(), rule.getMessage(), rule.getOperand(), rule.getOperator(), rule.getImportId());
         } catch (ServletException e) {
             log.error(e);
         } catch (Exception e) {

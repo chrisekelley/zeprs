@@ -29,7 +29,9 @@ public class Flow implements Identifiable, Serializable {
     private Long id;
     private String name;
     private Long flowOrder;
+    private String createdBy;
     private SortedSet forms = new TreeSet(new FlowOrderComparator());
+    private String globalIdentifierName;
 
 
     public Long getId() {
@@ -64,5 +66,21 @@ public class Flow implements Identifiable, Serializable {
     public void setForms(SortedSet forms) {
         this.forms = forms;
     }
+
+	public String getGlobalIdentifierName() {
+		return globalIdentifierName;
+	}
+
+	public void setGlobalIdentifierName(String globalIdentifierName) {
+		this.globalIdentifierName = globalIdentifierName;
+	}
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
 
 }

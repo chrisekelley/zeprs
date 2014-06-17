@@ -47,6 +47,7 @@ import org.cidrz.webapp.dynasite.valueobject.FormField;
 import org.cidrz.webapp.dynasite.valueobject.PageItem;
 import org.cidrz.webapp.dynasite.valueobject.SessionPatient;
 import org.cidrz.webapp.dynasite.valueobject.Site;
+import org.rti.zcore.utils.database.DatabaseCompatability;
 
 /**
  * Provide objects about forms
@@ -371,6 +372,120 @@ public class EncountersDAO {
         values.add(pregnancyId);
         items = DatabaseUtils.getList(conn, RoutineAnte.class, sql, values);
         return items;
+    }
+    
+
+	/**
+	 * Applies a simple constraint to the query.
+	 *
+	 * @param conn
+	 * @param formId
+	 * @param genSqlName
+	 * @param clazz
+	 * @return
+	 * @throws IOException
+	 * @throws ServletException
+	 * @throws SQLException
+	 */
+	public static List getAllConstraint(Connection conn, Long formId, String genSqlName, Class clazz,
+			String constraintClause, Long constraintLong) throws IOException, ServletException, SQLException {
+		List items;
+		Map queries = QueryLoader.instance().load("/" + Constants.SQL_GENERATED_PROPERTIES);
+		String sql = (String) queries.get(genSqlName);
+		String sqlExtra = sql.concat(" WHERE " + constraintClause + " = " + constraintLong);
+		ArrayList values = new ArrayList();
+		// values.add(formId);
+		items = DatabaseUtils.getList(conn, clazz, sqlExtra, values);
+		return items;
+	}
+
+	/**
+	 * Applies a simple constraint and ORDER BY clause to the query.
+	 * @param conn
+	 * @param formId
+	 * @param genSqlName
+	 * @param clazz
+	 * @param constraintClause
+	 * @param constraintLong
+	 * @param orderByClause
+	 * @return
+	 * @throws IOException
+	 * @throws ServletException
+	 * @throws SQLException
+	 */
+	public static List getAllConstraintOrderBy(Connection conn, Long formId, String genSqlName, Class clazz,
+			String constraintClause, Long constraintLong, String orderByClause) throws IOException, ServletException, SQLException {
+		List items;
+		Map queries = QueryLoader.instance().load("/" + Constants.SQL_GENERATED_PROPERTIES);
+		String sql = (String) queries.get(genSqlName);
+		String sqlExtra = sql.concat(" WHERE " + constraintClause + " = " + constraintLong + " ORDER BY " + orderByClause);
+		ArrayList values = new ArrayList();
+		// values.add(formId);
+		items = DatabaseUtils.getList(conn, clazz, sqlExtra, values);
+		return items;
+	}
+	
+	/**
+	 * Used for admin classes - records that are edited in the Admin interface
+	 * Not associated with patients. Replacement for MySQL LIMIT - maxRows
+	 * Orders by id asc.
+	 *
+	 * @param conn
+	 * @param formId
+	 * @param genSqlName
+	 * @param clazz
+	 * @param maxRows
+	 * @param offset TODO
+	 * @return list of records
+	 * @throws IOException
+	 * @throws ServletException
+	 * @throws SQLException
+	 */
+    public static List getAll(Connection conn, Long formId, String genSqlName, Class clazz, Integer maxRows, Integer offset) throws IOException, ServletException, SQLException {
+    	List items;
+    	Map queries = QueryLoader.instance().load("/" + Constants.SQL_GENERATED_PROPERTIES);
+    	//String sql = (String) queries.get(genSqlName) + " ORDER BY id asc OFFSET " + offset + " ROWS FETCH NEXT " + maxRows + " ROWS ONLY";
+		String insertPagerEnd = DatabaseCompatability.insertPagerEnd(Constants.DATABASE_TYPE, "id asc", offset, maxRows);
+    	String sql = (String) queries.get(genSqlName) + insertPagerEnd;
+    	ArrayList values = new ArrayList();
+    	if (Constants.DATABASE_TYPE.equals("mssql")) {
+    		sql = "SELECT TOP " + maxRows + " " + sql;
+    	}
+    	//items = DatabaseUtils.getList(conn, clazz, sql, values, maxRows);
+    	items = DatabaseUtils.getList(conn, clazz, sql, values);
+    	return items;
+    }
+	
+	  /**
+     * Used for admin classes - records that are edited in the Admin interface
+	 * Not associated with patients. Replacement for MySQL LIMIT - maxRows
+	 * Supports custom order by statement.
+     * @param conn
+     * @param formId
+     * @param genSqlName
+     * @param clazz
+     * @param maxRows
+     * @param offset
+     * @param order "id asc" if null
+     * @return
+     * @throws IOException
+     * @throws ServletException
+     * @throws SQLException
+     */
+    public static List getAll(Connection conn, Long formId, String genSqlName, Class clazz, Integer maxRows, Integer offset, String order) throws IOException, ServletException, SQLException {
+    	List items;
+    	Map queries = QueryLoader.instance().load("/" + Constants.SQL_GENERATED_PROPERTIES);
+    	if (order == null) {
+    		order = "id asc";
+    	}
+    	String insertPagerEnd = DatabaseCompatability.insertPagerEnd(Constants.DATABASE_TYPE, order, offset, maxRows);
+    	String sql = (String) queries.get(genSqlName) + insertPagerEnd;
+    	ArrayList values = new ArrayList();
+    	if (Constants.DATABASE_TYPE.equals("mssql")) {
+    		sql = "SELECT TOP " + maxRows + " " + sql;
+    	}
+    	items = DatabaseUtils.getList(conn, clazz, sql, values);
+    	return items;
     }
 
     /**

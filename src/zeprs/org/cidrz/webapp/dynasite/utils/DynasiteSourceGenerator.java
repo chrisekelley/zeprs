@@ -20,25 +20,36 @@ import org.apache.tools.ant.DefaultLogger;
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.ProjectHelper;
 import org.cidrz.webapp.dynasite.Constants;
+import org.cidrz.webapp.dynasite.dao.FormDisplayDAO;
+import org.cidrz.webapp.dynasite.exception.ObjectNotFoundException;
 import org.cidrz.webapp.dynasite.exception.PersistenceException;
 import org.cidrz.webapp.dynasite.valueobject.DynaSiteObjects;
+import org.cidrz.webapp.dynasite.valueobject.FieldEnumeration;
 import org.cidrz.webapp.dynasite.valueobject.Form;
 import org.cidrz.webapp.dynasite.valueobject.FormField;
 import org.cidrz.webapp.dynasite.valueobject.PageItem;
 
 import javax.servlet.ServletException;
+
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
 import xdoclet.modules.hibernate.HibernateDocletTask;
+
 import com.sun.tools.javac.Main;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Properties;
 
 /**
  * Extension of ActionServlet that modifies the XML configs based
@@ -64,7 +75,7 @@ public class DynasiteSourceGenerator {
      * @param formId - null if you want to process all forms.
      */
     // go
-    public void createSourceFiles(String genType, Boolean dev, Long formId) throws ServletException, PersistenceException, IOException, SQLException {
+    public void createSourceFiles(String genType, Boolean dev, Long formId) throws ServletException, PersistenceException, IOException, SQLException, ObjectNotFoundException, IllegalStateException {
 
         try {
             String pathname = null;
@@ -571,4 +582,182 @@ public class DynasiteSourceGenerator {
         }
 
     }
+    
+    /**
+     * Initiates processing and creation of Locale Resource properties file(s).
+     * @param dev
+     * @param formId - null if you want to process all forms.
+     * @return
+     * @throws ObjectNotFoundException
+     */
+    public static String createLocaleResources(Boolean dev, Long formId) throws ObjectNotFoundException {
+    	String message = null;
+    	String pathname = null;
+    	String deployPathname = null;
+        if (dev == true) {
+        	pathname = Constants.DEV_XML_PATH;
+        	deployPathname = Constants.DYNASITE_XML_PATH;
+        } else {
+        	pathname = Constants.DYNASITE_XML_PATH;
+        }
+
+        Form form = null;
+        if (formId != null) {
+        	Connection conn = null;
+        	//form = (Form) DynaSiteObjects.getForms().get(formId);
+        	try {
+            	conn = DatabaseUtils.getAdminConnection();
+        		form = FormDisplayDAO.getFormGraphDb(conn, formId);
+        		DynaSiteObjects.getForms().put(formId, form);
+        		/*createLocaleResourceFile(dev, pathname, deployPathname, form);
+                log.debug("done with generation of Locale Resource File for form id: " + formId);*/
+            } catch (Exception e) {
+                log.error(e);
+            } finally {
+    			try {
+					conn.close();
+				} catch (SQLException e) {
+					log.debug(e);
+				}
+    		}
+        	if (form != null) {
+            	createLocaleResourceFile(dev, pathname, deployPathname, form);
+                log.debug("done with generation of Locale Resource File for form id: " + formId);
+        	} else {
+        		message = "DynaSiteObjects.getForms() does not return a form for formId: " + formId + " Adding form to DynaSiteObjects";
+                log.debug(message);
+                try {
+                	conn = DatabaseUtils.getAdminConnection();
+            		form = FormDisplayDAO.getFormGraphDb(conn, formId);
+            		DynaSiteObjects.getForms().put(formId, form);
+            		createLocaleResourceFile(dev, pathname, deployPathname, form);
+                    log.debug("done with generation of Locale Resource File for form id: " + formId);
+                } catch (Exception e) {
+                    log.error(e);
+                } finally {
+        			try {
+						conn.close();
+					} catch (SQLException e) {
+						log.debug(e);
+					}
+        		}
+                //throw new ObjectNotFoundException(message);
+        	}
+        } else {
+        	Set formSet = DynaSiteObjects.getForms().entrySet();
+            for (Iterator iterator = formSet.iterator(); iterator.hasNext();) {
+                Map.Entry entry = (Map.Entry) iterator.next();
+                form = (Form) entry.getValue();
+            	createLocaleResourceFile(dev, pathname, deployPathname, form);
+            }
+           log.debug("done with generation of source");
+        }
+		return message;
+    }
+
+	/**
+	 * Creates Locale Resource properties file
+	 * @param dev
+	 * @param pathname
+	 * @param deployPathname
+	 * @param form
+	 */
+	public static void createLocaleResourceFile(Boolean dev, String pathname, String deployPathname, Form form) {
+		Iterator dbPageItems = form.getPageItems().iterator();
+        FormField formField = null;
+        Properties prop = new Properties();
+		prop.setProperty(form.getClassname() + ".label", form.getLabel());
+        while (dbPageItems.hasNext()) {
+            PageItem pageItem = (PageItem) dbPageItems.next();
+            formField = pageItem.getForm_field();
+            if (formField.isEnabled()) {
+            	prop.setProperty(form.getClassname() + "." + formField.getIdentifier(), formField.getLabel());
+            }
+            if (formField.getEnumerations() != null) {
+            	Set<FieldEnumeration> fieldEnumerations = formField.getEnumerations();
+            	for (FieldEnumeration fieldEnumeration : fieldEnumerations) {
+            		prop.setProperty(form.getClassname() + "." + formField.getIdentifier() + "_" + fieldEnumeration.getId(), fieldEnumeration.getEnumeration());
+				}
+            }
+            if (pageItem.getInputType().equals("dropdown-add-one")) {
+        		String classNameString = StringManipulation.fixClassname(pageItem.getDropdownTable());
+                Long inlineFormId = (Long) DynaSiteObjects.getFormNameMap().get(classNameString);
+                if (inlineFormId != null) {
+                	Form inlineForm = ((Form) DynaSiteObjects.getForms().get(new Long(inlineFormId)));
+                    // Create a list of fieldnames for inline forms.
+                    ArrayList<String> inlineFields = new ArrayList<String>();
+                    for (Iterator iterator2 = inlineForm.getPageItems().iterator(); iterator2.hasNext();) {
+                    	PageItem pageItem2 = (PageItem) iterator2.next();
+                    	// filter out disabled fields and table-being tags (display-tbl-begin)
+                        if (pageItem2.getForm_field().isEnabled() == true && !pageItem2.getInputType().startsWith("display")) {
+                        	prop.setProperty(form.getClassname() + "." + pageItem2.getForm_field().getIdentifier(), pageItem2.getForm_field().getLabel());
+                        }
+                    }
+                }
+        	}
+        }
+
+        if (form.getLocale() == null) {
+            String propertiesFilename = form.getClassname() +  ".properties";
+
+            FileOutputStream fos = null;
+    		try {
+    			fos = new FileOutputStream(pathname + propertiesFilename);
+    			prop.store(fos, null);
+    		} catch (IOException e) {
+    			log.error("Error: ", e);
+    		} finally {
+    			try {
+    				fos.close();
+    			} catch (IOException e) {
+    				log.error("Error: ", e);
+    			}
+    		}
+
+            // copy to tomcat as well if in dev mode
+            if (dev) {
+            	try {
+    				FileUtils.copyQuick(pathname + propertiesFilename, deployPathname + propertiesFilename);
+    			} catch (Exception e) {
+    				e.printStackTrace();
+    			}
+            }
+
+        } else {
+        	String outputFilename = form.getClassname() + "_" + form.getLocale() + ".properties";
+            String propertiesFilename = form.getClassname() +  ".properties";
+
+            FileOutputStream fos = null;
+    		try {
+    			fos = new FileOutputStream(pathname + outputFilename);
+    			prop.store(fos, null);
+    		} catch (IOException e) {
+    			log.error("Error: ", e);
+    		} finally {
+    			try {
+    				fos.close();
+    			} catch (IOException e) {
+    				log.error("Error: ", e);
+    			}
+    		}
+
+            // save the default properties file. This is used by browser set to a locale that the system does not have translations for.
+            try {
+    			FileUtils.copyQuick(pathname + outputFilename, pathname + propertiesFilename);
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
+
+            // copy to tomcat as well if in dev mode
+            if (dev) {
+            	try {
+    				FileUtils.copyQuick(pathname + outputFilename, deployPathname + outputFilename);
+    				FileUtils.copyQuick(pathname + outputFilename, deployPathname + propertiesFilename);
+    			} catch (Exception e) {
+    				e.printStackTrace();
+    			}
+            }
+
+        }
+	}
 }

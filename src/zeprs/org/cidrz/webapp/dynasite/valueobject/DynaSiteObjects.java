@@ -16,8 +16,10 @@ import org.cidrz.project.zeprs.valueobject.partograph.PartographMapping;
 import org.cidrz.webapp.dynasite.Constants;
 import org.cidrz.webapp.dynasite.utils.StringManipulation;
 import org.cidrz.webapp.dynasite.utils.XmlUtils;
+import org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator;
 import org.cidrz.webapp.dynasite.utils.sort.FlowOrderComparator;
 import org.dom4j.DocumentException;
+import org.rti.zcore.ApplicationDefinition;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -50,6 +52,7 @@ public class DynaSiteObjects {
     private static TreeMap districtsMap = null;
     private static List immunizations = null;
     private static List flows = null;
+    private static List<FormType> formTypes = null;
     private static HashMap flowMap = null;
     private static HashMap fieldEnumerations = null;
     private static HashMap fieldEnumerationsByField = null;
@@ -65,6 +68,8 @@ public class DynaSiteObjects {
     private static HashMap fieldToPageItem = null;
     private static HashMap fieldToForms = null;
     private static HashMap formNames = null;
+    private static HashMap<String,Long> formNameMap = null;	//classname:formId
+    private static HashMap<Long,String> formIdClassNameMap = null;
     private static HashMap rules = null;
     private static HashMap rulesToForms = null;
     private static HashMap ruleMap = null;
@@ -77,6 +82,17 @@ public class DynaSiteObjects {
 														// RSS import and export use the same value, RSS-Gen-date, so that their processes won't collide or leave the patient record
     private static Boolean dev;
     private static HashMap<String,String> masterArchiveIndex;
+    private static ApplicationDefinition applicationDefinition;
+    private static ArrayList<String> localeDisplayName;
+    private static ArrayList<Locale> localeList;
+    private static HashMap<String,String> localeDisplayMap;
+    private static HashMap<String,String> localeMessageMap;	//primarily used by DWR AJAX calls to access locale properties.
+    private static ArrayList<MenuItem> menuItemList;
+    private static HashMap<String,Boolean> propertyFileReloadMap = new HashMap<String,Boolean>();	//stores name of property file and if it needs to be reloaded.
+    private static Boolean problemListEnabled;	// display problem list?
+    private static String webDavArchiveFolderDate;	// has the folder hierarchy for the current date been created? what is it?
+    private static Server proxyServer;
+    private static Boolean needProxyAuthentication;
 
     /*private DynaSiteObjects() {
         log.debug("singleton object created");
@@ -238,6 +254,23 @@ public class DynaSiteObjects {
             }
         }
         return flows;
+    }
+    
+    /**
+     * Provides a FormType list.
+     * @return
+     */
+    public static List<FormType> getFormTypes() {
+    	if (formTypes == null) {
+    		formTypes = new ArrayList<FormType>();
+    		try {
+    			//flows = FlowDAO.getAll();
+    			formTypes = (List<FormType>) XmlUtils.getOne(path + "FormTypes.xml", null, null);
+    		} catch (IOException e) {
+    			e.printStackTrace();
+    		}
+    	}
+    	return formTypes;
     }
 
     public static HashMap getFlowMap() {
@@ -413,6 +446,45 @@ public class DynaSiteObjects {
     public static void setPageItems(HashMap pageItems) {
         DynaSiteObjects.pageItems = pageItems;
     }
+    
+    /**
+     * populates formNameMap - <String>classname:<Long>formId
+     * also sets classname in Form.
+     * also populates formIdClassNameMap
+     * @return
+     */
+    public static HashMap getFormNameMap() {
+    	if (formNameMap == null) {
+    		// log.debug("Populating pageItems from DynaSiteObjects.getPageItems");
+    		formNameMap = new HashMap<String,Long>();
+    		formIdClassNameMap = new HashMap<Long,String>();
+    		Set formList = forms.keySet();
+    		for (Iterator iterator = formList.iterator(); iterator.hasNext();) {
+    			Long formId = (Long) iterator.next();
+    			Form form = (Form) forms.get(formId);
+    	        String classname = StringManipulation.fixClassname(form.getName());
+    	        form.setClassname(classname);
+    	        formNameMap.put(classname, formId);
+    	        formIdClassNameMap.put(formId, classname);
+    		}
+    	}
+    	return formNameMap;
+    }
+    
+
+    /**
+	 * @return the formIdClassNameMap - formId, classname
+	 */
+	public static HashMap<Long, String> getFormIdClassNameMap() {
+		return formIdClassNameMap;
+	}
+
+	/**
+	 * @param formIdClassNameMap the formIdClassNameMap to set
+	 */
+	public static void setFormIdClassNameMap(HashMap<Long, String> formIdClassNameMap) {
+		DynaSiteObjects.formIdClassNameMap = formIdClassNameMap;
+	}
 
     /**
      * Populates both forms and pageItem Maps
@@ -1082,6 +1154,217 @@ public class DynaSiteObjects {
 	 */
 	public static void setMasterArchiveIndex(HashMap<String, String> masterArchiveIndex) {
 		DynaSiteObjects.masterArchiveIndex = masterArchiveIndex;
+	}
+	
+	/**
+	 * Populates locale-related lists and maps.
+	 * @return
+	 */
+//	public static ApplicationDefinition getApplicationDefinition() {
+//		ArrayList<String> localeStringList = null;
+//		if (applicationDefinition == null)
+//			try {
+//				applicationDefinition = (ApplicationDefinition) XmlUtils.getOne(Constants.DYNASITE_XML_PATH + Constants.APPLICATION_DEFINITION_FILENAME, "json", ApplicationDefinition.class);
+//				localeDisplayName = new ArrayList<String>();
+//				localeDisplayMap = new HashMap<String,String>();
+//
+//				localeStringList = applicationDefinition.getLocalList();
+//				for (String locales : localeStringList) {
+//					Locale locale = null;
+//					if(locales.contains("_")) {
+//						if(locales.charAt(2) == '_') {
+//							locale = new Locale(locales.substring(0, 2),locales.substring(3, 5) );
+//							if( (locales.substring(5, locales.length())).contains("_")) {
+//								if(locales.charAt(5) == '_')
+//									locale = new Locale(locales.substring(0, 2),locales.substring(3, 5), locales.substring(6, 8)  );
+//							}
+//						}
+//					} else {
+//						locale = new Locale(locales);
+//					}
+//					if (localeList == null) {
+//						localeList = new ArrayList<Locale>();
+//					}
+//					localeList.add(locale);
+//					localeDisplayName.add(locale.getDisplayName());
+//					localeDisplayMap.put(locales, locale.getDisplayName());
+//				}
+//			} catch (FileNotFoundException e) {
+//				//log.debug(Constants.DYNASITE_XML_PATH + Constants.APPLICATION_DEFINITION_FILENAME + " not found.");
+//			} catch (IOException e) {
+//				log.debug("Problem with " + Constants.DYNASITE_XML_PATH + Constants.APPLICATION_DEFINITION_FILENAME + ": " + e);
+//			}
+//		return applicationDefinition;
+//	}
+
+	public static void setApplicationDefinition(ApplicationDefinition applicationDefinition)
+	{
+		DynaSiteObjects.applicationDefinition = applicationDefinition;
+	}
+
+	public static ArrayList<String> getLocaleDisplayName() {
+		return localeDisplayName;
+	}
+
+	public static void setLocaleDisplayName(ArrayList<String> localeDisplayName) {
+		DynaSiteObjects.localeDisplayName = localeDisplayName;
+	}
+
+	/**
+	 * @return the localeDisplayMap
+	 */
+	public static HashMap<String, String> getLocaleDisplayMap() {
+		return localeDisplayMap;
+	}
+
+	/**
+	 * @param localeDisplayMap the localeDisplayMap to set
+	 */
+	public static void setLocaleDisplayMap(HashMap<String, String> localeDisplayMap) {
+		DynaSiteObjects.localeDisplayMap = localeDisplayMap;
+	}
+
+	/**
+	 * @return the localeMessageMap
+	 */
+	public static HashMap<String, String> getLocaleMessageMap() {
+		if (localeMessageMap == null) {
+        	localeMessageMap = new HashMap<String,String>();
+        }
+		return localeMessageMap;
+	}
+
+	/**
+	 * @param localeMessageMap the localeMessageMap to set
+	 */
+	public static void setLocaleMessageMap(HashMap<String, String> localeMessageMap) {
+		DynaSiteObjects.localeMessageMap = localeMessageMap;
+	}
+
+//	public static ArrayList<MenuItem> getMenuItemList() {
+//		if (menuItemList == null)
+//			try {
+//				menuItemList = (ArrayList<MenuItem>) XmlUtils.getOne(Constants.DYNASITE_XML_PATH + Constants.MENUITEM_LIST_FILENAME, "json", null);
+//				DisplayOrderComparator doc = new DisplayOrderComparator();
+//		        Collections.sort(menuItemList, doc);
+//			} catch (FileNotFoundException e) {
+//				// not created yet
+//			} catch (IOException e) {
+//				log.debug(e);
+//			}
+//		return menuItemList;
+//	}
+
+	public static void setMenuItemList(ArrayList<MenuItem> newMenuItemList) {
+		menuItemList = newMenuItemList;
+	}
+
+	/**
+	 * @return the propertyFileReloadMap
+	 */
+	public static HashMap<String, Boolean> getPropertyFileReloadMap() {
+		return propertyFileReloadMap;
+	}
+
+	/**
+	 * @param propertyFileReloadMap the propertyFileReloadMap to set
+	 */
+	public static void setPropertyFileReloadMap(HashMap<String, Boolean> propertyFileReloadMap) {
+		DynaSiteObjects.propertyFileReloadMap = propertyFileReloadMap;
+	}
+
+	/**
+	 * @return the localeList
+	 */
+	public static ArrayList<Locale> getLocaleList() {
+		return localeList;
+	}
+
+	/**
+	 * @param localeList the localeList to set
+	 */
+	public static void setLocaleList(ArrayList<Locale> localeList) {
+		DynaSiteObjects.localeList = localeList;
+	}
+
+	/**
+	 * @return the problemListEnabled
+	 */
+	public static Boolean getProblemListEnabled() {
+		if (problemListEnabled == null) {
+			String enabled = Constants.getProperties("problemList.enabled",Constants.APP_PROPERTIES);
+			if (enabled != null) {
+				try {
+					problemListEnabled = Boolean.valueOf(enabled);
+				} catch (Exception e) {
+					log.debug("Incorrect setting in application.properties: problemList.enabled should be either true or false.");
+				}
+			}
+		}
+		return problemListEnabled;
+	}
+
+	/**
+	 * @param problemListEnabled the problemListEnabled to set
+	 */
+	public static void setProblemListEnabled(Boolean problemListEnabled) {
+		DynaSiteObjects.problemListEnabled = problemListEnabled;
+	}
+
+	/**
+	 * @return the webDavArchiveFolderDate
+	 */
+	public static String getWebDavArchiveFolderDate() {
+		return webDavArchiveFolderDate;
+	}
+
+	/**
+	 * @param webDavArchiveFolderDate the webDavArchiveFolderDate to set
+	 */
+	public static void setWebDavArchiveFolderDate(String webDavArchiveFolderDate) {
+		DynaSiteObjects.webDavArchiveFolderDate = webDavArchiveFolderDate;
+	}
+
+	/**
+	 * @return the proxyServer
+	 */
+//	public static Server getProxyServer() {
+//		if (proxyServer == null) {
+//			File name = new File(Constants.ARCHIVE_PATH_SERVERS);
+//	    	String[] directory = name.list();
+//	    	//ArrayList<String> proxyDirectory = new ArrayList<String>();
+//	    	for (String serverConfigFile : directory) {
+//	    		Server serverConfig;
+//				try {
+//					serverConfig = (Server) XmlUtils.getOne(Constants.ARCHIVE_PATH_SERVERS + serverConfigFile, Constants.SYNC_FORMAT, Server.class);
+//					String serverType = serverConfig.getServerType();
+//					Boolean enabled = serverConfig.getEnabled();
+//		    		if ((serverType.equals("proxy")) && ((enabled != null) && (enabled == Boolean.TRUE))) {
+//		    			proxyServer = serverConfig;
+//		    		}
+//				} catch (FileNotFoundException e) {
+//					log.debug(e);
+//				} catch (IOException e) {
+//					log.debug(e);
+//				}
+//			}
+//		}
+//		return proxyServer;
+//	}
+
+	/**
+	 * @param proxyServer the proxyServer to set
+	 */
+	public static void setProxyServer(Server proxyServer) {
+		DynaSiteObjects.proxyServer = proxyServer;
+	}
+
+	public static Boolean getNeedProxyAuthentication() {
+		return needProxyAuthentication;
+	}
+
+	public static void setNeedProxyAuthentication(Boolean needProxyAuthentication) {
+		DynaSiteObjects.needProxyAuthentication = needProxyAuthentication;
 	}
 
 

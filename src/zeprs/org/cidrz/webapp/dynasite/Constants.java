@@ -125,8 +125,12 @@ public class Constants {
     public static final String MASTER_ARCHIVE_INDEX_JS = ARCHIVE_PATH + MASTER_ARCHIVE_INDEX_JS_FILENAME;
     public static final String PATIENT_ID_LIST_FILENAME = "patient_id_list.js";
     public static final String PATIENT_GET_URL = getProperties("patient.get.url",Constants.APP_PROPERTIES);
-
-
+    public static final String DYNASITE_FORMAT = getProperties("dynasite.format",Constants.APP_PROPERTIES);
+    public static final String DYNASITE_FORMAT_EXTENSION = getProperties("dynasite.format.extension",Constants.APP_PROPERTIES);
+    public static final String APPLICATION_DEFINITION_FILENAME = "ApplicationDefinition.js";
+    public static final String MENUITEM_LIST_FILENAME = "MenuItemList.js";
+    public static final String SYNC_FORMAT = getProperties("sync.format",Constants.APP_PROPERTIES);
+    public static final String APPLICATION_DEFINITION_URL = getProperties("application.definition.url",Constants.APP_PROPERTIES);
 
 
     /**

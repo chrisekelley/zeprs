@@ -16,8 +16,10 @@ import org.cidrz.webapp.dynasite.utils.DatabaseUtils;
 import org.cidrz.webapp.dynasite.valueobject.FormField;
 import org.cidrz.webapp.dynasite.valueobject.RuleDefinition;
 import org.cidrz.webapp.dynasite.valueobject.DynaSiteObjects;
+import org.rti.zcore.dynasite.utils.DynasiteUtils;
 
 import javax.servlet.ServletException;
+
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.util.*;
@@ -262,6 +264,46 @@ public class RuleDefinitionDAO {
         values.add(operand);
         values.add(operator);
         values.add(allPregnancies);
+        Long encId = (Long) DatabaseUtils.create(conn, sql, values.toArray());
+        return encId;
+    }
+    
+    /**
+     * inserts a rule
+     * @param conn
+     * @param ruleClazz
+     * @param outcomeClazz
+     * @param formId
+     * @param fieldId
+     * @param enabled
+     * @param allPregnancies
+     * @param userName
+     * @param siteId
+     * @param message
+     * @param operand
+     * @param operator
+     * @param importId
+     * @return
+     * @throws SQLException
+     * @throws ServletException
+     */
+    public static Object insertRule(Connection conn, String ruleClazz, String outcomeClazz, Long formId, Long fieldId, Boolean enabled, Boolean allPregnancies, String userName, Long siteId, String message, String operand, String operator, Long importId) throws SQLException, ServletException {
+        ArrayList values = new ArrayList();
+        String sql = "INSERT INTO ADMIN.rule_definition " +
+                "(rule_class, outcome_class, form_id, field_id, is_enabled, last_modified, created, " +
+                "last_modified_by, created_by, site_id, message, operand, operator, all_pregs, import_id) " +
+                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        values.add(ruleClazz);
+        values.add(outcomeClazz);
+        values.add(formId);
+        values.add(fieldId);
+        values.add(enabled);
+        DynasiteUtils.AddAuditInfo(values, userName, siteId);
+        values.add(message);
+        values.add(operand);
+        values.add(operator);
+        values.add(allPregnancies);
+        values.add(importId);
         Long encId = (Long) DatabaseUtils.create(conn, sql, values.toArray());
         return encId;
     }

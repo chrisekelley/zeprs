@@ -84,6 +84,9 @@ public class SqlGenerator {
                     }
                     Iterator dbPageItems = form.getPageItems().iterator();
                     FormField formField = null;
+                    
+//    				String insertPagerSelect = DatabaseCompatability.insertPagerSelect(databaseType, "?", null);
+    				String insertPagerSelect = "SELECT id, ";
 
                     // setup the auto-generated sql
                     StringBuffer sbufInserts1 = new StringBuffer(2048);
@@ -97,6 +100,7 @@ public class SqlGenerator {
                     StringBuffer sbufSelectsReportAllSites = new StringBuffer(2048);  // takes date range only
                     StringBuffer sbufSelectsReportPregs = new StringBuffer(2048);   // all pregs. for patient, with report fields
                     StringBuffer sbufSelectsReportPatient = new StringBuffer(2048);   // for patient, this pregnancy, with report fields - takes patient id and pregnancy id
+					StringBuffer sBufSelectAllAdminNoEncounterPager = new StringBuffer(2048);	// does not join w/ the encounter table
 
                     sbufInserts1.append("SQL_CREATE" + form.getId() + "=INSERT INTO " + tableName + "(id, ");
                     sbufSelects.append("SQL_RETRIEVE" + form.getId() + "=SELECT encounter.id AS id, ");
@@ -108,6 +112,9 @@ public class SqlGenerator {
                     sbufSelectsReportAllSites.append("SQL_RETRIEVE_REPORT_SITES" + form.getId() + "=SELECT encounter.id AS id, ");
                     sbufSelectsReportPregs.append("SQL_RETRIEVE_REPORT_PREGS" + form.getId() + "=SELECT encounter.id AS id, ");
                     sbufSelectsReportPatient.append("SQL_RETRIEVE_REPORT_PATIENT" + form.getId() + "=SELECT encounter.id AS id, ");
+					if (form.getFormTypeId() == 5 || form.getFormTypeId() == 9 || form.getFormTypeId() == 10 || form.getFormTypeId() == 11) {	//admin or header table
+						sBufSelectAllAdminNoEncounterPager.append("SQL_RETRIEVE_ALL_ADMIN_PAGER" + form.getId() + "=" + insertPagerSelect);
+					}
                     int j = 0;
                     // int dbPageItemsSize = form.getPageItems().size();
                     while (dbPageItems.hasNext()) {
@@ -135,6 +142,9 @@ public class SqlGenerator {
                                 sbufSelectsReportAllSites.append(tableName + "." + columnName + " AS " + columnName);
                                 sbufSelectsReportPregs.append(columnName + " AS " + columnName +"R");
                                 sbufSelectsReportPatient.append(columnName + " AS " + columnName +"R");
+                                if (form.getFormTypeId() == 5 || form.getFormTypeId() == 9 || form.getFormTypeId() == 10 || form.getFormTypeId() == 11) {	//admin or header table
+									sBufSelectAllAdminNoEncounterPager.append(columnName + " AS " + fieldName);
+								}
                                 if (j < piCount) {
                                     sbufInserts1.append(", ");
                                     sbufInserts2.append(", ");
@@ -147,6 +157,10 @@ public class SqlGenerator {
                                     sbufSelectsReportAllSites.append(", ");
                                     sbufSelectsReportPregs.append(", ");
                                     sbufSelectsReportPatient.append(", ");
+									if (form.getFormTypeId() == 5 || form.getFormTypeId() == 9 || form.getFormTypeId() == 10 || form.getFormTypeId() == 11) {	//admin or header table
+										sBufSelectAllAdminNoEncounterPager.append(", ");
+
+									}
                                 }
                             }
                         }
@@ -248,6 +262,13 @@ public class SqlGenerator {
                             "LEFT JOIN userdata.address u2 ON u2.nickname =encounter.last_modified_by " +
                             "WHERE encounter.id = " + tableName + ".id " +
                             "AND encounter.patient_id=? AND encounter.pregnancy_id=?");
+					if (form.getFormTypeId() == 5 || form.getFormTypeId() == 9 || form.getFormTypeId() == 10 || form.getFormTypeId() == 11) {	//admin or header table
+						if (form.getName().equals("user_info")) {
+							sBufSelectAllAdminNoEncounterPager.append(" FROM " + tableName);
+						}
+					}
+                    
+                    
                     writer.write(sbufInserts1.toString() + ") VALUES (LAST_INSERT_ID(), " + sbufInserts2.toString() + ")");
                     writer.write("\n");
                     writer.write(sbufSelects.toString());
@@ -268,6 +289,10 @@ public class SqlGenerator {
                     writer.write("\n");
                     writer.write(sbufSelectsReportPatient.toString());
                     writer.write("\n");
+					if (form.getFormTypeId() == 5 || form.getFormTypeId() == 9 || form.getFormTypeId() == 10 || form.getFormTypeId() == 11) {	//admin or header table
+						writer.write(sBufSelectAllAdminNoEncounterPager.toString());
+						writer.write("\n");
+					}
                 } catch (IOException e) {
                     e.printStackTrace();
                     // System.exit(1);

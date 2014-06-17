@@ -49,8 +49,14 @@ public class PageItem implements Identifiable, org.cidrz.webapp.dynasite.valueob
     private HashMap dempMap2;
     private boolean highlightCell;
     private Long recordCount;	// count of records that use this field.
+    private String dropdownTable;
+    private String dropdownColumn;
+    private String dropdownConstraint;
+    private String dropdownOrderByClause;
+    private String currentFieldNameIdentifier;	// used when dynamically rendering fields for Patient Bridge tables.
     private String roles;
-    //= new HashSet();
+    private Long importId;
+    private String fkIdentifier;	// id or uuid - which identifier is used for foreign keys.
 
     public PageItem() {
     }
@@ -392,6 +398,66 @@ public class PageItem implements Identifiable, org.cidrz.webapp.dynasite.valueob
 
 	public void setRoles(String roles) {
 		this.roles = roles;
+	}
+
+	public String getDropdownTable() {
+		return dropdownTable;
+	}
+
+	public void setDropdownTable(String dropdownTable) {
+		this.dropdownTable = dropdownTable;
+	}
+
+	public String getDropdownColumn() {
+		return dropdownColumn;
+	}
+
+	public void setDropdownColumn(String dropdownColumn) {
+		this.dropdownColumn = dropdownColumn;
+	}
+
+	public String getDropdownConstraint() {
+		return dropdownConstraint;
+	}
+
+	public void setDropdownConstraint(String dropdownConstraint) {
+		this.dropdownConstraint = dropdownConstraint;
+	}
+
+	public String getDropdownOrderByClause() {
+		return dropdownOrderByClause;
+	}
+
+	public void setDropdownOrderByClause(String dropdownOrderByClause) {
+		this.dropdownOrderByClause = dropdownOrderByClause;
+	}
+
+	public String getCurrentFieldNameIdentifier() {
+		return currentFieldNameIdentifier;
+	}
+
+	public void setCurrentFieldNameIdentifier(String currentFieldNameIdentifier) {
+		this.currentFieldNameIdentifier = currentFieldNameIdentifier;
+	}
+
+	 /**
+     * @return
+     * @hibernate.property column="import_id"
+     */
+	public Long getImportId() {
+		return importId;
+	}
+
+	public void setImportId(Long importId) {
+		this.importId = importId;
+	}
+
+	public String getFkIdentifier() {
+		return fkIdentifier;
+	}
+
+	public void setFkIdentifier(String fkIdentifier) {
+		this.fkIdentifier = fkIdentifier;
 	}
 
 

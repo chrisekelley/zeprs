@@ -63,6 +63,7 @@ import org.cidrz.webapp.dynasite.dao.FlowDAO;
 import org.cidrz.webapp.dynasite.dao.FormDAO;
 import org.cidrz.webapp.dynasite.dao.FormDisplayDAO;
 import org.cidrz.webapp.dynasite.dao.FormFieldDAO;
+import org.cidrz.webapp.dynasite.dao.FormTypeDAO;
 import org.cidrz.webapp.dynasite.dao.ImmunizationDAO;
 import org.cidrz.webapp.dynasite.dao.OutcomeArchiveDAO;
 import org.cidrz.webapp.dynasite.dao.OutcomeDAO;
@@ -97,11 +98,13 @@ import org.cidrz.webapp.dynasite.valueobject.Pregnancy;
 import org.cidrz.webapp.dynasite.valueobject.Problem;
 import org.cidrz.webapp.dynasite.valueobject.Server;
 import org.cidrz.webapp.dynasite.valueobject.SessionPatient;
+import org.codehaus.jackson.map.DeserializationProblemHandler;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.hibernate.util.DTDEntityResolver;
+import org.rti.zcore.sync.SyncFormat;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.alias.CannotResolveClassException;
@@ -109,6 +112,20 @@ import com.thoughtworks.xstream.converters.ConversionException;
 import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 import com.thoughtworks.xstream.io.json.JsonHierarchicalStreamDriver;
 import com.thoughtworks.xstream.mapper.MapperWrapper;
+
+import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.JsonParser;
+import org.codehaus.jackson.JsonProcessingException;
+import org.codehaus.jackson.map.DeserializationContext;
+import org.codehaus.jackson.map.DeserializationProblemHandler;
+import org.codehaus.jackson.map.JsonDeserializer;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.SerializationConfig;
+//import org.codehaus.jackson.map.annotate.JsonSerialize;
+
+//import org.rti.zcore.utils.encryption.FileEncryption;
+
 
 /**
  * @author <a href="mailto:ckelley@rti.org">Chris Kelley</a>
@@ -159,6 +176,199 @@ public class XmlUtils {
         }
         reader.close();
         return xmlObject;
+    }
+    
+    /**
+     * Fetches an xml file. Custom wrapper code ignores fields that are not in the Object
+     * This is useful when the client has an older version of the Object.
+     * Custom MapperWrapper code kudos to http://pvoss.wordpress.com/2009/01/08/xstream/
+     * @param fileName
+     * @param driverName - Specify json ; otherwise xml if null. Also checks if Constants.PATIENT_RECORD_OUTPUT.equals("json")
+     * @param clazz TODO
+     * @return
+     * @throws IOException
+     */
+    public static Object getOne(String fileName, String driverName, Class clazz) throws IOException, FileNotFoundException {
+    	Object object = null;
+    	if (clazz != null) {
+    		String syncFormat = null;
+    		Object bean = null;
+			try {
+				bean = clazz.newInstance();
+			} catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if (bean instanceof SyncFormat) {
+    			SyncFormat syncFormattable = (SyncFormat) bean;
+				syncFormat = syncFormattable.getSyncFormat();
+    			if (syncFormat != null) {
+    				if (syncFormat.equals("json")) {
+    					object = XmlUtils.getOneJackson(fileName, clazz);
+    				}
+    			}
+    		} else {
+        		object = getOneXStream(fileName, object, driverName);
+    		}
+    	}  else {
+    		object = getOneXStream(fileName, object, driverName);
+    	}
+    	return object;
+
+    }
+
+	/**
+	 * @param fileName
+	 * @param object
+	 * @param driverName TODO
+	 * @return
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
+	private static Object getOneXStream(String fileName, Object object, String driverName) throws FileNotFoundException, IOException {
+		XStream xstream = null;
+		if (driverName != null || fileName.endsWith(".json")) {
+			xstream = new XStream(new JettisonMappedXmlDriver());
+		} else {
+			xstream = new XStream() {
+				@Override
+				protected MapperWrapper wrapMapper(MapperWrapper next) {
+					return new MapperWrapper(next) {
+
+						@Override
+						public boolean shouldSerializeMember(Class definedIn,
+								String fieldName) {
+							if (definedIn == Object.class) {
+								return false;
+							} else {
+								log.debug("Newer version of this field: " + fieldName+ " in class " + definedIn.toString() + " detected when deserializing XML.");
+							}
+							return super.shouldSerializeMember(definedIn, fieldName);
+						}
+					};
+				}
+			};
+		}
+		FileReader fr = (new FileReader(fileName));
+		Reader reader = new BufferedReader(fr);
+		try {
+			object = xstream.fromXML(reader);
+		} catch (ConversionException e) {
+			log.error(e);
+			e.printStackTrace();
+		} finally {
+			reader.close();
+			fr.close();
+		}
+		return object;
+	}
+	
+	 /**
+     * Gets a JSON file using Jackson lib. Decrypts it if possible.
+     * TODO: Check if necessary file handles are being closed.
+     * @param fileName
+     * @param clazz
+     * @return
+     * @throws IOException
+     * @throws FileNotFoundException
+     */
+    public static Object getOneJackson(String fileName, Class clazz) throws IOException, FileNotFoundException {
+    	Boolean useFileEncryption = null;
+    	Object bean = null;
+		try {
+			bean = clazz.newInstance();
+		} catch (InstantiationException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+//        if (bean instanceof Encryptable) {
+//        	Encryptable encryptable = (Encryptable) bean;
+//        	useFileEncryption = encryptable.getEncryptable();
+//        }
+    	ObjectMapper mapper = new ObjectMapper(); // can reuse, share globally
+        mapper.getDeserializationConfig().addHandler(new JacksonProblemHandler());
+    	//mapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    	Object object = null;
+
+    	// commented out for ZEPRS
+    	
+//    	if (useFileEncryption != null && useFileEncryption == true) {
+//    		File encryptedFile = new File(fileName);
+//			//File unencryptedFile = new File(fileName+".tmp");
+//			// InputStream unencryptedStream = new FileInputStream(fileName+".tmp");
+//			if (encryptedFile.exists()) {
+//				FileEncryption secure;
+//	    		try {
+//	    			secure = new FileEncryption();
+//	    			File encryptedKeyFile = new File(Constants.getPathToCatalinaHome() + "resources" + File.separator + "aes.key");
+//	    			File privateKeyFile = new File(Constants.getPathToCatalinaHome() + "resources" + File.separator + "private.der");
+//	    			secure.loadKey(encryptedKeyFile, privateKeyFile);
+//	    			ByteArrayOutputStream os = secure.decrypt(encryptedFile);
+//	    			ByteArrayInputStream bis = new ByteArrayInputStream(os.toByteArray());
+//	        		try {
+//	        			object = mapper.readValue(bis, clazz);
+//	        		} catch (JsonMappingException e) {
+//	        			log.debug("Probem deserialising " + fileName);
+//	        			e.printStackTrace();
+//	        		}
+//	    			//unencryptedFile.delete();
+//	    		} catch (GeneralSecurityException e) {
+//	    			e.printStackTrace();
+//	    		} catch (FileNotFoundException e) {
+//	    			throw new FileNotFoundException();
+//	    		} catch (IOException e) {
+//	    			e.printStackTrace();
+//
+//	    		}
+//			} else {
+//				throw new FileNotFoundException("File not found at: " + fileName);
+//			}
+//    	} else {
+    		try {
+    			object = mapper.readValue(new File(fileName), clazz);
+    		} catch (JsonMappingException e) {
+    			log.debug("Probem deserialising " + fileName + " Error: " + e);
+    			e.printStackTrace();
+    		} catch (JsonParseException e) {
+    			throw new IOException(e);
+    		}
+//    	}
+    	return object;
+    }
+
+    public static Object getOneJackson(InputStream inputStream, Class clazz) throws IOException, FileNotFoundException {
+    	ObjectMapper mapper = new ObjectMapper(); // can reuse, share globally
+    	mapper.getDeserializationConfig().addHandler(new JacksonProblemHandler());
+    	//mapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    	Object object = null;
+    	try {
+    		object = mapper.readValue(inputStream, clazz);
+    	} catch (JsonMappingException e) {
+    		log.debug("Probem deserialising " + clazz.toString());
+			e.printStackTrace();    	}
+    	return object;
+    }
+
+    final static class JacksonProblemHandler extends DeserializationProblemHandler
+    {
+    	public boolean handleUnknownProperty(DeserializationContext ctxt, JsonDeserializer<?> deserializer,
+    			Object bean, String propertyName)
+    	throws IOException, JsonProcessingException
+    	{
+    		JsonParser jp = ctxt.getParser();
+
+    		// very simple, just to verify that we do see correct token type
+    		log.debug("Unknown property: " + propertyName+":"+jp.getCurrentToken().toString() + " in class: " + bean.getClass().getSimpleName() );
+    		// Yup, we are good to go; must skip whatever value we'd have:
+    		jp.skipChildren();
+    		return true;
+    	}
     }
 
     /**
@@ -660,6 +870,31 @@ public class XmlUtils {
         }
 		sbuf.append(" - Flows output to xml.\n");
 	}
+	
+	/**
+	 * Outputs formTypes to xml from database
+	 * @param dev
+	 * @param conn
+	 * @param path
+	 * @param path2
+	 * @param sbuf
+	 * @throws SQLException
+	 * @throws ServletException
+	 * @throws IOException
+	 */
+	public static void outputFormTypes(Boolean dev, Connection conn, String path, String path2, StringBuffer sbuf)
+	throws SQLException, ServletException, IOException {
+		String dynasiteOutputFormat = Constants.DYNASITE_FORMAT;
+	    String dynasiteOutputFormatExtension = Constants.DYNASITE_FORMAT_EXTENSION;
+		List formTypes = FormTypeDAO.getAll(conn);
+		if (dev == true) {
+			XmlUtils.saveAndCopy(formTypes, path + "FormTypes"  + dynasiteOutputFormatExtension, path2 + "FormTypes"  + dynasiteOutputFormatExtension);
+		} else {
+			XmlUtils.save(formTypes, path + "FormTypes"  + dynasiteOutputFormatExtension);
+		}
+		sbuf.append(" - FormTypes output to " + dynasiteOutputFormat + ".\n");
+	}
+	
 
     /**
      * Used in DynaSiteObjects for in-memory access of partograph table names

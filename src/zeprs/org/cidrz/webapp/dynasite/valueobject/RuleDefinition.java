@@ -41,6 +41,7 @@ public class RuleDefinition implements Identifiable, Auditable, Configuration, S
     private String operand;
     private String operator;
     private boolean allPregnancies;
+    private Long importId;
 
     public RuleDefinition() {
     }
@@ -285,5 +286,17 @@ public class RuleDefinition implements Identifiable, Auditable, Configuration, S
     public void setAllPregnancies(boolean allPregnancies) {
         this.allPregnancies = allPregnancies;
     }
+    
+    /**
+     * @return
+     * @hibernate.property column="import_id"
+     */
+	public Long getImportId() {
+		return importId;
+	}
+
+	public void setImportId(Long importId) {
+		this.importId = importId;
+	}
 
 }

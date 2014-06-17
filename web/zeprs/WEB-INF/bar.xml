@@ -789,21 +789,16 @@
         </var>
         <arg0 key="Crown-Heel Length" resource="false"/>
       </field>
-      <field property="field530" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
+      <field property="field530" depends="float,floatRange">
+        <arg1 name="floatRange" key="${var:min}" resource="false"/>
         <var>
           <var-name>min</var-name>
-          <var-value>20</var-value>
+          <var-value>20.0</var-value>
         </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
+        <arg2 name="floatRange" key="${var:max}" resource="false"/>
         <var>
           <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>60</var-value>
+          <var-value>60.0</var-value>
         </var>
         <arg0 key="Head Circumference" resource="false"/>
       </field>
@@ -1245,21 +1240,16 @@
       <field property="field682">
         <arg0 key="Head, Other, Describe" resource="false"/>
       </field>
-      <field property="field530" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
+      <field property="field530" depends="float,floatRange">
+        <arg1 name="floatRange" key="${var:min}" resource="false"/>
         <var>
           <var-name>min</var-name>
-          <var-value>20</var-value>
+          <var-value>20.0</var-value>
         </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
+        <arg2 name="floatRange" key="${var:max}" resource="false"/>
         <var>
           <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>60</var-value>
+          <var-value>60.0</var-value>
         </var>
         <arg0 key="Head Circumference" resource="false"/>
       </field>
@@ -1857,21 +1847,16 @@
         </var>
         <arg0 key="Temperature" resource="false"/>
       </field>
-      <field property="field530" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
+      <field property="field530" depends="float,floatRange">
+        <arg1 name="floatRange" key="${var:min}" resource="false"/>
         <var>
           <var-name>min</var-name>
-          <var-value>20</var-value>
+          <var-value>20.0</var-value>
         </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
+        <arg2 name="floatRange" key="${var:max}" resource="false"/>
         <var>
           <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>60</var-value>
+          <var-value>60.0</var-value>
         </var>
         <arg0 key="Head Circumference" resource="false"/>
       </field>
@@ -4551,21 +4536,16 @@
       <field property="field697">
         <arg0 key="Genitalia, Other, Describe" resource="false"/>
       </field>
-      <field property="field530" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
+      <field property="field530" depends="float,floatRange">
+        <arg1 name="floatRange" key="${var:min}" resource="false"/>
         <var>
           <var-name>min</var-name>
-          <var-value>20</var-value>
+          <var-value>20.0</var-value>
         </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
+        <arg2 name="floatRange" key="${var:max}" resource="false"/>
         <var>
           <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>60</var-value>
+          <var-value>60.0</var-value>
         </var>
         <arg0 key="Head Circumference" resource="false"/>
       </field>
@@ -4777,21 +4757,16 @@
       <field property="field682">
         <arg0 key="Head, Other, Describe" resource="false"/>
       </field>
-      <field property="field530" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
+      <field property="field530" depends="float,floatRange">
+        <arg1 name="floatRange" key="${var:min}" resource="false"/>
         <var>
           <var-name>min</var-name>
-          <var-value>20</var-value>
+          <var-value>20.0</var-value>
         </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
+        <arg2 name="floatRange" key="${var:max}" resource="false"/>
         <var>
           <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>60</var-value>
+          <var-value>60.0</var-value>
         </var>
         <arg0 key="Head Circumference" resource="false"/>
       </field>
@@ -5700,6 +5675,30 @@
           <var-value>2147483647</var-value>
         </var>
         <arg0 key="EGA (weeks)" resource="false"/>
+      </field>
+    </form>
+    <form name="form115">
+      <field property="field1" depends="required">
+        <arg0 key="Date of visit" resource="false"/>
+      </field>
+      <field property="field2117">
+        <arg0 key="Drug name" resource="false"/>
+      </field>
+      <field property="field2118" depends="integer,intRange">
+        <arg1 name="intRange" key="${var:min}" resource="false"/>
+        <var>
+          <var-name>min</var-name>
+          <var-value>0</var-value>
+        </var>
+        <arg2 name="intRange" key="${var:max}" resource="false"/>
+        <var>
+          <var-name>max</var-name>
+          <var-value>2147483647</var-value>
+        </var>
+        <arg0 key="Quantity" resource="false"/>
+      </field>
+      <field property="field2119">
+        <arg0 key="Form factor" resource="false"/>
       </field>
     </form>
   </formset>

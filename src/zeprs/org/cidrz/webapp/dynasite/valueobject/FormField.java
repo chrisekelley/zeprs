@@ -47,6 +47,24 @@ public class FormField implements RuleProvider, Identifiable, DisplayOrderable, 
     private Set pageItems;
     private String patientStatusproperty;
     private String patientLabproperty;
+    private Long importId;
+    private String identifier;	// set upon Dynasite startup - if importId is not null, use importId; otherwise, starSchemaName
+    private String enumerationList;
+    private String openmrs_concept;
+    private String openmrs_datatype;
+    private String openmrs_name;
+    private String openmrs_parent_concept;	// used for multi-input widgets - section-headers w/ checkboxes beneath
+    private String uuid;
+    private String parentUuid;
+    private String locale;
+    
+    public String getLocale() {
+		return locale;
+	}
+
+	public void setLocale(String locale) {
+		this.locale = locale;
+	}
 
     public FormField() {
     }
@@ -337,5 +355,111 @@ public class FormField implements RuleProvider, Identifiable, DisplayOrderable, 
     public void setPatientLabproperty(String patientLabproperty) {
         this.patientLabproperty = patientLabproperty;
     }
+    
+	 /**
+     * @return
+     * @hibernate.property column="import_id"
+     */
+	public Long getImportId() {
+		return importId;
+	}
+
+	public void setImportId(Long importId) {
+		this.importId = importId;
+	}
+
+	public String getIdentifier() {
+		return identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+	}
+	
+	/**
+	 * @return the enumerationList
+	 */
+	public String getEnumerationList() {
+		return enumerationList;
+	}
+
+	/**
+	 * @param enumerationList the enumerationList to set
+	 */
+	public void setEnumerationList(String enumerationList) {
+		this.enumerationList = enumerationList;
+	}
+
+	/**
+	 * @return the openmrs_concept
+	 */
+	public String getOpenmrs_concept() {
+		return openmrs_concept;
+	}
+
+	/**
+	 * @param openmrsConcept the openmrs_concept to set
+	 */
+	public void setOpenmrs_concept(String openmrsConcept) {
+		openmrs_concept = openmrsConcept;
+	}
+
+	/**
+	 * @return the openmrs_datatype
+	 */
+	public String getOpenmrs_datatype() {
+		return openmrs_datatype;
+	}
+
+	/**
+	 * @param openmrsDatatype the openmrs_datatype to set
+	 */
+	public void setOpenmrs_datatype(String openmrsDatatype) {
+		openmrs_datatype = openmrsDatatype;
+	}
+
+	/**
+	 * @return the openmrs_name
+	 */
+	public String getOpenmrs_name() {
+		return openmrs_name;
+	}
+
+	/**
+	 * @param openmrsName the openmrs_name to set
+	 */
+	public void setOpenmrs_name(String openmrsName) {
+		openmrs_name = openmrsName;
+	}
+
+	/**
+	 * @return the openmrs_parent_concept
+	 */
+	public String getOpenmrs_parent_concept() {
+		return openmrs_parent_concept;
+	}
+
+	/**
+	 * @param openmrsParentConcept the openmrs_parent_concept to set
+	 */
+	public void setOpenmrs_parent_concept(String openmrsParentConcept) {
+		openmrs_parent_concept = openmrsParentConcept;
+	}
+
+	public String getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+
+	public String getParentUuid() {
+		return parentUuid;
+	}
+
+	public void setParentUuid(String parentUuid) {
+		this.parentUuid = parentUuid;
+	}
 
 }

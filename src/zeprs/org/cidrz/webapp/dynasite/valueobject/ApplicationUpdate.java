@@ -12,6 +12,7 @@ package org.cidrz.webapp.dynasite.valueobject;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
 /**
  * Logs updates to this application - this includes sql updates
@@ -34,6 +35,31 @@ public class ApplicationUpdate {
     private String job;
     private String message;
     private Boolean logJob;
+    private ArrayList values;	// for sql parameters.
+    private Boolean intendedSite;
+    private Boolean supportedVersion;
+    private String siteAbbrev;
+    
+    public ApplicationUpdate(Long id, Long updateid, Timestamp dateposted, Timestamp dateinstalled, String type,
+			String job, String message, Boolean logJob, ArrayList values, Boolean intendedSite, Boolean supportedVersion, String siteAbbrev) {
+		super();
+		this.id = id;
+		this.updateid = updateid;
+		this.dateposted = dateposted;
+		this.dateinstalled = dateinstalled;
+		this.type = type;
+		this.job = job;
+		this.message = message;
+		this.logJob = logJob;
+		this.values = values;
+		this.intendedSite = intendedSite;
+		this.supportedVersion = supportedVersion;
+		this.siteAbbrev = siteAbbrev;
+	}
+    
+	public ApplicationUpdate() {
+		super();
+	}
 
     /**
      * @return
@@ -145,5 +171,43 @@ public class ApplicationUpdate {
     public void setLogJob(Boolean logJob) {
         this.logJob = logJob;
     }
+    
+    /**
+	 * @return the values
+	 */
+	public ArrayList getValues() {
+		return values;
+	}
+
+	/**
+	 * @param values the values to set
+	 */
+	public void setValues(ArrayList values) {
+		this.values = values;
+	}
+	
+	public Boolean getIntendedSite() {
+		return intendedSite;
+	}
+
+	public void setIntendedSite(Boolean intendedSite) {
+		this.intendedSite = intendedSite;
+	}
+
+	public Boolean getSupportedVersion() {
+		return supportedVersion;
+	}
+
+	public void setSupportedVersion(Boolean supportedVersion) {
+		this.supportedVersion = supportedVersion;
+	}
+
+	public String getSiteAbbrev() {
+		return siteAbbrev;
+	}
+
+	public void setSiteAbbrev(String siteAbbrev) {
+		this.siteAbbrev = siteAbbrev;
+	}
 
 }

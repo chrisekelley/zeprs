@@ -10,12 +10,16 @@
 
 package org.cidrz.webapp.dynasite.dao;
 
+import org.cidrz.webapp.dynasite.Constants;
 import org.cidrz.webapp.dynasite.exception.ObjectNotFoundException;
 import org.cidrz.webapp.dynasite.struts.action.admin.PropogateUpdateAction;
 import org.cidrz.webapp.dynasite.utils.DatabaseUtils;
+import org.cidrz.webapp.dynasite.utils.XmlUtils;
 import org.cidrz.webapp.dynasite.valueobject.ApplicationUpdate;
 
 import javax.servlet.ServletException;
+
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
@@ -120,6 +124,33 @@ public class ApplicationUpdateDAO {
         result = DatabaseUtils.create(conn, sql, values.toArray());
         return result;
     }
+    
+    /**
+     * Save an ApplicationUpdate record.
+     * @param conn
+     * @param appUpdate
+     * @return
+     * @throws SQLException
+     */
+    public static Object save(Connection conn, String schema, ApplicationUpdate appUpdate) throws SQLException {
+    	String sql = null;
+    	Object result = 0;
+    	ArrayList values;
+    	values = new ArrayList();
+    		//sql = "INSERT into appupdate " +
+    		// "SET updateid=?, dateposted=?, dateinstalled=?, type=?, job=?";
+    		sql = "INSERT into " + schema + ".appupdate " +
+    		"(dateposted, dateinstalled, type, job, message) " +
+    		"VALUES (?,?,?,?,?)";
+    	//values.add(appUpdate.getUpdateid()); q
+    	values.add(appUpdate.getDateposted());
+    	values.add(appUpdate.getDateinstalled());
+    	values.add(appUpdate.getType());
+    	values.add(appUpdate.getJob());
+    	values.add(appUpdate.getMessage());
+    	result = DatabaseUtils.create(conn, sql, values.toArray());
+    	return result;
+    }
 
     /**
      * Delete appupdate record
@@ -151,4 +182,31 @@ public class ApplicationUpdateDAO {
         values.add(id);
         DatabaseUtils.create(conn, sql, values.toArray());
     }
+    
+    /**
+	 * Saves app update to the database as well as to an xml file. XML file also includes any sql parameters.
+	 * Sets datePosted value so that updates do not get run on local instance.
+	 * Don't log updates to the Admin database - that db is updated using a csv dump.
+	 * @param connAdmin
+	 * @param sql
+	 * @param values
+	 * @param type - "S"
+	 * @throws SQLException
+	 * @throws IOException
+	 */
+	public static void createApplicationUpdate(Connection connAdmin, String sql, ArrayList values,
+			String type) throws SQLException, IOException {
+		ApplicationUpdate appUpdate = new ApplicationUpdate();
+		Timestamp datePosted = new Timestamp(System.currentTimeMillis());
+		appUpdate.setDateposted(datePosted);
+		appUpdate.setDateinstalled(datePosted);
+		appUpdate.setJob(sql);
+		appUpdate.setType(type);
+		//Long id = (Long) save(connAdmin, "ADMIN", null, datePosted, null, type, sql);
+    	Long id = (Long) ApplicationUpdateDAO.save(connAdmin, "ADMIN", appUpdate);
+		appUpdate.setId(id);
+		appUpdate.setValues(values);
+		// XML version is a safety in case the admin db get wiped out.
+		XmlUtils.save(appUpdate, Constants.ARCHIVE_PATH_LOGS_APPUPDATES + "/update" + id + ".xml");
+	}
 }

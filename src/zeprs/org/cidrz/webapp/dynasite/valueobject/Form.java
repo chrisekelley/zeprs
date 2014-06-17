@@ -14,7 +14,7 @@ import org.cidrz.webapp.dynasite.valueobject.AuditInfo;
 import org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator;
 import org.cidrz.webapp.dynasite.rules.RuleProvider;
 import org.cidrz.webapp.dynasite.rules.RuleUtils;
-
+import org.rti.zcore.FormDomain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +46,22 @@ public class Form implements RuleProvider, Identifiable, org.cidrz.webapp.dynasi
     private Integer submissions = new Integer(0);
     private Integer maxSubmissions;
     private Long recordCount;	// count of records that use this field.
+    private Integer recordsPerEncounter;	// number of records in bridge table per encounter. Used in Patient Bridge forms.
+    private Boolean resizedForPatientBridge;	// True if system has already created additional pageItems for a Patient Bridge form.
+    private String globalIdentifierName;	// unique identifier for the form.
+    private Long importId;
+    private String classname;	// set during app startup by Dynasite
+    private FormDomain formDomain;	//mother, infant, both, etc.
+    private Long formDomainId;
+    private Boolean startNewEvent;	// submission of this form means that a new Event must be starting
+    private String eventType;
+    private String importType;
+    private String locale;
+    private ArrayList<String> localeList = new ArrayList<String>();
+    private Long siteId;
+    private String superClass;
+    private boolean demographicsForm;
+
 
     public Form() {
         }
@@ -321,6 +337,130 @@ public class Form implements RuleProvider, Identifiable, org.cidrz.webapp.dynasi
 
 	public void setRecordCount(Long recordCount) {
 		this.recordCount = recordCount;
+	}
+
+	public String getGlobalIdentifierName() {
+		return globalIdentifierName;
+	}
+
+	public void setGlobalIdentifierName(String globalIdentifierName) {
+		this.globalIdentifierName = globalIdentifierName;
+	}
+	
+	 /**
+     * @return
+     * @hibernate.property column="import_id"
+     */
+	public Long getImportId() {
+		return importId;
+	}
+
+	public void setImportId(Long importId) {
+		this.importId = importId;
+	}
+
+	public Long getFormDomainId() {
+		return formDomainId;
+	}
+
+	public void setFormDomainId(Long formDomainId) {
+		this.formDomainId = formDomainId;
+	}
+
+	public String getClassname() {
+		return classname;
+	}
+
+	public void setClassname(String classname) {
+		this.classname = classname;
+	}
+
+	public Integer getRecordsPerEncounter() {
+		return recordsPerEncounter;
+	}
+
+	public void setRecordsPerEncounter(Integer recordsPerEncounter) {
+		this.recordsPerEncounter = recordsPerEncounter;
+	}
+
+	public Boolean getResizedForPatientBridge() {
+		return resizedForPatientBridge;
+	}
+
+	public void setResizedForPatientBridge(Boolean resizedForPatientBridge) {
+		this.resizedForPatientBridge = resizedForPatientBridge;
+	}
+
+	public FormDomain getFormDomain() {
+		return formDomain;
+	}
+
+	public void setFormDomain(FormDomain formDomain) {
+		this.formDomain = formDomain;
+	}
+
+	public Boolean getStartNewEvent() {
+		return startNewEvent;
+	}
+
+	public void setStartNewEvent(Boolean startNewEvent) {
+		this.startNewEvent = startNewEvent;
+	}
+
+	public String getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(String eventType) {
+		this.eventType = eventType;
+	}
+
+	public String getImportType() {
+		return importType;
+	}
+
+	public void setImportType(String importType) {
+		this.importType = importType;
+	}
+
+	public String getLocale() {
+		return locale;
+	}
+
+	public void setLocale(String locale) {
+		this.locale = locale;
+	}
+
+	public ArrayList<String> getLocaleList() {
+		return localeList;
+	}
+
+	public void setLocaleList(ArrayList<String> localeList) {
+		this.localeList = localeList;
+	}
+
+	public Long getSiteId() {
+		return siteId;
+	}
+
+	public void setSiteId(Long siteId) {
+		this.siteId = siteId;
+	}
+
+	public String getSuperClass() {
+		return superClass;
+	}
+
+	public void setSuperClass(String superClass) {
+		this.superClass = superClass;
+	}
+
+	public boolean isDemographicsForm() {
+		return demographicsForm;
+	}
+
+	public void setDemographicsForm(boolean demographicsForm) {
+		this.demographicsForm = demographicsForm;
 	}
 
 

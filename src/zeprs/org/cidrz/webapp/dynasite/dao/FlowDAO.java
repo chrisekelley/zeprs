@@ -46,6 +46,26 @@ public class FlowDAO {
         item = (Flow) DatabaseUtils.getBean(conn, Flow.class, sql, values);
         return item;
     }
+    
+    /**
+     * Fetches flow by UUID.
+     * @param conn
+     * @param flowUUID
+     * @return
+     * @throws SQLException
+     * @throws ServletException
+     * @throws ObjectNotFoundException
+     */
+    public static Flow getOneByUUID(Connection conn, String flowUUID) throws SQLException, ServletException, ObjectNotFoundException {
+    	Flow item = null;
+    	String sql;
+    	ArrayList values;
+    	sql = "select id, name, flow_order AS flowOrder, global_identifier_name AS globalIdentifierName from ADMIN.flow where global_identifier_name=?";
+    	values = new ArrayList();
+    	values.add(flowUUID);
+    	item = (Flow) DatabaseUtils.getBean(conn, Flow.class, sql, values);
+    	return item;
+    }
 
     /**
      * @return List of objects
@@ -61,6 +81,28 @@ public class FlowDAO {
         String sql = "select id, name, flow_order AS flowOrder from admin.flow";
         list = DatabaseUtils.getList(conn, Flow.class, sql, values);
         return list;
+    }
+    
+    /**
+     * Inserts a new flow
+     * @param conn
+     * @param site
+     * @return
+     * @throws SQLException
+     * @throws ServletException
+     */
+    public static Long save(Connection conn, Flow flow) throws SQLException, ServletException {
+
+        String sql = "INSERT INTO admin.flow " +
+                "(name, flow_order, created_by, global_identifier_name) " +
+                "VALUES (?,?,?,?)";
+        ArrayList values = new ArrayList();
+        values.add(flow.getName());
+        values.add(flow.getFlowOrder());
+        values.add(flow.getCreatedBy());
+        values.add(flow.getGlobalIdentifierName());
+        Long siteId = (Long) DatabaseUtils.create(conn, sql, values.toArray());
+        return siteId;
     }
 
 }
