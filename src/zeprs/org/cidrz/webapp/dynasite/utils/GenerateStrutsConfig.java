@@ -148,8 +148,12 @@ public class GenerateStrutsConfig {
                     visitDate.setId(new Long(1));
                     visitDate.setType("Date");
                     visitDate.setRequired(true);
-                    addField(thisFormBean, "field1");
-                    addValidatorField(thisValidatorForm, visitDate);
+                    
+                    if (form.getFormTypeId() < 5) {
+                    	addField(thisFormBean, "field1");
+                        addValidatorField(thisValidatorForm, visitDate);
+                    }
+                    
                     //FieldMappingUtil.getEncounterRecordFieldMap().put("field1", "visitDate");
                     while (dbPageItems.hasNext()) {
                         PageItem pageItem = (PageItem) dbPageItems.next();
@@ -421,7 +425,18 @@ public class GenerateStrutsConfig {
         //first add the action mapping for the input form
         thisActionMapping = actionMappings.addElement("action");
         thisActionMapping.addAttribute("path", "/form" + form.getId() + "/new");
-        thisActionMapping.addAttribute("type", "org.cidrz.webapp.dynasite.struts.action.FormDisplayAction");
+//        thisActionMapping.addAttribute("type", "org.cidrz.webapp.dynasite.struts.action.FormDisplayAction");
+        switch (form.getFormTypeId().intValue()) {
+		case 5:
+			String displayListFormAction = "org.rti.zcore.struts.action.records.ListAction";
+            thisActionMapping.addAttribute("type", displayListFormAction);
+			break;
+		default:
+            String displayFormAction = "org.rti.zcore.struts.action.FormDisplayAction";
+            thisActionMapping.addAttribute("type", displayFormAction);
+			break;
+		}
+        //thisActionMapping.addAttribute("name", "form" + form.getId());
         thisActionMapping.addAttribute("name", "form" + form.getId());
         thisActionMapping.addAttribute("validate", "false");
         thisActionMapping.addAttribute("parameter", String.valueOf(form.getId()));
@@ -458,7 +473,15 @@ public class GenerateStrutsConfig {
 
         success = thisActionMapping.addElement("forward");
         success.addAttribute("name", "success");
-        success.addAttribute("path", "/WEB-INF/pages/encounters/encounter_form.jsp");
+//        success.addAttribute("path", "/WEB-INF/pages/encounters/encounter_form.jsp");
+        switch (form.getFormTypeId().intValue()) {
+		case 5:
+	        success.addAttribute("path", "/WEB-INF/pages/admin/records/record.jsp");
+			break;
+		default:
+	        success.addAttribute("path", "/WEB-INF/pages/encounters/encounter_form.jsp");
+			break;
+		}
     }
 
     /**

@@ -24,9 +24,11 @@ import org.cidrz.project.zeprs.valueobject.EncounterData;
 import org.cidrz.project.zeprs.valueobject.gen.Newbornrecord;
 import org.cidrz.project.zeprs.valueobject.gen.PatientRegistration;
 import org.cidrz.project.zeprs.valueobject.gen.NewbornEval;
+import org.cidrz.project.zeprs.valueobject.gen.UserInfo;
 import org.cidrz.webapp.dynasite.dao.EncountersDAO;
 import org.cidrz.webapp.dynasite.dao.FormDAO;
 import org.cidrz.webapp.dynasite.dao.SessionPatientDAO;
+import org.cidrz.webapp.dynasite.dao.UserDAO;
 import org.cidrz.webapp.dynasite.struts.action.FormAction;
 import org.cidrz.webapp.dynasite.struts.action.generic.BasePatientAction;
 import org.cidrz.webapp.dynasite.valueobject.*;
@@ -38,6 +40,7 @@ import org.cidrz.webapp.dynasite.session.SessionUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpSession;
+
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.sql.Date;
@@ -878,11 +881,27 @@ public class PopulatePatientRecord {
             // log.debug("Assigning currentFlowId as 1 to form id: " + formDef.getId());
         }
         EncounterData vo = null;
+        // process user form
+//        if (formId == "125") {
+//        	UserInfo user = (UserInfo) vo;
+////        	private String field2157;	//username
+////        	private String field2158;	//password
+////        	private String field2159;	//email
+////        	private String field2160;	//forenames
+////        	private String field2161;	//lastname
+////        	private String field2162;	//mobile
+////        	private String field2163;	//phone
+//        	
+//        	UserDAO.insertUser(conn, user.getField2157(), user.getField2160(), user.getField2161(), user.getField2159(), user.getField2162(), user.getField2163());
+//        }
         vo = FormDAO.create(conn, enc, username, siteId, formDef, currentFlowId, null);
         //this persists any outcomes to db. We're not using the value it returns in the view at this point, but if
         // we needed it, simply pass it in the response.
-        vo.setSessionPatient(sessionPatient);     // script rule processing needs session patient in the encounter
-        EncounterProcessor.processRules(conn, formDef, vo, username);
+        if (!formId.equals("125") ) {
+            vo.setSessionPatient(sessionPatient);     // script rule processing needs session patient in the encounter
+            EncounterProcessor.processRules(conn, formDef, vo, username);
+        }
+
         //conn.close();
         // conn = null;
         return vo;

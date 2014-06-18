@@ -113,8 +113,8 @@ public class EncounterProcessor {
                                     ReferralReasons reasons = new ReferralReasons();
                                     reasons.setReferralId(outcomeId);
                                     reasons.setField1917(encounter.getId().intValue()); // encounter_id
-                                    String encounterUuid = encounter.getUuid();
-                                    reasons.setField2153(encounterUuid);	// uuid
+//                                    String encounterUuid = encounter.getUuid();
+//                                    reasons.setField2153(encounterUuid);	// uuid
                                     Form reasonsFormDef = (Form) DynaSiteObjects.getForms().get(new Long("94"));
                                     try {
                                         Map encMap = BeanUtils.describe(encounter);

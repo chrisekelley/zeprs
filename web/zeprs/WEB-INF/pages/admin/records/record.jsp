@@ -22,28 +22,27 @@
 
 <!-- Begin
 
-function submitForm() {
+function submitForm(form) {
     bCancel=false;
-    bCancel =  validate${encounterForm.classname}(document.${encounterForm.classname});
-    if (bCancel == true) {
-    document.${encounterForm.classname}.submit();
-    }
+    bCancel =  validateForm${encounterForm.id}(document.form${encounterForm.id});
+    return bCancel;
 }
+
 function submitAddForm() {
     bCancel=false;
-    bCancel =  validate${encounterForm.classname}(document.${encounterForm.classname});
+    bCancel =  validateForm${encounterForm.id}(document.form${encounterForm.id});
     if (bCancel == true) {
     document.forms[0].forward.value="add";
-    document.${encounterForm.classname}.submit();
+    document.form${encounterForm.id}.submit();
     }
 }
 
 function submitNoneForm() {
     bCancel=false;
-    bCancel =  validate${encounterForm.classname}(document.${encounterForm.classname});
+    bCancel =  validateForm${encounterForm.id}(document.form${encounterForm.id});
     if (bCancel == true) {
     document.forms[0].forward.value="none";
-    document.${encounterForm.classname}.submit();
+    document.form${encounterForm.id}.submit();
     }
 }
 //End -->
@@ -57,25 +56,23 @@ function submitNoneForm() {
     </c:otherwise>
 </c:choose>
 
-<div id="${formClass}">
+<%-- <div id="${formClass}"> --%>
     <h2>${encounterForm.label}${labelEnd}</h2>
     <c:if test="${! empty param.referralId}">
         <c:import url="admit_to_uth.jsp"/>
     </c:if>
 <logic:messagesPresent>
    <ul>
-   <html:messages id="error" bundle="ApplicationResources">
       <li class="valError"><bean:write  name="error"/></li>
-   </html:messages>
    </ul>
 </logic:messagesPresent>
-<html:form action="form${encounterForm.id}/save.do" onsubmit="return validate${encounterForm.id}(this);">
+<html:form action="form${encounterForm.id}/save.do" onsubmit="return submitForm(this.form);">
 <input type="hidden" name="forward"/>
 	<p><strong>Create new ${encounterForm.label} record:</strong></p>
 	<%@ include file="create_new_record.jsp" %>
 <html:javascript formName="form${encounterForm.id}" dynamicJavascript="true" staticJavascript="false" />
 </html:form>
-<c:if test="${! empty chartItems}">
+<%-- <c:if test="${! empty chartItems}">
 	<h2>${encounterForm.label} Listing<c:if test="${! empty detailName}">: ${detailName}</c:if></h2>
 	<c:url var="nextUrl" value="admin/records/list.do">
 	<c:param name="formId" value="${encounterForm.id}"/>
@@ -102,8 +99,8 @@ function submitNoneForm() {
 	<c:if test="${empty offset}">&gt;&gt;</c:if>
 	</p>
 	</c:if>
-</c:if>
-</div>
+</c:if> --%>
+<!-- </div> -->
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </template:put>

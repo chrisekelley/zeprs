@@ -38,12 +38,7 @@
     <li><html:link action="/archive">View Encounter Value archive</html:link></li>
     <li><html:link action="/admin/reportGen">Generate Reports</html:link></li>
     <li><html:link action="/admin/sql/new">SQL console</html:link></li>
-    <li>User Administration</li>
-    <c:url value="admin/records/list.do" var="users"><c:param name="formId" value="125"/></c:url>
-    	<ul>
-    		<li><a href='<c:out value="/${appName}/${users}"/>'>Create and list Users</a></li>   	
-    	    <li><html:link action="/admin/users">View and modify User Group Assignments</html:link></li>
-    	</ul>
+    <li><html:link action="/admin/users">Create and Modify Users and Group Assignments</html:link></li>
     <li><html:link action="/admin/subscription/new">Site Subscriptions</html:link></li>
     <li><html:link action="/admin/publisher/new">Site Publisher Setup</html:link></li>
     <li><html:link action="/admin/appupdates/view">Application Update Job Log</html:link></li>

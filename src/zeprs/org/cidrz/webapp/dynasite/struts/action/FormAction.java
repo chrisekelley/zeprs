@@ -10,45 +10,55 @@
 
 package org.cidrz.webapp.dynasite.struts.action;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.struts.action.*;
-import org.apache.struts.validator.DynaValidatorForm;
-import org.cidrz.project.zeprs.valueobject.BaseEncounter;
-import org.cidrz.project.zeprs.valueobject.EncounterData;
-import org.cidrz.project.zeprs.valueobject.gen.ArvRegimen;
-import org.cidrz.project.zeprs.valueobject.gen.LabTest;
-import org.cidrz.project.zeprs.valueobject.gen.NewbornEval;
-import org.cidrz.project.zeprs.valueobject.gen.Rpr;
-import org.cidrz.webapp.dynasite.Constants;
-import org.cidrz.webapp.dynasite.dao.EncountersDAO;
-import org.cidrz.webapp.dynasite.dao.PatientDAO;
-import org.cidrz.webapp.dynasite.dao.PatientStatusDAO;
-import org.cidrz.webapp.dynasite.dao.SessionPatientDAO;
-import org.cidrz.webapp.dynasite.dao.FormDAO;
-import org.cidrz.webapp.dynasite.dao.UserDAO;
-import org.cidrz.webapp.dynasite.exception.ObjectNotFoundException;
-import org.cidrz.webapp.dynasite.security.AuthManager;
-import org.cidrz.webapp.dynasite.security.UserUnauthorizedException;
-import org.cidrz.webapp.dynasite.session.SessionUtil;
-import org.cidrz.webapp.dynasite.struts.action.generic.BasePatientAction;
-import org.cidrz.webapp.dynasite.utils.*;
-import org.cidrz.webapp.dynasite.utils.struts.StrutsUtils;
-import org.cidrz.webapp.dynasite.valueobject.*;
-import org.cidrz.webapp.dynasite.logic.EncounterProcessor;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import java.io.IOException;
 import java.security.Principal;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.StringTokenizer;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
+import org.apache.struts.validator.DynaValidatorForm;
+import org.cidrz.project.zeprs.valueobject.BaseEncounter;
+import org.cidrz.project.zeprs.valueobject.EncounterData;
+import org.cidrz.project.zeprs.valueobject.gen.LabTest;
+import org.cidrz.project.zeprs.valueobject.gen.NewbornEval;
+import org.cidrz.project.zeprs.valueobject.gen.Rpr;
+import org.cidrz.webapp.dynasite.dao.EncountersDAO;
+import org.cidrz.webapp.dynasite.dao.FormDAO;
+import org.cidrz.webapp.dynasite.dao.PatientDAO;
+import org.cidrz.webapp.dynasite.dao.PatientStatusDAO;
+import org.cidrz.webapp.dynasite.dao.SessionPatientDAO;
+import org.cidrz.webapp.dynasite.dao.UserDAO;
+import org.cidrz.webapp.dynasite.exception.ObjectNotFoundException;
+import org.cidrz.webapp.dynasite.logic.EncounterProcessor;
+import org.cidrz.webapp.dynasite.security.AuthManager;
+import org.cidrz.webapp.dynasite.security.UserUnauthorizedException;
+import org.cidrz.webapp.dynasite.session.SessionUtil;
+import org.cidrz.webapp.dynasite.struts.action.generic.BasePatientAction;
+import org.cidrz.webapp.dynasite.utils.DatabaseUtils;
+import org.cidrz.webapp.dynasite.utils.DateUtils;
+import org.cidrz.webapp.dynasite.utils.PatientRecordUtils;
+import org.cidrz.webapp.dynasite.utils.PopulatePatientRecord;
+import org.cidrz.webapp.dynasite.utils.StringManipulation;
+import org.cidrz.webapp.dynasite.utils.struts.StrutsUtils;
+import org.cidrz.webapp.dynasite.valueobject.DynaSiteObjects;
+import org.cidrz.webapp.dynasite.valueobject.Form;
+import org.cidrz.webapp.dynasite.valueobject.Patient;
+import org.cidrz.webapp.dynasite.valueobject.Pregnancy;
+import org.cidrz.webapp.dynasite.valueobject.SessionPatient;
+import org.cidrz.webapp.dynasite.valueobject.Site;
 
 /**
  * @author <a href="mailto:ckelley@rti.org">Chris Kelley</a>
@@ -119,13 +129,21 @@ public class FormAction extends BasePatientAction {
         }
 
         //resolve the patientId - it has been either push via the request or gathered from the sessionPatient
-        if (formId != 1) {
+        if (formId != 1 && formId != 125) {
             sessionPatient = SessionUtil.getInstance(session).getSessionPatient();
             patientId = sessionPatient.getId();
         }
         
         if (formId == 125) {
-			String password = (String) dynaForm.get("password");
+//        	private String field2157;	//username
+//        	private String field2158;	//password
+//        	private String field2159;	//email
+//        	private String field2160;	//forenames
+//        	private String field2161;	//lastname
+//        	private String field2162;	//mobile
+//        	private String field2163;	//phone
+        	
+			String password = (String) dynaForm.get("field2158");	//password
 			ActionMessages errors = new ActionMessages();
 			if (password.length() > 12) {
 				errors.add("errors", new ActionMessage("errors.password.length.long"));
@@ -136,8 +154,8 @@ public class FormAction extends BasePatientAction {
 			}
 
         	// Check for duplicate username
-        	if ( dynaForm.get("username") != null) {
-        		String searchUsername = (String) dynaForm.get("username");
+        	if ( dynaForm.get("field2157") != null) {	//username
+        		String searchUsername = (String) dynaForm.get("field2157");
         		Object userObject;
         		Connection conn = null;
 				try {
@@ -248,7 +266,11 @@ public class FormAction extends BasePatientAction {
 
         Connection conn = null;
         try {
-        	conn = DatabaseUtils.getZEPRSConnection(username);
+        	if (formId == 125) {
+            	conn = DatabaseUtils.getSpecialRootConnection(username);
+        	} else {
+            	conn = DatabaseUtils.getZEPRSConnection(username);
+        	}
         	Long encounterId = null;
         	try {
         		encounterId = (Long) dynaForm.get("id");
@@ -377,11 +399,14 @@ public class FormAction extends BasePatientAction {
         		sessionPatient = SessionUtil.getInstance(session).getSessionPatient();
         		flowId = sessionPatient.getCurrentFlowId();
         	} else if (pregnancyId == null) {
-        		SessionPatientDAO.updateSessionPatient(conn, vo.getPatientId(), vo.getPregnancyId(), session);
-        		// re-initialise the globals
-        		sessionPatient = SessionUtil.getInstance(session).getSessionPatient();
-        		flowId = sessionPatient.getCurrentFlowId();
-        		pregnancyId = sessionPatient.getCurrentPregnancyId();
+    			//Forms that don't require patient(including admin forms) don't need the session refreshed since they aren't patient oriented
+        		if (formDef.isRequirePatient() == true) {
+            		SessionPatientDAO.updateSessionPatient(conn, vo.getPatientId(), vo.getPregnancyId(), session);
+            		// re-initialise the globals
+            		sessionPatient = SessionUtil.getInstance(session).getSessionPatient();
+            		flowId = sessionPatient.getCurrentFlowId();
+            		pregnancyId = sessionPatient.getCurrentPregnancyId();
+        		}
         	}
 
         	// Reset form
@@ -479,7 +504,7 @@ public class FormAction extends BasePatientAction {
             try {
                 sessionPatient = SessionUtil.getInstance(session).getSessionPatient();
             } catch (SessionUtil.AttributeNotFoundException e) {
-                log.error("Unable to get SessionPatient");
+//                log.error("Unable to get SessionPatient");
             }
 
             Form nextForm = new Form();
@@ -1309,6 +1334,16 @@ public class FormAction extends BasePatientAction {
                 return mapping.findForward("patientTask");
                 // routine antenatal form takes you back to chart
             }
+            
+            if (formId == 125) {
+            	ActionForward forwardForm = null;
+            	String forwardString = null;
+//				forwardString = "/admin/records/list.do?formId=" + formId;
+				forwardString = "/admin/users.do";
+				forwardForm = new ActionForward(forwardString);
+                forwardForm.setRedirect(true);
+                return forwardForm;
+            }
 
             if (nextForm.getId() == null) {
                 // part of reload prevention scheme:
@@ -1425,7 +1460,7 @@ public class FormAction extends BasePatientAction {
      * @throws IllegalAccessException
      */
     public static BaseEncounter setupFormObject(Form formDef, String formId, Long patientId, DynaValidatorForm dynaForm, SessionPatient sessionPatient) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-        String classname = "org.cidrz.project.zeprs.valueobject.gen." + StringManipulation.firstCharToUpperCase(formDef.getName());
+        String classname = "org.cidrz.project.zeprs.valueobject.gen." + StringManipulation.fixClassname(formDef.getName());
         Class formClass = Class.forName(classname);
         BaseEncounter formObj = (BaseEncounter) formClass.newInstance();
 
@@ -1438,7 +1473,7 @@ public class FormAction extends BasePatientAction {
         formObj.setDateVisit(visitDateD);
         formObj.setPatientId(patientId);
         // Pregnancy section
-        if (formObj.getFormId().intValue() != 1) {
+		if (formObj.getFormId().intValue() != 1 && formDef.getFormTypeId() != 5 ) {
             // use the mother's current pregnancy value
             if (sessionPatient.getParentId() != null) {
                 // Saving a record of an infant - need to get mother's current pregnancy id

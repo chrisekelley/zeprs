@@ -195,6 +195,28 @@ public class UserDAO {
         Long encId = (Long) DatabaseUtils.create(conn, sql, values.toArray());
         return encId;
     }
+    
+    public static void insertUser(Connection conn, String username, String firstname, String lastname, 
+    		String email, String mobile, String phone) throws SQLException, ServletException {
+        ArrayList values = new ArrayList();
+        values.add(username);
+        values.add(firstname);
+        values.add(lastname);
+        values.add(email);
+        values.add(mobile);
+        values.add(phone);
+        String sql = "INSERT INTO userdata.address set nickname=?, firstname=?, lastname=?, "
+        		+ "email=?, ad_mobile=?, ad_phone=? ";
+        DatabaseUtils.save(conn, sql, values.toArray());
+    }
+    
+    public static void insertPassword(Connection conn, String username, String password) throws SQLException, ServletException {
+        ArrayList values = new ArrayList();
+        values.add(username);
+        values.add(password);
+        String sql = "INSERT INTO mail.accountuser set username=?, password=password(?)";
+        DatabaseUtils.save(conn, sql, values.toArray());
+    }
 
     public static Object updateGroup(Connection conn, String username, Long group) throws SQLException, ServletException {
         ArrayList values = new ArrayList();

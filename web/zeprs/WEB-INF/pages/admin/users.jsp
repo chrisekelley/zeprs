@@ -15,7 +15,7 @@
 
 <template:insert template='/WEB-INF/templates/template-admin.jsp'>
 <template:put name='title' content='User Administration' direct='true'/>
-<template:put name='header' content='' direct='true'/>
+<template:put name='header' content='User Administration' direct='true'/>
 <template:put name='content' direct='true'>
     <script language="JavaScript" type='text/javascript' src='/zeprs/dwruseradmin/util.js;jsessionid=${pageContext.request.session.id}'></script>
     <script language="JavaScript" type='text/javascript' src='/zeprs/dwruseradmin/interface/User.js;jsessionid=${pageContext.request.session.id}'></script>
@@ -42,14 +42,16 @@
             <c:set var="offset" value="0"/>
         </c:otherwise>
     </c:choose>
-    <div id="widePage">
-        <h2>User Administration</h2>
+    <!-- <div id="content-admin"> -->
         <p>Search for User (enter username only):
             <html:form action="admin/users.do">
                 <input id="searchBox" type="text" size="15" maxlength="20" name="searchUsername"><html:submit value="Search!"/>
                 <c:if test="${! empty error}"><p class="error">${error}</p></c:if>
             </html:form>
             </p>
+            
+        <c:url value="admin/records/list.do" var="userCreateLink"><c:param name="formId" value="125"/></c:url>
+        <p><a href='<c:out value="/${appName}/${userCreateLink}"/>'>Create New User</a>
         <p>Assign/modify a user's group by clicking in the Group field of the user record. </p>
         <table class="enhancedtable">
             <tr>
@@ -72,7 +74,7 @@
             <c:choose>
                 <c:when test="${! empty search}">
                 <tr>
-                    <td colspan="4" align="center"><html:link href="users.do">Browse User List</html:link></td>
+                    <td colspan="4" align="center"><html:link href="users.do;jsessionid=${pageContext.request.session.id}">Browse User List</html:link></td>
                 </tr>
                 </c:when>
                 <c:otherwise>
@@ -82,18 +84,18 @@
                         <td colspan="2">&nbsp;</td>
                     </c:when>
                     <c:otherwise>
-                        <td colspan="2"><html:link href="users.do?offset=${offset-rowCount}">Prev</html:link></td>
+                        <td colspan="2"><html:link href="users.do;jsessionid=${pageContext.request.session.id}?offset=${offset-rowCount}">Prev</html:link></td>
                     </c:otherwise>
                 </c:choose>
                 <c:choose>
                     <c:when test="${offset == 0}">
-                        <td colspan="2" align="right"><html:link href="/zeprs/admin/users.do?offset=${rowCount}">Next</html:link></td>
+                        <td colspan="2" align="right"><html:link href="/zeprs/admin/users.do;jsessionid=${pageContext.request.session.id}?offset=${rowCount}">Next</html:link></td>
                     </c:when>
                     <c:when test="${offset == 'stop'}">
                         <td colspan="2" align="right">&nbsp;</td>
                     </c:when>
                     <c:otherwise>
-                        <td colspan="2" align="right"><html:link href="/zeprs/admin/users.do?offset=${offset + rowCount}">Next</html:link></td>
+                        <td colspan="2" align="right"><html:link href="/zeprs/admin/users.do;jsessionid=${pageContext.request.session.id}?offset=${offset + rowCount}">Next</html:link></td>
                     </c:otherwise>
                 </c:choose>
 
@@ -102,6 +104,6 @@
             </c:choose>
 
     </table>
-    </div>
+<!--     </div> -->
 </template:put>
 </template:insert>

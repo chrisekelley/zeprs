@@ -26,7 +26,9 @@ import org.cidrz.webapp.dynasite.utils.DateUtils;
 import org.cidrz.webapp.dynasite.utils.PatientRecordUtils;
 import org.cidrz.webapp.dynasite.utils.XmlUtils;
 import org.cidrz.webapp.dynasite.valueobject.*;
+
 import javax.servlet.ServletException;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -256,6 +258,33 @@ public class FormDAO {
             // be sure to update the following list.
 
             FormDAO.updatePatientValues(conn, patientId, vo, formId, dateVisit, encounterId);
+            
+    		/**
+        	 * Users
+        	 */
+            
+    		if (formId == 125) {
+    			String username = BeanUtils.getProperty(vo, "field2157");
+    			String password = BeanUtils.getProperty(vo, "field2158");
+    			String email = BeanUtils.getProperty(vo, "field2159");
+    			String firstname = BeanUtils.getProperty(vo, "field2160");
+    			String lastname = BeanUtils.getProperty(vo, "field2161");
+    			String mobile = BeanUtils.getProperty(vo, "field2162");
+    			String phone = BeanUtils.getProperty(vo, "field2163");
+        		/*UserInfo userInfo = (UserInfo) formData;
+        		String username = userInfo.getUsername();*/
+        		try {
+        			// String username, firstname, lastname, email, mobile, phone
+                    UserDAO.insertUser(conn, username, firstname, lastname, email, mobile, phone);
+                    //  String username, String password)
+                    UserDAO.insertPassword(conn, username, password);
+                    UserDAO.insertGroup(conn, username, Long.valueOf(5));
+                } catch (SQLException ex) {
+                    log.error(ex);
+                } catch (ServletException ex) {
+                    log.error(ex);
+                }
+        	}
 
             /**
              * Commit the transaction

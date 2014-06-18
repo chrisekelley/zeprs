@@ -18,10 +18,10 @@
   <flowId>104</flowId>
   <flowOrder>21</flowOrder>
   <formType>
-    <id>1</id>
-    <name>Pregnancy (Mother only)</name>
+    <id>5</id>
+    <name>Admin</name>
   </formType>
-  <formTypeId>1</formTypeId>
+  <formTypeId>5</formTypeId>
   <pageItems class="tree-set">
     <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>

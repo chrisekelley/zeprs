@@ -278,7 +278,7 @@ public class BasePatientAction extends Action {
 
             if (mapping.getParameter() != null && !mapping.getParameter().equals("")) {
                 String formId = mapping.getParameter();
-                if (!formId.equals("1") && sessionPatient == null) {
+                if (!formId.equals("1") && !formId.equals("125") && sessionPatient == null) {
                     return mapping.findForward("home");
                 }
             }

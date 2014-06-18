@@ -1692,17 +1692,7 @@
       <form-property name="field2118" type="java.lang.String"/>
       <form-property name="field2119" type="java.lang.String"/>
     </form-bean>
-    <form-bean name="form122" type="org.apache.struts.validator.DynaValidatorForm">
-      <form-property name="field1" type="java.lang.String"/>
-    </form-bean>
-    <form-bean name="form123" type="org.apache.struts.validator.DynaValidatorForm">
-      <form-property name="field1" type="java.lang.String"/>
-    </form-bean>
-    <form-bean name="form124" type="org.apache.struts.validator.DynaValidatorForm">
-      <form-property name="field1" type="java.lang.String"/>
-    </form-bean>
     <form-bean name="form125" type="org.apache.struts.validator.DynaValidatorForm">
-      <form-property name="field1" type="java.lang.String"/>
       <form-property name="field2157" type="java.lang.String"/>
       <form-property name="field2158" type="java.lang.String"/>
       <form-property name="field2159" type="java.lang.String"/>
@@ -2234,359 +2224,338 @@
     <action path="/admin/compareDatabasesResult" type="org.cidrz.webapp.dynasite.struts.action.admin.CompareDatabasesResultAction" name="chooseReportForm">
       <forward name="success" path="/WEB-INF/pages/admin/compare_results.jsp"/>
     </action>
-    <action path="/form1/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form1" validate="false" parameter="1" scope="request">
+    <action path="/form1/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form1" validate="false" parameter="1" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form1/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form1" validate="true" input="/form1/new.do" parameter="1" scope="request"/>
     <action path="/form1/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form1" validate="false" parameter="1" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form2/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form2" validate="false" parameter="2" scope="request">
+    <action path="/form2/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form2" validate="false" parameter="2" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form2/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form2" validate="true" input="/form2/new.do" parameter="2" scope="request"/>
     <action path="/form2/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form2" validate="false" parameter="2" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form9/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form9" validate="false" parameter="9" scope="request">
+    <action path="/form9/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form9" validate="false" parameter="9" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form9/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form9" validate="true" input="/form9/new.do" parameter="9" scope="request"/>
     <action path="/form9/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form9" validate="false" parameter="9" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form17/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form17" validate="false" parameter="17" scope="request">
+    <action path="/form17/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form17" validate="false" parameter="17" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form17/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form17" validate="true" input="/form17/new.do" parameter="17" scope="request"/>
     <action path="/form17/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form17" validate="false" parameter="17" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form23/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form23" validate="false" parameter="23" scope="request">
+    <action path="/form23/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form23" validate="false" parameter="23" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form23/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form23" validate="true" input="/form23/new.do" parameter="23" scope="request"/>
     <action path="/form23/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form23" validate="false" parameter="23" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form28/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form28" validate="false" parameter="28" scope="request">
+    <action path="/form28/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form28" validate="false" parameter="28" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form28/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form28" validate="true" input="/form28/new.do" parameter="28" scope="request"/>
     <action path="/form28/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form28" validate="false" parameter="28" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form32/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form32" validate="false" parameter="32" scope="request">
+    <action path="/form32/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form32" validate="false" parameter="32" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form32/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form32" validate="true" input="/form32/new.do" parameter="32" scope="request"/>
     <action path="/form32/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form32" validate="false" parameter="32" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form33/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form33" validate="false" parameter="33" scope="request">
+    <action path="/form33/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form33" validate="false" parameter="33" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form33/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form33" validate="true" input="/form33/new.do" parameter="33" scope="request"/>
     <action path="/form33/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form33" validate="false" parameter="33" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form36/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form36" validate="false" parameter="36" scope="request">
+    <action path="/form36/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form36" validate="false" parameter="36" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form36/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form36" validate="true" input="/form36/new.do" parameter="36" scope="request"/>
     <action path="/form36/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form36" validate="false" parameter="36" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form40/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form40" validate="false" parameter="40" scope="request">
+    <action path="/form40/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form40" validate="false" parameter="40" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form40/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form40" validate="true" input="/form40/new.do" parameter="40" scope="request"/>
     <action path="/form40/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form40" validate="false" parameter="40" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form44/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form44" validate="false" parameter="44" scope="request">
+    <action path="/form44/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form44" validate="false" parameter="44" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form44/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form44" validate="true" input="/form44/new.do" parameter="44" scope="request"/>
     <action path="/form44/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form44" validate="false" parameter="44" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form55/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form55" validate="false" parameter="55" scope="request">
+    <action path="/form55/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form55" validate="false" parameter="55" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form55/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form55" validate="true" input="/form55/new.do" parameter="55" scope="request"/>
     <action path="/form55/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form55" validate="false" parameter="55" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form63/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form63" validate="false" parameter="63" scope="request">
+    <action path="/form63/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form63" validate="false" parameter="63" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form63/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form63" validate="true" input="/form63/new.do" parameter="63" scope="request"/>
     <action path="/form63/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form63" validate="false" parameter="63" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form65/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form65" validate="false" parameter="65" scope="request">
+    <action path="/form65/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form65" validate="false" parameter="65" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form65/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form65" validate="true" input="/form65/new.do" parameter="65" scope="request"/>
     <action path="/form65/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form65" validate="false" parameter="65" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form66/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form66" validate="false" parameter="66" scope="request">
+    <action path="/form66/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form66" validate="false" parameter="66" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form66/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form66" validate="true" input="/form66/new.do" parameter="66" scope="request"/>
     <action path="/form66/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form66" validate="false" parameter="66" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form68/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form68" validate="false" parameter="68" scope="request">
+    <action path="/form68/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form68" validate="false" parameter="68" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form68/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form68" validate="true" input="/form68/new.do" parameter="68" scope="request"/>
     <action path="/form68/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form68" validate="false" parameter="68" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form70/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form70" validate="false" parameter="70" scope="request">
+    <action path="/form70/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form70" validate="false" parameter="70" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form70/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form70" validate="true" input="/form70/new.do" parameter="70" scope="request"/>
     <action path="/form70/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form70" validate="false" parameter="70" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form71/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form71" validate="false" parameter="71" scope="request">
+    <action path="/form71/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form71" validate="false" parameter="71" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form71/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form71" validate="true" input="/form71/new.do" parameter="71" scope="request"/>
     <action path="/form71/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form71" validate="false" parameter="71" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form72/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form72" validate="false" parameter="72" scope="request">
+    <action path="/form72/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form72" validate="false" parameter="72" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form72/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form72" validate="true" input="/form72/new.do" parameter="72" scope="request"/>
     <action path="/form72/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form72" validate="false" parameter="72" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form73/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form73" validate="false" parameter="73" scope="request">
+    <action path="/form73/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form73" validate="false" parameter="73" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form73/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form73" validate="true" input="/form73/new.do" parameter="73" scope="request"/>
     <action path="/form73/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form73" validate="false" parameter="73" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form74/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form74" validate="false" parameter="74" scope="request">
+    <action path="/form74/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form74" validate="false" parameter="74" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form74/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form74" validate="true" input="/form74/new.do" parameter="74" scope="request"/>
     <action path="/form74/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form74" validate="false" parameter="74" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form75/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form75" validate="false" parameter="75" scope="request">
+    <action path="/form75/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form75" validate="false" parameter="75" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form75/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form75" validate="true" input="/form75/new.do" parameter="75" scope="request"/>
     <action path="/form75/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form75" validate="false" parameter="75" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form76/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form76" validate="false" parameter="76" scope="request">
+    <action path="/form76/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form76" validate="false" parameter="76" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form76/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form76" validate="true" input="/form76/new.do" parameter="76" scope="request"/>
     <action path="/form76/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form76" validate="false" parameter="76" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form77/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form77" validate="false" parameter="77" scope="request">
+    <action path="/form77/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form77" validate="false" parameter="77" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form77/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form77" validate="true" input="/form77/new.do" parameter="77" scope="request"/>
     <action path="/form77/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form77" validate="false" parameter="77" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form78/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form78" validate="false" parameter="78" scope="request">
+    <action path="/form78/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form78" validate="false" parameter="78" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form78/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form78" validate="true" input="/form78/new.do" parameter="78" scope="request"/>
     <action path="/form78/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form78" validate="false" parameter="78" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form79/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form79" validate="false" parameter="79" scope="request">
+    <action path="/form79/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form79" validate="false" parameter="79" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form79/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form79" validate="true" input="/form79/new.do" parameter="79" scope="request"/>
     <action path="/form79/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form79" validate="false" parameter="79" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form80/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form80" validate="false" parameter="80" scope="request">
+    <action path="/form80/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form80" validate="false" parameter="80" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form80/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form80" validate="true" input="/patientAnte.do" parameter="80" scope="request"/>
     <action path="/form80/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form80" validate="false" parameter="80" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form81/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form81" validate="false" parameter="81" scope="request">
+    <action path="/form81/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form81" validate="false" parameter="81" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form81/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form81" validate="true" input="/form81/new.do" parameter="81" scope="request"/>
     <action path="/form81/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form81" validate="false" parameter="81" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form82/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form82" validate="false" parameter="82" scope="request">
+    <action path="/form82/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form82" validate="false" parameter="82" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form82/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form82" validate="true" input="/form82/new.do" parameter="82" scope="request"/>
     <action path="/form82/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form82" validate="false" parameter="82" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form83/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form83" validate="false" parameter="83" scope="request">
+    <action path="/form83/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form83" validate="false" parameter="83" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form83/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form83" validate="true" input="/form83/new.do" parameter="83" scope="request"/>
     <action path="/form83/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form83" validate="false" parameter="83" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form84/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form84" validate="false" parameter="84" scope="request">
+    <action path="/form84/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form84" validate="false" parameter="84" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form84/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form84" validate="true" input="/form84/new.do" parameter="84" scope="request"/>
     <action path="/form84/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form84" validate="false" parameter="84" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form86/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form86" validate="false" parameter="86" scope="request">
+    <action path="/form86/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form86" validate="false" parameter="86" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form86/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form86" validate="true" input="/form86/new.do" parameter="86" scope="request"/>
     <action path="/form86/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form86" validate="false" parameter="86" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form87/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form87" validate="false" parameter="87" scope="request">
+    <action path="/form87/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form87" validate="false" parameter="87" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form87/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form87" validate="true" input="/form87/new.do" parameter="87" scope="request"/>
     <action path="/form87/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form87" validate="false" parameter="87" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form88/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form88" validate="false" parameter="88" scope="request">
+    <action path="/form88/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form88" validate="false" parameter="88" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form88/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form88" validate="true" input="/form88/new.do" parameter="88" scope="request"/>
     <action path="/form88/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form88" validate="false" parameter="88" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form89/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form89" validate="false" parameter="89" scope="request">
+    <action path="/form89/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form89" validate="false" parameter="89" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form89/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form89" validate="true" input="/form89/new.do" parameter="89" scope="request"/>
     <action path="/form89/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form89" validate="false" parameter="89" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form90/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form90" validate="false" parameter="90" scope="request">
+    <action path="/form90/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form90" validate="false" parameter="90" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form90/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form90" validate="true" input="/form90/new.do" parameter="90" scope="request"/>
     <action path="/form90/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form90" validate="false" parameter="90" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form91/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form91" validate="false" parameter="91" scope="request">
+    <action path="/form91/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form91" validate="false" parameter="91" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form91/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form91" validate="true" input="/form91/new.do" parameter="91" scope="request"/>
     <action path="/form91/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form91" validate="false" parameter="91" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form92/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form92" validate="false" parameter="92" scope="request">
+    <action path="/form92/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form92" validate="false" parameter="92" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form92/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form92" validate="true" input="/form92/new.do" parameter="92" scope="request"/>
     <action path="/form92/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form92" validate="false" parameter="92" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form93/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form93" validate="false" parameter="93" scope="request">
+    <action path="/form93/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form93" validate="false" parameter="93" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form93/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form93" validate="true" input="/form93/new.do" parameter="93" scope="request"/>
     <action path="/form93/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form93" validate="false" parameter="93" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form94/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form94" validate="false" parameter="94" scope="request">
+    <action path="/form94/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form94" validate="false" parameter="94" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form94/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form94" validate="true" input="/form94/new.do" parameter="94" scope="request"/>
     <action path="/form94/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form94" validate="false" parameter="94" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form101/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form101" validate="false" parameter="101" scope="request">
+    <action path="/form101/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form101" validate="false" parameter="101" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form101/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form101" validate="true" input="/form101/new.do" parameter="101" scope="request"/>
     <action path="/form101/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form101" validate="false" parameter="101" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form102/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form102" validate="false" parameter="102" scope="request">
+    <action path="/form102/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form102" validate="false" parameter="102" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form102/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form102" validate="true" input="/form102/new.do" parameter="102" scope="request"/>
     <action path="/form102/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form102" validate="false" parameter="102" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form103/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form103" validate="false" parameter="103" scope="request">
+    <action path="/form103/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form103" validate="false" parameter="103" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form103/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form103" validate="true" input="/form103/new.do" parameter="103" scope="request"/>
     <action path="/form103/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form103" validate="false" parameter="103" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form104/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form104" validate="false" parameter="104" scope="request">
+    <action path="/form104/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form104" validate="false" parameter="104" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form104/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form104" validate="true" input="/form104/new.do" parameter="104" scope="request"/>
     <action path="/form104/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form104" validate="false" parameter="104" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form109/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form109" validate="false" parameter="109" scope="request">
+    <action path="/form109/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form109" validate="false" parameter="109" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form109/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form109" validate="true" input="/form109/new.do" parameter="109" scope="request"/>
     <action path="/form109/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form109" validate="false" parameter="109" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form115/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form115" validate="false" parameter="115" scope="request">
+    <action path="/form115/new" type="org.rti.zcore.struts.action.FormDisplayAction" name="form115" validate="false" parameter="115" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form115/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form115" validate="true" input="/form115/new.do" parameter="115" scope="request"/>
     <action path="/form115/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form115" validate="false" parameter="115" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form122/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form122" validate="false" parameter="122" scope="request">
-      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
-    </action>
-    <action path="/form122/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form122" validate="true" input="/form122/new.do" parameter="122" scope="request"/>
-    <action path="/form122/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form122" validate="false" parameter="122" scope="request">
-      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
-    </action>
-    <action path="/form123/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form123" validate="false" parameter="123" scope="request">
-      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
-    </action>
-    <action path="/form123/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form123" validate="true" input="/form123/new.do" parameter="123" scope="request"/>
-    <action path="/form123/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form123" validate="false" parameter="123" scope="request">
-      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
-    </action>
-    <action path="/form124/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form124" validate="false" parameter="124" scope="request">
-      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
-    </action>
-    <action path="/form124/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form124" validate="true" input="/form124/new.do" parameter="124" scope="request"/>
-    <action path="/form124/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form124" validate="false" parameter="124" scope="request">
-      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
-    </action>
-    <action path="/form125/new" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form125" validate="false" parameter="125" scope="request">
+    <action path="/form125/new" type="org.rti.zcore.struts.action.records.ListAction" name="form125" validate="false" parameter="125" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
     <action path="/form125/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form125" validate="true" input="/form125/new.do" parameter="125" scope="request"/>
     <action path="/form125/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form125" validate="false" parameter="125" scope="request">
-      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+      <forward name="success" path="/WEB-INF/pages/admin/records/record.jsp"/>
     </action>
   </action-mappings>
-     <message-resources factory="org.rti.zcore.utils.struts.i18n.ReloadablePropertyMessageResourcesFactory" parameter="resources.ApplicationResources" null="false" key="ApplicationResources"/>
-  	 <message-resources factory="org.rti.zcore.utils.struts.i18n.ReloadablePropertyMessageResourcesFactory" parameter="resources.TemplateResources" null="false" key="TemplateResources"/>
+  <message-resources factory="org.rti.zcore.utils.struts.i18n.ReloadablePropertyMessageResourcesFactory" parameter="resources.ApplicationResources" null="false" key="ApplicationResources"/>
+  <message-resources factory="org.rti.zcore.utils.struts.i18n.ReloadablePropertyMessageResourcesFactory" parameter="resources.TemplateResources" null="false" key="TemplateResources"/>
   <message-resources parameter="resources.application" null="false"/>
   <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
     <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/bar.xml"/>
