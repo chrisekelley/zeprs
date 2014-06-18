@@ -7,7 +7,7 @@
  *
  *        http://www.apache.org/licenses/LICENSE-2.0
  */
-package org.rti.zcore.dar.struts.action;
+package org.rti.zcore.struts.action;
 
 import java.io.IOException;
 import java.security.Principal;
@@ -145,6 +145,11 @@ public class ListAction extends BaseAction {
 //			sessionPatient = new TimsSessionSubject();
 //            SessionUtil.getInstance(session).setSessionPatient(sessionPatient);
 
+            
+            if (formId == null) {
+            	formId = (long) 125;
+            }
+            
 			encounterForm = ((Form) DynaSiteObjects.getForms().get(new Long(formId)));
 			Long formTypeId = encounterForm.getFormTypeId();
 			// populate the records for this class

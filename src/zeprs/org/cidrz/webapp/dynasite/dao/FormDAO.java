@@ -273,17 +273,17 @@ public class FormDAO {
     			String phone = BeanUtils.getProperty(vo, "field2163");
         		/*UserInfo userInfo = (UserInfo) formData;
         		String username = userInfo.getUsername();*/
-        		try {
-        			// String username, firstname, lastname, email, mobile, phone
-                    UserDAO.insertUser(conn, username, firstname, lastname, email, mobile, phone);
+//        		try {
                     //  String username, String password)
                     UserDAO.insertPassword(conn, username, password);
+        			// String username, firstname, lastname, email, mobile, phone
+                    UserDAO.insertUser(conn, username, firstname, lastname, email, mobile, phone);
                     UserDAO.insertGroup(conn, username, Long.valueOf(5));
-                } catch (SQLException ex) {
-                    log.error(ex);
-                } catch (ServletException ex) {
-                    log.error(ex);
-                }
+//                } catch (SQLException ex) {
+//                    log.error(ex);
+//                } catch (ServletException ex) {
+//                    log.error(ex);
+//                }
         	}
 
             /**

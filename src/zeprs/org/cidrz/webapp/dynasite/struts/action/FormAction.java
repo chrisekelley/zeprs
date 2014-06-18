@@ -59,6 +59,7 @@ import org.cidrz.webapp.dynasite.valueobject.Patient;
 import org.cidrz.webapp.dynasite.valueobject.Pregnancy;
 import org.cidrz.webapp.dynasite.valueobject.SessionPatient;
 import org.cidrz.webapp.dynasite.valueobject.Site;
+import org.rti.zcore.utils.struts.StrutsHelper;
 
 /**
  * @author <a href="mailto:ckelley@rti.org">Chris Kelley</a>
@@ -145,10 +146,7 @@ public class FormAction extends BasePatientAction {
         	
 			String password = (String) dynaForm.get("field2158");	//password
 			ActionMessages errors = new ActionMessages();
-			if (password.length() > 12) {
-				errors.add("errors", new ActionMessage("errors.password.length.long"));
-				saveErrors(request, errors);
-			} else if (password.length() < 8) {
+			if (password.length() < 8) {
 				errors.add("errors", new ActionMessage("errors.password.length.short"));
 				saveErrors(request, errors);
 			}
@@ -162,6 +160,7 @@ public class FormAction extends BasePatientAction {
                     conn = DatabaseUtils.getZEPRSConnection(username);
 					userObject = UserDAO.getUser(conn, searchUsername);
 					errors.add("errors", new ActionMessage("errors.duplicate.username", searchUsername));
+					saveErrors(request, errors);
 				} catch (ObjectNotFoundException e) {
 					// It's ok - there should not be a user.
 				 } finally {
@@ -170,20 +169,57 @@ public class FormAction extends BasePatientAction {
                      }
                  }
         	}
-//			String hashPass = null;
-//			if (Constants.PASSWORD_ALGORITHM != null && Constants.PASSWORD_ENCODING != null) {
-//        		String algorithm = Constants.PASSWORD_ALGORITHM;
-//        		String encodingMethod = Constants.PASSWORD_ENCODING;
+        	if (errors.size() > 0) {
 //        		try {
-//        			hashPass = EncryptionUtils.hash(algorithm, encodingMethod, password);
-//        		} catch (Exception e) {
+////                    String specialFormName = (String) DynaSiteObjects.getFormNames().get("form" + formId);
+////                    if (specialFormName == null) {
+//                        return mapping.getInputForward();
+////                    } else {
+////                        if (specialFormName.equals("demographics")) {
+////                            return mapping.getInputForward();
+////                        } else {
+////                            return mapping.findForward(formName + "Error");
+////                        }
+////                    }
+////                    
+////                    ActionForward forwardForm = null;
+////                	String forwardString = null;
+//////    				forwardString = "/admin/records/list.do?formId=" + formId;
+////    				forwardString = "/admin/users.do";
+////    				forwardForm = new ActionForward(forwardString);
+////                    forwardForm.setRedirect(true);
+////                    return forwardForm;
+//                    
+//                    
+//                } catch (Exception e1) {
+//                    return mapping.getInputForward();
+//                }
+        		
+//        		ActionForward forwardForm = null;
+//        		String forwardString = null;
+//        		String forwardClassname = "org.rti.zcore.utils.struts.StrutsHelperImpl";
+//        		Class forwardClazz = null;
+//        		try {
+//        			forwardClazz = Class.forName(forwardClassname);
+//        			StrutsHelper forward = (StrutsHelper) forwardClazz.newInstance();
+//        			Form encounterForm = (Form) DynaSiteObjects.getForms().get(new Long("125"));
+//        			forwardForm = forward.getActionForward("foo", patientId, encounterForm);
+//        			return forwardForm;
+//        		} catch (ClassNotFoundException e) {
+//        			// Not using it - use the boilerplate below.
+//        		} catch (InstantiationException e) {
+//        			// TODO Auto-generated catch block
+//        			e.printStackTrace();
+//        		} catch (IllegalAccessException e) {
 //        			// TODO Auto-generated catch block
 //        			e.printStackTrace();
 //        		}
-//				dynaForm.set("password", hashPass);
-//        	} else {
-//        		log.debug("You must set up password.algorithm and password.encoding when encryptionMethod equals app");
-//        	}
+        		
+        		return mapping.getInputForward();
+        		
+        		
+        	}
+        	
 		}
 
         // Some of the forms are submitted in edit-mode. We need to deal w/ these up-front
@@ -248,18 +284,18 @@ public class FormAction extends BasePatientAction {
                 errors.add("errors", new ActionMessage("errors.userunauthorized"));
                 saveErrors(request, errors);
                 try {
-                    String formName = (String) DynaSiteObjects.getFormNames().get("form" + formId);
-                    if (formName == null) {
-                        return mapping.getInputForward();
-                    } else {
-                        if (formName.equals("demographics")) {
-                            return mapping.getInputForward();
-                        } else {
-                            return mapping.findForward(formName + "Error");
-                        }
-                    }
+                	String formName = (String) DynaSiteObjects.getFormNames().get("form" + formId);
+                	if (formName == null) {
+                		return mapping.getInputForward();
+                	} else {
+                		if (formName.equals("demographics")) {
+                			return mapping.getInputForward();
+                		} else {
+                			return mapping.findForward(formName + "Error");
+                		}
+                	}
                 } catch (Exception e1) {
-                    return mapping.getInputForward();
+                	return mapping.getInputForward();
                 }
             }
         }

@@ -654,7 +654,7 @@
         <action path="/admin/dynagen" type="org.cidrz.webapp.dynasite.struts.action.admin.SourceGeneratorAction">
             <forward name="success" path="/WEB-INF/pages/admin/generate_done.jsp"/>
         </action>
-        <action path="/admin/records/list" type="org.rti.zcore.dar.struts.action.ListAction">
+        <action path="/admin/records/list" type="org.rti.zcore.struts.action.ListAction">
             <forward name="success" path="/WEB-INF/pages/admin/records/record.jsp"/>
         </action>
 		<action path="/admin/records/add" type="org.rti.zcore.dynasite.struts.records.AddAction">

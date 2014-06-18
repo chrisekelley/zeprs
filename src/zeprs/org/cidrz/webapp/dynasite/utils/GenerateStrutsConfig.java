@@ -428,11 +428,11 @@ public class GenerateStrutsConfig {
 //        thisActionMapping.addAttribute("type", "org.cidrz.webapp.dynasite.struts.action.FormDisplayAction");
         switch (form.getFormTypeId().intValue()) {
 		case 5:
-			String displayListFormAction = "org.rti.zcore.struts.action.records.ListAction";
+			String displayListFormAction = "org.rti.zcore.struts.action.ListAction";
             thisActionMapping.addAttribute("type", displayListFormAction);
 			break;
 		default:
-            String displayFormAction = "org.rti.zcore.struts.action.FormDisplayAction";
+            String displayFormAction = "org.cidrz.webapp.dynasite.struts.action.FormDisplayAction";
             thisActionMapping.addAttribute("type", displayFormAction);
 			break;
 		}
@@ -441,10 +441,18 @@ public class GenerateStrutsConfig {
         thisActionMapping.addAttribute("validate", "false");
         thisActionMapping.addAttribute("parameter", String.valueOf(form.getId()));
         thisActionMapping.addAttribute("scope", "request");
-
+        
         Element success = thisActionMapping.addElement("forward");
         success.addAttribute("name", "success");
-        success.addAttribute("path", "/WEB-INF/pages/encounters/encounter_form.jsp");
+        
+        switch (form.getFormTypeId().intValue()) {
+		case 5:
+	        success.addAttribute("path", "/WEB-INF/pages/admin/records/record.jsp");
+			break;
+		default:
+	        success.addAttribute("path", "/WEB-INF/pages/encounters/encounter_form.jsp");
+			break;
+		}
 
         //then add the action mapping for the form submission
         thisActionMapping = actionMappings.addElement("action");

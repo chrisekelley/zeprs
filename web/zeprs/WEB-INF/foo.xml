@@ -2116,7 +2116,7 @@
     <action path="/admin/dynagen" type="org.cidrz.webapp.dynasite.struts.action.admin.SourceGeneratorAction">
       <forward name="success" path="/WEB-INF/pages/admin/generate_done.jsp"/>
     </action>
-    <action path="/admin/records/list" type="org.rti.zcore.dar.struts.action.ListAction">
+    <action path="/admin/records/list" type="org.rti.zcore.struts.action.ListAction">
       <forward name="success" path="/WEB-INF/pages/admin/records/record.jsp"/>
     </action>
     <action path="/admin/records/add" type="org.rti.zcore.dynasite.struts.records.AddAction">
@@ -2546,8 +2546,8 @@
     <action path="/form115/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form115" validate="false" parameter="115" scope="request">
       <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
     </action>
-    <action path="/form125/new" type="org.rti.zcore.struts.action.records.ListAction" name="form125" validate="false" parameter="125" scope="request">
-      <forward name="success" path="/WEB-INF/pages/encounters/encounter_form.jsp"/>
+    <action path="/form125/new" type="org.rti.zcore.struts.action.ListAction" name="form125" validate="false" parameter="125" scope="request">
+      <forward name="success" path="/WEB-INF/pages/admin/records/record.jsp"/>
     </action>
     <action path="/form125/save" type="org.cidrz.webapp.dynasite.struts.action.FormAction" name="form125" validate="true" input="/form125/new.do" parameter="125" scope="request"/>
     <action path="/form125/correct" type="org.cidrz.webapp.dynasite.struts.action.FormDisplayAction" name="form125" validate="false" parameter="125" scope="request">

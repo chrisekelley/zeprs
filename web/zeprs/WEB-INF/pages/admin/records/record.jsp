@@ -61,11 +61,21 @@ function submitNoneForm() {
     <c:if test="${! empty param.referralId}">
         <c:import url="admit_to_uth.jsp"/>
     </c:if>
-<logic:messagesPresent>
+<%-- <logic:messagesPresent>
    <ul>
       <li class="valError"><bean:write  name="error"/></li>
    </ul>
+</logic:messagesPresent> --%>
+
+<logic:messagesPresent>
+   <bean:message key="errors.header"/>
+   <html:messages id="error">
+      <li class="valError"><bean:write name="error"/></li>
+   </html:messages>
+   <bean:message key="errors.footer"/>
 </logic:messagesPresent>
+
+
 <html:form action="form${encounterForm.id}/save.do" onsubmit="return submitForm(this.form);">
 <input type="hidden" name="forward"/>
 	<p><strong>Create new ${encounterForm.label} record:</strong></p>
