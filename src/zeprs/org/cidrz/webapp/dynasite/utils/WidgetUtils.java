@@ -885,14 +885,15 @@ public class WidgetUtils {
     public static String getGroups(Connection conn, String username) throws SQLException, ObjectNotFoundException, ServletException {
         String item = null;
         StringBuffer sbuf = new StringBuffer();
-        sbuf.append("<select>\n");
+        sbuf.append("<select id='groups" + username + "' onChange=\"modifyUserGroup('" + username + "')\">\n");
         //  <option value="${group.id}" onmouseup="insertUserGroup('${user.id}', ${group.id})">${group.name}</option>
         sbuf.append("   <option value=\"\">Select Group</option>\n");
 
         List groups = UserDAO.getAllGroups(conn);
         for (int i = 0; i < groups.size(); i++) {
             UserGroup group = (UserGroup) groups.get(i);
-            sbuf.append("   <option value=\"" + group.getId() + "\" onmouseup=\"modifyUserGroup('" + username + "', " + group.getId() + ")\">" + group.getName() + "</option>\n");
+//            sbuf.append("   <option value=\"" + group.getId() + "\" onChange=\"modifyUserGroup('" + username + "', " + group.getId() + ")\">" + group.getName() + "</option>\n");
+            sbuf.append("   <option value=\"" + group.getId() + "\">" + group.getName() + "</option>\n");
         }
         sbuf.append("</select>\n");
         item = sbuf.toString();

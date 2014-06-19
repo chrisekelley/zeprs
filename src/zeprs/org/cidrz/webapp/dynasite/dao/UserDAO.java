@@ -111,10 +111,11 @@ public class UserDAO {
         List list = new ArrayList();
         ArrayList values = new ArrayList();
         String sql = "select u.nickname AS id, u.firstname AS firstName, u.lastname AS lastName, m.group_id AS groupId, " +
-                "g.name AS groupName " +
+                "g.name AS groupName, a.password, u.ad_phone AS phone, u.ad_mobile AS mobile, u.email AS email " +
                 "FROM userdata.address u " +
                 "LEFT JOIN user_group_membership m ON m.id = u.nickname " +
                 "LEFT JOIN user_group g ON m.group_id = g.id " +
+                "LEFT JOIN mail.accountuser a ON a.username = u.nickname " +
                 "WHERE u.nickname LIKE '%" + username + "%';";
 
         list = DatabaseUtils.getList(conn, Staff.class, sql, values);
@@ -136,10 +137,11 @@ public class UserDAO {
         List list = new ArrayList();
         ArrayList values = new ArrayList();
         String sql = "select u.nickname AS id, u.firstname AS firstName, u.lastname AS lastName, m.group_id AS groupId, " +
-                "g.name AS groupName " +
+                "g.name AS groupName, a.password, u.ad_phone AS phone, u.ad_mobile AS mobile, u.email AS email " +
                 "FROM userdata.address u " +
                 "LEFT JOIN user_group_membership m ON m.id = u.nickname " +
                 "LEFT JOIN user_group g ON m.group_id = g.id " +
+                "LEFT JOIN mail.accountuser a ON a.username = u.nickname " +
                 "ORDER BY " + sortOrder +
                 " LIMIT " + offset + "," + rowCount + ";";
         list = DatabaseUtils.getList(conn, Staff.class, sql, values);
@@ -216,6 +218,41 @@ public class UserDAO {
         values.add(password);
         String sql = "INSERT INTO mail.accountuser set username=?, password=password(?)";
         DatabaseUtils.save(conn, sql, values.toArray());
+    }
+    
+    public static void updatePassword(Connection conn, String username, String password) throws SQLException, ServletException {
+    	ArrayList values = new ArrayList();
+    	values.add(password);
+    	values.add(username);
+    	String sql = "UPDATE mail.accountuser set password=password(?) WHERE username=?";
+    	DatabaseUtils.save(conn, sql, values.toArray());
+    }
+    
+    /**
+     * Updates fields in userdata.address table.
+     * @param conn
+     * @param field
+     * @param username
+     * @param value
+     * @throws SQLException
+     * @throws ServletException
+     */
+    public static void updateUserInfo(Connection conn, String field, String username, String value) throws SQLException, ServletException {
+    	String column = field;
+    	if (field.equals("firstName")) {
+    		column = "firstname";
+    	} else if (field.equals("lastName")) {
+    		column = "lastname";
+    	} else if (field.equals("mobile")) {
+    		column = "ad_mobile";
+    	} else if (field.equals("phone")) {
+    		column = "ad_phone";
+    	} 
+    	ArrayList values = new ArrayList();
+    	values.add(value);
+    	values.add(username);
+    	String sql = "UPDATE userdata.address set " + column + "=? WHERE nickname=?";
+    	DatabaseUtils.save(conn, sql, values.toArray());
     }
 
     public static Object updateGroup(Connection conn, String username, Long group) throws SQLException, ServletException {

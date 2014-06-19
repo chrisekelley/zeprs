@@ -2985,3 +2985,13 @@ html>body #reporttitle {
 	vertical-align : top;
     background:#ffffff;
 }
+
+.stretchToCell {
+	/* display: table-cell; */
+}
+
+.stretchRow {
+/* 	display: table ;
+ */	
+ /* width: 100%; */
+}

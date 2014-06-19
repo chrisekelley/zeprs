@@ -2667,3 +2667,17 @@ html>body #reporttitle {
 	vertical-align : top;
     background:#ffffff;
 }
+
+
+.stretchToCell {
+	 display: block; 
+	 /* width: 100%;  */
+	 overflow:auto;
+	 height:100%;
+}
+
+.stretchRow {
+	/*  display: table ; */
+	/* display: table-cell;  */
+	/* width: 100%;  */
+}

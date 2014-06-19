@@ -6,6 +6,7 @@
          <create creator="new" javascript="User" scope="session">
             <param name="class" value="org.cidrz.webapp.dynasite.remote.admin.User"/>
             <auth method="modifyUserGroup" role="CREATE_MEDICAL_STAFF_IDS_AND_PASSWORDS_FOR_MEDICAL_STAFF"/>
+            <auth method="updateUserInfo" role="CREATE_MEDICAL_STAFF_IDS_AND_PASSWORDS_FOR_MEDICAL_STAFF"/>
         </create>
     </allow>
 

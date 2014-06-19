@@ -111,4 +111,47 @@ public class User {
         }
         return result;
     }
+    
+    public static String updateUserInfo(String fieldName, String username, String value) {
+
+    	String result = fieldName + username + "=" + value;
+    	if (fieldName.equals("Password")) {
+        	if (value.length() < 8) {
+        		return fieldName + username + "=Error: Password must be at least 8 characters.";
+        	}
+    	}
+    	WebContext exec = WebContextFactory.get();
+    	String dbUser = null;
+    	Connection conn = null;
+    	try {
+    		try {
+    			dbUser = exec.getHttpServletRequest().getUserPrincipal().getName();
+            } catch (NullPointerException e) {
+                // unit testing - it's ok...
+            	dbUser = "demo";
+            }
+//            conn = DatabaseUtils.getZEPRSConnection(dbUser);
+            conn = DatabaseUtils.getSpecialRootConnection(dbUser);
+            if (fieldName.equals("Password")) {
+            	UserDAO.updatePassword(conn, username, value);
+            } else {
+            	UserDAO.updateUserInfo(conn, fieldName, username, value);
+            }
+			
+		} catch (SQLException e) {
+			log.error(e);
+			 result = fieldName + username + "=Error: " + e;
+		} catch (ServletException e) {
+			 result = fieldName + username + "=Error: " + e;
+		} finally {
+	            try {
+	                if (conn != null && !conn.isClosed()) {
+	                    conn.close();
+	                }
+	            } catch (SQLException e) {
+	                e.printStackTrace();
+	            }
+	        }
+		return result;
+    }
 }

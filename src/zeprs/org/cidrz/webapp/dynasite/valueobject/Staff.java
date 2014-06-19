@@ -29,6 +29,10 @@ public class Staff implements Serializable {
     private Long groupId;
     private String groupName;
     private List permissions;
+    private String password;
+    private String phone;
+    private String mobile;
+    private String email;
 
     public String getId() {
         return id;
@@ -77,4 +81,36 @@ public class Staff implements Serializable {
     public void setPermissions(List permissions) {
         this.permissions = permissions;
     }
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 }
