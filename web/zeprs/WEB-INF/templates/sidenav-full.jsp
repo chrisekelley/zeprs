@@ -146,8 +146,6 @@
                 </logic:present>
                 <li><html:link  action="/help.do">Help</html:link></li>
                 <li style="margin: 0px 0px 0px 5px;">&nbsp;</li>
-                <li><a href="http://192.168.20.6/mail" target="_top">Webmail</a></li>
-                <li><a href="http://192.168.20.6/training" target="_top">Training</a></li>
 
                <%-- <li style="margin: 0px 0px 0px 5px;">&nbsp;</li>
            <li><a href='<%= response.encodeURL(printTemplateURL) %>'>Print Version</a></li>--%>

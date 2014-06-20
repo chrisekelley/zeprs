@@ -64,8 +64,6 @@
             <li><html:link  href="/zeprs/referrals.do">Referrals</html:link></li>
             <li><html:link  href="/zeprs/help.do">Help</html:link></li>
             <li style="margin: 0px 0px 0px 5px;">&nbsp;</li>
-            <li><a href="http://${hostname}/mail" target="_top">Webmail</a></li>
-            <li><a href="http://${hostname}/training" target="_top">Training</a></li>
 
            <%-- <li style="margin: 0px 0px 0px 5px;">&nbsp;</li>
        <li><a href='<%= response.encodeURL(printTemplateURL) %>'>Print Version</a></li>--%>

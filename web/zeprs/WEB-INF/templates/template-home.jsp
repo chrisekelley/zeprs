@@ -74,8 +74,6 @@
                 <logic:present role="RUN_SITE_SETUP">
                 <li><a href="/zeprs/setup.do;jsessionid=${pageContext.request.session.id}">Setup</a></li>
                 </logic:present>
-                <li><a href="http://${hostname}/mail" target="_top">Webmail</a></li>
-                <li><a href="http://${hostname}/training" target="_top">Training</a></li>
                 <logic:present role="DELETE_ARCHIVE_PATIENT_RECORDS">
                 <li style="margin: 0px 0px 0px 5px;">&nbsp;</li>
                 <li><html:link action="/admin/home">Admin</html:link></li>

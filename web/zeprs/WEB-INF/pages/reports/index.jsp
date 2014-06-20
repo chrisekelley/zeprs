@@ -193,7 +193,6 @@
     <p><html:link action="archive">Record Modification Listing</html:link> - provides staff name and time that a record has been modified</p>
 
 <p><html:link action="reports/queryBuilder">Query Builder</html:link> - ad-hoc query interface</p>
-    <p>Daily generation of XML database files has been suspended. Please contact Chris - ckelley@rti.org - if you need this capability.</p>
 
     <%--<p>The reports linked below are provided in XML format - they can be opened in Excel as well as viewed in the browser. Right-click and save to your
         pc, then open in Excel. They are currently generated at 7 AM every day.</p>
