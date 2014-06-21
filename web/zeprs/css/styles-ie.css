@@ -2258,7 +2258,7 @@ font-weight: bold;
 #widePage {
     position: absolute;
     height: 550px;
-    width:725px;
+/*     width:725px; */
     top: 46px;
     left: 130px;
     font-family: Tahoma, Verdana, Arial, sans-serif;

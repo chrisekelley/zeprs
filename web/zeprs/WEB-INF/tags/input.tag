@@ -26,11 +26,14 @@ ${field.label}: <c:if test='${field.required}'><span class="asterix">*</span> </
     </c:when>
 <c:otherwise>
     <c:choose>
+    <c:when test="${field.id == '2158'}">
+    <input type="password" size="20" maxlength="30" name="${pageItem.currentFieldNameIdentifier}${recordForEncounter}${field.identifier}" id="${field.identifier}" autocomplete="off" value="${valueFromDb}"/> ${field.units}
+   	</c:when>
     <c:when test="${empty pageItem.size}">
     <html:text size="20" property="field${field.id}" styleId="field${field.id}"/> ${field.units}
     </c:when>
     <c:when test="${pageItem.maxlength==0}">
-    <html:text size="20" property="field${field.id}" styleId="field${field.id}"/> ${field.units}
+	<html:text size="20" property="field${field.id}" styleId="field${field.id}"/> ${field.units}
     </c:when>
     <c:otherwise>
         <c:choose>
