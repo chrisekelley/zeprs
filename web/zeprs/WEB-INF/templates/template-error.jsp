@@ -48,7 +48,7 @@
             <tr>
                 <td align="center" valign="middle" height="46" width="100" ><span class="serviceHeader"><a href="/zeprs/home.do;jsessionid=${pageContext.request.session.id}" border="0">ZEPRS</a></span></td>
                 <td class="bannerLabel">&nbsp;</td>
-                <td align="right"><a href="/zeprs/referrals.do;jsessionid=${pageContext.request.session.id}" target="_top">referrals</a> | <a href="http://${hostname}/mail" target="_top">webmail</a> | <a href="http://${hostname}/training" target="_top">training</a>&nbsp;&nbsp;</td>
+                <td align="right"><a href="/zeprs/referrals.do;jsessionid=${pageContext.request.session.id}" target="_top">referrals</a> &nbsp;&nbsp;&nbsp;</td>
             </tr>
         </table>
     </div>

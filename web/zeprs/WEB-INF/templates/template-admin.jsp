@@ -57,8 +57,8 @@
                 <td background="/zeprs/images/banner_bkgd.gif" class="bannerLabel">&nbsp;</td>
                 <td background="/zeprs/images/banner_bkgd.gif" align="right">
                 <logic:present role="ALTER_PROGRAMS_AND_SCREEN_APPEARANCE">
-                <html:link action="/admin/home">admin</html:link> |
-                </logic:present><a href="http://${hostname}/referral" target="_top">referral</a> | <a href="http://${hostname}/mail" target="_top">webmail</a> | <a href="http://${hostname}/training" target="_top">training</a>&nbsp;&nbsp;</td>
+                <html:link action="/admin/home">admin</html:link> &nbsp;&nbsp;&nbsp;
+                </logic:present>
             </tr>
         </table>
     </div>

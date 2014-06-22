@@ -145,7 +145,6 @@
                 <li><html:link  action="/reports.do">Reports</html:link></li>
                 </logic:present>
                 <li><html:link  action="/help.do">Help</html:link></li>
-                <li style="margin: 0px 0px 0px 5px;">&nbsp;</li>
 
                <%-- <li style="margin: 0px 0px 0px 5px;">&nbsp;</li>
            <li><a href='<%= response.encodeURL(printTemplateURL) %>'>Print Version</a></li>--%>
