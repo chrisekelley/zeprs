@@ -28,8 +28,10 @@
 <template:put name='header' content='Admin menu' direct='true'/>
 <template:put name='help' content='' direct='true'/>
 <template:put name='content' direct='true'>
+<strong>Clinic/UTH Admin Shortcuts</strong>
 <ul>
     <li><html:link action="/admin/restorePatient">Restore Patient</html:link></li>
+    <li><html:link action="/admin/users">Create and Modify Users and Group Assignments</html:link></li>
 </ul>
 <logic:present role="ALTER_PROGRAMS_AND_SCREEN_APPEARANCE">
 <strong>Admin Shortcuts</strong>

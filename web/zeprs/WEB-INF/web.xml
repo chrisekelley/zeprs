@@ -293,6 +293,20 @@
             <role-name>CREATE_MEDICAL_STAFF_IDS_AND_PASSWORDS_FOR_MEDICAL_STAFF</role-name>
         </auth-constraint>
     </security-constraint>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>user administration</web-resource-name>
+            <url-pattern>/admin/records/list.do</url-pattern>
+            <url-pattern>/dwruseradmin/*</url-pattern>
+            <url-pattern>/dwrdisplay/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>CREATE_MEDICAL_STAFF_IDS_AND_PASSWORDS_FOR_MEDICAL_STAFF</role-name>
+        </auth-constraint>
+    </security-constraint>
 
     <security-constraint>
         <web-resource-collection>
