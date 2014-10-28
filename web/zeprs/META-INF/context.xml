@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/zeprs" docBase="zeprs" debug="0" reloadable="false" crossContext="true" privileged="true" useNaming="true" cookies="false">
 
-<Realm className="org.rti.tools.tomcat.ZcoreUserGroupRoleRealm" username="zeprs_web_user" connectionPassword="**password**" connectionURL="jdbc:mysql://localhost/zeprs?autoReconnect=true" debug="99" driverName="com.mysql.jdbc.Driver" groupFK="group_id" groupPK="id" groupTable="user_group_membership" mysqlPassword="true" roleNameCol="role" userCredCol="password" userFK="id" userNameCol="username" userRoleTable="user_group_role" userTable="mail.accountuser" encryptionMethod="password"/>
+<Realm className="org.rti.tools.tomcat.ZcoreUserGroupRoleRealm" username="zeprs_web_user" connectionPassword="password" connectionURL="jdbc:mysql://localhost/zeprs?autoReconnect=true" debug="99" driverName="com.mysql.jdbc.Driver" groupFK="group_id" groupPK="id" groupTable="user_group_membership" mysqlPassword="true" roleNameCol="role" userCredCol="password" userFK="id" userNameCol="username" userRoleTable="user_group_role" userTable="mail.accountuser" encryptionMethod="password"/>
 
 <Resource name="jdbc/zeprsDB" auth="Container" type="javax.sql.DataSource"
 maxActive="50" maxIdle="5" maxWait="10000"
 validationQuery="SELECT 1" testOnBorrow="true" testWhileIdle="true" timeBetweenEvictionRunsMillis="120000"
 minEvictableIdleTimeMillis="60000"
-username="zeprs_web_user" password="**password**" driverClassName="com.mysql.jdbc.Driver"
+username="zeprs_web_user" password="password" driverClassName="com.mysql.jdbc.Driver"
 removeAbandoned="true" removeAbandonedTimeout="60" logAbandoned="true"
 url="jdbc:mysql://localhost:3306/zeprs"></Resource>
 

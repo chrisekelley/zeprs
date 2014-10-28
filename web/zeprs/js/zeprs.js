@@ -240,6 +240,7 @@ images[0].src = "/zeprs/images/plus.gif";
 images[1].src = "/zeprs/images/minus.gif";
 
 function toggleField(theField, visibleEnumIdTrigger, visibleDependency, fieldid) {
+
 	var cellType = "";
     if (theField == "dropdown")
     {
@@ -253,10 +254,10 @@ function toggleField(theField, visibleEnumIdTrigger, visibleDependency, fieldid)
     else if (theField == "Yes/No")
     {
         var master = document.getElementsByName("field" + fieldid);
-        if (master[0].checked == true) {
-            masterValue = master[0].value
-        } else {
-            masterValue = master[1].value
+        for (var x = 0; x < master.length; x ++) {
+        	if (master[x].checked) {
+        		masterValue = master[x].value
+        	}
         }
 
     }
@@ -269,6 +270,10 @@ function toggleField(theField, visibleEnumIdTrigger, visibleDependency, fieldid)
     {
         var master = document.getElementById("field" + fieldid);
         masterValue = master.value
+    } 
+    else {
+    	var master = document.getElementById("field" + fieldid);
+    	masterValue = master.value
     }
 
     var lvals = visibleDependency.split(",");

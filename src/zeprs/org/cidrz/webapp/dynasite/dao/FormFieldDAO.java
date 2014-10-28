@@ -477,7 +477,7 @@ public class FormFieldDAO {
         			} else if (database.equals("mssql")) {
         				dataType = "TEXT";
         			} else if (database.equals("mysql")) {
-        				dataType = "VARCHAR";
+        				dataType = "VARCHAR(255)";
         			}
         		}
         	} else if (fieldType.equals("Enum")) {
@@ -558,7 +558,7 @@ public class FormFieldDAO {
 			} else if (database.equals("mssql")) {
 	        	sql = "ALTER TABLE " + form.getName().toLowerCase() + " add " + fieldName + " " + dataType + "";
 			} else if (database.equals("mysql")) {
-	        	sql = "ALTER TABLE " + form.getName().toLowerCase() + " add column " + fieldName + " " + dataType + "";
+	        	sql = "ALTER TABLE zeprs." + form.getName() + " add column " + fieldName + " " + dataType + "";
 			}
 
         	DatabaseUtils.create(appConn, sql);

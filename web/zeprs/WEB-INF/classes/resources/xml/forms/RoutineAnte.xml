@@ -71,7 +71,7 @@
         <type>Integer</type>
         <required>false</required>
         <minValue>1</minValue>
-        <maxValue>350</maxValue>
+        <maxValue>0</maxValue>
         <units></units>
         <displayOrder>2147483647</displayOrder>
         <patientProperty></patientProperty>

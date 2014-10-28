@@ -737,7 +737,55 @@
     <demographicsForm>false</demographicsForm>
   </org.cidrz.webapp.dynasite.valueobject.Form>
   <org.cidrz.webapp.dynasite.valueobject.Form>
-    <name>user_info</name>
+    <name>uth_gyn_admission</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>uth_ob_admission</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>uth_ob_delivery</name>
+    <requireReauth>false</requireReauth>
+    <requirePatient>false</requirePatient>
+    <enabled>false</enabled>
+    <ruleDefinitions/>
+    <pageItems class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </pageItems>
+    <formfields class="tree-set">
+      <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+    </formfields>
+    <submissions>0</submissions>
+    <localeList/>
+    <demographicsForm>false</demographicsForm>
+  </org.cidrz.webapp.dynasite.valueobject.Form>
+  <org.cidrz.webapp.dynasite.valueobject.Form>
+    <name>uth_postnatal_discharge</name>
     <requireReauth>false</requireReauth>
     <requirePatient>false</requirePatient>
     <enabled>false</enabled>

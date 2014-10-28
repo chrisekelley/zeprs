@@ -8,14 +8,14 @@
   <enabled>true</enabled>
   <ruleDefinitions/>
   <flow>
-    <id>6</id>
-    <name>UTH Admissions</name>
-    <flowOrder>6</flowOrder>
+    <id>4</id>
+    <name>Delivery Summary/Postnatal</name>
+    <flowOrder>4</flowOrder>
     <forms class="tree-set">
       <comparator class="org.cidrz.webapp.dynasite.utils.sort.FlowOrderComparator"/>
     </forms>
   </flow>
-  <flowId>6</flowId>
+  <flowId>4</flowId>
   <flowOrder>3</flowOrder>
   <formType>
     <id>1</id>

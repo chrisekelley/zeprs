@@ -270,6 +270,7 @@
         <forward name="urinalysisError" path="/urinalysis.do"/>
         <forward name="homelink" path="/homelink.do" redirect="true"/>
         <forward name="admin/records/list" path="/admin/records/list.do" />
+        <forward name="admin/message" path="/admin/message.do" />
     </global-forwards>
 
     <action-mappings>
@@ -719,6 +720,12 @@
         <action path="/admin/sql/new" type="org.cidrz.webapp.dynasite.struts.action.admin.SqlAction"  parameter="org.cidrz.webapp.dynasite.valueobject.ApplicationUpdate">
             <forward name="success" path="/WEB-INF/pages/admin/sql.jsp"/>
         </action>
+        
+        <!-- General status   -->
+
+        <action path="/admin/message" type="org.cidrz.webapp.dynasite.struts.action.MessageAction" >
+            <forward name="success" path="/WEB-INF/pages/admin/message.jsp"/>
+        </action>
 
          <!-- admin appupdates  -->
 
@@ -792,6 +799,12 @@
 
 		<action path="/admin/setServerStatusMessage" type="org.cidrz.webapp.dynasite.struts.action.admin.SetServerStatusAction">
 		    <forward name="success" path="/WEB-INF/pages/success.jsp" />
+        </action>
+        
+		<!-- Verify Database Schema -->
+        
+		<action path="/admin/verifySchema" type="org.rti.zcore.dynasite.struts.VerifySchemaAction">
+            <forward name="success" path="/WEB-INF/pages/admin/message.jsp"/>
         </action>
 
 		<!-- compare databases -->

@@ -16,6 +16,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/WEB-INF/tlds/zeprs.tld" prefix="zeprs" %>
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
+<%@ taglib uri="/WEB-INF/tlds/struts-bean.tld" prefix="bean" %>
 
 <%
     List sites = DynaSiteObjects.getClinics();
@@ -122,6 +123,7 @@ Proceed to the "System State" link first.</p>-->
     <c:url value="dynagen.do" var="report"><c:param name="gen" value="8"/><c:param name="dev" value="true"/></c:url>
     <c:url value="dynagen.do" var="formChanges"><c:param name="gen" value="10"/></c:url>
     <li><a href='<c:out value="/zeprs/admin/${formChanges}"/>' onclick="return confirm('Generate source, SQL, struts-config, and xml files for all changed forms?');self.close();">Generate Form Changes</a></li>
+    <li><html:link action="/admin/verifySchema"><bean:message bundle="ApplicationResources" key="admin.index.database.update.schema"/></html:link> - <bean:message bundle="ApplicationResources" key="admin.index.database.update.schema.desc"/></li>
     <li><a href='<c:out value="/zeprs/admin/${all}"/>' onclick="return confirm('Generate source, SQL, struts-config, and xml files?');self.close();">Generate Dynasite Source for all forms</a>
         <ul>
             <li><a href='<c:out value="/zeprs/admin/${source}"/>' onclick="return confirm('Generate Only Dynasite source files?');self.close();">Generate Source Only</a></li>

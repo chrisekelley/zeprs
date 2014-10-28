@@ -487,22 +487,25 @@ public class DynasiteUtils {
 	 * @throws ServletException
 	 * @should return ArrayList
 	 */
-	public static ArrayList<String> verifySchema(Connection conn, Connection connZeprs, String username, String execute, String localeString)
+	public static ArrayList<String> verifySchema(Connection connAdmin, Connection connZeprs, String username, String execute, String localeString)
 			throws IOException, SQLException, ServletException, Exception {
 		//StringBuffer sbuf = new StringBuffer();
 		// Hack for ZEPRS
-		Connection connAdmin = conn;
+//		Connection connAdmin = conn;
 		ArrayList<String> missingCols = new ArrayList<String>();
 		String database = Constants.DATABASE_TYPE;
 		Publisher publisher = PubSubUtils.getPublisher();
 		List<Form> forms = null;
-		forms = FormDisplayDAO.getAllFormIds(conn);
+		forms = FormDisplayDAO.getAllFormIds(connAdmin);
 		for (int i = 0; i < forms.size(); i++) {
 			Form simpleForm = (Form) forms.get(i);
 			Form formObj = null;
 			try {
 				formObj = (Form) DynaSiteObjects.getForms().get(simpleForm.getId());
 				String tableName = formObj.getName().toUpperCase();
+				if (database.equals("mysql")) {
+    				tableName = formObj.getName();
+    			}
 				String sql = null;
 				if (database.equals("derby")) {
 					sql = "SELECT systabs.TABLENAME FROM SYS.SYSTABLES systabs " +
@@ -510,13 +513,13 @@ public class DynasiteUtils {
 				} else if (database.equals("mssql")) {
 					sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES systabs WHERE systabs.TABLE_NAME = ?";
 				} else if (database.equals("mysql")) {
-					//sql = "SELECT systabs.TABLENAME FROM SYS.SYSTABLES systabs WHERE systabs.TABLENAME = ?";
-					log.error("Must create SQL for MySQL");
+					sql = "SELECT systabs.TABLE_NAME FROM INFORMATION_SCHEMA.TABLES systabs WHERE systabs.TABLE_NAME = ?";
+//					log.error("Must create SQL for MySQL");
 				}
 
 				ArrayList values = new ArrayList();
 				values.add(tableName);
-				String dbTable = (String) DatabaseUtils.getScalar(conn, sql, values);
+				String dbTable = (String) DatabaseUtils.getScalar(connAdmin, sql, values);
 
 				// if this table does not exist, import it.
 				if (dbTable == null) {
@@ -541,13 +544,13 @@ public class DynasiteUtils {
 				} else if (database.equals("mssql")) {
 					sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ?";
 				} else if (database.equals("mysql")) {
-					log.error("Must create SQL for MySQL");
+					sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ?";
 				}
 				values = new ArrayList();
 				values.add(tableName);
 				ResultSetHandler h = new ArrayListHandler();
 		        QueryRunner run = new QueryRunner();
-		        List results = (List) run.query(conn, sql, values.toArray(), h);
+		        List results = (List) run.query(connAdmin, sql, values.toArray(), h);
 		        for (int j = 0; j < results.size(); j++) {
 		            Object[] keyVal = (Object[]) results.get(j);
 		            //map.put(keyVal[1], keyVal[0]);
@@ -562,11 +565,14 @@ public class DynasiteUtils {
 					FormField formField = pageItem.getForm_field();
 					if (formField.isEnabled() && !formField.getType().equals("Display")) {
 						String columnName = formField.getStarSchemaName().toUpperCase();
-						if (columnMap.get(columnName) == null) {
+						if (database.equals("mysql")) {
+							columnName = formField.getStarSchemaName();
+	        			}
+						if (columnMap.get(columnName.toUpperCase()) == null) {
 							missingCols.add(tableName + ":" + columnName);
 							if (execute != null) {
 								try {
-									FormFieldDAO.createColumn(conn, conn, formField, simpleForm.getId(), pageItem);
+									FormFieldDAO.createColumn(connAdmin, connZeprs, formField, simpleForm.getId(), pageItem);
 									columnMap.put(columnName, columnName);
 								} catch (Exception e) {
 									log.debug("Error while processing " + columnMap + ":" + columnName);
