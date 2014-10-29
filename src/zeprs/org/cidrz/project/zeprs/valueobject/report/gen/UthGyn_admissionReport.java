@@ -15,7 +15,7 @@ import java.util.TreeSet;
  *
  * @author Chris Kelley
  *         Date: 2014-10-28
- *         Time: 12:52:11
+ *         Time: 17:33:32
  *         Form Name: UTH  OB/GYN Visit Form [CO3]
  *         Form Id: 126
  */
@@ -150,10 +150,10 @@ private transient Integer resp_bpm;	//resp_bpm
 private String resp_bpmR;
 private transient Byte conscious;	//conscious
 private String consciousR;
-private transient Boolean jaundice;	//jaundice
-private String jaundiceR;
 private transient Integer gcs;	//gcs
 private String gcsR;
+private transient Boolean jaundice;	//jaundice
+private String jaundiceR;
 private transient Integer pallor;	//pallor
 private String pallorR;
 private transient Boolean cyanosis;	//cyanosis
@@ -216,7 +216,7 @@ private transient Integer hiv_rapid_results;	//hiv_rapid_results
 private String hiv_rapid_resultsR;
 private transient Integer rpr_results;	//rpr_results
 private String rpr_resultsR;
-private transient Boolean ultrasound_presentation;	//ultrasound_presentation
+private transient Integer ultrasound_presentation;	//ultrasound_presentation
 private String ultrasound_presentationR;
 private transient Integer ultrasound_placenta;	//ultrasound_placenta
 private String ultrasound_placentaR;
@@ -356,8 +356,8 @@ private transient Boolean vulvar_lesion;	//vulvar_lesion
 private String vulvar_lesionR;
 private transient String vulvar_lesion_txt;	//vulvar_lesion_txt
 private String vulvar_lesion_txtR;
-private transient Boolean cancer_bcouvv;	//cancer_bcouvv
-private String cancer_bcouvvR;
+private transient Integer cancer_type;	//cancer_type
+private String cancer_typeR;
 private transient Boolean cervicitis;	//cervicitis
 private String cervicitisR;
 private transient Boolean other_diagnosis1;	//other_diagnosis1
@@ -396,24 +396,26 @@ private transient Boolean fecal_incont;	//fecal_incont
 private String fecal_incontR;
 private transient Boolean urinary_incont;	//urinary_incont
 private String urinary_incontR;
-private transient Boolean infertility;	//Infertility
-private String infertilityR;
+private transient Integer infertility_type;	//infertility_type
+private String infertility_typeR;
 private transient Boolean leiomyomatous;	//Leiomyomatous
 private String leiomyomatousR;
 private transient Boolean menstrual_irreg;	//menstrual_irreg
 private String menstrual_irregR;
+private transient String menstrual_irregularity_txt;	//menstrual_irregularity_txt
+private String menstrual_irregularity_txtR;
 private transient Boolean molar_preg;	//molar_preg
 private String molar_pregR;
 private transient Boolean pelvic_abscess;	//pelvic_abscess
 private String pelvic_abscessR;
 private transient Boolean pelvic_prolapse;	//pelvic_prolapse
 private String pelvic_prolapseR;
+private transient Boolean pelvic_prolapse_anterior;	//pelvic_prolapse_anterior
+private String pelvic_prolapse_anteriorR;
 private transient Boolean pelvic_prolapse_ut;	//pelvic_prolapse_ut
 private String pelvic_prolapse_utR;
 private transient Boolean pelvic_prolapse_posteriour;	//pelvic_prolapse_posteriour
 private String pelvic_prolapse_posteriourR;
-private transient Boolean pelvic_prolapse_anterior;	//pelvic_prolapse_anterior
-private String pelvic_prolapse_anteriorR;
 private transient Boolean discharge;	//Discharge
 private String dischargeR;
 private transient Boolean admitObservation;	//AdmitObservation
@@ -1926,30 +1928,6 @@ private String uth_wardR;
 
  /**
   * @return
-  * @hibernate.property column="jaundice"
-  */
-    public Boolean getJaundice() {
-        return this.jaundice;
-    }
-
-    public void setJaundice(Boolean jaundice) {
-        this.jaundice = jaundice;
-    }
-
-
-
-    public String getJaundiceR() {
-        return this.jaundiceR;
-    }
-
-    public void setJaundiceR(String jaundiceR) {
-        this.jaundiceR = jaundiceR;
-    }
-
-
-
- /**
-  * @return
   * @hibernate.property column="gcs"
   */
     public Integer getGcs() {
@@ -1968,6 +1946,30 @@ private String uth_wardR;
 
     public void setGcsR(String gcsR) {
         this.gcsR = gcsR;
+    }
+
+
+
+ /**
+  * @return
+  * @hibernate.property column="jaundice"
+  */
+    public Boolean getJaundice() {
+        return this.jaundice;
+    }
+
+    public void setJaundice(Boolean jaundice) {
+        this.jaundice = jaundice;
+    }
+
+
+
+    public String getJaundiceR() {
+        return this.jaundiceR;
+    }
+
+    public void setJaundiceR(String jaundiceR) {
+        this.jaundiceR = jaundiceR;
     }
 
 
@@ -2720,11 +2722,11 @@ private String uth_wardR;
   * @return
   * @hibernate.property column="ultrasound_presentation"
   */
-    public Boolean getUltrasound_presentation() {
+    public Integer getUltrasound_presentation() {
         return this.ultrasound_presentation;
     }
 
-    public void setUltrasound_presentation(Boolean ultrasound_presentation) {
+    public void setUltrasound_presentation(Integer ultrasound_presentation) {
         this.ultrasound_presentation = ultrasound_presentation;
     }
 
@@ -4398,24 +4400,24 @@ private String uth_wardR;
 
  /**
   * @return
-  * @hibernate.property column="cancer_bcouvv"
+  * @hibernate.property column="cancer_type"
   */
-    public Boolean getCancer_bcouvv() {
-        return this.cancer_bcouvv;
+    public Integer getCancer_type() {
+        return this.cancer_type;
     }
 
-    public void setCancer_bcouvv(Boolean cancer_bcouvv) {
-        this.cancer_bcouvv = cancer_bcouvv;
+    public void setCancer_type(Integer cancer_type) {
+        this.cancer_type = cancer_type;
     }
 
 
 
-    public String getCancer_bcouvvR() {
-        return this.cancer_bcouvvR;
+    public String getCancer_typeR() {
+        return this.cancer_typeR;
     }
 
-    public void setCancer_bcouvvR(String cancer_bcouvvR) {
-        this.cancer_bcouvvR = cancer_bcouvvR;
+    public void setCancer_typeR(String cancer_typeR) {
+        this.cancer_typeR = cancer_typeR;
     }
 
 
@@ -4878,24 +4880,24 @@ private String uth_wardR;
 
  /**
   * @return
-  * @hibernate.property column="Infertility"
+  * @hibernate.property column="infertility_type"
   */
-    public Boolean getInfertility() {
-        return this.infertility;
+    public Integer getInfertility_type() {
+        return this.infertility_type;
     }
 
-    public void setInfertility(Boolean infertility) {
-        this.infertility = infertility;
+    public void setInfertility_type(Integer infertility_type) {
+        this.infertility_type = infertility_type;
     }
 
 
 
-    public String getInfertilityR() {
-        return this.infertilityR;
+    public String getInfertility_typeR() {
+        return this.infertility_typeR;
     }
 
-    public void setInfertilityR(String infertilityR) {
-        this.infertilityR = infertilityR;
+    public void setInfertility_typeR(String infertility_typeR) {
+        this.infertility_typeR = infertility_typeR;
     }
 
 
@@ -4944,6 +4946,30 @@ private String uth_wardR;
 
     public void setMenstrual_irregR(String menstrual_irregR) {
         this.menstrual_irregR = menstrual_irregR;
+    }
+
+
+
+ /**
+  * @return
+  * @hibernate.property column="menstrual_irregularity_txt"
+  */
+    public String getMenstrual_irregularity_txt() {
+        return this.menstrual_irregularity_txt;
+    }
+
+    public void setMenstrual_irregularity_txt(String menstrual_irregularity_txt) {
+        this.menstrual_irregularity_txt = menstrual_irregularity_txt;
+    }
+
+
+
+    public String getMenstrual_irregularity_txtR() {
+        return this.menstrual_irregularity_txtR;
+    }
+
+    public void setMenstrual_irregularity_txtR(String menstrual_irregularity_txtR) {
+        this.menstrual_irregularity_txtR = menstrual_irregularity_txtR;
     }
 
 
@@ -5022,6 +5048,30 @@ private String uth_wardR;
 
  /**
   * @return
+  * @hibernate.property column="pelvic_prolapse_anterior"
+  */
+    public Boolean getPelvic_prolapse_anterior() {
+        return this.pelvic_prolapse_anterior;
+    }
+
+    public void setPelvic_prolapse_anterior(Boolean pelvic_prolapse_anterior) {
+        this.pelvic_prolapse_anterior = pelvic_prolapse_anterior;
+    }
+
+
+
+    public String getPelvic_prolapse_anteriorR() {
+        return this.pelvic_prolapse_anteriorR;
+    }
+
+    public void setPelvic_prolapse_anteriorR(String pelvic_prolapse_anteriorR) {
+        this.pelvic_prolapse_anteriorR = pelvic_prolapse_anteriorR;
+    }
+
+
+
+ /**
+  * @return
   * @hibernate.property column="pelvic_prolapse_ut"
   */
     public Boolean getPelvic_prolapse_ut() {
@@ -5064,30 +5114,6 @@ private String uth_wardR;
 
     public void setPelvic_prolapse_posteriourR(String pelvic_prolapse_posteriourR) {
         this.pelvic_prolapse_posteriourR = pelvic_prolapse_posteriourR;
-    }
-
-
-
- /**
-  * @return
-  * @hibernate.property column="pelvic_prolapse_anterior"
-  */
-    public Boolean getPelvic_prolapse_anterior() {
-        return this.pelvic_prolapse_anterior;
-    }
-
-    public void setPelvic_prolapse_anterior(Boolean pelvic_prolapse_anterior) {
-        this.pelvic_prolapse_anterior = pelvic_prolapse_anterior;
-    }
-
-
-
-    public String getPelvic_prolapse_anteriorR() {
-        return this.pelvic_prolapse_anteriorR;
-    }
-
-    public void setPelvic_prolapse_anteriorR(String pelvic_prolapse_anteriorR) {
-        this.pelvic_prolapse_anteriorR = pelvic_prolapse_anteriorR;
     }
 
 

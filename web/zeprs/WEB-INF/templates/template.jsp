@@ -25,7 +25,8 @@
         <script language="JavaScript" type="text/javascript">
             //<![CDATA[
             var output = '';
-            if (browser.isGecko) {
+            if (browser.isGecko || browser.isSafari) 
+            {
             output += '<link rel="stylesheet" href="/zeprs/css/styles-moz.css;jsessionid=${pageContext.request.session.id}" charset="ISO-8859-1" type="text/css">';
             } else {
             output += '<link rel="stylesheet" href="/zeprs/css/styles-ie.css;jsessionid=${pageContext.request.session.id}" charset="ISO-8859-1" type="text/css">';

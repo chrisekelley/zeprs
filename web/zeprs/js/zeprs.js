@@ -271,6 +271,10 @@ function toggleField(theField, visibleEnumIdTrigger, visibleDependency, fieldid)
         var master = document.getElementById("field" + fieldid);
         masterValue = master.value
     } 
+    else if (theField == "link")
+    {
+    	masterValue = 1
+    }
     else {
     	var master = document.getElementById("field" + fieldid);
     	masterValue = master.value

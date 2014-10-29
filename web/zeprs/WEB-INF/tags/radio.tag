@@ -5,7 +5,7 @@
 <%@ attribute name="edit" required="true" type="java.lang.String" %>
 <c:set var="field" value="${pageItem.form_field}" />
 <div class="row"><span class="labelNoBold">${field.label}: <c:if test='${field.required}'><span class="asterix">*</span> </c:if></span>
-<span class="formw">
+<span class="form">
 <c:forEach var="enum" begin="0" items="${field.enumerations}"  varStatus="ctr">
     <c:choose>
            <%--<c:when test="${(pageItem.visibleEnumIdTrigger1 > 0) && (pageItem.visibleEnumIdTrigger2 > 0)}">

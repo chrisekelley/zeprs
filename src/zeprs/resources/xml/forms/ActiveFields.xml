@@ -1078,24 +1078,6 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2362</id>
-    <label>Adnexa</label>
-    <type>Text</type>
-    <required>false</required>
-    <minValue>0</minValue>
-    <maxValue>0</maxValue>
-    <units></units>
-    <displayOrder>2147483647</displayOrder>
-    <patientProperty></patientProperty>
-    <isEnabled>true</isEnabled>
-    <ruleDefinitions/>
-    <enumerations/>
-    <shared>false</shared>
-    <starSchemaName>adnexa_txt</starSchemaName>
-    <encounterRecordproperty></encounterRecordproperty>
-    <patientStatusproperty></patientStatusproperty>
-  </org.cidrz.webapp.dynasite.valueobject.FormField>
-  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>189</id>
     <label>Adnexa</label>
     <type>Enum</type>
@@ -1128,6 +1110,24 @@
     <enumerations/>
     <shared>true</shared>
     <starSchemaName>adnexa_abnormal_190</starSchemaName>
+    <encounterRecordproperty></encounterRecordproperty>
+    <patientStatusproperty></patientStatusproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2362</id>
+    <label>Adnexa, describe</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <patientProperty></patientProperty>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>adnexa_txt</starSchemaName>
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
@@ -3915,42 +3915,6 @@
     <patientLabproperty></patientLabproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2332</id>
-    <label>BP Hg</label>
-    <type>Integer</type>
-    <required>false</required>
-    <minValue>0</minValue>
-    <maxValue>0</maxValue>
-    <units></units>
-    <displayOrder>2147483647</displayOrder>
-    <patientProperty></patientProperty>
-    <isEnabled>true</isEnabled>
-    <ruleDefinitions/>
-    <enumerations/>
-    <shared>false</shared>
-    <starSchemaName>bp_hg</starSchemaName>
-    <encounterRecordproperty></encounterRecordproperty>
-    <patientStatusproperty></patientStatusproperty>
-  </org.cidrz.webapp.dynasite.valueobject.FormField>
-  <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2331</id>
-    <label>BP mm Hg</label>
-    <type>Integer</type>
-    <required>false</required>
-    <minValue>0</minValue>
-    <maxValue>0</maxValue>
-    <units></units>
-    <displayOrder>2147483647</displayOrder>
-    <patientProperty></patientProperty>
-    <isEnabled>true</isEnabled>
-    <ruleDefinitions/>
-    <enumerations/>
-    <shared>false</shared>
-    <starSchemaName>bp_mm</starSchemaName>
-    <encounterRecordproperty></encounterRecordproperty>
-    <patientStatusproperty></patientStatusproperty>
-  </org.cidrz.webapp.dynasite.valueobject.FormField>
-  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>407</id>
     <label>BP Time Entered</label>
     <type>Time</type>
@@ -3964,6 +3928,24 @@
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
     <patientLabproperty></patientLabproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2332</id>
+    <label>BP: Dia.</label>
+    <type>Integer</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units>mm/hg</units>
+    <displayOrder>2147483647</displayOrder>
+    <patientProperty></patientProperty>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>bp_hg</starSchemaName>
+    <encounterRecordproperty></encounterRecordproperty>
+    <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>225</id>
@@ -4097,6 +4079,24 @@
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
     <patientLabproperty></patientLabproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2331</id>
+    <label>BP: Sys.</label>
+    <type>Integer</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units>mm/hg</units>
+    <displayOrder>2147483647</displayOrder>
+    <patientProperty></patientProperty>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>bp_mm</starSchemaName>
+    <encounterRecordproperty></encounterRecordproperty>
+    <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>224</id>
@@ -4610,9 +4610,9 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2290</id>
-    <label>Cancer Breast Cervical Ov Ut Vag Vulv</label>
-    <type>Boolean</type>
+    <id>2938</id>
+    <label>Cancer</label>
+    <type>Enum</type>
     <required>false</required>
     <minValue>0</minValue>
     <maxValue>0</maxValue>
@@ -4623,7 +4623,7 @@
     <ruleDefinitions/>
     <enumerations/>
     <shared>false</shared>
-    <starSchemaName>cancer_bcouvv</starSchemaName>
+    <starSchemaName>cancer_type</starSchemaName>
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
@@ -5107,7 +5107,7 @@
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2359</id>
-    <label>Cervix_txt</label>
+    <label>Cervix, describe</label>
     <type>Text</type>
     <required>false</required>
     <minValue>0</minValue>
@@ -16789,9 +16789,9 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2214</id>
+    <id>2939</id>
     <label>Infertility</label>
-    <type>Yes/No</type>
+    <type>Enum</type>
     <required>false</required>
     <minValue>0</minValue>
     <maxValue>0</maxValue>
@@ -16802,14 +16802,14 @@
     <ruleDefinitions/>
     <enumerations/>
     <shared>false</shared>
-    <starSchemaName>Infertility</starSchemaName>
+    <starSchemaName>infertility_type</starSchemaName>
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2310</id>
-    <label>Infertility Primary Secondary</label>
-    <type>Boolean</type>
+    <id>2214</id>
+    <label>Infertility</label>
+    <type>Yes/No</type>
     <required>false</required>
     <minValue>0</minValue>
     <maxValue>0</maxValue>
@@ -19711,7 +19711,7 @@
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2312</id>
-    <label>Menstrual irregularity Specify</label>
+    <label>Menstrual irregularity</label>
     <type>Boolean</type>
     <required>false</required>
     <minValue>0</minValue>
@@ -19724,6 +19724,24 @@
     <enumerations/>
     <shared>false</shared>
     <starSchemaName>menstrual_irreg</starSchemaName>
+    <encounterRecordproperty></encounterRecordproperty>
+    <patientStatusproperty></patientStatusproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2940</id>
+    <label>Menstrual irregularity, Specify</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <patientProperty></patientProperty>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>menstrual_irregularity_txt</starSchemaName>
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
@@ -23664,7 +23682,7 @@
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2314</id>
-    <label>Pelvic abscess PID Peritonitis</label>
+    <label>Pelvic abscess/PID/Peritonitis</label>
     <type>Boolean</type>
     <required>false</required>
     <minValue>0</minValue>
@@ -27158,12 +27176,12 @@
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2334</id>
-    <label>Resp bpm</label>
+    <label>Resp</label>
     <type>Integer</type>
     <required>false</required>
     <minValue>0</minValue>
     <maxValue>0</maxValue>
-    <units></units>
+    <units>bpm</units>
     <displayOrder>2147483647</displayOrder>
     <patientProperty></patientProperty>
     <isEnabled>true</isEnabled>
@@ -34558,6 +34576,24 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2356</id>
+    <label>Vagina, describe</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <patientProperty></patientProperty>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>vagina_txt</starSchemaName>
+    <encounterRecordproperty></encounterRecordproperty>
+    <patientStatusproperty></patientStatusproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2590</id>
     <label>Vaginal</label>
     <type>Boolean</type>
@@ -34808,24 +34844,6 @@
     <enumerations/>
     <shared>true</shared>
     <starSchemaName>vaginal_thrush_diag</starSchemaName>
-    <encounterRecordproperty></encounterRecordproperty>
-    <patientStatusproperty></patientStatusproperty>
-  </org.cidrz.webapp.dynasite.valueobject.FormField>
-  <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2356</id>
-    <label>vagina_txt</label>
-    <type>Text</type>
-    <required>false</required>
-    <minValue>0</minValue>
-    <maxValue>0</maxValue>
-    <units></units>
-    <displayOrder>2147483647</displayOrder>
-    <patientProperty></patientProperty>
-    <isEnabled>true</isEnabled>
-    <ruleDefinitions/>
-    <enumerations/>
-    <shared>false</shared>
-    <starSchemaName>vagina_txt</starSchemaName>
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
@@ -35090,6 +35108,24 @@
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
+    <id>2328</id>
+    <label>Vulva, describe</label>
+    <type>Text</type>
+    <required>false</required>
+    <minValue>0</minValue>
+    <maxValue>0</maxValue>
+    <units></units>
+    <displayOrder>2147483647</displayOrder>
+    <patientProperty></patientProperty>
+    <isEnabled>true</isEnabled>
+    <ruleDefinitions/>
+    <enumerations/>
+    <shared>false</shared>
+    <starSchemaName>vulva_txt</starSchemaName>
+    <encounterRecordproperty></encounterRecordproperty>
+    <patientStatusproperty></patientStatusproperty>
+  </org.cidrz.webapp.dynasite.valueobject.FormField>
+  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2229</id>
     <label>Vulvar growth</label>
     <type>Boolean</type>
@@ -35194,24 +35230,6 @@
     <enumerations/>
     <shared>false</shared>
     <starSchemaName>vulvar_lesion_txt</starSchemaName>
-    <encounterRecordproperty></encounterRecordproperty>
-    <patientStatusproperty></patientStatusproperty>
-  </org.cidrz.webapp.dynasite.valueobject.FormField>
-  <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2328</id>
-    <label>Vulva_txt</label>
-    <type>Text</type>
-    <required>false</required>
-    <minValue>0</minValue>
-    <maxValue>0</maxValue>
-    <units></units>
-    <displayOrder>2147483647</displayOrder>
-    <patientProperty></patientProperty>
-    <isEnabled>true</isEnabled>
-    <ruleDefinitions/>
-    <enumerations/>
-    <shared>false</shared>
-    <starSchemaName>vulva_txt</starSchemaName>
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>

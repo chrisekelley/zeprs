@@ -24568,4 +24568,76 @@
     <concatEnumNumeric>Not available (3)</concatEnumNumeric>
     <displayOrder>3</displayOrder>
   </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3455</id>
+    <fieldId>2938</fieldId>
+    <enumeration>Breast</enumeration>
+    <numericValue>0</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Breast (0)</concatEnumNumeric>
+    <displayOrder>0</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3456</id>
+    <fieldId>2938</fieldId>
+    <enumeration>Cervical</enumeration>
+    <numericValue>1</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Cervical (1)</concatEnumNumeric>
+    <displayOrder>1</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3457</id>
+    <fieldId>2938</fieldId>
+    <enumeration>Ov</enumeration>
+    <numericValue>2</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Ov (2)</concatEnumNumeric>
+    <displayOrder>2</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3458</id>
+    <fieldId>2938</fieldId>
+    <enumeration>Ut</enumeration>
+    <numericValue>3</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Ut (3)</concatEnumNumeric>
+    <displayOrder>3</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3459</id>
+    <fieldId>2938</fieldId>
+    <enumeration>Vag</enumeration>
+    <numericValue>4</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Vag (4)</concatEnumNumeric>
+    <displayOrder>4</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3460</id>
+    <fieldId>2938</fieldId>
+    <enumeration>Vulv</enumeration>
+    <numericValue>5</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Vulv (5)</concatEnumNumeric>
+    <displayOrder>5</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3461</id>
+    <fieldId>2939</fieldId>
+    <enumeration>Primary</enumeration>
+    <numericValue>0</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Primary (0)</concatEnumNumeric>
+    <displayOrder>0</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3462</id>
+    <fieldId>2939</fieldId>
+    <enumeration>Secondary</enumeration>
+    <numericValue>1</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Secondary (1)</concatEnumNumeric>
+    <displayOrder>1</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
 </list>

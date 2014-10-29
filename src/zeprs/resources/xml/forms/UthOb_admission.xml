@@ -8214,7 +8214,7 @@
     <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
   </formfields>
   <submissions>0</submissions>
-  <maxSubmissions>0</maxSubmissions>
+  <maxSubmissions>1000</maxSubmissions>
   <localeList/>
   <demographicsForm>false</demographicsForm>
 </org.cidrz.webapp.dynasite.valueobject.Form>

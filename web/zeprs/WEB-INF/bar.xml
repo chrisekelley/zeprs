@@ -5892,7 +5892,7 @@
           <var-name>max</var-name>
           <var-value>2147483647</var-value>
         </var>
-        <arg0 key="BP mm Hg" resource="false"/>
+        <arg0 key="BP: Sys." resource="false"/>
       </field>
       <field property="field2332" depends="integer,intRange">
         <arg1 name="intRange" key="${var:min}" resource="false"/>
@@ -5905,7 +5905,7 @@
           <var-name>max</var-name>
           <var-value>2147483647</var-value>
         </var>
-        <arg0 key="BP Hg" resource="false"/>
+        <arg0 key="BP: Dia." resource="false"/>
       </field>
       <field property="field2333" depends="integer,intRange">
         <arg1 name="intRange" key="${var:min}" resource="false"/>
@@ -5931,13 +5931,10 @@
           <var-name>max</var-name>
           <var-value>2147483647</var-value>
         </var>
-        <arg0 key="Resp bpm" resource="false"/>
+        <arg0 key="Resp" resource="false"/>
       </field>
       <field property="field2336">
         <arg0 key="Conscious" resource="false"/>
-      </field>
-      <field property="field2338">
-        <arg0 key="Jaundice" resource="false"/>
       </field>
       <field property="field2337" depends="integer,intRange">
         <arg1 name="intRange" key="${var:min}" resource="false"/>
@@ -5951,6 +5948,9 @@
           <var-value>2147483647</var-value>
         </var>
         <arg0 key="GCS" resource="false"/>
+      </field>
+      <field property="field2338">
+        <arg0 key="Jaundice" resource="false"/>
       </field>
       <field property="field2340">
         <arg0 key="Pallor" resource="false"/>
@@ -5968,7 +5968,7 @@
         <arg0 key="Vulva" resource="false"/>
       </field>
       <field property="field2328">
-        <arg0 key="Vulva_txt" resource="false"/>
+        <arg0 key="Vulva, describe" resource="false"/>
       </field>
       <field property="field2329">
         <arg0 key="Breast" resource="false"/>
@@ -5986,7 +5986,7 @@
         <arg0 key="Vagina" resource="false"/>
       </field>
       <field property="field2356">
-        <arg0 key="vagina_txt" resource="false"/>
+        <arg0 key="Vagina, describe" resource="false"/>
       </field>
       <field property="field2344">
         <arg0 key="Chest Lungs" resource="false"/>
@@ -6004,7 +6004,7 @@
         <arg0 key="Cervix" resource="false"/>
       </field>
       <field property="field2359">
-        <arg0 key="Cervix_txt" resource="false"/>
+        <arg0 key="Cervix, describe" resource="false"/>
       </field>
       <field property="field2348">
         <arg0 key="Extremities" resource="false"/>
@@ -6037,7 +6037,7 @@
         <arg0 key="Adnexa" resource="false"/>
       </field>
       <field property="field2362">
-        <arg0 key="Adnexa" resource="false"/>
+        <arg0 key="Adnexa, describe" resource="false"/>
       </field>
       <field property="field2419">
         <arg0 key="HIV rapid Results" resource="false"/>
@@ -6255,8 +6255,8 @@
       <field property="field2289">
         <arg0 key="Vulvar_lesion_specify_txt" resource="false"/>
       </field>
-      <field property="field2290">
-        <arg0 key="Cancer Breast Cervical Ov Ut Vag Vulv" resource="false"/>
+      <field property="field2938">
+        <arg0 key="Cancer" resource="false"/>
       </field>
       <field property="field2291">
         <arg0 key="Cervicitis" resource="false"/>
@@ -6315,32 +6315,35 @@
       <field property="field2308">
         <arg0 key="Urinary" resource="false"/>
       </field>
-      <field property="field2310">
-        <arg0 key="Infertility Primary Secondary" resource="false"/>
+      <field property="field2939">
+        <arg0 key="Infertility" resource="false"/>
       </field>
       <field property="field2311">
         <arg0 key="Leiomyomatous uterus fibroids" resource="false"/>
       </field>
       <field property="field2312">
-        <arg0 key="Menstrual irregularity Specify" resource="false"/>
+        <arg0 key="Menstrual irregularity" resource="false"/>
+      </field>
+      <field property="field2940">
+        <arg0 key="Menstrual irregularity, Specify" resource="false"/>
       </field>
       <field property="field2313">
         <arg0 key="Molar pregnancy" resource="false"/>
       </field>
       <field property="field2314">
-        <arg0 key="Pelvic abscess PID Peritonitis" resource="false"/>
+        <arg0 key="Pelvic abscess/PID/Peritonitis" resource="false"/>
       </field>
       <field property="field2315">
         <arg0 key="Pelvic organ prolapse" resource="false"/>
+      </field>
+      <field property="field2316">
+        <arg0 key="Anterior" resource="false"/>
       </field>
       <field property="field2317">
         <arg0 key="Ut" resource="false"/>
       </field>
       <field property="field2318">
         <arg0 key="Posterior" resource="false"/>
-      </field>
-      <field property="field2316">
-        <arg0 key="Anterior" resource="false"/>
       </field>
       <field property="field2201">
         <arg0 key="Discharge Home" resource="false"/>

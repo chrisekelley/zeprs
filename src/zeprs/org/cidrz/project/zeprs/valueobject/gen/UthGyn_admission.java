@@ -16,7 +16,7 @@ import java.util.TreeSet;
  *
  * @author Chris Kelley
  *         Date: 2014-10-28
- *         Time: 12:52:09
+ *         Time: 17:33:30
  *         Form Name: UTH  OB/GYN Visit Form [CO3]
  *         Form Id: 126
  */
@@ -89,8 +89,8 @@ private Integer field2332;	//bp_hg
 private Integer field2333;	//pulse_bpm
 private Integer field2334;	//resp_bpm
 private Byte field2336;	//conscious
-private Boolean field2338;	//jaundice
 private Integer field2337;	//gcs
+private Boolean field2338;	//jaundice
 private Integer field2340;	//pallor
 private Boolean field2341;	//cyanosis
 private Boolean field2325;	//heentthyroid
@@ -122,7 +122,7 @@ private Boolean field2361;	//adnexa
 private String field2362;	//adnexa_txt
 private Integer field2419;	//hiv_rapid_results
 private Integer field2420;	//rpr_results
-private Boolean field2421;	//ultrasound_presentation
+private Integer field2421;	//ultrasound_presentation
 private Integer field2422;	//ultrasound_placenta
 private Integer field2423;	//ultrasound_fhts
 private String field2424;	//invest_other
@@ -192,7 +192,7 @@ private Boolean field2286;	//abscess
 private Boolean field2287;	//cyst
 private Boolean field2288;	//vulvar_lesion
 private String field2289;	//vulvar_lesion_txt
-private Boolean field2290;	//cancer_bcouvv
+private Integer field2938;	//cancer_type
 private Boolean field2291;	//cervicitis
 private Boolean field2292;	//other_diagnosis1
 private String field2293;	//other_diagnosis_txt1
@@ -212,15 +212,16 @@ private Boolean field2306;	//gastroenteritis
 private Boolean field2309;	//incontinence
 private Boolean field2307;	//fecal_incont
 private Boolean field2308;	//urinary_incont
-private Boolean field2310;	//Infertility
+private Integer field2939;	//infertility_type
 private Boolean field2311;	//Leiomyomatous
 private Boolean field2312;	//menstrual_irreg
+private String field2940;	//menstrual_irregularity_txt
 private Boolean field2313;	//molar_preg
 private Boolean field2314;	//pelvic_abscess
 private Boolean field2315;	//pelvic_prolapse
+private Boolean field2316;	//pelvic_prolapse_anterior
 private Boolean field2317;	//pelvic_prolapse_ut
 private Boolean field2318;	//pelvic_prolapse_posteriour
-private Boolean field2316;	//pelvic_prolapse_anterior
 private Boolean field2201;	//Discharge
 private Boolean field2202;	//AdmitObservation
 private Boolean field2207;	//AdmitCWard
@@ -1227,22 +1228,6 @@ private Integer field1841;	//uth_ward
 
  /**
   * @return
-  * @hibernate.property column="jaundice"
-  */
-    public Boolean getField2338() {
-        return this.field2338;
-    }
-
-    public void setField2338(Boolean field2338) {
-        this.field2338 = field2338;
-    }
-
-
-
-
-
- /**
-  * @return
   * @hibernate.property column="gcs"
   */
     public Integer getField2337() {
@@ -1251,6 +1236,22 @@ private Integer field1841;	//uth_ward
 
     public void setField2337(Integer field2337) {
         this.field2337 = field2337;
+    }
+
+
+
+
+
+ /**
+  * @return
+  * @hibernate.property column="jaundice"
+  */
+    public Boolean getField2338() {
+        return this.field2338;
+    }
+
+    public void setField2338(Boolean field2338) {
+        this.field2338 = field2338;
     }
 
 
@@ -1757,11 +1758,11 @@ private Integer field1841;	//uth_ward
   * @return
   * @hibernate.property column="ultrasound_presentation"
   */
-    public Boolean getField2421() {
+    public Integer getField2421() {
         return this.field2421;
     }
 
-    public void setField2421(Boolean field2421) {
+    public void setField2421(Integer field2421) {
         this.field2421 = field2421;
     }
 
@@ -2875,14 +2876,14 @@ private Integer field1841;	//uth_ward
 
  /**
   * @return
-  * @hibernate.property column="cancer_bcouvv"
+  * @hibernate.property column="cancer_type"
   */
-    public Boolean getField2290() {
-        return this.field2290;
+    public Integer getField2938() {
+        return this.field2938;
     }
 
-    public void setField2290(Boolean field2290) {
-        this.field2290 = field2290;
+    public void setField2938(Integer field2938) {
+        this.field2938 = field2938;
     }
 
 
@@ -3195,14 +3196,14 @@ private Integer field1841;	//uth_ward
 
  /**
   * @return
-  * @hibernate.property column="Infertility"
+  * @hibernate.property column="infertility_type"
   */
-    public Boolean getField2310() {
-        return this.field2310;
+    public Integer getField2939() {
+        return this.field2939;
     }
 
-    public void setField2310(Boolean field2310) {
-        this.field2310 = field2310;
+    public void setField2939(Integer field2939) {
+        this.field2939 = field2939;
     }
 
 
@@ -3235,6 +3236,22 @@ private Integer field1841;	//uth_ward
 
     public void setField2312(Boolean field2312) {
         this.field2312 = field2312;
+    }
+
+
+
+
+
+ /**
+  * @return
+  * @hibernate.property column="menstrual_irregularity_txt"
+  */
+    public String getField2940() {
+        return this.field2940;
+    }
+
+    public void setField2940(String field2940) {
+        this.field2940 = field2940;
     }
 
 
@@ -3291,6 +3308,22 @@ private Integer field1841;	//uth_ward
 
  /**
   * @return
+  * @hibernate.property column="pelvic_prolapse_anterior"
+  */
+    public Boolean getField2316() {
+        return this.field2316;
+    }
+
+    public void setField2316(Boolean field2316) {
+        this.field2316 = field2316;
+    }
+
+
+
+
+
+ /**
+  * @return
   * @hibernate.property column="pelvic_prolapse_ut"
   */
     public Boolean getField2317() {
@@ -3315,22 +3348,6 @@ private Integer field1841;	//uth_ward
 
     public void setField2318(Boolean field2318) {
         this.field2318 = field2318;
-    }
-
-
-
-
-
- /**
-  * @return
-  * @hibernate.property column="pelvic_prolapse_anterior"
-  */
-    public Boolean getField2316() {
-        return this.field2316;
-    }
-
-    public void setField2316(Boolean field2316) {
-        this.field2316 = field2316;
     }
 
 

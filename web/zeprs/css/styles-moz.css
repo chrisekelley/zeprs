@@ -1267,6 +1267,11 @@ div.row span.formw {
   vertical-align : top;
   font-size: 8pt;
   }
+  
+div.row span.form {
+  text-align: left;
+  font-size: 8pt;
+  }
 
 div.row span.select {
   float: left;
