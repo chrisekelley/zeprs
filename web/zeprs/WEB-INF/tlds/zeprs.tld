@@ -47,6 +47,11 @@
         <name>radio_vert</name>
         <path>/WEB-INF/tags/radio_vert.tag</path>
     </tag-file>
+    
+    <tag-file>
+        <name>radio_vert_alternate</name>
+        <path>/WEB-INF/tags/radio_vert_alternate.tag</path>
+    </tag-file>
 
     <tag-file>
         <name>radio_no_label</name>

@@ -166,7 +166,7 @@ public class WidgetUtils {
         }
 
         // some widgets are shared
-        if (inputType.equals("radio")) {
+        if (inputType.equals("radio") || inputType.equals("radio-table") || inputType.equals("radio_vert") || inputType.equals("radio_vert_alternate")) {
             inputType = "select";
         }
 

@@ -170,6 +170,7 @@ Disabled fields are in red/italics. Shared fields have asterix surrounding name.
                     <option value="text-only">Text - no label</option>
                     <option value="text-dwr">Text - DWR</option>
                     <option value="radio">Radio Button</option>
+                    <option value="radio_vert">Radio Button - br after each item</option>
                     <option value="checkbox">Checkbox</option>
                     <option value="checkbox_dwr">Checkbox - DWR</option>
                     <option value="Yes/No">Yes/No</option>

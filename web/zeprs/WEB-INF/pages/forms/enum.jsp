@@ -20,6 +20,14 @@
             <c:when test='${pageItem.inputType=="radio-vertical"}'>
                 <zeprs:radio_vert pageItem="${pageItem}"/>
             </c:when>
+            
+            <c:when test='${pageItem.inputType=="radio_vert"}'>
+                <zeprs:radio_vert pageItem="${pageItem}"/>
+            </c:when>
+
+            <c:when test='${pageItem.inputType=="radio_vert_alternate"}'>
+                <zeprs:radio_vert_alternate pageItem="${pageItem}"/>
+            </c:when>
 
             <c:when test='${pageItem.inputType=="radio-no-label"}'>
                 <zeprs:radio_no_label pageItem="${pageItem}"/>

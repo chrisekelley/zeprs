@@ -24640,4 +24640,139 @@
     <concatEnumNumeric>Secondary (1)</concatEnumNumeric>
     <displayOrder>1</displayOrder>
   </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3463</id>
+    <fieldId>2862</fieldId>
+    <enumeration>Pos</enumeration>
+    <numericValue>0</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Pos (0)</concatEnumNumeric>
+    <displayOrder>0</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3464</id>
+    <fieldId>2862</fieldId>
+    <enumeration>Mid</enumeration>
+    <numericValue>1</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Mid (1)</concatEnumNumeric>
+    <displayOrder>1</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3465</id>
+    <fieldId>2862</fieldId>
+    <enumeration>Ant</enumeration>
+    <numericValue>2</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Ant (2)</concatEnumNumeric>
+    <displayOrder>2</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3466</id>
+    <fieldId>2941</fieldId>
+    <enumeration>Pregestational</enumeration>
+    <numericValue>0</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Pregestational (0)</concatEnumNumeric>
+    <displayOrder>0</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3467</id>
+    <fieldId>2941</fieldId>
+    <enumeration>Gestational</enumeration>
+    <numericValue>1</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Gestational (1)</concatEnumNumeric>
+    <displayOrder>1</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3468</id>
+    <fieldId>2942</fieldId>
+    <enumeration>Hep B</enumeration>
+    <numericValue>0</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Hep B (0)</concatEnumNumeric>
+    <displayOrder>0</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3469</id>
+    <fieldId>2942</fieldId>
+    <enumeration>Herpes</enumeration>
+    <numericValue>1</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Herpes (1)</concatEnumNumeric>
+    <displayOrder>1</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3470</id>
+    <fieldId>2942</fieldId>
+    <enumeration>Syphilis</enumeration>
+    <numericValue>2</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Syphilis (2)</concatEnumNumeric>
+    <displayOrder>2</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3471</id>
+    <fieldId>2955</fieldId>
+    <enumeration>Twin</enumeration>
+    <numericValue>0</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Twin (0)</concatEnumNumeric>
+    <displayOrder>0</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3472</id>
+    <fieldId>2955</fieldId>
+    <enumeration>Triplet</enumeration>
+    <numericValue>1</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Triplet (1)</concatEnumNumeric>
+    <displayOrder>1</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3473</id>
+    <fieldId>2965</fieldId>
+    <enumeration>Discharge home</enumeration>
+    <numericValue>0</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Discharge home (0)</concatEnumNumeric>
+    <displayOrder>0</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3474</id>
+    <fieldId>2965</fieldId>
+    <enumeration>Admit to Antenatal</enumeration>
+    <numericValue>1</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Admit to Antenatal (1)</concatEnumNumeric>
+    <displayOrder>1</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3475</id>
+    <fieldId>2965</fieldId>
+    <enumeration>Admit to Labor - SOU / Annex</enumeration>
+    <numericValue>2</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Admit to Labor - SOU / Annex (2)</concatEnumNumeric>
+    <displayOrder>2</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3476</id>
+    <fieldId>2965</fieldId>
+    <enumeration>Admit to Labour Ward - Routine</enumeration>
+    <numericValue>3</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Admit to Labour Ward - Routine (3)</concatEnumNumeric>
+    <displayOrder>3</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+  <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+    <id>3477</id>
+    <fieldId>2965</fieldId>
+    <enumeration>Admit to Postnatal</enumeration>
+    <numericValue>4</numericValue>
+    <enabled>true</enabled>
+    <concatEnumNumeric>Admit to Postnatal (4)</concatEnumNumeric>
+    <displayOrder>4</displayOrder>
+  </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
 </list>

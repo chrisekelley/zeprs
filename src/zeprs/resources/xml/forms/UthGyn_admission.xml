@@ -10194,7 +10194,7 @@
       <maxlength>0</maxlength>
       <rows>0</rows>
       <cols>0</cols>
-      <visible>false</visible>
+      <visible>true</visible>
       <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
       <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>

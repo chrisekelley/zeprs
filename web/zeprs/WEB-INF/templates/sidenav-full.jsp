@@ -59,6 +59,7 @@
     <c:url value="patientTask.do" var="post"><c:param name="patientId" value="${zeprs_session.sessionPatient.id}"/><c:param name="flowId" value="4"/></c:url>
     <c:url value="patientTask.do" var="nicu"><c:param name="patientId" value="${zeprs_session.sessionPatient.id}"/><c:param name="flowId" value="5"/></c:url>
     <c:url value="discharge.do" var="uth"><c:param name="patientId" value="${zeprs_session.sessionPatient.id}"/></c:url>
+    <c:url value="patientTask.do" var="uthFlow"><c:param name="patientId" value="${zeprs_session.sessionPatient.id}"/><c:param name="flowId" value="6"/></c:url>
     <c:url value="patientTask.do" var="safe"><c:param name="patientId" value="${zeprs_session.sessionPatient.id}"/><c:param name="flowId" value="103"/></c:url>
     <c:url value="patientTask.do" var="emerg"><c:param name="patientId" value="${zeprs_session.sessionPatient.id}"/><c:param name="flowId" value="7"/></c:url>
     <c:url value="patientTask.do" var="ultra"><c:param name="patientId" value="${zeprs_session.sessionPatient.id}"/><c:param name="flowId" value="8"/></c:url>
@@ -98,6 +99,9 @@
 	                    </c:if>
 	                    <li><a href='<c:out value="/zeprs/${post}"/>'>Postnatal/ Delivery Summary</a></li>
 	                    <li><a href='<c:out value="/zeprs/${uth}"/>'>UTH Registry</a></li>
+	                    <c:if test="${empty referral.uthAdmissionDate && zeprs_session.clientSettings.site.siteTypeId == 2}">
+	                    <li><a href='<c:out value="/zeprs/${uthFlow}"/>'>UTH Admissions</a></li>
+	                    </c:if>
 	                    <li><html:link action="/problem.do" paramId="patientId"  paramName="zeprs_session" paramProperty="sessionPatient.id">Problem List</html:link></li>
 	                    <li><a href='<c:out value="/zeprs/${ultra}"/>'>Ultrasound</a></li>
 	                    <li><html:link action="/labs.do" paramId="patientId"  paramName="zeprs_session" paramProperty="sessionPatient.id">Labs</html:link></li>

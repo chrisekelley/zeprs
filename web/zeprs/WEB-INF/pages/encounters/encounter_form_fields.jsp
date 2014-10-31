@@ -31,7 +31,7 @@
         <c:set var="colspan" value="1"/>
         </c:otherwise>
     </c:choose>
-
+	<!-- ${pageItem.inputType} : tblItem: ${tblItem} -->
     <c:choose><%--First setup special table formatting and hidden fields - items that don't appear in normal layout--%>
         <c:when test="${pageItem.inputType=='display-tbl-begin'}">
                 <c:choose>
@@ -120,6 +120,7 @@
         </c:when>
         <c:when test="${pageItem.inputType=='collapsing-display-header-begin'}">
         <c:set var="collapsing" value="1"/>
+        <c:set var="tblItem" value="0"/>
         <table border="0" cellpadding="4" cellspacing="2" width="95%"  id="tbl${pageItem.form_field.id}" summary="${pageItem.cols} col table" class="formTable">
         <tr class="sectionHeader"><td colspan="${colspan}"><zeprs:display_collapsing_header pageItem="${pageItem}"/></td></tr>
         </table>
@@ -143,6 +144,7 @@
                     </c:otherwise>
                 </c:choose>
             </c:if>
+            <!-- ${pageItem.inputType} : tblItem: ${tblItem} -->
             <c:choose>
                 <c:when test="${pageItem.inputType=='display-subheader'}">
                     <c:set var="tdBackgroundColor" value="#E6E6FA"/>
@@ -261,7 +263,7 @@
             <c:when test="${pageItem.closeRow==true}">
             </tr><c:set var="tblItem" value="0"/>
             </c:when>
-            <c:when test="${tblItem==0 ||tblItem==tblCols }"><%--${field.label}:: ${tblItem}<br/>--%></tr></c:when>
+            <c:when test="${tblItem==0 ||tblItem==tblCols }"></tr></c:when>
             </c:choose>
             </c:otherwise>
         </c:choose>

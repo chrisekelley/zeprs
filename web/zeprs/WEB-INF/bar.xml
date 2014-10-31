@@ -6452,10 +6452,10 @@
         <arg0 key="UTH clinic" resource="false"/>
       </field>
       <field property="field2484">
-        <arg0 key="outside lusaka" resource="false"/>
+        <arg0 key="Outside lusaka" resource="false"/>
       </field>
       <field property="field2485">
-        <arg0 key="no antenatal care" resource="false"/>
+        <arg0 key="No antenatal care" resource="false"/>
       </field>
       <field property="field2486">
         <arg0 key="Followed at UTH B02 clinic" resource="false"/>
@@ -6703,7 +6703,7 @@
         <arg0 key="Respiration Rate" resource="false"/>
       </field>
       <field property="field2851">
-        <arg0 key="General_Skin" resource="false"/>
+        <arg0 key="General Skin" resource="false"/>
       </field>
       <field property="field2852" depends="integer,intRange">
         <arg1 name="intRange" key="${var:min}" resource="false"/>
@@ -6757,20 +6757,11 @@
       <field property="field2864" depends="float">
         <arg0 key="Dialation" resource="false"/>
       </field>
-      <field property="field2865">
-        <arg0 key="Gross_Pooling" resource="false"/>
-      </field>
       <field property="field336">
         <arg0 key="Station of PP" resource="false"/>
       </field>
-      <field property="field2866">
-        <arg0 key="Smell_of_Liquor" resource="false"/>
-      </field>
       <field property="field2867">
         <arg0 key="Consistency" resource="false"/>
-      </field>
-      <field property="field2868">
-        <arg0 key="Color_of_Liquor" resource="false"/>
       </field>
       <field property="field2869" depends="integer,intRange">
         <arg1 name="intRange" key="${var:min}" resource="false"/>
@@ -6785,14 +6776,23 @@
         </var>
         <arg0 key="Effacment" resource="false"/>
       </field>
+      <field property="field2872">
+        <arg0 key="Membranes" resource="false"/>
+      </field>
+      <field property="field2865">
+        <arg0 key="Gross Pooling" resource="false"/>
+      </field>
+      <field property="field2866">
+        <arg0 key="Smell of Liquor" resource="false"/>
+      </field>
+      <field property="field2868">
+        <arg0 key="Color of Liquor" resource="false"/>
+      </field>
       <field property="field2870">
         <arg0 key="Moulding" resource="false"/>
       </field>
       <field property="field2871">
         <arg0 key="Grade" resource="false"/>
-      </field>
-      <field property="field2872">
-        <arg0 key="Membranes" resource="false"/>
       </field>
       <field property="field2873">
         <arg0 key="Caput" resource="false"/>
@@ -6804,61 +6804,133 @@
         <arg0 key="APH" resource="false"/>
       </field>
       <field property="field2491">
-        <arg0 key="APH_Specify" resource="false"/>
+        <arg0 key="APH, Specify" resource="false"/>
+      </field>
+      <field property="field2942">
+        <arg0 key="Infection" resource="false"/>
+      </field>
+      <field property="field2941">
+        <arg0 key="Diabetes" resource="false"/>
       </field>
       <field property="field2494">
         <arg0 key="Infection" resource="false"/>
       </field>
-      <field property="field2496">
-        <arg0 key="previous caesarean delivery" resource="false"/>
+      <field property="field2943">
+        <arg0 key="Infection, Other" resource="false"/>
       </field>
       <field property="field2875">
-        <arg0 key="False_Labor" resource="false"/>
+        <arg0 key="False Labour" resource="false"/>
       </field>
       <field property="field2876">
-        <arg0 key="Intrauterine_fetal_demise_IUFD" resource="false"/>
-      </field>
-      <field property="field2877">
-        <arg0 key="previous_CD_Type" resource="false"/>
-      </field>
-      <field property="field2880">
-        <arg0 key="Retained_placenta_or_POCs" resource="false"/>
+        <arg0 key="Intrauterine fetal demise (IUFD)" resource="false"/>
       </field>
       <field property="field2878">
-        <arg0 key="Foetal_anomaly" resource="false"/>
+        <arg0 key="Foetal anomaly" resource="false"/>
       </field>
       <field property="field2879">
         <arg0 key="Labour" resource="false"/>
       </field>
+      <field property="field2880">
+        <arg0 key="Retained placenta or POCs" resource="false"/>
+      </field>
       <field property="field2881">
-        <arg0 key="Foetal_distress" resource="false"/>
+        <arg0 key="Foetal distress" resource="false"/>
       </field>
       <field property="field2882">
-        <arg0 key="Labour_dystocia_CPD" resource="false"/>
+        <arg0 key="Labour dystocia CPD" resource="false"/>
       </field>
       <field property="field2883">
-        <arg0 key="Urinary_tract_infection_UTI" resource="false"/>
+        <arg0 key="Urinary tract infection (UTI)" resource="false"/>
       </field>
       <field property="field2884">
-        <arg0 key="Foetal_growth_retardation_IUGR" resource="false"/>
+        <arg0 key="Foetal growth retardation (IUGR)" resource="false"/>
       </field>
       <field property="field2885">
-        <arg0 key="Macrosomia_suspected" resource="false"/>
+        <arg0 key="Macrosomia suspected" resource="false"/>
       </field>
-      <field property="field2886">
-        <arg0 key="Other1" resource="false"/>
+      <field property="field2496">
+        <arg0 key="Previous caesarean delivery" resource="false"/>
       </field>
-      <field property="field2887">
-        <arg0 key="idother1txt" resource="false"/>
+      <field property="field2944">
+        <arg0 key="Specify number of prev CD" resource="false"/>
+      </field>
+      <field property="field2877">
+        <arg0 key="Previous CD Type" resource="false"/>
       </field>
       <field property="field2888">
-        <arg0 key="Hypertensive_disease" resource="false"/>
+        <arg0 key="Hypertensive disease" resource="false"/>
       </field>
-      <field property="field2495">
-        <arg0 key="" resource="false"/>
+      <field property="field2947">
+        <arg0 key="Chronic HTN" resource="false"/>
+      </field>
+      <field property="field2948">
+        <arg0 key="Gestational HTN" resource="false"/>
+      </field>
+      <field property="field2949">
+        <arg0 key="cHTN w preeclampsia" resource="false"/>
+      </field>
+      <field property="field2954">
+        <arg0 key="Eclampsia" resource="false"/>
+      </field>
+      <field property="field2952">
+        <arg0 key="Mild preeclampsia" resource="false"/>
+      </field>
+      <field property="field2953">
+        <arg0 key="Severe preeclampsia" resource="false"/>
+      </field>
+      <field property="field2955">
+        <arg0 key="Multiple gestation" resource="false"/>
+      </field>
+      <field property="field2956">
+        <arg0 key="Oligohydramnios" resource="false"/>
+      </field>
+      <field property="field2957">
+        <arg0 key="Polyhydramnios" resource="false"/>
+      </field>
+      <field property="field2950">
+        <arg0 key="PPH" resource="false"/>
+      </field>
+      <field property="field2951">
+        <arg0 key="PPH, Specify" resource="false"/>
+      </field>
+      <field property="field2958">
+        <arg0 key="PROM" resource="false"/>
+      </field>
+      <field property="field2959">
+        <arg0 key="Preterm labour" resource="false"/>
+      </field>
+      <field property="field2960">
+        <arg0 key="Preterm PROM" resource="false"/>
+      </field>
+      <field property="field2886">
+        <arg0 key="Other" resource="false"/>
+      </field>
+      <field property="field2887">
+        <arg0 key="Other, specify" resource="false"/>
+      </field>
+      <field property="field2961">
+        <arg0 key="Other" resource="false"/>
+      </field>
+      <field property="field2962">
+        <arg0 key="Other, specify" resource="false"/>
+      </field>
+      <field property="field2963">
+        <arg0 key="Other" resource="false"/>
+      </field>
+      <field property="field2964">
+        <arg0 key="Other, specify" resource="false"/>
+      </field>
+      <field property="field2965">
+        <arg0 key="Select Plan" resource="false"/>
+      </field>
+      <field property="field2966">
+        <arg0 key="Other" resource="false"/>
+      </field>
+      <field property="field2967">
+        <arg0 key="Plan, Other" resource="false"/>
       </field>
       <field property="field2895">
-        <arg0 key="HIV_Rapid_Results" resource="false"/>
+        <arg0 key="HIV Rapid Results" resource="false"/>
       </field>
       <field property="field235" depends="integer,intRange">
         <arg1 name="intRange" key="${var:min}" resource="false"/>
@@ -6879,7 +6951,7 @@
         <arg0 key="Hb" resource="false"/>
       </field>
       <field property="field2896">
-        <arg0 key="hb_not_available" resource="false"/>
+        <arg0 key="Hb results not available" resource="false"/>
       </field>
       <field property="field2897">
         <arg0 key="Urinalysis_Results" resource="false"/>
@@ -6894,10 +6966,10 @@
         <arg0 key="WBC" resource="false"/>
       </field>
       <field property="field2901">
-        <arg0 key="Not_Available" resource="false"/>
+        <arg0 key="Not Available" resource="false"/>
       </field>
       <field property="field2902">
-        <arg0 key="RPR_Results" resource="false"/>
+        <arg0 key="RPR Results" resource="false"/>
       </field>
       <field property="field2904">
         <arg0 key="Placenta" resource="false"/>
@@ -6906,19 +6978,19 @@
         <arg0 key="FHTs" resource="false"/>
       </field>
       <field property="field2906">
-        <arg0 key="Investigations_Other" resource="false"/>
+        <arg0 key="Investigations, Other" resource="false"/>
       </field>
       <field property="field2915">
-        <arg0 key="Urine_Culture" resource="false"/>
+        <arg0 key="Urine Culture" resource="false"/>
       </field>
       <field property="field2916">
-        <arg0 key="Blood_culture" resource="false"/>
+        <arg0 key="Blood culture" resource="false"/>
       </field>
       <field property="field2917">
         <arg0 key="Ultrasound" resource="false"/>
       </field>
       <field property="field2918">
-        <arg0 key="Ordered_Other" resource="false"/>
+        <arg0 key="Ordered, Other" resource="false"/>
       </field>
     </form>
     <form name="form128">
@@ -6950,10 +7022,10 @@
         <arg0 key="Augmented w AROM" resource="false"/>
       </field>
       <field property="field2510">
-        <arg0 key="rupture date" resource="false"/>
+        <arg0 key="Rupture date" resource="false"/>
       </field>
       <field property="field2511" depends="time">
-        <arg0 key="rupture time" resource="false"/>
+        <arg0 key="Rupture time" resource="false"/>
       </field>
       <field property="field2512">
         <arg0 key="Induced w oxytocin" resource="false"/>
@@ -6970,77 +7042,80 @@
       <field property="field2519">
         <arg0 key="None" resource="false"/>
       </field>
-      <field property="field2520">
-        <arg0 key="Hypertensive disease" resource="false"/>
-      </field>
-      <field property="field2521">
-        <arg0 key="Infection" resource="false"/>
-      </field>
-      <field property="field2522">
-        <arg0 key="Rh diesease" resource="false"/>
-      </field>
-      <field property="field2525">
-        <arg0 key="APH" resource="false"/>
-      </field>
-      <field property="field2526">
-        <arg0 key="Chronic HTN" resource="false"/>
-      </field>
-      <field property="field2527">
-        <arg0 key="Chorioamnionitis" resource="false"/>
-      </field>
-      <field property="field2528">
-        <arg0 key="Shoulder dystocia" resource="false"/>
-      </field>
-      <field property="field2529">
-        <arg0 key="&lt;l&gt;Abruptio placenta&lt;/l&gt;" resource="false"/>
-      </field>
-      <field property="field2530">
-        <arg0 key="Gestational HTN" resource="false"/>
-      </field>
-      <field property="field2531">
-        <arg0 key="Endometritis" resource="false"/>
-      </field>
-      <field property="field2532">
-        <arg0 key="Uterine rupture" resource="false"/>
-      </field>
-      <field property="field2533">
-        <arg0 key="Placenta previa" resource="false"/>
-      </field>
-      <field property="field2534">
-        <arg0 key="cHTN w preeclampsia" resource="false"/>
+      <field property="field2554">
+        <arg0 key="Foetal distress" resource="false"/>
       </field>
       <field property="field2535">
         <arg0 key="IUFD" resource="false"/>
       </field>
-      <field property="field2536">
-        <arg0 key="MSB FSB" resource="false"/>
+      <field property="field2541">
+        <arg0 key="Meconium" resource="false"/>
       </field>
-      <field property="field2537">
-        <arg0 key="Other specify" resource="false"/>
+      <field property="field2522">
+        <arg0 key="Rh diesease" resource="false"/>
       </field>
-      <field property="field2538">
-        <arg0 key="Specify_ic1" resource="false"/>
+      <field property="field2528">
+        <arg0 key="Shoulder dystocia" resource="false"/>
       </field>
-      <field property="field2539">
+      <field property="field2532">
         <arg0 key="Uterine rupture" resource="false"/>
+      </field>
+      <field property="field2536">
+        <arg0 key="IUFD: MSB/FSB" resource="false"/>
+      </field>
+      <field property="field2520">
+        <arg0 key="Hypertensive disease" resource="false"/>
+      </field>
+      <field property="field2526">
+        <arg0 key="Chronic HTN" resource="false"/>
+      </field>
+      <field property="field2530">
+        <arg0 key="Gestational HTN" resource="false"/>
+      </field>
+      <field property="field2534">
+        <arg0 key="cHTN w preeclampsia" resource="false"/>
       </field>
       <field property="field2540">
         <arg0 key="Mild preeclampsia" resource="false"/>
       </field>
-      <field property="field2541">
-        <arg0 key="Meconium" resource="false"/>
+      <field property="field2545">
+        <arg0 key="Severe preeclampsia" resource="false"/>
       </field>
-      <field property="field2542">
-        <arg0 key="Other Specify" resource="false"/>
+      <field property="field2552">
+        <arg0 key="Eclampsia" resource="false"/>
       </field>
-      <field property="field2543">
-        <arg0 key="Specify" resource="false"/>
+      <field property="field2555">
+        <arg0 key="Unspecified Hypertensive disease" resource="false"/>
+      </field>
+      <field property="field2525">
+        <arg0 key="APH" resource="false"/>
+      </field>
+      <field property="field2529">
+        <arg0 key="&lt;l&gt;Abruptio placenta&lt;/l&gt;" resource="false"/>
+      </field>
+      <field property="field2533">
+        <arg0 key="Placenta previa" resource="false"/>
+      </field>
+      <field property="field2539">
+        <arg0 key="Uterine rupture" resource="false"/>
       </field>
       <field property="field2544">
         <arg0 key="Undet etiology" resource="false"/>
       </field>
-      <field property="field2545">
-        <arg0 key="Severe preeclampsia" resource="false"/>
+      <field property="field2550">
+        <arg0 key="APH, Other" resource="false"/>
+      </field>
+      <field property="field2551">
+        <arg0 key="aph_other_txt" resource="false"/>
+      </field>
+      <field property="field2521">
+        <arg0 key="Infection" resource="false"/>
+      </field>
+      <field property="field2527">
+        <arg0 key="Chorioamnionitis" resource="false"/>
+      </field>
+      <field property="field2531">
+        <arg0 key="Endometritis" resource="false"/>
       </field>
       <field property="field2546">
         <arg0 key="PPH" resource="false"/>
@@ -7048,32 +7123,29 @@
       <field property="field2547">
         <arg0 key="ATONY" resource="false"/>
       </field>
+      <field property="field2553">
+        <arg0 key="Laceration" resource="false"/>
+      </field>
+      <field property="field2556">
+        <arg0 key="Retained plac POC" resource="false"/>
+      </field>
+      <field property="field2537">
+        <arg0 key="Other Specify" resource="false"/>
+      </field>
+      <field property="field2538">
+        <arg0 key="Specify_ic1" resource="false"/>
+      </field>
+      <field property="field2542">
+        <arg0 key="Other Specify" resource="false"/>
+      </field>
+      <field property="field2543">
+        <arg0 key="Specify" resource="false"/>
+      </field>
       <field property="field2548">
         <arg0 key="Other Specify" resource="false"/>
       </field>
       <field property="field2549">
         <arg0 key="Specify_ic3" resource="false"/>
-      </field>
-      <field property="field2550">
-        <arg0 key="aph_Other" resource="false"/>
-      </field>
-      <field property="field2551">
-        <arg0 key="aph_other_txt" resource="false"/>
-      </field>
-      <field property="field2552">
-        <arg0 key="Eclampsia" resource="false"/>
-      </field>
-      <field property="field2553">
-        <arg0 key="Laceration" resource="false"/>
-      </field>
-      <field property="field2554">
-        <arg0 key="Foetal_distress" resource="false"/>
-      </field>
-      <field property="field2555">
-        <arg0 key="Hyptensive_unspecified" resource="false"/>
-      </field>
-      <field property="field2556">
-        <arg0 key="Retained plac POC" resource="false"/>
       </field>
       <field property="field2561">
         <arg0 key="None" resource="false"/>

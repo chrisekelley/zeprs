@@ -201,6 +201,7 @@ class="formw">${subject.form_field.id}</span>
 <html:option value="text-only">Text - no label</html:option>
 <html:option value="text-dwr">Text - DWR</html:option>
 <html:option value="radio">Radio Button</html:option>
+<html:option value="radio_vert">Radio Button - br after each item</html:option>
 <html:option value="checkbox">Checkbox</html:option>
 <html:option value="checkbox_dwr">Checkbox - DWR</html:option>
 <html:option value="Yes/No">Yes/No</html:option>

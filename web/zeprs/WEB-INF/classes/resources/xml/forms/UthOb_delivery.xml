@@ -551,7 +551,7 @@
       <id>4738</id>
       <form__field>
         <id>2510</id>
-        <label>rupture date</label>
+        <label>Rupture date</label>
         <type>Date</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -569,7 +569,7 @@
       </form__field>
       <formFieldId>2510</formFieldId>
       <displayOrder>13</displayOrder>
-      <inputType>emptyDate</inputType>
+      <inputType>dateTodayWithLabel</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -8082,7 +8082,7 @@
     <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
   </formfields>
   <submissions>0</submissions>
-  <maxSubmissions>0</maxSubmissions>
+  <maxSubmissions>1000</maxSubmissions>
   <localeList/>
   <demographicsForm>false</demographicsForm>
 </org.cidrz.webapp.dynasite.valueobject.Form>

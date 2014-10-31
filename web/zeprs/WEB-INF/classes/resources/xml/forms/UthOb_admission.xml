@@ -65,7 +65,7 @@
       <id>4671</id>
       <form__field>
         <id>2445</id>
-        <label>cs_labor_visit</label>
+        <label>Labor Visit</label>
         <type>Display</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -110,7 +110,7 @@
       <id>4669</id>
       <form__field>
         <id>2443</id>
-        <label>Labor Visit</label>
+        <label>Labor Visit tbl</label>
         <type>Display</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -134,7 +134,7 @@
       <size>0</size>
       <maxlength>0</maxlength>
       <rows>7</rows>
-      <cols>4</cols>
+      <cols>6</cols>
       <visible>true</visible>
       <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
@@ -157,7 +157,7 @@
         <units></units>
         <displayOrder>2147483647</displayOrder>
         <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
+        <isEnabled>false</isEnabled>
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
@@ -209,8 +209,8 @@
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
+      <size>2</size>
+      <maxlength>3</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
@@ -250,8 +250,8 @@
       <columnNumber>0</columnNumber>
       <size>255</size>
       <maxlength>255</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
+      <rows>4</rows>
+      <cols>80</cols>
       <visible>true</visible>
       <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
@@ -259,7 +259,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>1</colspan>
+      <colspan>5</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -274,7 +274,7 @@
         <units></units>
         <displayOrder>2147483647</displayOrder>
         <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
+        <isEnabled>false</isEnabled>
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
@@ -313,7 +313,7 @@
         <units></units>
         <displayOrder>2147483647</displayOrder>
         <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
+        <isEnabled>false</isEnabled>
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
@@ -482,8 +482,8 @@
       <inputType>text</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
+      <size>2</size>
+      <maxlength>4</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
@@ -493,7 +493,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -532,7 +532,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>1</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -649,7 +649,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -675,7 +675,7 @@
       <formFieldId>2475</formFieldId>
       <displayOrder>16</displayOrder>
       <inputType>text</inputType>
-      <closeRow>false</closeRow>
+      <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
       <maxlength>0</maxlength>
@@ -703,7 +703,7 @@
         <units></units>
         <displayOrder>2147483647</displayOrder>
         <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
+        <isEnabled>false</isEnabled>
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
@@ -742,7 +742,7 @@
         <units></units>
         <displayOrder>2147483647</displayOrder>
         <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
+        <isEnabled>false</isEnabled>
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
@@ -759,6 +759,45 @@
       <maxlength>0</maxlength>
       <rows>4</rows>
       <cols>6</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5219</id>
+      <form__field>
+        <id>2970</id>
+        <label>Referral</label>
+        <type>Display</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>referral_sub</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2970</formFieldId>
+      <displayOrder>19</displayOrder>
+      <inputType>display-subheader</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
       <visible>true</visible>
       <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
@@ -790,7 +829,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2476</formFieldId>
-      <displayOrder>19</displayOrder>
+      <displayOrder>20</displayOrder>
       <inputType>yesno_no_na</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -805,7 +844,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -829,7 +868,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2479</formFieldId>
-      <displayOrder>20</displayOrder>
+      <displayOrder>21</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -844,7 +883,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -868,7 +907,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2480</formFieldId>
-      <displayOrder>21</displayOrder>
+      <displayOrder>22</displayOrder>
       <inputType>text</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -883,7 +922,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -907,12 +946,12 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2481</formFieldId>
-      <displayOrder>22</displayOrder>
+      <displayOrder>23</displayOrder>
       <inputType>text</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
+      <size>80</size>
+      <maxlength>256</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
@@ -946,8 +985,8 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2482</formFieldId>
-      <displayOrder>23</displayOrder>
-      <inputType>infotext</inputType>
+      <displayOrder>24</displayOrder>
+      <inputType>display-subheader</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -985,7 +1024,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2483</formFieldId>
-      <displayOrder>24</displayOrder>
+      <displayOrder>25</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1024,7 +1063,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2488</formFieldId>
-      <displayOrder>25</displayOrder>
+      <displayOrder>26</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1063,7 +1102,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2489</formFieldId>
-      <displayOrder>26</displayOrder>
+      <displayOrder>27</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1085,7 +1124,7 @@
       <id>4710</id>
       <form__field>
         <id>2484</id>
-        <label>outside lusaka</label>
+        <label>Outside lusaka</label>
         <type>Boolean</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -1102,7 +1141,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2484</formFieldId>
-      <displayOrder>27</displayOrder>
+      <displayOrder>28</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1124,7 +1163,7 @@
       <id>4711</id>
       <form__field>
         <id>2485</id>
-        <label>no antenatal care</label>
+        <label>No antenatal care</label>
         <type>Boolean</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -1141,7 +1180,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2485</formFieldId>
-      <displayOrder>28</displayOrder>
+      <displayOrder>29</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -1150,13 +1189,13 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -1200,7 +1239,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2486</formFieldId>
-      <displayOrder>29</displayOrder>
+      <displayOrder>30</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1215,7 +1254,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <dempMap1>
         <entry>
           <string>2487</string>
@@ -1245,7 +1284,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2487</formFieldId>
-      <displayOrder>30</displayOrder>
+      <displayOrder>31</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -1260,7 +1299,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2>2487</visibleDependencies2>
       <formId>127</formId>
-      <colspan>5</colspan>
+      <colspan>3</colspan>
       <dempMap1>
         <entry>
           <string>2486</string>
@@ -1287,7 +1326,7 @@
         <units></units>
         <displayOrder>2147483647</displayOrder>
         <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
+        <isEnabled>false</isEnabled>
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
@@ -1296,7 +1335,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2478</formFieldId>
-      <displayOrder>31</displayOrder>
+      <displayOrder>32</displayOrder>
       <inputType>display-tbl-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1335,7 +1374,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2444</formFieldId>
-      <displayOrder>32</displayOrder>
+      <displayOrder>33</displayOrder>
       <inputType>display-tbl-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1374,7 +1413,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2446</formFieldId>
-      <displayOrder>33</displayOrder>
+      <displayOrder>34</displayOrder>
       <inputType>collapsing-display-header-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1412,7 +1451,7 @@
         <encounterRecordproperty></encounterRecordproperty>
       </form__field>
       <formFieldId>1428</formFieldId>
-      <displayOrder>34</displayOrder>
+      <displayOrder>35</displayOrder>
       <inputType>display-tbl-end</inputType>
       <closeRow>false</closeRow>
       <visible>true</visible>
@@ -1440,7 +1479,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2447</formFieldId>
-      <displayOrder>35</displayOrder>
+      <displayOrder>36</displayOrder>
       <inputType>collapsing-display-header-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1485,7 +1524,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2810</formFieldId>
-      <displayOrder>36</displayOrder>
+      <displayOrder>37</displayOrder>
       <inputType>display-tbl-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1524,7 +1563,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>128</formFieldId>
-      <displayOrder>37</displayOrder>
+      <displayOrder>38</displayOrder>
       <inputType>edd</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -1560,7 +1599,7 @@
         <patientStatusproperty>currentEgaDays</patientStatusproperty>
       </form__field>
       <formFieldId>129</formFieldId>
-      <displayOrder>38</displayOrder>
+      <displayOrder>39</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <visible>true</visible>
@@ -1588,7 +1627,7 @@
         <patientStatusproperty>currentLmpDate</patientStatusproperty>
       </form__field>
       <formFieldId>127</formFieldId>
-      <displayOrder>39</displayOrder>
+      <displayOrder>40</displayOrder>
       <inputType>lmp</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -1630,7 +1669,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>232</formFieldId>
-      <displayOrder>40</displayOrder>
+      <displayOrder>41</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1666,7 +1705,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2812</formFieldId>
-      <displayOrder>41</displayOrder>
+      <displayOrder>42</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1705,7 +1744,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2813</formFieldId>
-      <displayOrder>42</displayOrder>
+      <displayOrder>43</displayOrder>
       <inputType>emptyDate</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1744,7 +1783,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2814</formFieldId>
-      <displayOrder>43</displayOrder>
+      <displayOrder>44</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1783,7 +1822,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2815</formFieldId>
-      <displayOrder>44</displayOrder>
+      <displayOrder>45</displayOrder>
       <inputType>emptyDate</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1822,7 +1861,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2811</formFieldId>
-      <displayOrder>45</displayOrder>
+      <displayOrder>46</displayOrder>
       <inputType>display-tbl-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1861,7 +1900,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2448</formFieldId>
-      <displayOrder>46</displayOrder>
+      <displayOrder>47</displayOrder>
       <inputType>collapsing-display-header-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1900,7 +1939,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2449</formFieldId>
-      <displayOrder>47</displayOrder>
+      <displayOrder>48</displayOrder>
       <inputType>collapsing-display-header-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1945,7 +1984,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2816</formFieldId>
-      <displayOrder>48</displayOrder>
+      <displayOrder>49</displayOrder>
       <inputType>display-tbl-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -1984,7 +2023,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2818</formFieldId>
-      <displayOrder>49</displayOrder>
+      <displayOrder>50</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2023,7 +2062,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2819</formFieldId>
-      <displayOrder>50</displayOrder>
+      <displayOrder>51</displayOrder>
       <inputType>infotext</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -2062,7 +2101,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2821</formFieldId>
-      <displayOrder>51</displayOrder>
+      <displayOrder>52</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2144,7 +2183,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>1866</formFieldId>
-      <displayOrder>52</displayOrder>
+      <displayOrder>53</displayOrder>
       <inputType>select</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -2183,7 +2222,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2824</formFieldId>
-      <displayOrder>53</displayOrder>
+      <displayOrder>54</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2222,7 +2261,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2820</formFieldId>
-      <displayOrder>54</displayOrder>
+      <displayOrder>55</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2261,7 +2300,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2822</formFieldId>
-      <displayOrder>55</displayOrder>
+      <displayOrder>56</displayOrder>
       <inputType>emptyDate</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -2300,7 +2339,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2827</formFieldId>
-      <displayOrder>56</displayOrder>
+      <displayOrder>57</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2377,7 +2416,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2823</formFieldId>
-      <displayOrder>57</displayOrder>
+      <displayOrder>58</displayOrder>
       <inputType>select</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -2416,7 +2455,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2826</formFieldId>
-      <displayOrder>58</displayOrder>
+      <displayOrder>59</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2484,7 +2523,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2829</formFieldId>
-      <displayOrder>59</displayOrder>
+      <displayOrder>60</displayOrder>
       <inputType>radio</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -2523,7 +2562,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2825</formFieldId>
-      <displayOrder>60</displayOrder>
+      <displayOrder>61</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2562,7 +2601,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2830</formFieldId>
-      <displayOrder>61</displayOrder>
+      <displayOrder>62</displayOrder>
       <inputType>Yes/No</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2601,7 +2640,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2831</formFieldId>
-      <displayOrder>62</displayOrder>
+      <displayOrder>63</displayOrder>
       <inputType>text</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -2640,7 +2679,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2828</formFieldId>
-      <displayOrder>63</displayOrder>
+      <displayOrder>64</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2708,7 +2747,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2832</formFieldId>
-      <displayOrder>64</displayOrder>
+      <displayOrder>65</displayOrder>
       <inputType>radio</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -2747,7 +2786,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2837</formFieldId>
-      <displayOrder>65</displayOrder>
+      <displayOrder>66</displayOrder>
       <inputType>display-spacer-field</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2815,7 +2854,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2833</formFieldId>
-      <displayOrder>66</displayOrder>
+      <displayOrder>67</displayOrder>
       <inputType>radio</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2874,7 +2913,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2834</formFieldId>
-      <displayOrder>67</displayOrder>
+      <displayOrder>68</displayOrder>
       <inputType>radio</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -2913,7 +2952,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2838</formFieldId>
-      <displayOrder>68</displayOrder>
+      <displayOrder>69</displayOrder>
       <inputType>display-spacer-field</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2952,7 +2991,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2836</formFieldId>
-      <displayOrder>69</displayOrder>
+      <displayOrder>70</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -2991,7 +3030,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2835</formFieldId>
-      <displayOrder>70</displayOrder>
+      <displayOrder>71</displayOrder>
       <inputType>emptyDate</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -3059,7 +3098,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2840</formFieldId>
-      <displayOrder>71</displayOrder>
+      <displayOrder>72</displayOrder>
       <inputType>radio</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -3098,7 +3137,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2841</formFieldId>
-      <displayOrder>72</displayOrder>
+      <displayOrder>73</displayOrder>
       <inputType>yesno_no_na</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3137,7 +3176,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2842</formFieldId>
-      <displayOrder>73</displayOrder>
+      <displayOrder>74</displayOrder>
       <inputType>text-only</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3176,7 +3215,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2844</formFieldId>
-      <displayOrder>74</displayOrder>
+      <displayOrder>75</displayOrder>
       <inputType>text-only</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3215,7 +3254,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2843</formFieldId>
-      <displayOrder>75</displayOrder>
+      <displayOrder>76</displayOrder>
       <inputType>emptyDate</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -3283,7 +3322,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2845</formFieldId>
-      <displayOrder>76</displayOrder>
+      <displayOrder>77</displayOrder>
       <inputType>radio</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3322,7 +3361,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2846</formFieldId>
-      <displayOrder>77</displayOrder>
+      <displayOrder>78</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3361,7 +3400,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2847</formFieldId>
-      <displayOrder>78</displayOrder>
+      <displayOrder>79</displayOrder>
       <inputType>emptyDate</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -3400,7 +3439,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2848</formFieldId>
-      <displayOrder>79</displayOrder>
+      <displayOrder>80</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -3439,7 +3478,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2839</formFieldId>
-      <displayOrder>80</displayOrder>
+      <displayOrder>81</displayOrder>
       <inputType>display-spacer-field</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3478,7 +3517,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2817</formFieldId>
-      <displayOrder>81</displayOrder>
+      <displayOrder>82</displayOrder>
       <inputType>display-tbl-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3517,7 +3556,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2450</formFieldId>
-      <displayOrder>82</displayOrder>
+      <displayOrder>83</displayOrder>
       <inputType>collapsing-display-header-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3556,7 +3595,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2451</formFieldId>
-      <displayOrder>83</displayOrder>
+      <displayOrder>84</displayOrder>
       <inputType>collapsing-display-header-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3566,12 +3605,18 @@
       <cols>0</cols>
       <visible>true</visible>
       <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
+      <visibleDependencies1>2849</visibleDependencies1>
       <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
       <colspan>0</colspan>
+      <dempMap1>
+        <entry>
+          <string>2849</string>
+          <long>4677</long>
+        </entry>
+      </dempMap1>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -3595,7 +3640,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2849</formFieldId>
-      <displayOrder>84</displayOrder>
+      <displayOrder>85</displayOrder>
       <inputType>display-tbl-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3634,7 +3679,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>228</formFieldId>
-      <displayOrder>85</displayOrder>
+      <displayOrder>86</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <size>3</size>
@@ -3681,7 +3726,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>159</formFieldId>
-      <displayOrder>86</displayOrder>
+      <displayOrder>87</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <size>3</size>
@@ -3741,7 +3786,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>266</formFieldId>
-      <displayOrder>87</displayOrder>
+      <displayOrder>88</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -3949,7 +3994,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>224</formFieldId>
-      <displayOrder>88</displayOrder>
+      <displayOrder>89</displayOrder>
       <inputType>select</inputType>
       <closeRow>false</closeRow>
       <size>0</size>
@@ -4102,9 +4147,9 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>225</formFieldId>
-      <displayOrder>89</displayOrder>
+      <displayOrder>90</displayOrder>
       <inputType>select</inputType>
-      <closeRow>false</closeRow>
+      <closeRow>true</closeRow>
       <size>0</size>
       <maxlength>0</maxlength>
       <rows>0</rows>
@@ -4112,7 +4157,10 @@
       <visible>true</visible>
       <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -4221,17 +4269,19 @@
         <encounterRecordproperty></encounterRecordproperty>
       </form__field>
       <formFieldId>171</formFieldId>
-      <displayOrder>90</displayOrder>
+      <displayOrder>91</displayOrder>
       <inputType>select</inputType>
-      <closeRow>true</closeRow>
+      <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
       <maxlength>0</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1>-1</visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
       <colspan>2</colspan>
       <highlightCell>false</highlightCell>
@@ -4286,7 +4336,7 @@
         <encounterRecordproperty></encounterRecordproperty>
       </form__field>
       <formFieldId>269</formFieldId>
-      <displayOrder>91</displayOrder>
+      <displayOrder>92</displayOrder>
       <inputType>select</inputType>
       <closeRow>true</closeRow>
       <size>0</size>
@@ -4299,14 +4349,14 @@
       <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>4</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5094</id>
       <form__field>
         <id>2851</id>
-        <label>General_Skin</label>
+        <label>General Skin</label>
         <type>Enum</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -4343,8 +4393,8 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2851</formFieldId>
-      <displayOrder>92</displayOrder>
-      <inputType>radio</inputType>
+      <displayOrder>93</displayOrder>
+      <inputType>radio_vert</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -4352,9 +4402,9 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -4382,12 +4432,12 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2852</formFieldId>
-      <displayOrder>93</displayOrder>
+      <displayOrder>94</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
+      <size>2</size>
+      <maxlength>3</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
@@ -4421,7 +4471,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2853</formFieldId>
-      <displayOrder>94</displayOrder>
+      <displayOrder>95</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -4489,7 +4539,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2854</formFieldId>
-      <displayOrder>95</displayOrder>
+      <displayOrder>96</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -4528,7 +4578,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2855</formFieldId>
-      <displayOrder>96</displayOrder>
+      <displayOrder>97</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -4543,7 +4593,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -4567,7 +4617,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2856</formFieldId>
-      <displayOrder>97</displayOrder>
+      <displayOrder>98</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -4582,7 +4632,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>7</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -4606,7 +4656,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2857</formFieldId>
-      <displayOrder>98</displayOrder>
+      <displayOrder>99</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -4621,7 +4671,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>7</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -4645,7 +4695,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2858</formFieldId>
-      <displayOrder>99</displayOrder>
+      <displayOrder>100</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -4660,7 +4710,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>7</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -4684,7 +4734,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2859</formFieldId>
-      <displayOrder>100</displayOrder>
+      <displayOrder>101</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -4699,7 +4749,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>7</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -4757,7 +4807,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>229</formFieldId>
-      <displayOrder>101</displayOrder>
+      <displayOrder>102</displayOrder>
       <inputType>select</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -4871,7 +4921,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>230</formFieldId>
-      <displayOrder>102</displayOrder>
+      <displayOrder>103</displayOrder>
       <inputType>select</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -4880,13 +4930,13 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1>-1</visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2>-1</visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>-1</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -4947,7 +4997,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>315</formFieldId>
-      <displayOrder>103</displayOrder>
+      <displayOrder>104</displayOrder>
       <inputType>select</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -5033,8 +5083,8 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2860</formFieldId>
-      <displayOrder>104</displayOrder>
-      <inputType>radio</inputType>
+      <displayOrder>105</displayOrder>
+      <inputType>radio_vert</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -5048,7 +5098,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -5072,8 +5122,8 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2861</formFieldId>
-      <displayOrder>105</displayOrder>
-      <inputType>infotext</inputType>
+      <displayOrder>106</displayOrder>
+      <inputType>display-subheader</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -5081,9 +5131,9 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -5104,55 +5154,45 @@
         <patientProperty></patientProperty>
         <isEnabled>true</isEnabled>
         <ruleDefinitions/>
-        <enumerations/>
+        <enumerations class="tree-set">
+          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3463</id>
+            <fieldId>2862</fieldId>
+            <enumeration>Pos</enumeration>
+            <numericValue>0</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Pos (0)</concatEnumNumeric>
+            <displayOrder>0</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3464</id>
+            <fieldId>2862</fieldId>
+            <enumeration>Mid</enumeration>
+            <numericValue>1</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Mid (1)</concatEnumNumeric>
+            <displayOrder>1</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3465</id>
+            <fieldId>2862</fieldId>
+            <enumeration>Ant</enumeration>
+            <numericValue>2</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Ant (2)</concatEnumNumeric>
+            <displayOrder>2</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+        </enumerations>
         <shared>false</shared>
         <starSchemaName>pelvic_pos</starSchemaName>
         <encounterRecordproperty></encounterRecordproperty>
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2862</formFieldId>
-      <displayOrder>106</displayOrder>
-      <inputType>radio</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5109</id>
-      <form__field>
-        <id>2863</id>
-        <label>Sterile_speculum_for_ROM</label>
-        <type>Display</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>spec_rom</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2863</formFieldId>
       <displayOrder>107</displayOrder>
-      <inputType>infotext</inputType>
-      <closeRow>true</closeRow>
+      <inputType>radio_vert</inputType>
+      <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
       <maxlength>0</maxlength>
@@ -5193,53 +5233,14 @@
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
+      <size>2</size>
+      <maxlength>3</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5111</id>
-      <form__field>
-        <id>2865</id>
-        <label>Gross_Pooling</label>
-        <type>Yes/No</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>gross_pooling</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2865</formFieldId>
-      <displayOrder>109</displayOrder>
-      <inputType>yesno_no_na</inputType>
-      <closeRow>true</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -5368,7 +5369,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>336</formFieldId>
-      <displayOrder>110</displayOrder>
+      <displayOrder>109</displayOrder>
       <inputType>select</inputType>
       <closeRow>false</closeRow>
       <size>0</size>
@@ -5379,65 +5380,6 @@
       <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
       <formId>127</formId>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5113</id>
-      <form__field>
-        <id>2866</id>
-        <label>Smell_of_Liquor</label>
-        <type>Enum</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations class="tree-set">
-          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
-          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-            <id>3386</id>
-            <fieldId>2866</fieldId>
-            <enumeration>Not Foul</enumeration>
-            <numericValue>0</numericValue>
-            <enabled>true</enabled>
-            <concatEnumNumeric>Not Foul (0)</concatEnumNumeric>
-            <displayOrder>0</displayOrder>
-          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-            <id>3387</id>
-            <fieldId>2866</fieldId>
-            <enumeration>Foul</enumeration>
-            <numericValue>1</numericValue>
-            <enabled>true</enabled>
-            <concatEnumNumeric>Foul (1)</concatEnumNumeric>
-            <displayOrder>1</displayOrder>
-          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-        </enumerations>
-        <shared>false</shared>
-        <starSchemaName>smell_of_liquor</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2866</formFieldId>
-      <displayOrder>111</displayOrder>
-      <inputType>radio</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -5490,8 +5432,8 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2867</formFieldId>
-      <displayOrder>112</displayOrder>
-      <inputType>radio</inputType>
+      <displayOrder>110</displayOrder>
+      <inputType>radio_vert</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -5509,10 +5451,245 @@
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5116</id>
+      <form__field>
+        <id>2869</id>
+        <label>Effacment</label>
+        <type>Integer</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units>%</units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>effacement</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2869</formFieldId>
+      <displayOrder>111</displayOrder>
+      <inputType>text</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>2</size>
+      <maxlength>3</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5119</id>
+      <form__field>
+        <id>2872</id>
+        <label>Membranes</label>
+        <type>Enum</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations class="tree-set">
+          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3396</id>
+            <fieldId>2872</fieldId>
+            <enumeration>Intact</enumeration>
+            <numericValue>0</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Intact (0)</concatEnumNumeric>
+            <displayOrder>0</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3397</id>
+            <fieldId>2872</fieldId>
+            <enumeration>Absent</enumeration>
+            <numericValue>1</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Absent (1)</concatEnumNumeric>
+            <displayOrder>1</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+        </enumerations>
+        <shared>false</shared>
+        <starSchemaName>membranes</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2872</formFieldId>
+      <displayOrder>112</displayOrder>
+      <inputType>radio_vert</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5109</id>
+      <form__field>
+        <id>2863</id>
+        <label>Sterile speculum for ROM</label>
+        <type>Display</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>spec_rom</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2863</formFieldId>
+      <displayOrder>113</displayOrder>
+      <inputType>display-subheader</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5111</id>
+      <form__field>
+        <id>2865</id>
+        <label>Gross Pooling</label>
+        <type>Yes/No</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>gross_pooling</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2865</formFieldId>
+      <displayOrder>114</displayOrder>
+      <inputType>yesno_no_na</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5113</id>
+      <form__field>
+        <id>2866</id>
+        <label>Smell of Liquor</label>
+        <type>Enum</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations class="tree-set">
+          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3386</id>
+            <fieldId>2866</fieldId>
+            <enumeration>Not Foul</enumeration>
+            <numericValue>0</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Not Foul (0)</concatEnumNumeric>
+            <displayOrder>0</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3387</id>
+            <fieldId>2866</fieldId>
+            <enumeration>Foul</enumeration>
+            <numericValue>1</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Foul (1)</concatEnumNumeric>
+            <displayOrder>1</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+        </enumerations>
+        <shared>false</shared>
+        <starSchemaName>smell_of_liquor</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2866</formFieldId>
+      <displayOrder>115</displayOrder>
+      <inputType>radio_vert</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5115</id>
       <form__field>
         <id>2868</id>
-        <label>Color_of_Liquor</label>
+        <label>Color of Liquor</label>
         <type>Enum</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -5576,8 +5753,8 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2868</formFieldId>
-      <displayOrder>113</displayOrder>
-      <inputType>radio</inputType>
+      <displayOrder>116</displayOrder>
+      <inputType>radio_vert</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -5591,46 +5768,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5116</id>
-      <form__field>
-        <id>2869</id>
-        <label>Effacment</label>
-        <type>Integer</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units>%</units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>effacement</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2869</formFieldId>
-      <displayOrder>114</displayOrder>
-      <inputType>text</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -5654,9 +5792,9 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2870</formFieldId>
-      <displayOrder>115</displayOrder>
+      <displayOrder>117</displayOrder>
       <inputType>yesno_no_na</inputType>
-      <closeRow>true</closeRow>
+      <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
       <maxlength>0</maxlength>
@@ -5669,7 +5807,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -5722,67 +5860,8 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2871</formFieldId>
-      <displayOrder>116</displayOrder>
+      <displayOrder>118</displayOrder>
       <inputType>select</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5119</id>
-      <form__field>
-        <id>2872</id>
-        <label>Membranes</label>
-        <type>Enum</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations class="tree-set">
-          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
-          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-            <id>3396</id>
-            <fieldId>2872</fieldId>
-            <enumeration>Intact</enumeration>
-            <numericValue>0</numericValue>
-            <enabled>true</enabled>
-            <concatEnumNumeric>Intact (0)</concatEnumNumeric>
-            <displayOrder>0</displayOrder>
-          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-            <id>3397</id>
-            <fieldId>2872</fieldId>
-            <enumeration>Absent</enumeration>
-            <numericValue>1</numericValue>
-            <enabled>true</enabled>
-            <concatEnumNumeric>Absent (1)</concatEnumNumeric>
-            <displayOrder>1</displayOrder>
-          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-        </enumerations>
-        <shared>false</shared>
-        <starSchemaName>membranes</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2872</formFieldId>
-      <displayOrder>117</displayOrder>
-      <inputType>radio</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -5796,7 +5875,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -5820,7 +5899,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2873</formFieldId>
-      <displayOrder>118</displayOrder>
+      <displayOrder>119</displayOrder>
       <inputType>yesno_no_na</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -5835,7 +5914,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -5859,7 +5938,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2874</formFieldId>
-      <displayOrder>119</displayOrder>
+      <displayOrder>120</displayOrder>
       <inputType>yesno_no_na</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -5874,7 +5953,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -5898,7 +5977,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2850</formFieldId>
-      <displayOrder>120</displayOrder>
+      <displayOrder>121</displayOrder>
       <inputType>display-tbl-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -5937,7 +6016,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2452</formFieldId>
-      <displayOrder>121</displayOrder>
+      <displayOrder>122</displayOrder>
       <inputType>collapsing-display-header-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -5976,7 +6055,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2453</formFieldId>
-      <displayOrder>122</displayOrder>
+      <displayOrder>123</displayOrder>
       <inputType>collapsing-display-header-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -5986,12 +6065,18 @@
       <cols>0</cols>
       <visible>true</visible>
       <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
+      <visibleDependencies1>2464</visibleDependencies1>
       <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
       <colspan>0</colspan>
+      <dempMap1>
+        <entry>
+          <string>2464</string>
+          <long>4679</long>
+        </entry>
+      </dempMap1>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -6015,7 +6100,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2464</formFieldId>
-      <displayOrder>123</displayOrder>
+      <displayOrder>124</displayOrder>
       <inputType>display-tbl-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -6054,7 +6139,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2497</formFieldId>
-      <displayOrder>124</displayOrder>
+      <displayOrder>125</displayOrder>
       <inputType>infotext</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -6093,7 +6178,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2492</formFieldId>
-      <displayOrder>125</displayOrder>
+      <displayOrder>126</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -6121,7 +6206,7 @@
       <id>4717</id>
       <form__field>
         <id>2491</id>
-        <label>APH_Specify</label>
+        <label>APH, Specify</label>
         <type>Text</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -6138,7 +6223,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2491</formFieldId>
-      <displayOrder>126</displayOrder>
+      <displayOrder>127</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -6146,7 +6231,7 @@
       <maxlength>0</maxlength>
       <rows>0</rows>
       <cols>0</cols>
-      <visible>true</visible>
+      <visible>false</visible>
       <visibleEnumIdTrigger1>3285</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
       <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
@@ -6154,6 +6239,133 @@
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
       <colspan>1</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5191</id>
+      <form__field>
+        <id>2942</id>
+        <label>Infection</label>
+        <type>Enum</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations class="tree-set">
+          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3468</id>
+            <fieldId>2942</fieldId>
+            <enumeration>Hep B</enumeration>
+            <numericValue>0</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Hep B (0)</concatEnumNumeric>
+            <displayOrder>0</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3469</id>
+            <fieldId>2942</fieldId>
+            <enumeration>Herpes</enumeration>
+            <numericValue>1</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Herpes (1)</concatEnumNumeric>
+            <displayOrder>1</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3470</id>
+            <fieldId>2942</fieldId>
+            <enumeration>Syphilis</enumeration>
+            <numericValue>2</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Syphilis (2)</concatEnumNumeric>
+            <displayOrder>2</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+        </enumerations>
+        <shared>false</shared>
+        <starSchemaName>infection_types</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2942</formFieldId>
+      <displayOrder>128</displayOrder>
+      <inputType>select</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5190</id>
+      <form__field>
+        <id>2941</id>
+        <label>Diabetes</label>
+        <type>Enum</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations class="tree-set">
+          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3466</id>
+            <fieldId>2941</fieldId>
+            <enumeration>Pregestational</enumeration>
+            <numericValue>0</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Pregestational (0)</concatEnumNumeric>
+            <displayOrder>0</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3467</id>
+            <fieldId>2941</fieldId>
+            <enumeration>Gestational</enumeration>
+            <numericValue>1</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Gestational (1)</concatEnumNumeric>
+            <displayOrder>1</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+        </enumerations>
+        <shared>false</shared>
+        <starSchemaName>diabetes_types</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2941</formFieldId>
+      <displayOrder>129</displayOrder>
+      <inputType>select</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -6177,7 +6389,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2494</formFieldId>
-      <displayOrder>127</displayOrder>
+      <displayOrder>130</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -6186,6 +6398,51 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1>2943</visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>0</colspan>
+      <dempMap1>
+        <entry>
+          <string>2943</string>
+          <long>4720</long>
+        </entry>
+      </dempMap1>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5192</id>
+      <form__field>
+        <id>2943</id>
+        <label>Infection, Other</label>
+        <type>Text</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>infection_other</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2943</formFieldId>
+      <displayOrder>131</displayOrder>
+      <inputType>text</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>false</visible>
       <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
       <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
@@ -6196,10 +6453,10 @@
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>4722</id>
+      <id>5122</id>
       <form__field>
-        <id>2496</id>
-        <label>previous caesarean delivery</label>
+        <id>2875</id>
+        <label>False Labour</label>
         <type>Boolean</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -6211,12 +6468,51 @@
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
-        <starSchemaName>prev_csection_delv</starSchemaName>
+        <starSchemaName>falselabor</starSchemaName>
         <encounterRecordproperty></encounterRecordproperty>
         <patientStatusproperty></patientStatusproperty>
       </form__field>
-      <formFieldId>2496</formFieldId>
-      <displayOrder>128</displayOrder>
+      <formFieldId>2875</formFieldId>
+      <displayOrder>132</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5123</id>
+      <form__field>
+        <id>2876</id>
+        <label>Intrauterine fetal demise (IUFD)</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>iufd</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2876</formFieldId>
+      <displayOrder>133</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -6235,10 +6531,10 @@
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5122</id>
+      <id>5125</id>
       <form__field>
-        <id>2875</id>
-        <label>False_Labor</label>
+        <id>2878</id>
+        <label>Foetal anomaly</label>
         <type>Boolean</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -6250,12 +6546,12 @@
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
-        <starSchemaName>falselabor</starSchemaName>
+        <starSchemaName>foetalanom</starSchemaName>
         <encounterRecordproperty></encounterRecordproperty>
         <patientStatusproperty></patientStatusproperty>
       </form__field>
-      <formFieldId>2875</formFieldId>
-      <displayOrder>129</displayOrder>
+      <formFieldId>2878</formFieldId>
+      <displayOrder>134</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -6264,9 +6560,341 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5126</id>
+      <form__field>
+        <id>2879</id>
+        <label>Labour</label>
+        <type>Enum</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations class="tree-set">
+          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3405</id>
+            <fieldId>2879</fieldId>
+            <enumeration>Active</enumeration>
+            <numericValue>0</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Active (0)</concatEnumNumeric>
+            <displayOrder>0</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3406</id>
+            <fieldId>2879</fieldId>
+            <enumeration>Latent</enumeration>
+            <numericValue>1</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Latent (1)</concatEnumNumeric>
+            <displayOrder>1</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+        </enumerations>
+        <shared>false</shared>
+        <starSchemaName>labour</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2879</formFieldId>
+      <displayOrder>135</displayOrder>
+      <inputType>radio</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5127</id>
+      <form__field>
+        <id>2880</id>
+        <label>Retained placenta or POCs</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>retained_placenta</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2880</formFieldId>
+      <displayOrder>136</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5128</id>
+      <form__field>
+        <id>2881</id>
+        <label>Foetal distress</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>foetal_distress</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2881</formFieldId>
+      <displayOrder>137</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5129</id>
+      <form__field>
+        <id>2882</id>
+        <label>Labour dystocia CPD</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>labour_dys_cpd</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2882</formFieldId>
+      <displayOrder>138</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5130</id>
+      <form__field>
+        <id>2883</id>
+        <label>Urinary tract infection (UTI)</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>uti</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2883</formFieldId>
+      <displayOrder>139</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5131</id>
+      <form__field>
+        <id>2884</id>
+        <label>Foetal growth retardation (IUGR)</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>iugr</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2884</formFieldId>
+      <displayOrder>140</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5132</id>
+      <form__field>
+        <id>2885</id>
+        <label>Macrosomia suspected</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>macrosomia</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2885</formFieldId>
+      <displayOrder>141</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>4</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5194</id>
+      <form__field>
+        <id>2945</id>
+        <label>Caesarean Delivery</label>
+        <type>Display</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>cd_subheader</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2945</formFieldId>
+      <displayOrder>142</displayOrder>
+      <inputType>display-subheader</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -6274,10 +6902,10 @@
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5123</id>
+      <id>4722</id>
       <form__field>
-        <id>2876</id>
-        <label>Intrauterine_fetal_demise_IUFD</label>
+        <id>2496</id>
+        <label>Previous caesarean delivery</label>
         <type>Boolean</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -6289,12 +6917,12 @@
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
-        <starSchemaName>iufd</starSchemaName>
+        <starSchemaName>prev_csection_delv</starSchemaName>
         <encounterRecordproperty></encounterRecordproperty>
         <patientStatusproperty></patientStatusproperty>
       </form__field>
-      <formFieldId>2876</formFieldId>
-      <displayOrder>130</displayOrder>
+      <formFieldId>2496</formFieldId>
+      <displayOrder>143</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -6303,20 +6931,59 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5193</id>
+      <form__field>
+        <id>2944</id>
+        <label>Specify number of prev CD</label>
+        <type>Text</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>prev_cd_count</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2944</formFieldId>
+      <displayOrder>144</displayOrder>
+      <inputType>text</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>2</size>
+      <maxlength>3</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5124</id>
       <form__field>
         <id>2877</id>
-        <label>previous_CD_Type</label>
+        <label>Previous CD Type</label>
         <type>Enum</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -6371,7 +7038,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2877</formFieldId>
-      <displayOrder>131</displayOrder>
+      <displayOrder>145</displayOrder>
       <inputType>select</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -6386,15 +7053,15 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5127</id>
+      <id>5195</id>
       <form__field>
-        <id>2880</id>
-        <label>Retained_placenta_or_POCs</label>
-        <type>Boolean</type>
+        <id>2946</id>
+        <label>Hypertensive disease</label>
+        <type>Display</type>
         <required>false</required>
         <minValue>0</minValue>
         <maxValue>0</maxValue>
@@ -6405,384 +7072,13 @@
         <ruleDefinitions/>
         <enumerations/>
         <shared>false</shared>
-        <starSchemaName>retained_placenta</starSchemaName>
+        <starSchemaName>HT_subheader</starSchemaName>
         <encounterRecordproperty></encounterRecordproperty>
         <patientStatusproperty></patientStatusproperty>
       </form__field>
-      <formFieldId>2880</formFieldId>
-      <displayOrder>132</displayOrder>
-      <inputType>checkbox</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5125</id>
-      <form__field>
-        <id>2878</id>
-        <label>Foetal_anomaly</label>
-        <type>Boolean</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>foetalanom</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2878</formFieldId>
-      <displayOrder>133</displayOrder>
-      <inputType>checkbox</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5126</id>
-      <form__field>
-        <id>2879</id>
-        <label>Labour</label>
-        <type>Enum</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations class="tree-set">
-          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
-          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-            <id>3405</id>
-            <fieldId>2879</fieldId>
-            <enumeration>Active</enumeration>
-            <numericValue>0</numericValue>
-            <enabled>true</enabled>
-            <concatEnumNumeric>Active (0)</concatEnumNumeric>
-            <displayOrder>0</displayOrder>
-          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-            <id>3406</id>
-            <fieldId>2879</fieldId>
-            <enumeration>Latent</enumeration>
-            <numericValue>1</numericValue>
-            <enabled>true</enabled>
-            <concatEnumNumeric>Latent (1)</concatEnumNumeric>
-            <displayOrder>1</displayOrder>
-          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-        </enumerations>
-        <shared>false</shared>
-        <starSchemaName>labour</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2879</formFieldId>
-      <displayOrder>134</displayOrder>
-      <inputType>radio</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5128</id>
-      <form__field>
-        <id>2881</id>
-        <label>Foetal_distress</label>
-        <type>Boolean</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>foetal_distress</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2881</formFieldId>
-      <displayOrder>135</displayOrder>
-      <inputType>checkbox</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5129</id>
-      <form__field>
-        <id>2882</id>
-        <label>Labour_dystocia_CPD</label>
-        <type>Boolean</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>labour_dys_cpd</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2882</formFieldId>
-      <displayOrder>136</displayOrder>
-      <inputType>checkbox</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5130</id>
-      <form__field>
-        <id>2883</id>
-        <label>Urinary_tract_infection_UTI</label>
-        <type>Boolean</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>uti</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2883</formFieldId>
-      <displayOrder>137</displayOrder>
-      <inputType>checkbox</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5131</id>
-      <form__field>
-        <id>2884</id>
-        <label>Foetal_growth_retardation_IUGR</label>
-        <type>Boolean</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>iugr</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2884</formFieldId>
-      <displayOrder>138</displayOrder>
-      <inputType>checkbox</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5132</id>
-      <form__field>
-        <id>2885</id>
-        <label>Macrosomia_suspected</label>
-        <type>Boolean</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>macrosomia</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2885</formFieldId>
-      <displayOrder>139</displayOrder>
-      <inputType>checkbox</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5133</id>
-      <form__field>
-        <id>2886</id>
-        <label>Other1</label>
-        <type>Boolean</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>idother1</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2886</formFieldId>
-      <displayOrder>140</displayOrder>
-      <inputType>checkbox</inputType>
-      <closeRow>false</closeRow>
-      <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
-      <rows>0</rows>
-      <cols>0</cols>
-      <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
-      <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
-      <selectedEnum>0</selectedEnum>
-      <visibleDependencies2></visibleDependencies2>
-      <formId>127</formId>
-      <colspan>0</colspan>
-      <highlightCell>false</highlightCell>
-    </org.cidrz.webapp.dynasite.valueobject.PageItem>
-    <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>5134</id>
-      <form__field>
-        <id>2887</id>
-        <label>idother1txt</label>
-        <type>Text</type>
-        <required>false</required>
-        <minValue>0</minValue>
-        <maxValue>0</maxValue>
-        <units></units>
-        <displayOrder>2147483647</displayOrder>
-        <patientProperty></patientProperty>
-        <isEnabled>true</isEnabled>
-        <ruleDefinitions/>
-        <enumerations/>
-        <shared>false</shared>
-        <starSchemaName>idother1txt</starSchemaName>
-        <encounterRecordproperty></encounterRecordproperty>
-        <patientStatusproperty></patientStatusproperty>
-      </form__field>
-      <formFieldId>2887</formFieldId>
-      <displayOrder>141</displayOrder>
-      <inputType>text-only</inputType>
+      <formFieldId>2946</formFieldId>
+      <displayOrder>146</displayOrder>
+      <inputType>display-subheader</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -6803,7 +7099,7 @@
       <id>5135</id>
       <form__field>
         <id>2888</id>
-        <label>Hypertensive_disease</label>
+        <label>Hypertensive disease</label>
         <type>Boolean</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -6820,7 +7116,300 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2888</formFieldId>
-      <displayOrder>142</displayOrder>
+      <displayOrder>147</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5196</id>
+      <form__field>
+        <id>2947</id>
+        <label>Chronic HTN</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>chronic_htn</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2947</formFieldId>
+      <displayOrder>148</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5197</id>
+      <form__field>
+        <id>2948</id>
+        <label>Gestational HTN</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>gestational_htn</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2948</formFieldId>
+      <displayOrder>149</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5198</id>
+      <form__field>
+        <id>2949</id>
+        <label>cHTN w preeclampsia</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>cHTN_w_preeclamp</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2949</formFieldId>
+      <displayOrder>150</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5203</id>
+      <form__field>
+        <id>2954</id>
+        <label>Eclampsia</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>eclampsia</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2954</formFieldId>
+      <displayOrder>151</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5201</id>
+      <form__field>
+        <id>2952</id>
+        <label>Mild preeclampsia</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>mild_preeclampsia</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2952</formFieldId>
+      <displayOrder>152</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5202</id>
+      <form__field>
+        <id>2953</id>
+        <label>Severe preeclampsia</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>severe_preeclampsia</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2953</formFieldId>
+      <displayOrder>153</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>6</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5204</id>
+      <form__field>
+        <id>2955</id>
+        <label>Multiple gestation</label>
+        <type>Enum</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations class="tree-set">
+          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3471</id>
+            <fieldId>2955</fieldId>
+            <enumeration>Twin</enumeration>
+            <numericValue>0</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Twin (0)</concatEnumNumeric>
+            <displayOrder>0</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3472</id>
+            <fieldId>2955</fieldId>
+            <enumeration>Triplet</enumeration>
+            <numericValue>1</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Triplet (1)</concatEnumNumeric>
+            <displayOrder>1</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+        </enumerations>
+        <shared>false</shared>
+        <starSchemaName>multiple_gestation</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2955</formFieldId>
+      <displayOrder>154</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -6835,15 +7424,15 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
-      <id>4721</id>
+      <id>5205</id>
       <form__field>
-        <id>2495</id>
-        <label></label>
-        <type>Enum</type>
+        <id>2956</id>
+        <label>Oligohydramnios</label>
+        <type>Boolean</type>
         <required>false</required>
         <minValue>0</minValue>
         <maxValue>0</maxValue>
@@ -6852,44 +7441,15 @@
         <patientProperty></patientProperty>
         <isEnabled>true</isEnabled>
         <ruleDefinitions/>
-        <enumerations class="tree-set">
-          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
-          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-            <id>3288</id>
-            <fieldId>2495</fieldId>
-            <enumeration>Hep B</enumeration>
-            <numericValue>0</numericValue>
-            <enabled>true</enabled>
-            <concatEnumNumeric>Hep B (0)</concatEnumNumeric>
-            <displayOrder>0</displayOrder>
-          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-            <id>3289</id>
-            <fieldId>2495</fieldId>
-            <enumeration>Herpes</enumeration>
-            <numericValue>1</numericValue>
-            <enabled>true</enabled>
-            <concatEnumNumeric>Herpes (1)</concatEnumNumeric>
-            <displayOrder>1</displayOrder>
-          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-            <id>3290</id>
-            <fieldId>2495</fieldId>
-            <enumeration>Syphilis</enumeration>
-            <numericValue>2</numericValue>
-            <enabled>true</enabled>
-            <concatEnumNumeric>Syphilis (2)</concatEnumNumeric>
-            <displayOrder>2</displayOrder>
-          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
-        </enumerations>
+        <enumerations/>
         <shared>false</shared>
-        <starSchemaName>hepb_herp_syph</starSchemaName>
+        <starSchemaName>oligohydramnios</starSchemaName>
         <encounterRecordproperty></encounterRecordproperty>
         <patientStatusproperty></patientStatusproperty>
       </form__field>
-      <formFieldId>2495</formFieldId>
-      <displayOrder>143</displayOrder>
-      <inputType>radio</inputType>
+      <formFieldId>2956</formFieldId>
+      <displayOrder>155</displayOrder>
+      <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -6897,13 +7457,511 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5206</id>
+      <form__field>
+        <id>2957</id>
+        <label>Polyhydramnios</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>polyhydramnios</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2957</formFieldId>
+      <displayOrder>156</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5199</id>
+      <form__field>
+        <id>2950</id>
+        <label>PPH</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>pph</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2950</formFieldId>
+      <displayOrder>157</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1>2951</visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>1</colspan>
+      <dempMap1>
+        <entry>
+          <string>2951</string>
+          <long>5199</long>
+        </entry>
+      </dempMap1>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5200</id>
+      <form__field>
+        <id>2951</id>
+        <label>PPH, Specify</label>
+        <type>Text</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>pph_specify</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2951</formFieldId>
+      <displayOrder>158</displayOrder>
+      <inputType>text</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>false</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>1</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5207</id>
+      <form__field>
+        <id>2958</id>
+        <label>PROM</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>prom</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2958</formFieldId>
+      <displayOrder>159</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5208</id>
+      <form__field>
+        <id>2959</id>
+        <label>Preterm labour</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>preterm_labour</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2959</formFieldId>
+      <displayOrder>160</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5209</id>
+      <form__field>
+        <id>2960</id>
+        <label>Preterm PROM</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>preterm_prom</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2960</formFieldId>
+      <displayOrder>161</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>6</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5133</id>
+      <form__field>
+        <id>2886</id>
+        <label>Other</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>idother1</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2886</formFieldId>
+      <displayOrder>162</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1>2887</visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>3</colspan>
+      <dempMap1>
+        <entry>
+          <string>2887</string>
+          <long>5133</long>
+        </entry>
+      </dempMap1>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5134</id>
+      <form__field>
+        <id>2887</id>
+        <label>Other, specify</label>
+        <type>Text</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>idother1txt</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2887</formFieldId>
+      <displayOrder>163</displayOrder>
+      <inputType>text</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>false</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1>2887</visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>3</colspan>
+      <dempMap1>
+        <entry>
+          <string>2887</string>
+          <long>5134</long>
+        </entry>
+      </dempMap1>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5210</id>
+      <form__field>
+        <id>2961</id>
+        <label>Other</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>idother2</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2961</formFieldId>
+      <displayOrder>164</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1>2962</visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>3</colspan>
+      <dempMap1>
+        <entry>
+          <string>2962</string>
+          <long>5210</long>
+        </entry>
+      </dempMap1>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5211</id>
+      <form__field>
+        <id>2962</id>
+        <label>Other, specify</label>
+        <type>Text</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>idother2txt</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2962</formFieldId>
+      <displayOrder>165</displayOrder>
+      <inputType>text</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>false</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>3</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5212</id>
+      <form__field>
+        <id>2963</id>
+        <label>Other</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>idother3</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2963</formFieldId>
+      <displayOrder>166</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1>2964</visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>3</colspan>
+      <dempMap1>
+        <entry>
+          <string>2964</string>
+          <long>5212</long>
+        </entry>
+      </dempMap1>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5213</id>
+      <form__field>
+        <id>2964</id>
+        <label>Other, specify</label>
+        <type>Text</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>idother3txt</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2964</formFieldId>
+      <displayOrder>167</displayOrder>
+      <inputType>text</inputType>
+      <closeRow>true</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>false</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -6927,7 +7985,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2465</formFieldId>
-      <displayOrder>144</displayOrder>
+      <displayOrder>168</displayOrder>
       <inputType>display-tbl-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -6966,7 +8024,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2454</formFieldId>
-      <displayOrder>145</displayOrder>
+      <displayOrder>169</displayOrder>
       <inputType>collapsing-display-header-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -7005,8 +8063,139 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2455</formFieldId>
-      <displayOrder>146</displayOrder>
+      <displayOrder>170</displayOrder>
       <inputType>collapsing-display-header-begin</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1>2968</visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>0</colspan>
+      <dempMap1>
+        <entry>
+          <string>2968</string>
+          <long>4681</long>
+        </entry>
+      </dempMap1>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5217</id>
+      <form__field>
+        <id>2968</id>
+        <label>plan_tbl_begin</label>
+        <type>Display</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>plan_tbl_begin</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2968</formFieldId>
+      <displayOrder>171</displayOrder>
+      <inputType>display-tbl-begin</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>6</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>0</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5214</id>
+      <form__field>
+        <id>2965</id>
+        <label>Select Plan</label>
+        <type>Enum</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations class="tree-set">
+          <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3473</id>
+            <fieldId>2965</fieldId>
+            <enumeration>Discharge home</enumeration>
+            <numericValue>0</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Discharge home (0)</concatEnumNumeric>
+            <displayOrder>0</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3474</id>
+            <fieldId>2965</fieldId>
+            <enumeration>Admit to Antenatal</enumeration>
+            <numericValue>1</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Admit to Antenatal (1)</concatEnumNumeric>
+            <displayOrder>1</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3475</id>
+            <fieldId>2965</fieldId>
+            <enumeration>Admit to Labor - SOU / Annex</enumeration>
+            <numericValue>2</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Admit to Labor - SOU / Annex (2)</concatEnumNumeric>
+            <displayOrder>2</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3476</id>
+            <fieldId>2965</fieldId>
+            <enumeration>Admit to Labour Ward - Routine</enumeration>
+            <numericValue>3</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Admit to Labour Ward - Routine (3)</concatEnumNumeric>
+            <displayOrder>3</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+          <org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+            <id>3477</id>
+            <fieldId>2965</fieldId>
+            <enumeration>Admit to Postnatal</enumeration>
+            <numericValue>4</numericValue>
+            <enabled>true</enabled>
+            <concatEnumNumeric>Admit to Postnatal (4)</concatEnumNumeric>
+            <displayOrder>4</displayOrder>
+          </org.cidrz.webapp.dynasite.valueobject.FieldEnumeration>
+        </enumerations>
+        <shared>false</shared>
+        <starSchemaName>plan_options</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2965</formFieldId>
+      <displayOrder>172</displayOrder>
+      <inputType>radio_vert</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -7017,6 +8206,129 @@
       <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
       <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>3</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5215</id>
+      <form__field>
+        <id>2966</id>
+        <label>Other</label>
+        <type>Boolean</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>plan_other</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2966</formFieldId>
+      <displayOrder>173</displayOrder>
+      <inputType>checkbox</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1>2967</visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>0</colspan>
+      <dempMap1>
+        <entry>
+          <string>2967</string>
+          <long>5215</long>
+        </entry>
+      </dempMap1>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5216</id>
+      <form__field>
+        <id>2967</id>
+        <label>Plan, Other</label>
+        <type>Text</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>plan_other_describe</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2967</formFieldId>
+      <displayOrder>174</displayOrder>
+      <inputType>text</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>false</visible>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <selectedEnum>0</selectedEnum>
+      <visibleDependencies2></visibleDependencies2>
+      <formId>127</formId>
+      <colspan>2</colspan>
+      <highlightCell>false</highlightCell>
+    </org.cidrz.webapp.dynasite.valueobject.PageItem>
+    <org.cidrz.webapp.dynasite.valueobject.PageItem>
+      <id>5218</id>
+      <form__field>
+        <id>2969</id>
+        <label>plan_tbl_end</label>
+        <type>Display</type>
+        <required>false</required>
+        <minValue>0</minValue>
+        <maxValue>0</maxValue>
+        <units></units>
+        <displayOrder>2147483647</displayOrder>
+        <patientProperty></patientProperty>
+        <isEnabled>true</isEnabled>
+        <ruleDefinitions/>
+        <enumerations/>
+        <shared>false</shared>
+        <starSchemaName>plan_tbl_end</starSchemaName>
+        <encounterRecordproperty></encounterRecordproperty>
+        <patientStatusproperty></patientStatusproperty>
+      </form__field>
+      <formFieldId>2969</formFieldId>
+      <displayOrder>175</displayOrder>
+      <inputType>display-tbl-end</inputType>
+      <closeRow>false</closeRow>
+      <columnNumber>0</columnNumber>
+      <size>0</size>
+      <maxlength>0</maxlength>
+      <rows>0</rows>
+      <cols>0</cols>
+      <visible>true</visible>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -7044,7 +8356,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2456</formFieldId>
-      <displayOrder>147</displayOrder>
+      <displayOrder>176</displayOrder>
       <inputType>collapsing-display-header-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -7083,7 +8395,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2893</formFieldId>
-      <displayOrder>148</displayOrder>
+      <displayOrder>177</displayOrder>
       <inputType>collapsing-display-header-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -7128,18 +8440,18 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2889</formFieldId>
-      <displayOrder>149</displayOrder>
+      <displayOrder>178</displayOrder>
       <inputType>display-tbl-begin</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
       <maxlength>0</maxlength>
       <rows>18</rows>
-      <cols>5</cols>
+      <cols>6</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -7150,7 +8462,7 @@
       <id>5139</id>
       <form__field>
         <id>2892</id>
-        <label>Point_of_care_in_admission_designate_results_as_indicated</label>
+        <label>Point of care in admission (designate results as indicated)</label>
         <type>Display</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7167,7 +8479,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2892</formFieldId>
-      <displayOrder>150</displayOrder>
+      <displayOrder>179</displayOrder>
       <inputType>infotext</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -7182,14 +8494,14 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5142</id>
       <form__field>
         <id>2895</id>
-        <label>HIV_Rapid_Results</label>
+        <label>HIV Rapid Results</label>
         <type>Enum</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7244,7 +8556,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2895</formFieldId>
-      <displayOrder>151</displayOrder>
+      <displayOrder>180</displayOrder>
       <inputType>radio</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -7259,7 +8571,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -7297,29 +8609,29 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>235</formFieldId>
-      <displayOrder>152</displayOrder>
+      <displayOrder>181</displayOrder>
       <inputType>text</inputType>
-      <closeRow>true</closeRow>
+      <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>2</size>
       <maxlength>2</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>2</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5145</id>
       <form__field>
         <id>2896</id>
-        <label>hb_not_available</label>
+        <label>Hb results not available</label>
         <type>Boolean</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7336,7 +8648,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2896</formFieldId>
-      <displayOrder>153</displayOrder>
+      <displayOrder>182</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -7345,13 +8657,13 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -7375,7 +8687,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2897</formFieldId>
-      <displayOrder>154</displayOrder>
+      <displayOrder>183</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -7414,18 +8726,18 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2898</formFieldId>
-      <displayOrder>155</displayOrder>
+      <displayOrder>184</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
+      <size>2</size>
+      <maxlength>5</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -7453,18 +8765,18 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2899</formFieldId>
-      <displayOrder>156</displayOrder>
+      <displayOrder>185</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
+      <size>2</size>
+      <maxlength>5</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -7492,18 +8804,18 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2900</formFieldId>
-      <displayOrder>157</displayOrder>
+      <displayOrder>186</displayOrder>
       <inputType>text</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
-      <size>0</size>
-      <maxlength>0</maxlength>
+      <size>2</size>
+      <maxlength>5</maxlength>
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -7514,7 +8826,7 @@
       <id>5150</id>
       <form__field>
         <id>2901</id>
-        <label>Not_Available</label>
+        <label>Not Available</label>
         <type>Boolean</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7531,7 +8843,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2901</formFieldId>
-      <displayOrder>158</displayOrder>
+      <displayOrder>187</displayOrder>
       <inputType>checkbox</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -7540,20 +8852,20 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>2</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5151</id>
       <form__field>
         <id>2902</id>
-        <label>RPR_Results</label>
+        <label>RPR Results</label>
         <type>Enum</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7608,7 +8920,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2902</formFieldId>
-      <displayOrder>159</displayOrder>
+      <displayOrder>188</displayOrder>
       <inputType>radio</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -7617,20 +8929,20 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5152</id>
       <form__field>
         <id>2903</id>
-        <label>Ultrasound_Results</label>
+        <label>Ultrasound Results</label>
         <type>Display</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7647,8 +8959,8 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2903</formFieldId>
-      <displayOrder>160</displayOrder>
-      <inputType>infotext</inputType>
+      <displayOrder>189</displayOrder>
+      <inputType>display-subheader</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -7656,9 +8968,9 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
@@ -7706,7 +9018,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2904</formFieldId>
-      <displayOrder>161</displayOrder>
+      <displayOrder>190</displayOrder>
       <inputType>radio</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -7715,13 +9027,13 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -7765,7 +9077,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2905</formFieldId>
-      <displayOrder>162</displayOrder>
+      <displayOrder>191</displayOrder>
       <inputType>radio</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -7780,14 +9092,14 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5155</id>
       <form__field>
         <id>2906</id>
-        <label>Investigations_Other</label>
+        <label>Investigations, Other</label>
         <type>Text</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7804,7 +9116,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2906</formFieldId>
-      <displayOrder>163</displayOrder>
+      <displayOrder>192</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -7819,14 +9131,14 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>5</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5156</id>
       <form__field>
         <id>2907</id>
-        <label>Ordered_Tick_all_that_apply</label>
+        <label>Ordered (Tick all that apply)</label>
         <type>Display</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7843,8 +9155,8 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2907</formFieldId>
-      <displayOrder>164</displayOrder>
-      <inputType>infotext</inputType>
+      <displayOrder>193</displayOrder>
+      <inputType>display-subheader</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
       <size>0</size>
@@ -7858,14 +9170,14 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>5</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5164</id>
       <form__field>
         <id>2915</id>
-        <label>Urine_Culture</label>
+        <label>Urine Culture</label>
         <type>Enum</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7920,9 +9232,9 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2915</formFieldId>
-      <displayOrder>165</displayOrder>
+      <displayOrder>194</displayOrder>
       <inputType>multiselect_enum</inputType>
-      <closeRow>true</closeRow>
+      <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
       <size>4</size>
       <maxlength>4</maxlength>
@@ -7935,14 +9247,14 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5165</id>
       <form__field>
         <id>2916</id>
-        <label>Blood_culture</label>
+        <label>Blood culture</label>
         <type>Enum</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -7997,9 +9309,9 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2916</formFieldId>
-      <displayOrder>166</displayOrder>
+      <displayOrder>195</displayOrder>
       <inputType>multiselect_enum</inputType>
-      <closeRow>false</closeRow>
+      <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
       <size>4</size>
       <maxlength>4</maxlength>
@@ -8012,7 +9324,7 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>3</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -8074,7 +9386,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2917</formFieldId>
-      <displayOrder>167</displayOrder>
+      <displayOrder>196</displayOrder>
       <inputType>multiselect_enum</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -8089,14 +9401,14 @@
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>0</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
       <id>5167</id>
       <form__field>
         <id>2918</id>
-        <label>Ordered_Other</label>
+        <label>Ordered, Other</label>
         <type>Text</type>
         <required>false</required>
         <minValue>0</minValue>
@@ -8113,7 +9425,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2918</formFieldId>
-      <displayOrder>168</displayOrder>
+      <displayOrder>197</displayOrder>
       <inputType>textarea</inputType>
       <closeRow>true</closeRow>
       <columnNumber>0</columnNumber>
@@ -8122,13 +9434,13 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
       <visibleDependencies1></visibleDependencies1>
-      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>127</formId>
-      <colspan>5</colspan>
+      <colspan>6</colspan>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>
@@ -8152,7 +9464,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2890</formFieldId>
-      <displayOrder>169</displayOrder>
+      <displayOrder>198</displayOrder>
       <inputType>display-tbl-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -8191,7 +9503,7 @@
         <patientStatusproperty></patientStatusproperty>
       </form__field>
       <formFieldId>2894</formFieldId>
-      <displayOrder>170</displayOrder>
+      <displayOrder>199</displayOrder>
       <inputType>collapsing-display-header-end</inputType>
       <closeRow>false</closeRow>
       <columnNumber>0</columnNumber>
@@ -8214,7 +9526,7 @@
     <comparator class="org.cidrz.webapp.dynasite.utils.sort.DisplayOrderComparator"/>
   </formfields>
   <submissions>0</submissions>
-  <maxSubmissions>0</maxSubmissions>
+  <maxSubmissions>1000</maxSubmissions>
   <localeList/>
   <demographicsForm>false</demographicsForm>
 </org.cidrz.webapp.dynasite.valueobject.Form>
