@@ -99,7 +99,7 @@
 	                    </c:if>
 	                    <li><a href='<c:out value="/zeprs/${post}"/>'>Postnatal/ Delivery Summary</a></li>
 	                    <li><a href='<c:out value="/zeprs/${uth}"/>'>UTH Registry</a></li>
-	                    <c:if test="${empty referral.uthAdmissionDate && zeprs_session.clientSettings.site.siteTypeId == 2}">
+	                    <c:if test="${zeprs_session.clientSettings.site.siteTypeId == 2}">
 	                    <li><a href='<c:out value="/zeprs/${uthFlow}"/>'>UTH Admissions</a></li>
 	                    </c:if>
 	                    <li><html:link action="/problem.do" paramId="patientId"  paramName="zeprs_session" paramProperty="sessionPatient.id">Problem List</html:link></li>
@@ -136,6 +136,9 @@
                 <li><html:link action="/arv.do" paramId="patientId"  paramName="zeprs_session" paramProperty="sessionPatient.id">ARV</html:link></li>
                 -->
                 <li><a href='<c:out value="/zeprs/${uth}"/>'>UTH Registry</a></li>
+                <c:if test="${empty referral.uthAdmissionDate && zeprs_session.clientSettings.site.siteTypeId == 2}">
+	                    <li><a href='<c:out value="/zeprs/${uthFlow}"/>'>UTH Admissions</a></li>
+	            </c:if>
                 <li><a href='<c:out value="/zeprs/${nicu}"/>'>NICU/Pediatrics</a></li>
                 <logic:notEmpty name="zeprs_session" property="sessionPatient.parentId">
                 <li style="margin: 0px 0px 0px 5px;">Mother</li>

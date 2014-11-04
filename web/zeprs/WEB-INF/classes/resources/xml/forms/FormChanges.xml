@@ -1,7 +1,4 @@
 <?xml version="1.0"?>
 <org.cidrz.webapp.dynasite.valueobject.FormChanges>
-  <formList>
-    <long>128</long>
-  </formList>
-  <modified>2014-10-31 11:43:58.527</modified>
+  <formList/>
 </org.cidrz.webapp.dynasite.valueobject.FormChanges>

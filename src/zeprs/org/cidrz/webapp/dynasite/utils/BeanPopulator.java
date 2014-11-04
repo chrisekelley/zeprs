@@ -28,6 +28,7 @@ import org.cidrz.webapp.dynasite.valueobject.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.*;
 
@@ -395,17 +396,27 @@ public class BeanPopulator {
     private static void populate(Map src, PageItem dest) throws PopulationException {
         if (dest.getId() == null || Identifiable.NEW.equals(dest.getId())) {
             //Long formId = (Long) src.get("formId");
+        	Connection conn = null;
             try {
                 Long formId = (Long) src.get("formId");
                 // Form form = (Form) DynaSiteObjects.getForms().get(formId);
                 // Get a fresh form
-                Connection conn = DatabaseUtils.getAdminConnection();
+                conn = DatabaseUtils.getAdminConnection();
                 Form form = FormDisplayDAO.getFormGraph(conn, formId);
                 dest.setForm(form);
                 Integer display_order = dest.getForm().getPageItems().size();
                 dest.setDisplayOrder(display_order);
             } catch (Exception e) {
                 throw new PopulationException();
+            } finally {
+            	try {
+					if (conn != null && !conn.isClosed()) {
+					    conn.close();
+					}
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         }
         try {

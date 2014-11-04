@@ -5681,7 +5681,7 @@
         <arg0 key="Date of visit" resource="false"/>
       </field>
       <field property="field2427">
-        <arg0 key="Current_contraception" resource="false"/>
+        <arg0 key="Current contraception" resource="false"/>
       </field>
       <field property="field2428">
         <arg0 key="Contraception, Other" resource="false"/>
@@ -6380,21 +6380,8 @@
       <field property="field1" depends="required">
         <arg0 key="Date of visit" resource="false"/>
       </field>
-      <field property="field2469" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
-        <var>
-          <var-name>min</var-name>
-          <var-value>0</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg0 key="G" resource="false"/>
-      </field>
       <field property="field2457">
-        <arg0 key="Presenting_Complaints" resource="false"/>
+        <arg0 key="Presenting Complaint" resource="false"/>
       </field>
       <field property="field2463">
         <arg0 key="PVB" resource="false"/>
@@ -6462,75 +6449,6 @@
       </field>
       <field property="field2487">
         <arg0 key="Reason for UTH B02 clinic" resource="false"/>
-      </field>
-      <field property="field128">
-        <arg0 key="EDD" resource="false"/>
-      </field>
-      <field property="field129" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
-        <var>
-          <var-name>min</var-name>
-          <var-value>1</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg0 key="EGA" resource="false"/>
-      </field>
-      <field property="field127">
-        <arg0 key="LMP - Calculated" resource="false"/>
-      </field>
-      <field property="field232" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
-        <var>
-          <var-name>min</var-name>
-          <var-value>6</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>55</var-value>
-        </var>
-        <arg0 key="Fundal Ht." resource="false"/>
-      </field>
-      <field property="field2812" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
-        <var>
-          <var-name>min</var-name>
-          <var-value>0</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg0 key="1st_Ultrasound_weeks" resource="false"/>
-      </field>
-      <field property="field2813">
-        <arg0 key="1st_ultrasound_date" resource="false"/>
-      </field>
-      <field property="field2814" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
-        <var>
-          <var-name>min</var-name>
-          <var-value>0</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
-        <arg0 key="Fundal_ht_wks" resource="false"/>
-      </field>
-      <field property="field2815">
-        <arg0 key="Fundal_ht_Date" resource="false"/>
       </field>
       <field property="field2818">
         <arg0 key="Past_OB_hx" resource="false"/>
@@ -6980,14 +6898,50 @@
       <field property="field2906">
         <arg0 key="Investigations, Other" resource="false"/>
       </field>
-      <field property="field2915">
-        <arg0 key="Urine Culture" resource="false"/>
+      <field property="field3000">
+        <arg0 key="Ordered" resource="false"/>
       </field>
-      <field property="field2916">
-        <arg0 key="Blood culture" resource="false"/>
+      <field property="field2996">
+        <arg0 key="Drawn" resource="false"/>
       </field>
-      <field property="field2917">
-        <arg0 key="Ultrasound" resource="false"/>
+      <field property="field2997">
+        <arg0 key="Sent" resource="false"/>
+      </field>
+      <field property="field2998">
+        <arg0 key="No Funds" resource="false"/>
+      </field>
+      <field property="field2999">
+        <arg0 key="Not available" resource="false"/>
+      </field>
+      <field property="field3002">
+        <arg0 key="Ordered" resource="false"/>
+      </field>
+      <field property="field3003">
+        <arg0 key="Drawn" resource="false"/>
+      </field>
+      <field property="field3004">
+        <arg0 key="Sent" resource="false"/>
+      </field>
+      <field property="field3005">
+        <arg0 key="No funds" resource="false"/>
+      </field>
+      <field property="field3006">
+        <arg0 key="Not available" resource="false"/>
+      </field>
+      <field property="field3008">
+        <arg0 key="Ordered" resource="false"/>
+      </field>
+      <field property="field3009">
+        <arg0 key="Drawn" resource="false"/>
+      </field>
+      <field property="field3010">
+        <arg0 key="Sent" resource="false"/>
+      </field>
+      <field property="field3011">
+        <arg0 key="No funds" resource="false"/>
+      </field>
+      <field property="field3012">
+        <arg0 key="Not available" resource="false"/>
       </field>
       <field property="field2918">
         <arg0 key="Ordered, Other" resource="false"/>
@@ -7052,7 +7006,7 @@
         <arg0 key="Meconium" resource="false"/>
       </field>
       <field property="field2522">
-        <arg0 key="Rh diesease" resource="false"/>
+        <arg0 key="Rh disease" resource="false"/>
       </field>
       <field property="field2528">
         <arg0 key="Shoulder dystocia" resource="false"/>
@@ -7127,7 +7081,7 @@
         <arg0 key="Laceration" resource="false"/>
       </field>
       <field property="field2556">
-        <arg0 key="Retained plac POC" resource="false"/>
+        <arg0 key="Retained plac/POC" resource="false"/>
       </field>
       <field property="field2537">
         <arg0 key="Other Specify" resource="false"/>
@@ -7222,6 +7176,15 @@
       </field>
       <field property="field2581">
         <arg0 key="im_other_specify_txt2" resource="false"/>
+      </field>
+      <field property="field2976">
+        <arg0 key="Delivery Date" resource="false"/>
+      </field>
+      <field property="field2977" depends="time">
+        <arg0 key="Time" resource="false"/>
+      </field>
+      <field property="field2978">
+        <arg0 key="EBL" resource="false"/>
       </field>
       <field property="field2590">
         <arg0 key="Vaginal" resource="false"/>
@@ -7346,23 +7309,29 @@
       <field property="field2637">
         <arg0 key="T shaped" resource="false"/>
       </field>
+      <field property="field2981">
+        <arg0 key="Uterine rupture" resource="false"/>
+      </field>
       <field property="field2638">
         <arg0 key="Vicryl" resource="false"/>
       </field>
       <field property="field2639">
-        <arg0 key="ab Other Specify" resource="false"/>
+        <arg0 key="Abdominal incision, Other" resource="false"/>
       </field>
       <field property="field2640">
         <arg0 key="ab_Other_Specify_txt" resource="false"/>
       </field>
       <field property="field2641">
-        <arg0 key="after labour Other" resource="false"/>
+        <arg0 key="After labour, Other" resource="false"/>
+      </field>
+      <field property="field2982">
+        <arg0 key="after_labour_other" resource="false"/>
       </field>
       <field property="field2642">
-        <arg0 key="ab suture Other" resource="false"/>
+        <arg0 key="Abdominal suture, Other" resource="false"/>
       </field>
       <field property="field2643">
-        <arg0 key="ab_suture_other_txt" resource="false"/>
+        <arg0 key="Abdominal suture, Other" resource="false"/>
       </field>
       <field property="field2657">
         <arg0 key="Spontaneous delivery" resource="false"/>
@@ -7413,9 +7382,6 @@
       <field property="field2669">
         <arg0 key="Anesthesia_other_txt" resource="false"/>
       </field>
-      <field property="field2648">
-        <arg0 key="newborn_eval1" resource="false"/>
-      </field>
       <field property="field2674">
         <arg0 key="None" resource="false"/>
       </field>
@@ -7444,25 +7410,25 @@
         <arg0 key="Vaginal" resource="false"/>
       </field>
       <field property="field2687">
-        <arg0 key="Not_applicable" resource="false"/>
+        <arg0 key="Not applicable" resource="false"/>
       </field>
       <field property="field2688">
-        <arg0 key="Spontaneous_PTL" resource="false"/>
+        <arg0 key="Spontaneous PTL" resource="false"/>
       </field>
       <field property="field2689">
-        <arg0 key="PPROM_with" resource="false"/>
+        <arg0 key="PPROM with" resource="false"/>
       </field>
       <field property="field2690">
-        <arg0 key="Indicated_not_PPROM_specify" resource="false"/>
+        <arg0 key="Indicated (not PPROM), specify:" resource="false"/>
       </field>
       <field property="field2692">
-        <arg0 key="Induced_labour" resource="false"/>
+        <arg0 key="Induced labour" resource="false"/>
       </field>
       <field property="field2691">
         <arg0 key="Indicated_specify_txt" resource="false"/>
       </field>
-      <field property="field2694">
-        <arg0 key="pprom_Spontaneous_PTL" resource="false"/>
+      <field property="field2983">
+        <arg0 key="Spontaneous PTL" resource="false"/>
       </field>
       <field property="field2693">
         <arg0 key="Caesarean delivery" resource="false"/>
@@ -7512,7 +7478,7 @@
         <arg0 key="Coagulation disorder" resource="false"/>
       </field>
       <field property="field2715">
-        <arg0 key="Puerperal sepsis wo peritonitis" resource="false"/>
+        <arg0 key="Puerperal sepsis w/o peritonitis" resource="false"/>
       </field>
       <field property="field2716">
         <arg0 key="Hematoma Specify" resource="false"/>
@@ -7524,10 +7490,10 @@
         <arg0 key="Wound infection" resource="false"/>
       </field>
       <field property="field2719">
-        <arg0 key="Laceration Cervical Perineal Vaginal" resource="false"/>
+        <arg0 key="Laceration" resource="false"/>
       </field>
       <field property="field2720">
-        <arg0 key="postpartuminf Other specify" resource="false"/>
+        <arg0 key="Postpartum Infections, Other, Specify" resource="false"/>
       </field>
       <field property="field2721">
         <arg0 key="postpartuminf_Other_specify_txt" resource="false"/>
@@ -7572,7 +7538,7 @@
         <arg0 key="Bimanual uterine compression" resource="false"/>
       </field>
       <field property="field2738">
-        <arg0 key="Postpartum preeclampsia Eclampsia" resource="false"/>
+        <arg0 key="Postpartum" resource="false"/>
       </field>
       <field property="field2739" depends="integer,intRange">
         <arg1 name="intRange" key="${var:min}" resource="false"/>
@@ -7591,13 +7557,16 @@
         <arg0 key="Blood Transfusion product" resource="false"/>
       </field>
       <field property="field2741">
-        <arg0 key="Renal_Failure" resource="false"/>
+        <arg0 key="Renal Failure" resource="false"/>
       </field>
       <field property="field2742">
         <arg0 key="Curettage" resource="false"/>
       </field>
       <field property="field2743">
         <arg0 key="Thrombophlebitis" resource="false"/>
+      </field>
+      <field property="field2984">
+        <arg0 key="Fundal massage" resource="false"/>
       </field>
       <field property="field2744">
         <arg0 key="Wound" resource="false"/>
@@ -7606,7 +7575,7 @@
         <arg0 key="Hysterectomy" resource="false"/>
       </field>
       <field property="field2746">
-        <arg0 key="postpartumcomp Other1" resource="false"/>
+        <arg0 key="Other" resource="false"/>
       </field>
       <field property="field2747">
         <arg0 key="postpartumcomp_Other1_txt" resource="false"/>
@@ -7615,7 +7584,7 @@
         <arg0 key="Manual removal of placenta and membranes" resource="false"/>
       </field>
       <field property="field2748">
-        <arg0 key="postpartumcomp Other2" resource="false"/>
+        <arg0 key="Other" resource="false"/>
       </field>
       <field property="field2749">
         <arg0 key="postpartumcomp_Other2_txt" resource="false"/>
@@ -7624,7 +7593,7 @@
         <arg0 key="Medication" resource="false"/>
       </field>
       <field property="field2750">
-        <arg0 key="postpartumcomp Other3" resource="false"/>
+        <arg0 key="Other" resource="false"/>
       </field>
       <field property="field2751">
         <arg0 key="postpartumcomp_Other3_txt" resource="false"/>
@@ -7645,22 +7614,16 @@
         <arg0 key="Uterine packing" resource="false"/>
       </field>
       <field property="field2766">
-        <arg0 key="Treatment Other1" resource="false"/>
+        <arg0 key="Treatment Other" resource="false"/>
       </field>
       <field property="field2767">
         <arg0 key="Treatment_Other1_txt" resource="false"/>
       </field>
       <field property="field2768">
-        <arg0 key="Treatment Other2" resource="false"/>
+        <arg0 key="Treatment Other" resource="false"/>
       </field>
       <field property="field2769">
         <arg0 key="Treatment_Other2_txt" resource="false"/>
-      </field>
-      <field property="field2776">
-        <arg0 key="None" resource="false"/>
-      </field>
-      <field property="field2777">
-        <arg0 key="" resource="false"/>
       </field>
       <field property="field2783">
         <arg0 key="None" resource="false"/>
@@ -7714,19 +7677,19 @@
         <arg0 key="if_received_txt" resource="false"/>
       </field>
       <field property="field2808">
-        <arg0 key="Infant_Feeding" resource="false"/>
+        <arg0 key="Infant Feeding" resource="false"/>
       </field>
       <field property="field2809">
         <arg0 key="Comments" resource="false"/>
       </field>
       <field property="field2930">
-        <arg0 key="Maternal Death lt 24hrs Postnatal" resource="false"/>
+        <arg0 key="Maternal Death &amp;lt;= 24hrs Postnatal" resource="false"/>
       </field>
       <field property="field2931">
-        <arg0 key="Maternal Death gt 24hrs postnatal" resource="false"/>
+        <arg0 key="Maternal Death &amp;gt;= 24hrs postnatal" resource="false"/>
       </field>
       <field property="field2933">
-        <arg0 key="Neonatal Death lt 24hrs" resource="false"/>
+        <arg0 key="Neonatal Death  &amp;lt;= 24hrs" resource="false"/>
       </field>
       <field property="field2934">
         <arg0 key="Neonatal Death between 1 and 7 days" resource="false"/>

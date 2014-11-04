@@ -1258,7 +1258,6 @@ public class FormAction extends BasePatientAction {
                 forwardForm = new ActionForward("/form36/new.do");
                 forwardForm.setRedirect(true);
                 return forwardForm;
-
             }
 
             // Infant Physical Examination form takes you to NICU Hospitalization Summary Form
@@ -1376,6 +1375,16 @@ public class FormAction extends BasePatientAction {
             	String forwardString = null;
 //				forwardString = "/admin/records/list.do?formId=" + formId;
 				forwardString = "/admin/users.do";
+				forwardForm = new ActionForward(forwardString);
+                forwardForm.setRedirect(true);
+                return forwardForm;
+            }
+            
+            // UTH OB/GYN Visit Form [CO3] form takes you to UTH Admissions
+            if (formId == 126 || formId == 127 || formId == 128 || formId == 129) {               
+                ActionForward forwardForm = null;
+            	String forwardString = null;
+				forwardString = "/patientTask.do?patientId=" + patientId + "&flowId=6";
 				forwardForm = new ActionForward(forwardString);
                 forwardForm.setRedirect(true);
                 return forwardForm;
