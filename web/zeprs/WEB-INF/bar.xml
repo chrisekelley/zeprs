@@ -5842,17 +5842,7 @@
       <field property="field2270">
         <arg0 key="Medications" resource="false"/>
       </field>
-      <field property="field2319" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
-        <var>
-          <var-name>min</var-name>
-          <var-value>0</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
+      <field property="field2319" depends="float">
         <arg0 key="Weight (kg)" resource="false"/>
       </field>
       <field property="field2324" depends="integer,intRange">
@@ -5868,43 +5858,13 @@
         </var>
         <arg0 key="Height (CM)" resource="false"/>
       </field>
-      <field property="field2322" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
-        <var>
-          <var-name>min</var-name>
-          <var-value>0</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
+      <field property="field2322" depends="float">
         <arg0 key="Temp (C)" resource="false"/>
       </field>
-      <field property="field2331" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
-        <var>
-          <var-name>min</var-name>
-          <var-value>0</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
+      <field property="field224">
         <arg0 key="BP: Sys." resource="false"/>
       </field>
-      <field property="field2332" depends="integer,intRange">
-        <arg1 name="intRange" key="${var:min}" resource="false"/>
-        <var>
-          <var-name>min</var-name>
-          <var-value>0</var-value>
-        </var>
-        <arg2 name="intRange" key="${var:max}" resource="false"/>
-        <var>
-          <var-name>max</var-name>
-          <var-value>2147483647</var-value>
-        </var>
+      <field property="field225">
         <arg0 key="BP: Dia." resource="false"/>
       </field>
       <field property="field2333" depends="integer,intRange">

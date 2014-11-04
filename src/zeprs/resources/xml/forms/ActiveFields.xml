@@ -3858,24 +3858,6 @@
     <patientLabproperty></patientLabproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2332</id>
-    <label>BP: Dia.</label>
-    <type>Integer</type>
-    <required>false</required>
-    <minValue>0</minValue>
-    <maxValue>0</maxValue>
-    <units>mm/hg</units>
-    <displayOrder>2147483647</displayOrder>
-    <patientProperty></patientProperty>
-    <isEnabled>true</isEnabled>
-    <ruleDefinitions/>
-    <enumerations/>
-    <shared>false</shared>
-    <starSchemaName>bp_hg</starSchemaName>
-    <encounterRecordproperty></encounterRecordproperty>
-    <patientStatusproperty></patientStatusproperty>
-  </org.cidrz.webapp.dynasite.valueobject.FormField>
-  <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>225</id>
     <label>BP: Dia.</label>
     <type>Enum</type>
@@ -4007,24 +3989,6 @@
     <encounterRecordproperty></encounterRecordproperty>
     <patientStatusproperty></patientStatusproperty>
     <patientLabproperty></patientLabproperty>
-  </org.cidrz.webapp.dynasite.valueobject.FormField>
-  <org.cidrz.webapp.dynasite.valueobject.FormField>
-    <id>2331</id>
-    <label>BP: Sys.</label>
-    <type>Integer</type>
-    <required>false</required>
-    <minValue>0</minValue>
-    <maxValue>0</maxValue>
-    <units>mm/hg</units>
-    <displayOrder>2147483647</displayOrder>
-    <patientProperty></patientProperty>
-    <isEnabled>true</isEnabled>
-    <ruleDefinitions/>
-    <enumerations/>
-    <shared>false</shared>
-    <starSchemaName>bp_mm</starSchemaName>
-    <encounterRecordproperty></encounterRecordproperty>
-    <patientStatusproperty></patientStatusproperty>
   </org.cidrz.webapp.dynasite.valueobject.FormField>
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>224</id>
@@ -30970,7 +30934,7 @@
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2322</id>
     <label>Temp (C)</label>
-    <type>Integer</type>
+    <type>Float</type>
     <required>false</required>
     <minValue>0</minValue>
     <maxValue>0</maxValue>
@@ -36008,7 +35972,7 @@
   <org.cidrz.webapp.dynasite.valueobject.FormField>
     <id>2319</id>
     <label>Weight (kg)</label>
-    <type>Integer</type>
+    <type>Float</type>
     <required>false</required>
     <minValue>0</minValue>
     <maxValue>0</maxValue>

@@ -489,7 +489,7 @@
             </c:if>
         </c:when>
         <c:otherwise>
-            <input type="button" value="Submit" onclick="submitForm();"/>
+            <input type="button" value="Done/Submit" onclick="submitForm();"/>
             <c:if test="${encounterForm.id == '2'}">
             <input type="button" value="Add" onclick="submitAddForm();"/>
             </c:if>

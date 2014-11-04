@@ -1508,19 +1508,13 @@
       <rows>0</rows>
       <cols>0</cols>
       <visible>true</visible>
-      <visibleEnumIdTrigger1>0</visibleEnumIdTrigger1>
-      <visibleDependencies1>2520</visibleDependencies1>
-      <visibleEnumIdTrigger2>0</visibleEnumIdTrigger2>
+      <visibleEnumIdTrigger1></visibleEnumIdTrigger1>
+      <visibleDependencies1></visibleDependencies1>
+      <visibleEnumIdTrigger2></visibleEnumIdTrigger2>
       <selectedEnum>0</selectedEnum>
       <visibleDependencies2></visibleDependencies2>
       <formId>128</formId>
       <colspan>0</colspan>
-      <dempMap1>
-        <entry>
-          <string>2520</string>
-          <long>4754</long>
-        </entry>
-      </dempMap1>
       <highlightCell>false</highlightCell>
     </org.cidrz.webapp.dynasite.valueobject.PageItem>
     <org.cidrz.webapp.dynasite.valueobject.PageItem>

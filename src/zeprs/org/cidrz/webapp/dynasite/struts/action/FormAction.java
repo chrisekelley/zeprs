@@ -1380,12 +1380,24 @@ public class FormAction extends BasePatientAction {
                 return forwardForm;
             }
             
-            // UTH OB/GYN Visit Form [CO3] form takes you to UTH Admissions
-            if (formId == 126 || formId == 127 || formId == 128 || formId == 129) {               
+            // Some UTH forms takes you to UTH Admissions
+            if (formId == 126 || formId == 127 || formId == 129) {               
                 ActionForward forwardForm = null;
             	String forwardString = null;
 				forwardString = "/patientTask.do?patientId=" + patientId + "&flowId=6";
 				forwardForm = new ActionForward(forwardString);
+                forwardForm.setRedirect(true);
+                return forwardForm;
+            }
+            // UTH OB/GYN Intrapartum Delivery takes you to Delivery Summary
+            if (formId == 128) {               
+            	// part of reload prevention scheme:
+                nextForm = (Form) DynaSiteObjects.getForms().get(new Long("66"));
+                String formName = nextForm.getName();
+                request.setAttribute("name", formName);
+                request.setAttribute("id", nextForm.getId());
+                ActionForward forwardForm = null;
+                forwardForm = new ActionForward("/form66/new.do");
                 forwardForm.setRedirect(true);
                 return forwardForm;
             }
